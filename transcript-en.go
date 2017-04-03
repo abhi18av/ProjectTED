@@ -28,7 +28,8 @@ func main() {
                 }
         */
 
-        // TODO: Need a table for lang codes
+        // TODO: Need a table for lang codes from 
+        // https://www.ted.com/participate/translate/our-languages
         langs := doc.Find(".talk-transcript__language").Contents().Text()
         fmt.Println(langs)
        
