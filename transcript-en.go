@@ -3,7 +3,7 @@ package main
 import (
         "fmt"
         "github.com/PuerkitoBio/goquery"
-        //"strings"
+        "strings"
 )
 
 func check(e error) {
@@ -27,13 +27,14 @@ func main() {
                         fmt.Println(topic)
                 }
         */
-        
+
+        // TODO: Need a table for lang codes
         langs := doc.Find(".talk-transcript__language").Contents().Text()
         fmt.Println(langs)
        
 
 
-/*        times := doc.Find(".talk-transcript__para__time").Contents().Text()
+        times := doc.Find(".talk-transcript__para__time").Contents().Text()
         for _, time := range strings.Split(times, " ") {
 
                 fmt.Println(time)
@@ -44,4 +45,6 @@ func main() {
 
                 fmt.Println(text)
         }
-*/}
+
+
+}
