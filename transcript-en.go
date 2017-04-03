@@ -3,7 +3,7 @@ package main
 import (
         "fmt"
         "github.com/PuerkitoBio/goquery"
-        "strings"
+        //"strings"
 )
 
 func check(e error) {
@@ -16,7 +16,7 @@ func check(e error) {
 
 func main() {
 
-        url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+        url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
 
         doc, err := goquery.NewDocument(url)
         check(err)
@@ -27,14 +27,10 @@ func main() {
                         fmt.Println(topic)
                 }
         */
-        langs := doc.Find(".language-list__item").Contents().Text()
+        
+        langs := doc.Find(".talk-transcript__language").Contents().Text()
         fmt.Println(langs)
-        /* for _, lang := range strings.Split(langs, " "){
-	                           fmt.Println(lang)
-                }
-
-        */
-
+       
 
 
 /*        times := doc.Find(".talk-transcript__para__time").Contents().Text()
