@@ -1,0 +1,7 @@
+talk_posted:".meta__item"
+talk_rated:".meta__row"
+talk_avl_langs:".talk-transcript__language"
+lang: 
+    talk_transcript_title:".m5"
+    talk_transcript_time:".talk-transcript__para__time"
+    talk_transcript_text:".talk-transcript__para__text"

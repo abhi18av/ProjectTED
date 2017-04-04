@@ -1,0 +1,7 @@
+talk_author: ".talk-speaker__name"
+talk_title: ".player-hero__title__content"
+talk_duration: ".player-hero__meta"
+talk_filmed: ".player-hero__meta__label"
+talk_views: ".v-a:m tooltip"
+talk_topics_list: ".talk-topics__list"
+talk_comments_count: ".h11"
