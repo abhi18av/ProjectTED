@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"io/ioutil"
 )
 
 
@@ -57,9 +58,46 @@ type TED_JSON struct {
 	} `json:"transcript"`
 }
 
+
+
+
+
+
+
+func (p TED_JSON) toString() string {
+    return toJson(p)
+}
+
+func toJson(p interface{}) string {
+    bytes, err := json.Marshal(p)
+    if err != nil {
+        fmt.Println(err.Error())
+        os.Exit(1)
+    }
+
+    return string(bytes)
+}
+
+
+
+
+func getTED_JSONs() []TED_JSON {
+    raw, _ := ioutil.ReadFile("./al-A_simple_way_to_break_a_bad_habit.json")
+
+
+    var c []TED_JSON
+    json.Unmarshal(raw, &c)
+    return c
+}
+
+
+
 func main() {
-	
 
+    TED_JSONs := getTED_JSONs()
+    for _, p := range TED_JSONs {
+        fmt.Println(p.toString())
+    }
 
-	
+    fmt.Println(toJson(TED_JSONs))
 }
