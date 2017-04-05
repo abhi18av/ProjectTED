@@ -6,14 +6,33 @@ import (
 	"strings"
 )
 
-func posted(doc *goquery.Document) {
+func posted(doc *goquery.Document) (string) {
 	posted := doc.Find(".meta__item").Contents().Text()
-	fmt.Println(posted)
+	p := strings.Split(posted, "\n")
+	//fmt.Println(p[3])
+	return(p[3])
+
 }
 
 func rated(doc *goquery.Document) {
 	rated := doc.Find(".meta__row").Contents().Text()
-	fmt.Println(rated)
+//	fmt.Println(rated)
+
+	r := strings.Split(rated, "\n")
+	fmt.Println(r[3])
+//	rx := strings.Split(r[3], ",")
+	
+	/*
+	for _, x := range rx{
+		append(ls,x)
+	}
+
+	*/
+	//println(len(rx))
+
+	//println(r[0])
+	//println(r[1])
+	//return(p[3])
 }
 
 func title(doc *goquery.Document) {
@@ -56,6 +75,11 @@ func texts(doc *goquery.Document) {
 func main() {
 
 	url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
+//http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en
+//http://www.ted.com/talks/jill_bolte_taylor_s_powerful_stroke_of_insight/transcript?language=en
+//http://www.ted.com/talks/tony_robbins_asks_why_we_do_what_we_do/transcript?language=en
+//http://www.ted.com/talks/shawn_achor_the_happy_secret_to_better_work/transcript?language=en
+//http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action/transcript?language=en
 
 	/*
 		var url string
@@ -70,12 +94,14 @@ func main() {
 		panic(err)
 	}
 
-	posted(doc)
-	rated(doc)
-	title(doc)
-	topics(doc)
-	langs(doc)
+	//posted(doc)
+	
+		rated(doc)
 
-	times(doc)
-	texts(doc)
+	//	title(doc)
+	//	topics(doc)
+	//	langs(doc)
+	//	times(doc)
+	//	texts(doc)
+	
 }
