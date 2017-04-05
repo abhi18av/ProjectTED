@@ -12,31 +12,6 @@ func check(e error) {
 	}
 }
 
-func speaker() {
-	speaker := doc.Find(".talk-speaker__name").Contents().Text()
-	fmt.Println(speaker)
-
-}
-
-func title() {
-	title := doc.Find(".player-hero__title__content").Contents().Text()
-	fmt.Println(title)
-}
-
-func duration() {
-
-	duration := doc.Find(".player-hero__meta").Contents().Text()
-	//fmt.Println(duration)
-
-	//for _, x := range strings.Split(duration, "\n") {
-	//	fmt.Println(x)
-	//	println("~~~~~~")
-	//}
-
-	x := strings.Split(duration, "\n")
-	fmt.Println(x[6])
-}
-
 func main() {
 
 	url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
@@ -51,11 +26,22 @@ func main() {
 	doc, err := goquery.NewDocument(url)
 	check(err)
 
-	speaker()
+	speaker := doc.Find(".talk-speaker__name").Contents().Text()
+	fmt.Println(speaker)
 
-	title()
+	title := doc.Find(".player-hero__title__content").Contents().Text()
+	fmt.Println(title)
 
-	duration()
+	duration := doc.Find(".player-hero__meta").Contents().Text()
+	//fmt.Println(duration)
+
+	//for _, x := range strings.Split(duration, "\n") {
+	//	fmt.Println(x)
+	//	println("~~~~~~")
+	//}
+
+	x := strings.Split(duration, "\n")
+	fmt.Println(x[6])
 
 	time_filmed := doc.Find(".player-hero__meta").Contents().Text()
 
