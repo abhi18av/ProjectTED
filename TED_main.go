@@ -62,7 +62,11 @@ func main() {
 
 	c := strings.Split(talk_topics, "\n")
 
-	fmt.Println(c[3:len(c)])
+	//	fmt.Println(c[3:len(c)])
+
+	for i := 3; i < len(c); i++ {
+		fmt.Println(c[i])
+	}
 
 	talk_comments_count := doc.Find(".h11").Contents().Text()
 	//fmt.Println(talk_comments_count)
