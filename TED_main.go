@@ -60,17 +60,11 @@ func talk_views_count(doc *goquery.Document){
 func talk_topics_list(doc *goquery.Document){
 
 	talk_topics := doc.Find(".talk-topics__list").Contents().Text()
-	for _, topic := range strings.Split(talk_topics, "  ") {
-
-		fmt.Println(topic)
-	}
-
 
 
 
 	c := strings.Split(talk_topics, "\n")
 
-	//	fmt.Println(c[3:len(c)])
 
 	for i := 3; i < len(c); i++ {
 		fmt.Println(c[i])
