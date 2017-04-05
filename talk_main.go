@@ -86,8 +86,10 @@ func talk_comments_count(doc *goquery.Document){
 
 func main() {
 
-	url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-
+//	url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	url := "http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action"
+	
+	
 	/*
 		var url string
 
@@ -104,10 +106,10 @@ func main() {
 	//speaker(doc)
 	//title(doc)
 	//duration(doc)
-//time_filmed(doc)
-//talk_views_count(doc)
-talk_topics_list(doc)
-//talk_views_count(doc)
+	//time_filmed(doc)
+	//talk_views_count(doc)
+	//talk_topics_list(doc)
+	//talk_comments_count(doc)
 
 
 

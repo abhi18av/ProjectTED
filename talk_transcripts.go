@@ -15,6 +15,7 @@ func posted(doc *goquery.Document) (string) {
 }
 
 func rated(doc *goquery.Document) {
+
 	rated := doc.Find(".meta__row").Contents().Text()
 //	fmt.Println(rated)
 
@@ -26,10 +27,9 @@ func rated(doc *goquery.Document) {
 	for _, x := range rx{
 		append(ls,x)
 	}
-
 	*/
+	
 	//println(len(rx))
-
 	//println(r[0])
 	//println(r[1])
 	//return(p[3])
