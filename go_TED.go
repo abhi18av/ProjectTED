@@ -6,12 +6,6 @@ import (
 	"strings"
 )
 
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
-}
-
 func posted(doc *goquery.Document) {
 	posted := doc.Find(".meta__item").Contents().Text()
 	fmt.Println(posted)
@@ -71,7 +65,10 @@ func main() {
 	*/
 
 	doc, err := goquery.NewDocument(url)
-	check(err)
+
+	if err != nil {
+		panic(err)
+	}
 
 	posted(doc)
 	rated(doc)
