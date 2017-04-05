@@ -82,7 +82,6 @@ func main() {
 	*/
 
 	doc, err := goquery.NewDocument(url)
-
 	if err != nil {
 		panic(err)
 	}
