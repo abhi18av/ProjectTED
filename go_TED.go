@@ -40,13 +40,6 @@ func title(doc *goquery.Document) {
 	fmt.Println(strings.Split(title, "\n")[2])
 }
 
-func topics(doc *goquery.Document) {
-	topics := doc.Find(".talk-topics__list").Contents().Text()
-	for _, topic := range strings.Split(topics, "  ") {
-
-		fmt.Println(topic)
-	}
-}
 
 func langs(doc *goquery.Document) {
 
@@ -94,12 +87,10 @@ func main() {
 		panic(err)
 	}
 
-	//posted(doc)
-	
-		rated(doc)
-
+	//	posted(doc)
+	//	rated(doc)
 	//	title(doc)
-	//	topics(doc)
+		
 	//	langs(doc)
 	//	times(doc)
 	//	texts(doc)

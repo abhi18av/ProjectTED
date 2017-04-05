@@ -60,6 +60,16 @@ func main() {
 	talk_topics := doc.Find(".talk-topics__list").Contents().Text()
 	//fmt.Println(talk_topics)
 
+func topics(doc *goquery.Document) {
+	topics := doc.Find(".talk-topics__list").Contents().Text()
+	for _, topic := range strings.Split(topics, "  ") {
+
+		fmt.Println(topic)
+	}
+}
+
+
+
 	c := strings.Split(talk_topics, "\n")
 
 	//	fmt.Println(c[3:len(c)])
