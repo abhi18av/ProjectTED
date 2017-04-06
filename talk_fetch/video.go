@@ -7,6 +7,12 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
+var lang_codes = map[string]string{
+
+	"English": "en",
+	"French":  "fr",
+}
+
 func speaker(doc *goquery.Document) {
 	speaker := doc.Find(".talk-speaker__name").Contents().Text()
 	fmt.Println(speaker)
