@@ -1,4 +1,4 @@
-package main
+package talk_fetch
 
 import (
 	"fmt"
@@ -6,8 +6,7 @@ import (
 	"strings"
 )
 
-
-func speaker(doc *goquery.Document){
+func speaker(doc *goquery.Document) {
 	speaker := doc.Find(".talk-speaker__name").Contents().Text()
 	fmt.Println(speaker)
 }
@@ -17,7 +16,7 @@ func title(doc *goquery.Document) {
 	fmt.Println(title)
 }
 
-func duration(doc *goquery.Document){
+func duration(doc *goquery.Document) {
 
 	duration := doc.Find(".player-hero__meta").Contents().Text()
 	//fmt.Println(duration)
@@ -32,8 +31,7 @@ func duration(doc *goquery.Document){
 
 }
 
-func time_filmed(doc *goquery.Document){
-
+func time_filmed(doc *goquery.Document) {
 
 	time_filmed := doc.Find(".player-hero__meta").Contents().Text()
 
@@ -44,9 +42,7 @@ func time_filmed(doc *goquery.Document){
 
 }
 
-func talk_views_count(doc *goquery.Document){
-
-
+func talk_views_count(doc *goquery.Document) {
 
 	talk_views_count := doc.Find("#sharing-count").Contents().Text()
 	//	fmt.Println(talk_views_count)
@@ -57,14 +53,11 @@ func talk_views_count(doc *goquery.Document){
 
 }
 
-func talk_topics_list(doc *goquery.Document){
+func talk_topics_list(doc *goquery.Document) {
 
 	talk_topics := doc.Find(".talk-topics__list").Contents().Text()
 
-
-
 	c := strings.Split(talk_topics, "\n")
-
 
 	for i := 3; i < len(c); i++ {
 		fmt.Println(c[i])
@@ -72,24 +65,20 @@ func talk_topics_list(doc *goquery.Document){
 
 }
 
-func talk_comments_count(doc *goquery.Document){
+func talk_comments_count(doc *goquery.Document) {
 
-		talk_comments_count := doc.Find(".h11").Contents().Text()
+	talk_comments_count := doc.Find(".h11").Contents().Text()
 	//fmt.Println(talk_comments_count)
 	d := strings.Split(talk_comments_count, " ")
 	fmt.Println(d[0])
 
 }
 
-
-
-
 func main() {
 
-//	url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	//	url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
 	url := "http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action"
-	
-	
+
 	/*
 		var url string
 
@@ -102,7 +91,6 @@ func main() {
 		panic(err)
 	}
 
-
 	//speaker(doc)
 	//title(doc)
 	//duration(doc)
@@ -110,7 +98,5 @@ func main() {
 	//talk_views_count(doc)
 	//talk_topics_list(doc)
 	//talk_comments_count(doc)
-
-
 
 }

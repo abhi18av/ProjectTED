@@ -1,4 +1,4 @@
-package main
+package talk_fetch
 
 import (
 	"fmt"
@@ -6,40 +6,39 @@ import (
 	"strings"
 )
 
-func posted(doc *goquery.Document) (string) {
+func posted(doc *goquery.Document) string {
 	posted := doc.Find(".meta__item").Contents().Text()
 	p := strings.Split(posted, "\n")
 	//fmt.Println(p[3])
-	return(p[3])
+	return (p[3])
 
 }
 
 func rated(doc *goquery.Document) {
 
 	rated := doc.Find(".meta__row").Contents().Text()
-//	fmt.Println(rated)
 
 	r := strings.Split(rated, "\n")
 	fmt.Println(r[3])
-//	rx := strings.Split(r[3], ",")
-	
+
 	/*
-	for _, x := range rx{
-		append(ls,x)
-	}
+	   rx := strings.Split(r[3], ",")
+
+	   	for _, x := range rx{
+	   		append(ls,x)
+	   	}
 	*/
-	
+
 	//println(len(rx))
 	//println(r[0])
 	//println(r[1])
 	//return(p[3])
 }
 
-func title(doc *goquery.Document) {
+func local_title(doc *goquery.Document) {
 	title := doc.Find(".m5").Contents().Text()
 	fmt.Println(strings.Split(title, "\n")[2])
 }
-
 
 func langs(doc *goquery.Document) {
 
@@ -68,11 +67,11 @@ func texts(doc *goquery.Document) {
 func main() {
 
 	url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
-//http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en
-//http://www.ted.com/talks/jill_bolte_taylor_s_powerful_stroke_of_insight/transcript?language=en
-//http://www.ted.com/talks/tony_robbins_asks_why_we_do_what_we_do/transcript?language=en
-//http://www.ted.com/talks/shawn_achor_the_happy_secret_to_better_work/transcript?language=en
-//http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action/transcript?language=en
+	//http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en
+	//http://www.ted.com/talks/jill_bolte_taylor_s_powerful_stroke_of_insight/transcript?language=en
+	//http://www.ted.com/talks/tony_robbins_asks_why_we_do_what_we_do/transcript?language=en
+	//http://www.ted.com/talks/shawn_achor_the_happy_secret_to_better_work/transcript?language=en
+	//http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action/transcript?language=en
 
 	/*
 		var url string
@@ -88,10 +87,10 @@ func main() {
 
 	//	posted(doc)
 	//	rated(doc)
-	//	title(doc)
-		
+	//	local_title(doc)
+
 	//	langs(doc)
 	//	times(doc)
 	//	texts(doc)
-	
+
 }
