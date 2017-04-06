@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/PuerkitoBio/goquery"
 	"strings"
+
+	"github.com/PuerkitoBio/goquery"
 )
 
 func posted(doc *goquery.Document) string {
@@ -45,7 +46,15 @@ func langs(doc *goquery.Document) {
 	// TODO: Need a table for lang codes from
 	// https://www.ted.com/participate/translate/our-languages
 	langs := doc.Find(".talk-transcript__language").Contents().Text()
-	fmt.Println(langs)
+	//	fmt.Println(langs)
+	langs_seperated := strings.Split(langs, "\n")
+
+	for i := 1; i < len(langs_seperated)-1; i++ {
+		fmt.Println(i, ":", langs_seperated[i])
+		//println("~~~~~~")
+
+	}
+
 }
 
 func times(doc *goquery.Document) {
@@ -66,12 +75,11 @@ func texts(doc *goquery.Document) {
 
 func main() {
 
-	url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
-	//http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en
-	//http://www.ted.com/talks/jill_bolte_taylor_s_powerful_stroke_of_insight/transcript?language=en
-	//http://www.ted.com/talks/tony_robbins_asks_why_we_do_what_we_do/transcript?language=en
-	//http://www.ted.com/talks/shawn_achor_the_happy_secret_to_better_work/transcript?language=en
-	//http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action/transcript?language=en
+	//url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
+	//url := "https://www.ted.com/talks/jill_bolte_taylor_s_powerful_stroke_of_insight/transcript?language=en"
+	url := "https://www.ted.com/talks/tony_robbins_asks_why_we_do_what_we_do/transcript?language=en"
+	//url := "https://www.ted.com/talks/shawn_achor_the_happy_secret_to_better_work/transcript?language=en"
+	//url := "https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action/transcript?language=en"
 
 	/*
 		var url string
