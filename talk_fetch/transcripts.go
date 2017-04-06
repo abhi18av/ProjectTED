@@ -1,4 +1,4 @@
-package talk_fetch
+package main
 
 import (
 	"fmt"
@@ -89,7 +89,7 @@ func main() {
 	//	rated(doc)
 	//	local_title(doc)
 
-	//	langs(doc)
+	langs(doc)
 	//	times(doc)
 	//	texts(doc)
 

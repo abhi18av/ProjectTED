@@ -1,4 +1,4 @@
-package talk_fetch
+package main
 
 import (
 	"fmt"
@@ -93,7 +93,7 @@ func main() {
 
 	//speaker(doc)
 	//title(doc)
-	//duration(doc)
+	duration(doc)
 	//time_filmed(doc)
 	//talk_views_count(doc)
 	//talk_topics_list(doc)
