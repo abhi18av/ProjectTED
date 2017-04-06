@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/PuerkitoBio/goquery"
 	"strings"
+
+	"github.com/PuerkitoBio/goquery"
 )
 
 func speaker(doc *goquery.Document) {
@@ -76,8 +77,11 @@ func talk_comments_count(doc *goquery.Document) {
 
 func main() {
 
-	//	url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-	url := "http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action"
+	//url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	//url := "https://www.ted.com/talks/jill_bolte_taylor_s_powerful_stroke_of_insight"
+	url := "https://www.ted.com/talks/tony_robbins_asks_why_we_do_what_we_do"
+	//url := "https://www.ted.com/talks/shawn_achor_the_happy_secret_to_better_work"
+	//url := "https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action"
 
 	/*
 		var url string
