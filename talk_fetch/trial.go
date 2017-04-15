@@ -1,13 +1,16 @@
 package main
 
-import "fmt"
-
-var lang_codes = map[string]string{
-
-	"English": "en",
-	"French":  "fr",
-}
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println(lang_codes["French"])
+
+	var ds []int
+
+	for i := 0; i < 10; i++ {
+		ds = append(ds, i)
+	}
+
+	fmt.Println(ds)
 }

@@ -2,9 +2,8 @@ package main
 
 import (
 	"fmt"
-	"strings"
-
 	"github.com/PuerkitoBio/goquery"
+	"strings"
 )
 
 var lang_codes = map[string]string{
@@ -157,20 +156,22 @@ func local_title(doc *goquery.Document) {
 	fmt.Println(strings.Split(title, "\n")[2])
 }
 
-func langs(doc *goquery.Document) {
+// this should return an array of strings => ["langs"]
+func langs(doc *goquery.Document) []string {
 
-	// TODO: Need a table for lang codes from
-	// https://www.ted.com/participate/translate/our-languages
+	var langs_list []string
+
 	langs := doc.Find(".talk-transcript__language").Contents().Text()
+
 	//	fmt.Println(langs)
 	langs_seperated := strings.Split(langs, "\n")
 
 	for i := 1; i < len(langs_seperated)-1; i++ {
 		fmt.Println(i, ":", langs_seperated[i])
-		//println("~~~~~~")
-
+		langs_list = append(langs_list, langs_seperated[i])
 	}
 
+	return langs_list
 }
 
 func times(doc *goquery.Document) {
@@ -193,8 +194,8 @@ func main() {
 
 	//url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
 	//url := "https://www.ted.com/talks/jill_bolte_taylor_s_powerful_stroke_of_insight/transcript?language=en"
-	url := "https://www.ted.com/talks/tony_robbins_asks_why_we_do_what_we_do/transcript?language=en"
-	//url := "https://www.ted.com/talks/shawn_achor_the_happy_secret_to_better_work/transcript?language=en"
+	//url := "https://www.ted.com/talks/tony_robbins_asks_why_we_do_what_we_do/transcript?language=en"
+	url := "https://www.ted.com/talks/shawn_achor_the_happy_secret_to_better_work/transcript?language=en"
 	//url := "https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action/transcript?language=en"
 
 	/*
@@ -213,7 +214,7 @@ func main() {
 	//	rated(doc)
 	//	local_title(doc)
 
-	langs(doc)
+	println(langs(doc))
 	//	times(doc)
 	//	texts(doc)
 
