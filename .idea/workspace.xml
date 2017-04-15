@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c59cb71-a366-49d7-a6c8-5992b6e27589" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/talk_fetch/.vscode/temp.sql" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talk_fetch/transcripts.go" afterPath="$PROJECT_DIR$/talk_fetch/transcripts.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talk_fetch/trial.go" afterPath="$PROJECT_DIR$/talk_fetch/trial.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +30,8 @@
       <file leaf-file-name="transcripts.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/talk_fetch/transcripts.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="205" column="10" lean-forward="true" selection-start-line="205" selection-start-column="10" selection-end-line="205" selection-end-column="10" />
+            <state relative-caret-position="1089">
+              <caret line="212" column="27" lean-forward="true" selection-start-line="212" selection-start-column="27" selection-end-line="212" selection-end-column="27" />
               <folding>
                 <element signature="e#14#76#0" expanded="true" />
               </folding>
@@ -737,7 +735,7 @@
       <workItem from="1491492163799" duration="836000" />
       <workItem from="1491580145229" duration="88000" />
       <workItem from="1492272665777" duration="901000" />
-      <workItem from="1492273861420" duration="1951000" />
+      <workItem from="1492273861420" duration="2028000" />
     </task>
     <task id="LOCAL-00001" summary="renamed the main folder and placed a stub for angularDart">
       <created>1491482576427</created>
@@ -750,7 +748,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7062000" />
+    <option name="totallyTimeSpent" value="7139000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1427,8 +1425,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/talk_fetch/transcripts.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="205" column="10" lean-forward="true" selection-start-line="205" selection-start-column="10" selection-end-line="205" selection-end-column="10" />
+        <state relative-caret-position="1089">
+          <caret line="212" column="27" lean-forward="true" selection-start-line="212" selection-start-column="27" selection-end-line="212" selection-end-column="27" />
           <folding>
             <element signature="e#14#76#0" expanded="true" />
           </folding>
