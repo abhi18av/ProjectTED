@@ -1,11 +1,26 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
+	"os"
 	"strings"
 
+	"github.com/Jeffail/gabs"
 	"github.com/PuerkitoBio/goquery"
 )
+
+type kenJSON struct {
+	TalkTitle  string `json:"talk_title"`
+	TalkLink   string `json:"talk_link"`
+	Transcript struct {
+		En   []string `json:"en"`
+		ZhCn []string `json:"zh-cn"`
+		De   []string `json:"de"`
+		Ru   []string `json:"ru"`
+	} `json:"transcript"`
+}
 
 var langCodes = map[string]string{
 	"Chinese, Simplified": "zh-cn",
@@ -20,6 +35,20 @@ func texts(doc *goquery.Document) {
 
 		fmt.Println(text)
 	}
+}
+
+func (p kenJSON) toString() string {
+	return toJSON(p)
+}
+
+func toJSON(p interface{}) string {
+	bytes, err := json.Marshal(p)
+	if err != nil {
+		fmt.Println(err.Error())
+		os.Exit(1)
+	}
+
+	return string(bytes)
 }
 
 // this should return an array of strings => ["langs"]
@@ -75,4 +104,25 @@ func main() {
 	//texts(doc[1])
 
 	//texts(goquery.NewDocument(newURL))
+
+	raw, _ := ioutil.ReadFile("./al-A_simple_way_to_break_a_bad_habit.json")
+	/*
+		var TED_JSONs []TED_JSON
+		json.Unmarshal(raw, &TED_JSONs)
+
+		for _, p := range TED_JSONs {
+			fmt.Println(p.toString())
+		}
+
+		fmt.Println(toJson(TED_JSONs))
+	*/
+	jsonParsed, _ := gabs.ParseJSON(raw)
+
+	x, _ := jsonParsed.Path("transcript.zh-cn").Children()
+
+	for _, child := range x {
+
+		fmt.Println(child.Data())
+	}
+
 }
