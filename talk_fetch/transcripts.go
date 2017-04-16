@@ -1,15 +1,14 @@
-package main
-
-import (
-	"fmt"
-	"strings"
-
-	"github.com/PuerkitoBio/goquery"
-)
-
-var langCodes = map[string]string{
-	"Afrikaans":             "af",
-	"Albanian":              "sq",
+video - TalkLink
+video - AvailableSubtitles
+video - Speaker
+video - Duration
+video - TimeFilmed
+video - TalkViewsCount
+video - TalkTopicsList
+video - TalkCommentsCount
+transcript - TalkTitle
+trascript - Posted
+Rated	"Albanian":              "sq",
 	"Algerian Arabic":       "arq",
 	"Amharic":               "am",
 	"Arabic":                "ar",

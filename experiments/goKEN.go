@@ -47,20 +47,6 @@ func texts(doc *goquery.Document) {
 		fmt.Println(text)
 	}
 }
-
-func (p kenJSON) toString() string {
-	return toJSON(p)
-}
-
-func toJSON(p interface{}) string {
-	bytes, err := json.Marshal(p)
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	return string(bytes)
-}
-
 // this should return an array of strings => ["langs"]
 func langs(doc *goquery.Document) []string {
 
@@ -124,29 +110,5 @@ for _,x := range availableLangs{
 
 */
 
-
-
-/*
-	raw, _ := ioutil.ReadFile("../resources/al-A_simple_way_to_break_a_bad_habit.json")
-	
-		var TED_JSONs []TED_JSON
-		json.Unmarshal(raw, &TED_JSONs)
-
-		for _, p := range TED_JSONs {
-			fmt.Println(p.toString())
-		}
-
-		fmt.Println(toJson(TED_JSONs))
-	
-	jsonParsed, _ := gabs.ParseJSON(raw)
-
-	x, _ := jsonParsed.Path("transcript.zh-cn").Children()
-
-	for _, child := range x {
-
-		fmt.Println(child.Data())
-	}
-
-*/
 
 }

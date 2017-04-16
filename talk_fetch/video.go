@@ -1,8 +1,10 @@
-package main
-
-import (
-	"fmt"
-	"strings"
+video - TalkLink
+video - AvailableSubtitles
+video - Speaker
+video - Duration
+video -
+    transcript - TalkTitle
+	"strconv"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -13,6 +15,21 @@ var lang_codes = map[string]string{
 	"French":  "fr",
 }
 
+func availableSubtitles(doc *goquery.Document) int64 {
+
+	subtitles := doc.Find(".player-hero__meta__link").Contents().Text()
+	//fmt.Println(subtitles)
+
+	//for _, x := range strings.Split(subtitles, "\n") {
+	//fmt.Println(x)
+	//println("~~~~~~")
+	//}
+
+	y := strings.Split(subtitles, "\n")
+	z := strings.Split(y[3], " ")[0]
+	numOfSubtitles, _ := strconv.ParseInt(z, 10, 32)
+	return numOfSubtitles
+}
 func speaker(doc *goquery.Document) {
 	speaker := doc.Find(".talk-speaker__name").Contents().Text()
 	fmt.Println(speaker)
@@ -106,12 +123,14 @@ func main() {
 
 	//speaker(doc)
 
+	println(availableSubtitles(doc))
+
 	/*
 		// This is now taken from the transcripts pag
 		//title(doc)
 	*/
 
-	duration(doc)
+	//duration(doc)
 	//time_filmed(doc)
 	//talk_views_count(doc)
 	//talk_topics_list(doc)
