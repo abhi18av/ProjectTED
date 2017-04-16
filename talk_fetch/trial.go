@@ -14,6 +14,14 @@ var langCodes = map[string]string{
 	"Russian":             "ru",
 }
 
+func texts(doc *goquery.Document) {
+	texts := doc.Find(".talk-transcript__para__text").Contents().Text()
+	for _, text := range strings.Split(texts, "  ") {
+
+		fmt.Println(text)
+	}
+}
+
 // this should return an array of strings => ["langs"]
 func langs(doc *goquery.Document) []string {
 
@@ -21,7 +29,7 @@ func langs(doc *goquery.Document) []string {
 
 	langs := doc.Find(".talk-transcript__language").Contents().Text()
 
-	//	fmt.Println(langs)
+	//fmt.Println(langs)
 	langsSeparated := strings.Split(langs, "\n")
 
 	for i := 1; i < len(langsSeparated)-1; i++ {
@@ -34,15 +42,31 @@ func langs(doc *goquery.Document) []string {
 
 func main() {
 
-	//url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
-	url := "https://www.ted.com/talks/jill_bolte_taylor_s_powerful_stroke_of_insight/transcript?language=en"
-	//url := "https://www.ted.com/talks/tony_robbins_asks_why_we_do_what_we_do/transcript?language=en"
-	//url := "https://www.ted.com/talks/shawn_achor_the_happy_secret_to_better_work/transcript?language=en"
-	//url := "https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action/transcript?language=en"
-
+	url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
 	doc, err := goquery.NewDocument(url)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(len(langs(doc)))
+
+	//fmt.Println(langs(doc)[1])
+
+	var availableLangs []string
+
+	for _, code := range langs(doc) {
+
+		if langCodes[code] == "" {
+			//fmt.Println(code, " : Not available")
+		} else {
+			fmt.Println(langCodes[code])
+			availableLangs = append(availableLangs, langCodes[code])
+		}
+	}
+
+	fmt.Println(availableLangs)
+	newURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=" + availableLangs[0]
+	doc2, _ := goquery.NewDocument(newURL)
+
+	texts(doc2)
+
+	//texts(goquery.NewDocument(newURL))
 }
