@@ -6,10 +6,10 @@ video - TimeFilmed
 video - TalkViewsCount
 video - TalkTopicsList
 video - TalkCommentsCount
-transcript - TalkTitle
 trascript - Posted
 transcript - Rated
 transcript - LocalTime
 transcript - TimeStamps
-transcript - Paragraphs { LangCode: Para, }
 transcript - AvailableLanguages
+transcript - TalkTitle - LocalLang
+transcript - Paragraphs { LangCode: Para, }
