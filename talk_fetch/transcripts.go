@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/PuerkitoBio/goquery"
 	"strings"
+
+	"github.com/PuerkitoBio/goquery"
 )
 
 var langCodes = map[string]string{
@@ -211,6 +212,8 @@ func main() {
 
 	//	posted(doc)
 	//	rated(doc)
+
+	// Use this for the main title in English
 	//	local_title(doc)
 
 	println(len(langs(doc)))

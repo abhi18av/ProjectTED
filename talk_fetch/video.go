@@ -18,10 +18,13 @@ func speaker(doc *goquery.Document) {
 	fmt.Println(speaker)
 }
 
+/*
+// This is now taken from the transcripts page
 func title(doc *goquery.Document) {
 	title := doc.Find(".player-hero__title__content").Contents().Text()
 	fmt.Println(title)
 }
+*/
 
 func duration(doc *goquery.Document) {
 
@@ -102,7 +105,12 @@ func main() {
 	}
 
 	//speaker(doc)
-	//title(doc)
+
+	/*
+		// This is now taken from the transcripts pag
+		//title(doc)
+	*/
+
 	duration(doc)
 	//time_filmed(doc)
 	//talk_views_count(doc)
