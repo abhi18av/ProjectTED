@@ -7,7 +7,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-var lang_codes = map[string]string{
+var langCodes = map[string]string{
 	"Afrikaans":             "af",
 	"Albanian":              "sq",
 	"Algerian Arabic":       "arq",
@@ -175,19 +175,19 @@ func texts(doc *goquery.Document) {
 // this should return an array of strings => ["langs"]
 func langs(doc *goquery.Document) []string {
 
-	var langs_list []string
+	var langsList []string
 
 	langs := doc.Find(".talk-transcript__language").Contents().Text()
 
 	//	fmt.Println(langs)
-	langs_seperated := strings.Split(langs, "\n")
+	langsSeparated := strings.Split(langs, "\n")
 
-	for i := 1; i < len(langs_seperated)-1; i++ {
-		//fmt.Println(i, ":", langs_seperated[i])
-		langs_list = append(langs_list, langs_seperated[i])
+	for i := 1; i < len(langsSeparated)-1; i++ {
+		//fmt.Println(i, ":", langsSeparated[i])
+		langsList = append(langsList, langsSeparated[i])
 	}
 
-	return langs_list
+	return langsList
 }
 
 func main() {
