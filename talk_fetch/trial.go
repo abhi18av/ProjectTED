@@ -42,31 +42,37 @@ func langs(doc *goquery.Document) []string {
 
 func main() {
 
+	var doc []*goquery.Document
+
 	url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
-	doc, err := goquery.NewDocument(url)
-	if err != nil {
-		panic(err)
-	}
+
+	page, _ := goquery.NewDocument(url)
+	doc = append(doc, page)
+
+	fmt.Println(doc[0])
 
 	//fmt.Println(langs(doc)[1])
 
-	var availableLangs []string
+	/*
+			var availableLangs []string
 
-	for _, code := range langs(doc) {
+			for _, code := range langs(doc[0]) {
 
-		if langCodes[code] == "" {
-			//fmt.Println(code, " : Not available")
-		} else {
-			fmt.Println(langCodes[code])
-			availableLangs = append(availableLangs, langCodes[code])
-		}
-	}
+				if langCodes[code] == "" {
+					//fmt.Println(code, " : Not available")
+				} else {
+					fmt.Println(langCodes[code])
+					availableLangs = append(availableLangs, langCodes[code])
+				}
+			}
 
-	fmt.Println(availableLangs)
-	newURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=" + availableLangs[0]
-	doc2, _ := goquery.NewDocument(newURL)
+		fmt.Println(availableLangs)
+	*/
 
-	texts(doc2)
+	//newURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=" + availableLangs[0]
+	//doc[1], _ = goquery.NewDocument(newURL)
+
+	//texts(doc[1])
 
 	//texts(goquery.NewDocument(newURL))
 }
