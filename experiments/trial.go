@@ -40,10 +40,11 @@ func main() {
 
 kenJsonObj := gabs.New()
 kenJsonObj.Set(url, "TalkLink")
-kenJsonObj.Set(title(page), "TalkTitle")
+kenJsonObj.Set(url, "Talk", "TalkLink")
+kenJsonObj.Set(title(page),"TalkTitle")
 fmt.Println(kenJsonObj.String())
 
 //fmt.Println(title(page))
-ioutil.WriteFile("./output.json", []byte(kenJsonObj.String()), 0777)
+ioutil.WriteFile("./output.json", []byte(kenJsonObj.StringIndent(" ", "  ")), 0777)
 
 }
