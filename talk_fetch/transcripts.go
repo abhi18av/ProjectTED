@@ -2,9 +2,8 @@ package main
 
 import (
 	"fmt"
-	"strings"
-
 	"github.com/PuerkitoBio/goquery"
+	"strings"
 )
 
 var langCodes = map[string]string{
