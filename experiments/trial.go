@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 	"github.com/PuerkitoBio/goquery"
-	//"github.com/Jeffail/gabs"
 	"io/ioutil"
 	//"os"
+	"github.com/Jeffail/gabs"
 )
 
 
@@ -27,15 +27,23 @@ func title(doc *goquery.Document) string {
 }
 
 func main() {
-	
+	// Need a check for internet connection 
+
 	url := "https://www.ted.com/talks/ari_wallach_3_ways_to_plan_for_the_very_long_term/transcript?language=en"
 
 
 	page, _ := goquery.NewDocument(url)
 
 
-fmt.Println(title(page))
+//info := kenJSON{ TalkLink: url, TalkTitle: title(page)}
+//fmt.Println(info)
 
-ioutil.WriteFile("./output.json", []byte(title(page)), 0777)
+kenJsonObj := gabs.New()
+kenJsonObj.Set(url, "TalkLink")
+kenJsonObj.Set(title(page), "TalkTitle")
+fmt.Println(kenJsonObj.String())
+
+//fmt.Println(title(page))
+ioutil.WriteFile("./output.json", []byte(kenJsonObj.String()), 0777)
 
 }
