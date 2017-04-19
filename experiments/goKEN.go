@@ -220,7 +220,6 @@ func langs(doc *goquery.Document) []string {
 
 func main() {
 
-	//var doc []*goquery.Document
 
 	
 	video_url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
@@ -289,7 +288,6 @@ transcripts_page, _ := goquery.NewDocument(transcripts_url)
 
 kenJsonObj.Set(localTitle(transcripts_page),"TranscriptPage","TalkTitle")
 //localTitle(page)
-
 
 // This function needs work
 kenJsonObj.Set(times(transcripts_page),"TranscriptPage","TimeStamps")
