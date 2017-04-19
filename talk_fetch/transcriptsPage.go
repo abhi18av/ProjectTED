@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+
 	"github.com/PuerkitoBio/goquery"
 )
 
@@ -213,9 +214,9 @@ func main() {
 	//	rated(doc)
 
 	// Use this for the main title in English
-	//	local_title(doc)
+	localTitle(doc)
 
-	println(len(langs(doc)))
+	//println(len(langs(doc)))
 	//	times(doc)
 	//	texts(doc)
 

@@ -160,6 +160,73 @@ func talk_comments_count(doc *goquery.Document) string{
 	return strings.TrimLeft(d[0],"\n")
 }
 
+
+
+
+// TranscriptsPage
+
+func posted(doc *goquery.Document) string {
+	posted := doc.Find(".meta__item").Contents().Text()
+	p := strings.Split(posted, "\n")
+	//fmt.Println(p[3])
+	return (p[3])
+
+}
+
+func rated(doc *goquery.Document) string{
+
+	rated := doc.Find(".meta__row").Contents().Text()
+
+	r := strings.Split(rated, "\n")
+	//fmt.Println(r[3])
+	return r[3]
+	/*
+	   rx := strings.Split(r[3], ",")
+
+	   	for _, x := range rx{
+	   		append(ls,x)
+	   	}
+	*/
+
+	//println(len(rx))
+	//println(r[0])
+	//println(r[1])
+	//return(p[3])
+}
+
+func localTitle(doc *goquery.Document) string {
+	title := doc.Find(".m5").Contents().Text()
+	//fmt.Println(strings.Split(title, "\n")[2])
+	return strings.Split(title, "\n")[2]
+}
+func times(doc *goquery.Document) []string{
+	times := doc.Find(".talk-transcript__para__time").Contents().Text()
+	var timestamps []string
+
+	for _, time := range strings.Split(times, " ") {
+		if time == ""{
+
+		}else {
+	
+		fmt.Println(time)
+		timestamps = append(timestamps, strings.TrimRight(time, "\n"))
+		
+		}
+	}
+	return timestamps
+}
+
+func talk_texts(doc *goquery.Document) []string {
+	texts := doc.Find(".talk-transcript__para__text").Contents().Text()
+	var para []string
+	for _, text := range strings.Split(texts, "  ") {
+
+		//fmt.Println(text)
+		para = append(para, text)
+	}
+	return para
+}
+
 // this should return an array of strings => ["langs"]
 func langs(doc *goquery.Document) []string {
 
@@ -167,7 +234,7 @@ func langs(doc *goquery.Document) []string {
 
 	langs := doc.Find(".talk-transcript__language").Contents().Text()
 
-	//fmt.Println(langs)
+	//	fmt.Println(langs)
 	langsSeparated := strings.Split(langs, "\n")
 
 	for i := 1; i < len(langsSeparated)-1; i++ {
@@ -178,13 +245,19 @@ func langs(doc *goquery.Document) []string {
 	return langsList
 }
 
+
+
+
+
+
 func main() {
 
 	var doc []*goquery.Document
 
-	//url := "https://www.ted.com/talks/ari_wallach_3_ways_to_plan_for_the_very_long_term/transcript?language=en"
-	url := "https://www.ted.com/talks/ari_wallach_3_ways_to_plan_for_the_very_long_term"
+	
+	//video_url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
 
+	url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
 
 	page, _ := goquery.NewDocument(url)
 	doc = append(doc, page)
@@ -219,26 +292,47 @@ for _,x := range availableLangs{
 
 */
 
+
+
+
 kenJsonObj := gabs.New()
 
 // Video page
-kenJsonObj.Set(url,"VideoPage", "TalkLink")
+//kenJsonObj.Set(url,"VideoPage", "TalkLink")
 
+//Needs fine tuning
 //kenJsonObj.Set(availableSubtitles(page),"VideoPage", "AvailableSubtitlesCount")
 
-kenJsonObj.Set(speaker(page),"VideoPage", "Speaker")
-kenJsonObj.Set(duration(page),"VideoPage", "Duration")
-kenJsonObj.Set(time_filmed(page),"VideoPage", "TimeFilmed")
-kenJsonObj.Set(talk_views_count(page),"VideoPage", "TalkViewsCount")
-kenJsonObj.Set(talk_topics_list(page),"VideoPage", "TalkTopicsList")
-kenJsonObj.Set(talk_comments_count(page),"VideoPage", "TalkCommentsCount")
+//kenJsonObj.Set(speaker(page),"VideoPage", "Speaker")
+//kenJsonObj.Set(duration(page),"VideoPage", "Duration")
+//kenJsonObj.Set(time_filmed(page),"VideoPage", "TimeFilmed")
+//kenJsonObj.Set(talk_views_count(page),"VideoPage", "TalkViewsCount")
+//kenJsonObj.Set(talk_topics_list(page),"VideoPage", "TalkTopicsList")
+//kenJsonObj.Set(talk_comments_count(page),"VideoPage", "TalkCommentsCount")
 
 
 // Transcript page
-//kenJsonObj.Set(title(page),"TranscriptPage","TalkTitle")
+kenJsonObj.Set(localTitle(page),"TranscriptPage","TalkTitle")
+//localTitle(page)
+
+
+// This function needs work
+//kenJsonObj.Set(times(page),"TranscriptPage","TimeStamps")
+//times(page)
+
+
+
+// needs work
+//kenJsonObj.Set(talk_texts(page),"TranscriptPage","TalkTranscript")
+//talk_texts(page)
+
+
+kenJsonObj.Set(langs(page),"TranscriptPage","AvailableTranscripts")
+//langs(page)
+
+
 
 fmt.Println(kenJsonObj.StringIndent(" ", "  "))
-
 
 
 //fmt.Println(title(page))
