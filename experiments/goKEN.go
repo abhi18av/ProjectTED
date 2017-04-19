@@ -242,6 +242,6 @@ fmt.Println(kenJsonObj.StringIndent(" ", "  "))
 
 
 //fmt.Println(title(page))
-ioutil.WriteFile("./goKEN.json", []byte(kenJsonObj.StringIndent(" ", "  ")), 0777)
+ioutil.WriteFile("./experiments/goKEN.json", []byte(kenJsonObj.StringIndent(" ", "  ")), 0777)
 
 }
