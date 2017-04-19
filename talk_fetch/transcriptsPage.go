@@ -228,7 +228,7 @@ func main() {
 	//	rated(doc)
 
 	// Use this for the main title in English
-	localTitle(doc)
+	LocalTitle(doc)
 
 	//println(len(langs(doc)))
 	//	times(doc)

@@ -1,13 +1,10 @@
 package main
 
 import (
-	//"encoding/json"
 	"fmt"
 	"strings"
-	//"github.com/huandu/xstrings""
 	"github.com/PuerkitoBio/goquery"
 	"io/ioutil"
-	//"os"
 	"strconv"
 	"github.com/Jeffail/gabs"
 )
@@ -19,35 +16,6 @@ var langCodes = map[string]string{
 	"Russian":             "ru",
 }
 
-type kenJSON struct {
-	// The link to the main video
-	TalkLink string `json:"talk_link"`
-
-	AvailableSubtitlesCount string
-
-	Speaker string
-
-	Duration string
-
-	TimeFilmed string
-
-	TalkViewsCount string
-
-	TalkTopicsList string
-
-	TalkCommentsCount string
-
-
-/*
-	// The main container for the Transcript text
-	Transcript struct {
-		En   []string `json:"en"`
-		ZhCn []string `json:"zh-cn"`
-		De   []string `json:"de"`
-		Ru   []string `json:"ru"`
-	} `json:"transcript"`
-*/
-}
 
 // From the main page or the English language transcript
 func title(doc *goquery.Document) string {
@@ -69,7 +37,7 @@ func texts(doc *goquery.Document) []string{
 
 
 
-func availableSubtitles(doc *goquery.Document) int64 {
+func availableSubtitlesCount(doc *goquery.Document) int64 {
 
 	subtitles := doc.Find(".player-hero__meta__link").Contents().Text()
 	//fmt.Println(subtitles)
@@ -255,9 +223,9 @@ func main() {
 	var doc []*goquery.Document
 
 	
-	//video_url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
 
-	url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
+	//url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
 
 	page, _ := goquery.NewDocument(url)
 	doc = append(doc, page)
@@ -301,7 +269,7 @@ kenJsonObj := gabs.New()
 //kenJsonObj.Set(url,"VideoPage", "TalkLink")
 
 //Needs fine tuning
-//kenJsonObj.Set(availableSubtitles(page),"VideoPage", "AvailableSubtitlesCount")
+kenJsonObj.Set(availableSubtitlesCount(page),"VideoPage", "AvailableSubtitlesCount")
 
 //kenJsonObj.Set(speaker(page),"VideoPage", "Speaker")
 //kenJsonObj.Set(duration(page),"VideoPage", "Duration")
@@ -312,7 +280,7 @@ kenJsonObj := gabs.New()
 
 
 // Transcript page
-kenJsonObj.Set(localTitle(page),"TranscriptPage","TalkTitle")
+//kenJsonObj.Set(localTitle(page),"TranscriptPage","TalkTitle")
 //localTitle(page)
 
 
@@ -327,7 +295,7 @@ kenJsonObj.Set(localTitle(page),"TranscriptPage","TalkTitle")
 //talk_texts(page)
 
 
-kenJsonObj.Set(langs(page),"TranscriptPage","AvailableTranscripts")
+//kenJsonObj.Set(langs(page),"TranscriptPage","AvailableTranscripts")
 //langs(page)
 
 
