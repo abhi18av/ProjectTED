@@ -73,7 +73,7 @@ func duration(doc *goquery.Document) string {
 	//}
 
 	x := strings.Split(duration, "\n")
-	fmt.Println(x[6])
+	//fmt.Println(x[6])
 	return x[6]
 
 }
@@ -220,15 +220,18 @@ func langs(doc *goquery.Document) []string {
 
 func main() {
 
-	var doc []*goquery.Document
+	//var doc []*goquery.Document
 
 	
-	url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	video_url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
 
-	//url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
+	transcripts_url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
 
-	page, _ := goquery.NewDocument(url)
-	doc = append(doc, page)
+	video_page, _ := goquery.NewDocument(video_url)
+	
+	
+	
+	//doc = append(doc, page)
 
 
 	//fmt.Println(doc[0])
@@ -266,38 +269,39 @@ for _,x := range availableLangs{
 kenJsonObj := gabs.New()
 
 // Video page
-//kenJsonObj.Set(url,"VideoPage", "TalkLink")
+kenJsonObj.Set(video_url,"VideoPage", "TalkLink")
+kenJsonObj.Set(availableSubtitlesCount(video_page),"VideoPage", "AvailableSubtitlesCount")
+kenJsonObj.Set(speaker(video_page),"VideoPage", "Speaker")
+kenJsonObj.Set(duration(video_page),"VideoPage", "Duration")
+kenJsonObj.Set(time_filmed(video_page),"VideoPage", "TimeFilmed")
+kenJsonObj.Set(talk_views_count(video_page),"VideoPage", "TalkViewsCount")
+kenJsonObj.Set(talk_topics_list(video_page),"VideoPage", "TalkTopicsList")
+kenJsonObj.Set(talk_comments_count(video_page),"VideoPage", "TalkCommentsCount")
 
-//Needs fine tuning
-kenJsonObj.Set(availableSubtitlesCount(page),"VideoPage", "AvailableSubtitlesCount")
-
-//kenJsonObj.Set(speaker(page),"VideoPage", "Speaker")
-//kenJsonObj.Set(duration(page),"VideoPage", "Duration")
-//kenJsonObj.Set(time_filmed(page),"VideoPage", "TimeFilmed")
-//kenJsonObj.Set(talk_views_count(page),"VideoPage", "TalkViewsCount")
-//kenJsonObj.Set(talk_topics_list(page),"VideoPage", "TalkTopicsList")
-//kenJsonObj.Set(talk_comments_count(page),"VideoPage", "TalkCommentsCount")
 
 
 // Transcript page
-//kenJsonObj.Set(localTitle(page),"TranscriptPage","TalkTitle")
+if availableSubtitlesCount(video_page) != 0{
+
+
+
+transcripts_page, _ := goquery.NewDocument(transcripts_url)
+
+kenJsonObj.Set(localTitle(transcripts_page),"TranscriptPage","TalkTitle")
 //localTitle(page)
 
 
 // This function needs work
-//kenJsonObj.Set(times(page),"TranscriptPage","TimeStamps")
+kenJsonObj.Set(times(transcripts_page),"TranscriptPage","TimeStamps")
 //times(page)
 
-
-
 // needs work
-//kenJsonObj.Set(talk_texts(page),"TranscriptPage","TalkTranscript")
+kenJsonObj.Set(talk_texts(transcripts_page),"TranscriptPage","TalkTranscript")
 //talk_texts(page)
 
-
-//kenJsonObj.Set(langs(page),"TranscriptPage","AvailableTranscripts")
+kenJsonObj.Set(langs(transcripts_page),"TranscriptPage","AvailableTranscripts")
 //langs(page)
-
+}
 
 
 fmt.Println(kenJsonObj.StringIndent(" ", "  "))
