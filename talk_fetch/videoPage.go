@@ -8,13 +8,13 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-var lang_codes = map[string]string{
+var langCodes = map[string]string{
 
 	"English": "en",
 	"French":  "fr",
 }
 
-func availableSubtitles(doc *goquery.Document) int64 {
+func AvailableSubtitles(doc *goquery.Document) int64 {
 
 	subtitles := doc.Find(".player-hero__meta__link").Contents().Text()
 	//fmt.Println(subtitles)
@@ -29,9 +29,12 @@ func availableSubtitles(doc *goquery.Document) int64 {
 	numOfSubtitles, _ := strconv.ParseInt(z, 10, 32)
 	return numOfSubtitles
 }
-func speaker(doc *goquery.Document) {
+
+func Speaker(doc *goquery.Document) string {
 	speaker := doc.Find(".talk-speaker__name").Contents().Text()
-	fmt.Println(speaker)
+	//fmt.Println(speaker)
+	speaker = strings.Trim(speaker, "\n")
+	return speaker
 }
 
 /*
@@ -42,7 +45,7 @@ func title(doc *goquery.Document) {
 }
 */
 
-func duration(doc *goquery.Document) {
+func Duration(doc *goquery.Document) string {
 
 	duration := doc.Find(".player-hero__meta").Contents().Text()
 	//fmt.Println(duration)
@@ -54,50 +57,58 @@ func duration(doc *goquery.Document) {
 
 	x := strings.Split(duration, "\n")
 	fmt.Println(x[6])
+	return x[6]
 
 }
 
-func time_filmed(doc *goquery.Document) {
+// TimeFilmed : Time at which the talk was filmed
+func TimeFilmed(doc *goquery.Document) string {
 
 	time_filmed := doc.Find(".player-hero__meta").Contents().Text()
 
 	//	fmt.Println(time_filmed)
 
 	y := strings.Split(time_filmed, "\n")
-	fmt.Println(y[11])
-
+	//fmt.Println(y[11])
+	return y[11]
 }
 
-func talk_views_count(doc *goquery.Document) {
+func TalkViewsCount(doc *goquery.Document) string {
 
 	talk_views_count := doc.Find("#sharing-count").Contents().Text()
 	//	fmt.Println(talk_views_count)
 
 	a := strings.Split(talk_views_count, "\n")
 	b := strings.TrimSpace(a[2])
-	fmt.Println(b)
+	//fmt.Println(b)
+	return b
 
 }
 
-func talk_topics_list(doc *goquery.Document) {
+func TalkTopicsList(doc *goquery.Document) []string {
 
 	talk_topics := doc.Find(".talk-topics__list").Contents().Text()
 
 	c := strings.Split(talk_topics, "\n")
-
+	var topics []string
 	for i := 3; i < len(c); i++ {
-		fmt.Println(c[i])
-	}
+		//fmt.Println(c[i])
+		if c[i] == "" {
 
+		} else {
+			topics = append(topics, c[i])
+		}
+	}
+	return topics
 }
 
-func talk_comments_count(doc *goquery.Document) {
+func TalkCommentsCount(doc *goquery.Document) string {
 
 	talk_comments_count := doc.Find(".h11").Contents().Text()
 	//fmt.Println(talk_comments_count)
 	d := strings.Split(talk_comments_count, " ")
-	fmt.Println(d[0])
-
+	//fmt.Println(d[0])
+	return strings.TrimLeft(d[0], "\n")
 }
 
 func main() {

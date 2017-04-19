@@ -123,7 +123,7 @@ var langCodes = map[string]string{
 	"Vietnamese":            "vi",
 }
 
-func posted(doc *goquery.Document) string {
+func Posted(doc *goquery.Document) string {
 	posted := doc.Find(".meta__item").Contents().Text()
 	p := strings.Split(posted, "\n")
 	//fmt.Println(p[3])
@@ -131,13 +131,13 @@ func posted(doc *goquery.Document) string {
 
 }
 
-func rated(doc *goquery.Document) {
+func Rated(doc *goquery.Document) string {
 
 	rated := doc.Find(".meta__row").Contents().Text()
 
 	r := strings.Split(rated, "\n")
-	fmt.Println(r[3])
-
+	//fmt.Println(r[3])
+	return r[3]
 	/*
 	   rx := strings.Split(r[3], ",")
 
@@ -152,28 +152,42 @@ func rated(doc *goquery.Document) {
 	//return(p[3])
 }
 
-func localTitle(doc *goquery.Document) {
+func LocalTitle(doc *goquery.Document) string {
 	title := doc.Find(".m5").Contents().Text()
-	fmt.Println(strings.Split(title, "\n")[2])
+	//fmt.Println(strings.Split(title, "\n")[2])
+	return strings.Split(title, "\n")[2]
 }
-func times(doc *goquery.Document) {
+
+func Times(doc *goquery.Document) []string {
 	times := doc.Find(".talk-transcript__para__time").Contents().Text()
-	for _, time := range strings.Split(times, " ") {
+	var timestamps []string
 
-		fmt.Println(time)
+	for _, time := range strings.Split(times, " ") {
+		if time == "" {
+
+		} else {
+
+			fmt.Println(time)
+			timestamps = append(timestamps, strings.TrimRight(time, "\n"))
+
+		}
 	}
+	return timestamps
 }
 
-func texts(doc *goquery.Document) {
+func TalkTexts(doc *goquery.Document) []string {
 	texts := doc.Find(".talk-transcript__para__text").Contents().Text()
+	var para []string
 	for _, text := range strings.Split(texts, "  ") {
 
-		fmt.Println(text)
+		//fmt.Println(text)
+		para = append(para, text)
 	}
+	return para
 }
 
 // this should return an array of strings => ["langs"]
-func langs(doc *goquery.Document) []string {
+func AvailableTranscripts(doc *goquery.Document) []string {
 
 	var langsList []string
 
