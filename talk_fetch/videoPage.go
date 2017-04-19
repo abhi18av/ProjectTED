@@ -1,10 +1,9 @@
-video - TalkLink
-video - AvailableSubtitles
-video - Speaker
-video - Duration
-video -
-    transcript - TalkTitle
+package main
+
+import (
+	"fmt"
 	"strconv"
+	"strings"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -123,14 +122,14 @@ func main() {
 
 	//speaker(doc)
 
-	println(availableSubtitles(doc))
+	//println(availableSubtitles(doc))
 
 	/*
 		// This is now taken from the transcripts pag
 		//title(doc)
 	*/
 
-	//duration(doc)
+	duration(doc)
 	//time_filmed(doc)
 	//talk_views_count(doc)
 	//talk_topics_list(doc)

@@ -1,12 +1,14 @@
 package main
 
 import (
-	"encoding/json"
+	//"encoding/json"
 	"fmt"
 	"strings"
+	//"github.com/huandu/xstrings""
 	"github.com/PuerkitoBio/goquery"
 	"io/ioutil"
-	"os"
+	//"os"
+	"strconv"
 	"github.com/Jeffail/gabs"
 )
 
@@ -48,18 +50,116 @@ type kenJSON struct {
 }
 
 // From the main page or the English language transcript
-func title(doc *goquery.Document) {
+func title(doc *goquery.Document) string {
 	title := doc.Find(".player-hero__title__content").Contents().Text()
-	fmt.Println(title)
+	//fmt.Println(title)
+	return title
 }
 
-func texts(doc *goquery.Document) {
+func texts(doc *goquery.Document) []string{
 	texts := doc.Find(".talk-transcript__para__text").Contents().Text()
+	var paragraphs []string
 	for _, text := range strings.Split(texts, "  ") {
 
-		fmt.Println(text)
+		//fmt.Println(text)
+		paragraphs = append(paragraphs, text)
 	}
+	return paragraphs
 }
+
+
+
+func availableSubtitles(doc *goquery.Document) int64 {
+
+	subtitles := doc.Find(".player-hero__meta__link").Contents().Text()
+	//fmt.Println(subtitles)
+
+	//for _, x := range strings.Split(subtitles, "\n") {
+	//fmt.Println(x)
+	//println("~~~~~~")
+	//}
+
+	y := strings.Split(subtitles, "\n")
+	z := strings.Split(y[3], " ")[0]
+	numOfSubtitles, _ := strconv.ParseInt(z, 10, 32)
+	return numOfSubtitles
+}
+
+func speaker(doc *goquery.Document) string{
+	speaker := doc.Find(".talk-speaker__name").Contents().Text()
+	//fmt.Println(speaker)
+	speaker = strings.Trim(speaker, "\n")
+	return speaker
+}
+
+
+
+func duration(doc *goquery.Document) string {
+
+	duration := doc.Find(".player-hero__meta").Contents().Text()
+	//fmt.Println(duration)
+
+	//for _, x := range strings.Split(duration, "\n") {
+	//	fmt.Println(x)
+	//	println("~~~~~~")
+	//}
+
+	x := strings.Split(duration, "\n")
+	fmt.Println(x[6])
+	return x[6]
+
+}
+
+func time_filmed(doc *goquery.Document) string{
+
+	time_filmed := doc.Find(".player-hero__meta").Contents().Text()
+
+	//	fmt.Println(time_filmed)
+
+	y := strings.Split(time_filmed, "\n")
+	//fmt.Println(y[11])
+	return y[11]
+}
+
+func talk_views_count(doc *goquery.Document) string{
+
+	talk_views_count := doc.Find("#sharing-count").Contents().Text()
+	//	fmt.Println(talk_views_count)
+
+	a := strings.Split(talk_views_count, "\n")
+	b := strings.TrimSpace(a[2])
+	//fmt.Println(b)
+	return b
+
+}
+
+func talk_topics_list(doc *goquery.Document) []string{
+
+	talk_topics := doc.Find(".talk-topics__list").Contents().Text()
+
+	c := strings.Split(talk_topics, "\n")
+	var topics []string
+	for i := 3; i < len(c); i++ {
+		//fmt.Println(c[i])
+		if c[i] ==""{
+
+		}else
+		{
+		topics = append(topics, c[i])
+	}
+	}
+	return topics 
+}
+
+func talk_comments_count(doc *goquery.Document) string{
+
+	talk_comments_count := doc.Find(".h11").Contents().Text()
+	//fmt.Println(talk_comments_count)
+	d := strings.Split(talk_comments_count, " ")
+	//fmt.Println(d[0])
+	return strings.TrimLeft(d[0],"\n")
+}
+
 // this should return an array of strings => ["langs"]
 func langs(doc *goquery.Document) []string {
 
@@ -82,16 +182,12 @@ func main() {
 
 	var doc []*goquery.Document
 
-	url := "https://www.ted.com/talks/ari_wallach_3_ways_to_plan_for_the_very_long_term/transcript?language=en"
-//	mainURL := "https://www.ted.com/talks/ari_wallach_3_ways_to_plan_for_the_very_long_term"
+	//url := "https://www.ted.com/talks/ari_wallach_3_ways_to_plan_for_the_very_long_term/transcript?language=en"
+	url := "https://www.ted.com/talks/ari_wallach_3_ways_to_plan_for_the_very_long_term"
 
 
 	page, _ := goquery.NewDocument(url)
 	doc = append(doc, page)
-
-if texts(page) == ""{
-	print("Not available yet")
-}
 
 
 	//fmt.Println(doc[0])
@@ -123,14 +219,29 @@ for _,x := range availableLangs{
 
 */
 
-
 kenJsonObj := gabs.New()
-kenJsonObj.Set(url, "TalkLink")
-kenJsonObj.Set(url, "Talk", "TalkLink")
-kenJsonObj.Set(title(page),"TalkTitle")
-fmt.Println(kenJsonObj.String())
+
+// Video page
+kenJsonObj.Set(url,"VideoPage", "TalkLink")
+
+//kenJsonObj.Set(availableSubtitles(page),"VideoPage", "AvailableSubtitlesCount")
+
+kenJsonObj.Set(speaker(page),"VideoPage", "Speaker")
+kenJsonObj.Set(duration(page),"VideoPage", "Duration")
+kenJsonObj.Set(time_filmed(page),"VideoPage", "TimeFilmed")
+kenJsonObj.Set(talk_views_count(page),"VideoPage", "TalkViewsCount")
+kenJsonObj.Set(talk_topics_list(page),"VideoPage", "TalkTopicsList")
+kenJsonObj.Set(talk_comments_count(page),"VideoPage", "TalkCommentsCount")
+
+
+// Transcript page
+//kenJsonObj.Set(title(page),"TranscriptPage","TalkTitle")
+
+fmt.Println(kenJsonObj.StringIndent(" ", "  "))
+
+
 
 //fmt.Println(title(page))
-ioutil.WriteFile("./output.json", []byte(kenJsonObj.StringIndent(" ", "  ")), 0777)
+ioutil.WriteFile("./goKEN.json", []byte(kenJsonObj.StringIndent(" ", "  ")), 0777)
 
 }
