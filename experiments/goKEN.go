@@ -3,12 +3,11 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-//	"io/ioutil"
-//	"os"
 	"strings"
-
-//	"github.com/Jeffail/gabs"
 	"github.com/PuerkitoBio/goquery"
+	"io/ioutil"
+	"os"
+	"github.com/Jeffail/gabs"
 )
 
 var langCodes = map[string]string{
@@ -19,10 +18,24 @@ var langCodes = map[string]string{
 }
 
 type kenJSON struct {
-	// This is the main title from English language
-	TalkTitle string `json:"talk_title"`
 	// The link to the main video
 	TalkLink string `json:"talk_link"`
+
+	AvailableSubtitlesCount string
+
+	Speaker string
+
+	Duration string
+
+	TimeFilmed string
+
+	TalkViewsCount string
+
+	TalkTopicsList string
+
+	TalkCommentsCount string
+
+
 /*
 	// The main container for the Transcript text
 	Transcript struct {
@@ -110,5 +123,14 @@ for _,x := range availableLangs{
 
 */
 
+
+kenJsonObj := gabs.New()
+kenJsonObj.Set(url, "TalkLink")
+kenJsonObj.Set(url, "Talk", "TalkLink")
+kenJsonObj.Set(title(page),"TalkTitle")
+fmt.Println(kenJsonObj.String())
+
+//fmt.Println(title(page))
+ioutil.WriteFile("./output.json", []byte(kenJsonObj.StringIndent(" ", "  ")), 0777)
 
 }

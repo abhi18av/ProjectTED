@@ -1,14 +1,14 @@
-video - TalkLink
-video - AvailableSubtitles
-video - Speaker
-video - Duration
-video - TimeFilmed
-video - TalkViewsCount
-video - TalkTopicsList
-video - TalkCommentsCount
-transcript - TalkTitle
-trascript - Posted
-Rated	"Albanian":              "sq",
+package main
+
+import (
+	"fmt"
+	"strings"
+	"github.com/PuerkitoBio/goquery"
+)
+
+var langCodes = map[string]string{
+	"Afrikaans":             "af",
+	"Albanian":              "sq",
 	"Algerian Arabic":       "arq",
 	"Amharic":               "am",
 	"Arabic":                "ar",
@@ -151,7 +151,7 @@ func rated(doc *goquery.Document) {
 	//return(p[3])
 }
 
-func local_title(doc *goquery.Document) {
+func localTitle(doc *goquery.Document) {
 	title := doc.Find(".m5").Contents().Text()
 	fmt.Println(strings.Split(title, "\n")[2])
 }
