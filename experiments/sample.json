@@ -18,14 +18,22 @@ transcript - Paragraphs { LangCode: Para, }
 
 
 {
+    "Meta": {
+        "DataProcessed": ,
+    },
     "TranscriptPage": {
         "AvailableTranscripts": [],
-        "TalkTitle": ,
-        "TalkTranscript": [],
+        "TalkTranscript": [
+            "LangCode": [
+                "LocalTalkTitle": ,
+                "Paragraphs": []
+            ]
+        ],
         "TimeStamps": []
     },
     "VideoPage": {
         "AvailableSubtitlesCount": ,
+        "TalkTitle",
         "Duration": ,
         "Speaker": ,
         "TalkCommentsCount": ,
