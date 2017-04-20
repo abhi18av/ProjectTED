@@ -15,9 +15,7 @@ func main() {
 	fmt.Println("Please enter the num: ")
 	var x int
 	fmt.Scanf("%d", &x)
-
 	println("\nBeginning the count: ")
-
-	countTill(x)
+	// countTill(x)
 
 }

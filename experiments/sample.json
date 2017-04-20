@@ -13,3 +13,25 @@ transcript - TimeStamps
 transcript - AvailableLanguages
 transcript - TalkTitle - LocalLang
 transcript - Paragraphs { LangCode: Para, }
+
+
+
+
+{
+    "TranscriptPage": {
+        "AvailableTranscripts": [],
+        "TalkTitle": ,
+        "TalkTranscript": [],
+        "TimeStamps": []
+    },
+    "VideoPage": {
+        "AvailableSubtitlesCount": ,
+        "Duration": ,
+        "Speaker": ,
+        "TalkCommentsCount": ,
+        "TalkLink": ,
+        "TalkTopicsList": [],
+        "TalkViewsCount": ,
+        "TimeFilmed":
+    }
+}
