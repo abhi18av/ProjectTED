@@ -19,7 +19,12 @@ transcript - Paragraphs { LangCode: Para, }
 
 {
     "Meta": {
-        "DateProcessed": ,
+        "DateProcessed": {
+            "ItemsUpdated": {
+                "TranscriptPage": [],
+                "VideoPage": []
+            }
+        },
     },
     "TranscriptPage": {
         "AvailableTranscripts": [],
