@@ -1,22 +1,3 @@
-video - TalkLink
-video - AvailableSubtitlesCount
-video - Speaker
-video - Duration
-video - TimeFilmed
-video - TalkViewsCount
-video - TalkTopicsList
-video - TalkCommentsCount
-trascript - Posted
-transcript - Rated
-transcript - LocalTime
-transcript - TimeStamps
-transcript - AvailableLanguages
-transcript - TalkTitle - LocalLang
-transcript - Paragraphs { LangCode: Para, }
-
-
-
-
 {
     "Meta": {
         "DateProcessed": {
@@ -26,6 +7,7 @@ transcript - Paragraphs { LangCode: Para, }
             }
         },
     },
+
     "TranscriptPage": {
         "AvailableTranscripts": [],
         "DatePosted": ,
@@ -39,6 +21,7 @@ transcript - Paragraphs { LangCode: Para, }
         ],
         "TimeStamps": []
     },
+
     "VideoPage": {
         "AvailableSubtitlesCount": ,
         "TalkTitle",
@@ -46,7 +29,7 @@ transcript - Paragraphs { LangCode: Para, }
         "Speaker": ,
         "TalkCommentsCount": ,
         "TalkLink": ,
-        "TalkTopicsList": [],
+        "TalkSimilarTopicsList": [],
         "TalkViewsCount": ,
         "TimeFilmed":
     }
