@@ -1,0 +1,1 @@
+## This will grow into a proper dataScience based exploration for the TedTalks
