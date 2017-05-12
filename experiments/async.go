@@ -16,6 +16,6 @@ func main() {
 	var x int
 	fmt.Scanf("%d", &x)
 	println("\nBeginning the count: ")
-	// countTill(x)
+	defer countTill(x)
 
 }
