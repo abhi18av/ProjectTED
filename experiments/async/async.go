@@ -20,16 +20,8 @@ func main() {
 
 	for _, url := range urls {
 
-		go talk_texts(url, textChannel)
+		go talkTexts(url, textChannel)
 	}
-
-	/*
-		for _, url := range urls {
-
-			go fetch(url, ch)
-		}
-
-	*/
 
 	for range urls {
 		fmt.Println(<-textChannel)
@@ -37,28 +29,7 @@ func main() {
 
 }
 
-/*
-func fetch(url string, ch chan<- string) {
-	resp, err := http.Get(url)
-	if err != nil {
-		println("Error with the fetch")
-	}
-
-	nbytes, err := io.Copy(ioutil.Discard, resp.Body)
-
-	resp.Body.Close()
-	if err != nil {
-		println("Error with IO")
-
-	}
-
-	//	ch <- fmt.Sprintf("%7d    %s", nbytes, url)
-
-	ch <- fmt.Println(resp.Body)
-}
-*/
-
-func talk_texts(url string, textChannel chan<- []string) {
+func talkTexts(url string, textChannel chan<- []string) {
 	page, _ := goquery.NewDocument(url)
 
 	texts := page.Find(".talk-transcript__para__text").Contents().Text()
