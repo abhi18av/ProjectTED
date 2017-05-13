@@ -16,11 +16,11 @@ func main() {
 		"https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=ru",
 	}
 
-	ch := make(chan []string)
+	textChannel := make(chan []string)
 
 	for _, url := range urls {
 
-		go talk_texts(url, ch)
+		go talk_texts(url, textChannel)
 	}
 
 	/*
@@ -32,7 +32,7 @@ func main() {
 	*/
 
 	for range urls {
-		fmt.Println(<-ch)
+		fmt.Println(<-textChannel)
 	}
 
 }
@@ -58,7 +58,7 @@ func fetch(url string, ch chan<- string) {
 }
 */
 
-func talk_texts(url string, ch chan<- []string) {
+func talk_texts(url string, textChannel chan<- []string) {
 	page, _ := goquery.NewDocument(url)
 
 	texts := page.Find(".talk-transcript__para__text").Contents().Text()
@@ -69,5 +69,5 @@ func talk_texts(url string, ch chan<- []string) {
 		para = append(para, text)
 	}
 
-	ch <- para
+	textChannel <- para
 }
