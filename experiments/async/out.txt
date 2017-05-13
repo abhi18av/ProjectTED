@@ -1,4 +1,4 @@
-Received first int: [
+Received second int: [
 Good morning. How are you? (Laughter) It's been great, hasn't it?
 I've been blown away by the whole thing.
 In fact, I'm leaving. (Laughter) There have been three themes
@@ -530,7 +530,7 @@ but they will.
 And our job is to help them
 make something of it. Thank you very much. (Applause)
 ]
-Received first int: [
+Received second int: [
 早上好，还好吗?
 很好吧，对不对?
 我已经飘飘然了!
@@ -974,7 +974,7 @@ Jonas Salk曾说过：“如果所有的昆虫
 但孩子们会。而我们要做的就是帮助
 他们能在未来有所作为。谢谢大家。
 ]
-Received first int: [
+Received second int: [
 Guten Morgen. Wie geht es Ihnen? (Lachen) Es war großartig, nicht wahr?
 Die ganze Sache hier hat mich umgehauen.
 Also ich gehe jetzt. (Lachen) Es gab drei Leitmotive, die sich
@@ -1518,7 +1518,7 @@ Unsere Aufgabe ist es, ihnen
 zu helfen, etwas daraus zu machen. Herzlichen Dank.
 (Applaus)
 ]
-Received first int: [
+Received second int: [
 Доброе утро! Как дела? (Смех) Вам нравится конференция?
 Предыдущие выступления
 поразили меня до глубины души,

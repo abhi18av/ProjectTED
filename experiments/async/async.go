@@ -20,8 +20,8 @@ func main() {
 
 		//		fmt.Println(talkTexts(url))
 
-		fmt.Println("Received first int:", <-funcWithChanResult(url))
-		//fmt.Println("Received second int:", funcWithNonChanResult(url))
+		//fmt.Println( <-funcWithChanResult(url))
+		fmt.Println(funcWithNonChanResult(url))
 	}
 
 	//var texts []string
