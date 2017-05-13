@@ -18,27 +18,10 @@ func main() {
 
 	for _, url := range urls {
 
-		//		fmt.Println(talkTexts(url))
+		fmt.Println(talkTexts(url))
 
-		fmt.Println("Received first int:", <-funcWithChanResult(url))
-		//fmt.Println("Received second int:", funcWithNonChanResult(url))
 	}
 
-	//var texts []string
-
-	//fmt.Println(texts)
-}
-
-func funcWithChanResult(url string) chan []string {
-	chanStr := make(chan []string)
-	go func() {
-		chanStr <- talkTexts(url)
-	}()
-	return chanStr
-}
-
-func funcWithNonChanResult(url string) []string {
-	return <-funcWithChanResult(url)
 }
 
 func talkTexts(url string) []string {
