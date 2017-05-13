@@ -10,8 +10,6 @@ import (
 
 func main() {
 
-	var texts []string
-
 	urls := []string{
 		"https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en",
 		"https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=zh-cn",
@@ -26,12 +24,13 @@ func main() {
 		go talkTexts(url, textChannel)
 	}
 
+	//var texts []string
 	for range urls {
-		texts = append(texts, <-textChannel)
-		//fmt.Println(<-textChannel)
+		//texts = append(texts, <-textChannel)
+		fmt.Println(<-textChannel)
 	}
 
-	fmt.Println(texts)
+	//fmt.Println(texts)
 }
 
 func talkTexts(url string, textChannel chan<- []string) {
@@ -43,7 +42,7 @@ func talkTexts(url string, textChannel chan<- []string) {
 
 		//fmt.Println(text)
 		para = append(para, text)
-	}
 
+	}
 	textChannel <- para
 }
