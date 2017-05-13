@@ -1,0 +1,1 @@
+# This is the test ground for the Ionic app

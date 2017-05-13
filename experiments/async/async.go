@@ -1,13 +1,16 @@
 package main
 
 import (
-	"fmt"
 	"strings"
+
+	"fmt"
 
 	"github.com/PuerkitoBio/goquery"
 )
 
 func main() {
+
+	var texts []string
 
 	urls := []string{
 		"https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en",
@@ -24,9 +27,11 @@ func main() {
 	}
 
 	for range urls {
-		fmt.Println(<-textChannel)
+		texts = append(texts, <-textChannel)
+		//fmt.Println(<-textChannel)
 	}
 
+	fmt.Println(texts)
 }
 
 func talkTexts(url string, textChannel chan<- []string) {

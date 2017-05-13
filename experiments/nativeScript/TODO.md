@@ -1,2 +1,2 @@
-# This will grow into a proper android app.
+# This will grow into a proper NativeScript android app.
 
