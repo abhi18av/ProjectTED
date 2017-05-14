@@ -10,8 +10,8 @@
     "TranscriptPage": {
         "AvailableTranscripts": null,
         "DatePosted": null,
-        "Rated": null,
         "LocalTime": null,
+        "Rated": null,
         "TalkTranscript": {
             "LangCode": {
                 "LocalTalkTitle": null,

@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
@@ -14,7 +13,7 @@ var langCodes = map[string]string{
 	"French":  "fr",
 }
 
-func AvailableSubtitles(doc *goquery.Document) int64 {
+func AvailableSubtitlesCount(doc *goquery.Document) string {
 
 	subtitles := doc.Find(".player-hero__meta__link").Contents().Text()
 	//fmt.Println(subtitles)
@@ -26,7 +25,9 @@ func AvailableSubtitles(doc *goquery.Document) int64 {
 
 	y := strings.Split(subtitles, "\n")
 	z := strings.Split(y[3], " ")[0]
-	numOfSubtitles, _ := strconv.ParseInt(z, 10, 32)
+	// In case I need an INT
+	//numOfSubtitles, _ := strconv.ParseInt(z, 10, 32)
+	numOfSubtitles := z
 	return numOfSubtitles
 }
 
