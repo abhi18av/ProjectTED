@@ -1,5 +1,27 @@
 Meta:
   DateProcessed:
     ItemsUpdated:
-      TranscriptPage
-      VideoPage
+      TranscriptPage:
+      VideoPage:
+
+TranscriptPage:
+  AvailableTranscripts:
+  DatePosted:
+  Rated:
+  LocalTime:
+  TalkTranscript:
+    LangCode:
+      LocalTalkTitle:
+      Paragraphs:
+  TimeStamps:
+
+VideoPage:
+        AvailableSubtitlesCount:
+        TalkTitle:
+        Duration: 
+        Speaker: 
+        TalkCommentsCount: 
+        TalkLink: 
+        TalkTopicsList: 
+        TalkViewsCount: 
+        TimeFilmed:
