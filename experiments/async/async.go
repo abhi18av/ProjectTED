@@ -20,12 +20,12 @@ func main() {
 
 	var wg sync.WaitGroup
 
-	baseURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-
 	var urls []string
+	baseURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	langBaseURL := "/transcript?language="
 
 	for _, value := range langCodes {
-		newURL := baseURL + "/transcript?language=" + value
+		newURL := baseURL + langBaseURL + value
 		//fmt.Println(x)
 		urls = append(urls, newURL)
 	}
