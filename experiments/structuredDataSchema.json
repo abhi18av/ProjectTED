@@ -1,35 +1,34 @@
-
 {
     "Meta": {
         "DateProcessed": {
             "ItemsUpdated": {
-                "TranscriptPage": [],
-                "VideoPage": []
+                "TranscriptPage": null,
+                "VideoPage": null
             }
-        },
+        }
     },
     "TranscriptPage": {
-        "AvailableTranscripts": [],
-        "DatePosted":"" ,
-        "Rated": [],
-        "LocalTime": "" ,
-        "TalkTranscript": [
-            "LangCode": [
-                "LocalTalkTitle": "",
-                "Paragraphs": [],
-            ],
-        ],
-        "TimeStamps": []
+        "AvailableTranscripts": null,
+        "DatePosted": null,
+        "Rated": null,
+        "LocalTime": null,
+        "TalkTranscript": {
+            "LangCode": {
+                "LocalTalkTitle": null,
+                "Paragraphs": null
+            }
+        },
+        "TimeStamps": null
     },
     "VideoPage": {
-        "AvailableSubtitlesCount": ,
-        "TalkTitle",
-        "Duration": ,
-        "Speaker": ,
-        "TalkCommentsCount": ,
-        "TalkLink": ,
-        "TalkTopicsList": [],
-        "TalkViewsCount": ,
-        "TimeFilmed":
+        "AvailableSubtitlesCount": null,
+        "TalkTitle": null,
+        "Duration": null,
+        "Speaker": null,
+        "TalkCommentsCount": null,
+        "TalkLink": null,
+        "TalkTopicsList": null,
+        "TalkViewsCount": null,
+        "TimeFilmed": null
     }
 }
