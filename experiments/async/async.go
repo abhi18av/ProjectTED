@@ -4,10 +4,14 @@ import (
 	"fmt"
 	"strings"
 
+	"sync"
+
 	"github.com/PuerkitoBio/goquery"
 )
 
 func main() {
+
+	var wg sync.WaitGroup
 
 	urls := []string{
 		"https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en",
@@ -16,29 +20,20 @@ func main() {
 		"https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=ru",
 	}
 
+	wg.Add(len(urls))
+
 	for _, url := range urls {
 
-		//		fmt.Println(talkTexts(url))
-
-		//fmt.Println( <-funcWithChanResult(url))
-		fmt.Println(funcWithNonChanResult(url))
+		go func(url string) {
+			fmt.Println(talkTexts(url))
+			defer wg.Done()
+		}(url)
 	}
 
 	//var texts []string
 
 	//fmt.Println(texts)
-}
-
-func funcWithChanResult(url string) chan []string {
-	chanStr := make(chan []string)
-	go func() {
-		chanStr <- talkTexts(url)
-	}()
-	return chanStr
-}
-
-func funcWithNonChanResult(url string) []string {
-	return <-funcWithChanResult(url)
+	wg.Wait()
 }
 
 func talkTexts(url string) []string {
