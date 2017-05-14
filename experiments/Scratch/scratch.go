@@ -17,6 +17,10 @@ func main() {
 			oneToTen(th)
 		}(thread)
 	}
+
+	var input string
+	fmt.Scanln(&input)
+	fmt.Println("done")
 }
 
 func oneToTen(aThread string) {
