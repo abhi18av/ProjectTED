@@ -123,7 +123,7 @@ var langCodes = map[string]string{
 	"Vietnamese":            "vi",
 }
 
-func Posted(doc *goquery.Document) string {
+func DatePosted(doc *goquery.Document) string {
 	posted := doc.Find(".meta__item").Contents().Text()
 	p := strings.Split(posted, "\n")
 	//fmt.Println(p[3])
@@ -158,7 +158,7 @@ func LocalTitle(doc *goquery.Document) string {
 	return strings.Split(title, "\n")[2]
 }
 
-func Times(doc *goquery.Document) []string {
+func TimeStamps(doc *goquery.Document) []string {
 	times := doc.Find(".talk-transcript__para__time").Contents().Text()
 	var timestamps []string
 
@@ -175,7 +175,7 @@ func Times(doc *goquery.Document) []string {
 	return timestamps
 }
 
-func TalkTexts(doc *goquery.Document) []string {
+func TalkTranscript(doc *goquery.Document) []string {
 	texts := doc.Find(".talk-transcript__para__text").Contents().Text()
 	var para []string
 	for _, text := range strings.Split(texts, "  ") {
