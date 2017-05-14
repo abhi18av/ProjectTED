@@ -8,13 +8,27 @@ import (
 	"time"
 )
 
+var langCodes = map[string]string{
+	"Chinese, Simplified": "zh-cn",
+	"English":             "en",
+	"German":              "de",
+	"Russian":             "ru",
+}
+
 func main() {
 	var wg sync.WaitGroup
 
 	var threadNames = [...]string{"T1", "T2", "T3", "T4", "T5"}
 
 	wg.Add(len(threadNames))
+	baseURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language="
 
+	//	var urls []string
+
+	for _, value := range langCodes {
+		x := baseURL + value
+		fmt.Println(x)
+	}
 	// Execute this on 5 diferent threads
 	for _, thread := range threadNames {
 		go func(th string) {

@@ -9,17 +9,27 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
+var langCodes = map[string]string{
+	"Chinese, Simplified": "zh-cn",
+	"English":             "en",
+	"German":              "de",
+	"Russian":             "ru",
+}
+
 func main() {
 
 	var wg sync.WaitGroup
 
-	urls := []string{
-		"https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en",
-		"https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=zh-cn",
-		"https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=de",
-		"https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=ru",
-	}
+	baseURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
 
+	var urls []string
+
+	for _, value := range langCodes {
+		newURL := baseURL + "/transcript?language=" + value
+		//fmt.Println(x)
+		urls = append(urls, newURL)
+	}
+	fmt.Println(urls)
 	wg.Add(len(urls))
 
 	for _, url := range urls {
