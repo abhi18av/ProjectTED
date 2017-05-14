@@ -9,7 +9,7 @@ type TranscriptPage struct {
 	DatePosted           string
 	LocalTitle           string
 	Rated                string
-	TalkTranscript       struct {
+	TalkTranscript       []string {
 		LocalTalkTitle string
 		Paragraphs     []string
 	}

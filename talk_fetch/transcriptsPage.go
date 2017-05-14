@@ -152,7 +152,7 @@ func Rated(doc *goquery.Document) string {
 	//return(p[3])
 }
 
-func LocalTitle(doc *goquery.Document) string {
+func LocalTalkTitle(doc *goquery.Document) string {
 	title := doc.Find(".m5").Contents().Text()
 	//fmt.Println(strings.Split(title, "\n")[2])
 	return strings.Split(title, "\n")[2]
