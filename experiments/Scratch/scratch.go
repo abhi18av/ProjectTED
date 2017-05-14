@@ -12,17 +12,20 @@ func main() {
 	var threadNames = [...]string{"T1", "T2", "T3", "T4", "T5"}
 	// Execute this on 5 diferent threads
 	for _, thread := range threadNames {
-		oneToTen(thread)
+
+		go func(th string) {
+			oneToTen(th)
+		}(thread)
 	}
 }
 
-func oneToTen(channelName string) {
+func oneToTen(aThread string) {
 
 	// Sleep for arbitrary amount of time
-	time.Sleep(time.Millisecond * time.Duration(rand.Intn(1000)))
+	time.Sleep(time.Millisecond * time.Duration(rand.Intn(5000)))
 
 	// Line seperation for better formatting
-	fmt.Println("\n\n # ", channelName, " #")
+	fmt.Println("\n\n # ", aThread, " #")
 
 	// Prints 1 to 10 on the screen
 	fmt.Println(">>>>>>>>>>>>>>>")
