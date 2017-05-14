@@ -10,14 +10,14 @@
     },
     "TranscriptPage": {
         "AvailableTranscripts": [],
-        "DatePosted": ,
-        "Rated": ,
-        "LocalTime": ,
+        "DatePosted":"" ,
+        "Rated": [],
+        "LocalTime": "" ,
         "TalkTranscript": [
-            "LangCode": [
-                "LocalTalkTitle": ,
-                "Paragraphs": []
-            ]
+            "en": [
+                "LocalTalkTitle": "",
+                "Paragraphs": [],
+            ],
         ],
         "TimeStamps": []
     },
