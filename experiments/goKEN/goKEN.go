@@ -17,6 +17,84 @@ var langCodes = map[string]string{
 	"Russian":             "ru",
 }
 
+func main() {
+
+	video_url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+
+	transcripts_url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
+
+	video_page, _ := goquery.NewDocument(video_url)
+
+	//doc = append(doc, page)
+
+	//fmt.Println(doc[0])
+
+	//fmt.Println(langs(doc)[1])
+
+	/*
+
+	   			var availableLangs []string
+
+	   			for _, code := range langs(doc[0]) {
+
+	   				if langCodes[code] == "" {
+	   					//fmt.Println(code, " : Not available")
+	   				} else {
+	   					//fmt.Println(langCodes[code])
+	   					availableLangs = append(availableLangs, langCodes[code])
+	   				}
+	   			}
+
+	   		fmt.Println(availableLangs)
+
+	   for _,x := range availableLangs{
+	   	transcriptURL := mainURL + "/transcript?language=" + x
+
+	   	// asynchronously send the requests and fill in the correct place in the struct
+	   	fmt.Println(transcriptURL)
+	   }
+
+	*/
+
+	kenJsonObj := gabs.New()
+
+	// Video page
+	kenJsonObj.Set(video_url, "VideoPage", "TalkLink")
+	kenJsonObj.Set(availableSubtitlesCount(video_page), "VideoPage", "AvailableSubtitlesCount")
+	kenJsonObj.Set(speaker(video_page), "VideoPage", "Speaker")
+	kenJsonObj.Set(duration(video_page), "VideoPage", "Duration")
+	kenJsonObj.Set(time_filmed(video_page), "VideoPage", "TimeFilmed")
+	kenJsonObj.Set(talk_views_count(video_page), "VideoPage", "TalkViewsCount")
+	kenJsonObj.Set(talk_topics_list(video_page), "VideoPage", "TalkTopicsList")
+	kenJsonObj.Set(talk_comments_count(video_page), "VideoPage", "TalkCommentsCount")
+
+	// Transcript page
+	if availableSubtitlesCount(video_page) != 0 {
+
+		transcripts_page, _ := goquery.NewDocument(transcripts_url)
+
+		kenJsonObj.Set(localTitle(transcripts_page), "TranscriptPage", "TalkTitle")
+		//localTitle(page)
+
+		// This function needs work
+		kenJsonObj.Set(times(transcripts_page), "TranscriptPage", "TimeStamps")
+		//times(page)
+
+		// needs work
+		kenJsonObj.Set(talk_texts(transcripts_page), "TranscriptPage", "TalkTranscript")
+		//talk_texts(page)
+
+		kenJsonObj.Set(langs(transcripts_page), "TranscriptPage", "AvailableTranscripts")
+		//langs(page)
+	}
+
+	fmt.Println(kenJsonObj.StringIndent(" ", "  "))
+
+	//fmt.Println(title(page))
+	ioutil.WriteFile("./experiments/goKEN.json", []byte(kenJsonObj.StringIndent(" ", "  ")), 0777)
+
+} // end of main()
+
 // From the main page or the English language transcript
 func title(doc *goquery.Document) string {
 	title := doc.Find(".player-hero__title__content").Contents().Text()
@@ -203,82 +281,4 @@ func langs(doc *goquery.Document) []string {
 	}
 
 	return langsList
-}
-
-func main() {
-
-	video_url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-
-	transcripts_url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
-
-	video_page, _ := goquery.NewDocument(video_url)
-
-	//doc = append(doc, page)
-
-	//fmt.Println(doc[0])
-
-	//fmt.Println(langs(doc)[1])
-
-	/*
-
-	   			var availableLangs []string
-
-	   			for _, code := range langs(doc[0]) {
-
-	   				if langCodes[code] == "" {
-	   					//fmt.Println(code, " : Not available")
-	   				} else {
-	   					//fmt.Println(langCodes[code])
-	   					availableLangs = append(availableLangs, langCodes[code])
-	   				}
-	   			}
-
-	   		fmt.Println(availableLangs)
-
-	   for _,x := range availableLangs{
-	   	transcriptURL := mainURL + "/transcript?language=" + x
-
-	   	// asynchronously send the requests and fill in the correct place in the struct
-	   	fmt.Println(transcriptURL)
-	   }
-
-	*/
-
-	kenJsonObj := gabs.New()
-
-	// Video page
-	kenJsonObj.Set(video_url, "VideoPage", "TalkLink")
-	kenJsonObj.Set(availableSubtitlesCount(video_page), "VideoPage", "AvailableSubtitlesCount")
-	kenJsonObj.Set(speaker(video_page), "VideoPage", "Speaker")
-	kenJsonObj.Set(duration(video_page), "VideoPage", "Duration")
-	kenJsonObj.Set(time_filmed(video_page), "VideoPage", "TimeFilmed")
-	kenJsonObj.Set(talk_views_count(video_page), "VideoPage", "TalkViewsCount")
-	kenJsonObj.Set(talk_topics_list(video_page), "VideoPage", "TalkTopicsList")
-	kenJsonObj.Set(talk_comments_count(video_page), "VideoPage", "TalkCommentsCount")
-
-	// Transcript page
-	if availableSubtitlesCount(video_page) != 0 {
-
-		transcripts_page, _ := goquery.NewDocument(transcripts_url)
-
-		kenJsonObj.Set(localTitle(transcripts_page), "TranscriptPage", "TalkTitle")
-		//localTitle(page)
-
-		// This function needs work
-		kenJsonObj.Set(times(transcripts_page), "TranscriptPage", "TimeStamps")
-		//times(page)
-
-		// needs work
-		kenJsonObj.Set(talk_texts(transcripts_page), "TranscriptPage", "TalkTranscript")
-		//talk_texts(page)
-
-		kenJsonObj.Set(langs(transcripts_page), "TranscriptPage", "AvailableTranscripts")
-		//langs(page)
-	}
-
-	fmt.Println(kenJsonObj.StringIndent(" ", "  "))
-
-	//fmt.Println(title(page))
-	ioutil.WriteFile("./experiments/goKEN.json", []byte(kenJsonObj.StringIndent(" ", "  ")), 0777)
-
 }
