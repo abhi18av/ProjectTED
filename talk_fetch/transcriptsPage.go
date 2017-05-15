@@ -183,7 +183,16 @@ func TalkTranscript(doc *goquery.Document) []string {
 		//fmt.Println(text)
 		para = append(para, text)
 	}
+
+	var lines []string
+	for _, para := range strings.Split(texts, "\n\n") {
+
+		//fmt.Println(text)
+		lines = append(lines, para)
+	}
+
 	return para
+	//return lines
 }
 
 // this should return an array of strings => ["langs"]

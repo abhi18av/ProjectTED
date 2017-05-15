@@ -75,7 +75,7 @@
        "Vietnamese"
      ],
         "DatePosted": null,
-        "LocalTime": null,
+        "TimeFilmed": null,
        "TalkTopicsList": [
        "Children",
        "Creativity",
@@ -84,7 +84,7 @@
        "Education",
        "Parenting",
        "Teaching"
-     ], "Rated": null,
+     ],
         "TalkTranscript": {
             "en": {
                 "LocalTalkTitle": "Do schools kill creativity?",
