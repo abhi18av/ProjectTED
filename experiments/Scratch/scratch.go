@@ -24,12 +24,21 @@ func LocalTalkTitle(doc *goquery.Document) string {
 func TalkTranscript(doc *goquery.Document) []string {
 	texts := doc.Find(".talk-transcript__para__text").Contents().Text()
 	var para []string
-	for _, text := range strings.Split(texts, "\n\n") {
+	for _, text := range strings.Split(texts, "  ") {
 
 		//fmt.Println(text)
 		para = append(para, text)
 	}
+
+	var lines []string
+	for _, para := range strings.Split(texts, "\n\n") {
+
+		//fmt.Println(text)
+		lines = append(lines, para)
+	}
+
 	return para
+	//return lines
 }
 
 func main() {
@@ -39,6 +48,8 @@ func main() {
 	transcriptPage, _ := goquery.NewDocument(transcriptURL)
 
 	fmt.Println(TalkTranscript(transcriptPage))
+
+	fmt.Println(len(TalkTranscript(transcriptPage)[0]))
 
 	/*
 		var ken TranscriptPage
