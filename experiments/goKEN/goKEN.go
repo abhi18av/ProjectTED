@@ -37,16 +37,17 @@ func main() {
 
 	var urls []string
 
+	transcriptBaseURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
 	langBaseURL := "/transcript?language="
 
 	for _, value := range langCodes {
-		newURL := transcriptURL + langBaseURL + value
+		newURL := transcriptBaseURL + langBaseURL + value
 		//fmt.Println(x)
 		urls = append(urls, newURL)
 	}
 	fmt.Println(len(urls))
 
-	fmt.Println(urls)
+	//fmt.Println(urls)
 
 	/*
 	   // OUTPUT
@@ -67,6 +68,7 @@ func main() {
 		go func(url string) {
 			//fmt.Println(XtranscriptLocalTalkTitle(url))
 
+			fmt.Println(url)
 			transcriptPage, _ := goquery.NewDocument(transcriptURL)
 			fmt.Println(transcriptLocalTalkTitle(transcriptPage))
 			defer wg.Done()
