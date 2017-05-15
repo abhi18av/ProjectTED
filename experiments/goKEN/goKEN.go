@@ -2,7 +2,6 @@ package main
 
 import (
 	"github.com/PuerkitoBio/goquery"
-	"./goKEN/videoPage.go"
 )
 
 func main() {
@@ -21,11 +20,11 @@ func main() {
 
 
 var langCodes = map[string]string{
-
-	"English": "en",
-	"French":  "fr",
+	"Chinese, Simplified": "zh-cn",
+	"English":             "en",
+	"German":              "de",
+	"Russian":             "ru",
 }
-
 func AvailableSubtitlesCount(doc *goquery.Document) string {
 
 	subtitles := doc.Find(".player-hero__meta__link").Contents().Text()
