@@ -107,10 +107,10 @@ func videoTimeFilmed(doc *goquery.Document) string {
 // 45,122,067
 func videoTalkViewsCount(doc *goquery.Document) string {
 
-	talk_views_count := doc.Find("#sharing-count").Contents().Text()
-	//	fmt.Println(talk_views_count)
+	talkViewsCount := doc.Find("#sharing-count").Contents().Text()
+	//	fmt.Println(talkViewsCount)
 
-	a := strings.Split(talk_views_count, "\n")
+	a := strings.Split(talkViewsCount, "\n")
 	b := strings.TrimSpace(a[2])
 	//fmt.Println(b)
 	return b
@@ -121,9 +121,9 @@ func videoTalkViewsCount(doc *goquery.Document) string {
 // [Children Creativity Culture Dance Education Parenting Teaching]
 func videoTalkTopicsList(doc *goquery.Document) []string {
 
-	talk_topics := doc.Find(".talk-topics__list").Contents().Text()
+	talkTopics := doc.Find(".talk-topics__list").Contents().Text()
 
-	c := strings.Split(talk_topics, "\n")
+	c := strings.Split(talkTopics, "\n")
 	var topics []string
 	for i := 3; i < len(c); i++ {
 		//fmt.Println(c[i])
@@ -140,9 +140,9 @@ func videoTalkTopicsList(doc *goquery.Document) []string {
 // 4526
 func videoTalkCommentsCount(doc *goquery.Document) string {
 
-	talk_comments_count := doc.Find(".h11").Contents().Text()
-	//fmt.Println(talk_comments_count)
-	d := strings.Split(talk_comments_count, " ")
+	talkCommentsCount := doc.Find(".h11").Contents().Text()
+	//fmt.Println(talkCommentsCount)
+	d := strings.Split(talkCommentsCount, " ")
 	//fmt.Println(d[0])
 	return strings.TrimLeft(d[0], "\n")
 }
