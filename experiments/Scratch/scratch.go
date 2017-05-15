@@ -3,14 +3,17 @@ package main
 import (
 	"strings"
 
-	"github.com/Jeffail/gabs"
+	"fmt"
+
 	"github.com/PuerkitoBio/goquery"
 )
 
+/*
 type TranscriptPage struct {
 	LocalTalkTitle string
 	TalkTranscript []string
 }
+*/
 
 func LocalTalkTitle(doc *goquery.Document) string {
 	title := doc.Find(".m5").Contents().Text()
@@ -26,21 +29,34 @@ func TalkTranscript(doc *goquery.Document) []string {
 		//fmt.Println(text)
 		para = append(para, text)
 	}
+
+	var lines []string
+	for _, para := range strings.Split(texts, "\n\n") {
+
+		//fmt.Println(text)
+		lines = append(lines, para)
+	}
+
 	return para
+	//return lines
 }
 
 func main() {
 
 	transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
 
-	transcriptPage, _ := goquery.NewDocument(videoURL)
+	transcriptPage, _ := goquery.NewDocument(transcriptURL)
 
-	kenJsonObj := gabs.New()
+	fmt.Println(TalkTranscript(transcriptPage))
 
-	// Video page
-	kenJsonObj.Set(videoURL, "transcriptPage", "TalkLink")
-	kenJsonObj.Set(availableSubtitlesCount(transcriptPage), "transcriptPage", "AvailableSubtitlesCount")
-	kenJsonObj.Set(talk_topics_list(), "transcriptPage", "TalkTopicsList")
-	kenJsonObj.Set(talk_comments_count(), "transcriptPage", "TalkCommentsCount")
+	fmt.Println(len(TalkTranscript(transcriptPage)))
 
+	/*
+		var ken TranscriptPage
+				ken.LocalTalkTitle = LocalTalkTitle(transcriptPage)
+				ken.TalkTranscript = TalkTranscript(transcriptPage)
+
+				fmt.Println(ken)
+
+	*/
 }
