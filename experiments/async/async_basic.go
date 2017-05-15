@@ -15,25 +15,31 @@ func main() {
 
 	wg.Add(len(threadNames))
 
+	type collections struct {
+		title string
+	}
+
+	var talk collections
+
 	// Execute this on 5 diferent threads
 	for _, thread := range threadNames {
-		go func(th string) {
+		go func(thread string) {
 			defer wg.Done()
-			currentThread(th)
+			talk.title = currentThread(thread)
 		}(thread)
 	}
 
 	wg.Wait()
-}
+} // end of main()
 
-func currentThread(aThread string) {
+func currentThread(aThread string) string {
 
 	// Sleep for arbitrary amount of time
 	time.Sleep(time.Millisecond * time.Duration(rand.Intn(5000)))
 
 	// Line seperation for better formatting
 	fmt.Println("# ", aThread, " #")
-
+	return (aThread)
 	/*
 		// Prints 1 to 10 on the screen
 		fmt.Println(">>>>>>>>>>>>>>>")
