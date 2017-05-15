@@ -25,7 +25,7 @@ var langCodes = map[string]string{
 	"German":              "de",
 	"Russian":             "ru",
 }
-func AvailableSubtitlesCount(doc *goquery.Document) string {
+func videoAvailableSubtitlesCount(doc *goquery.Document) string {
 
 	subtitles := doc.Find(".player-hero__meta__link").Contents().Text()
 	//fmt.Println(subtitles)
@@ -43,7 +43,7 @@ func AvailableSubtitlesCount(doc *goquery.Document) string {
 	return numOfSubtitles
 }
 
-func Speaker(doc *goquery.Document) string {
+func videoSpeaker(doc *goquery.Document) string {
 	speaker := doc.Find(".talk-speaker__name").Contents().Text()
 	//fmt.Println(speaker)
 	speaker = strings.Trim(speaker, "\n")
@@ -58,7 +58,7 @@ func title(doc *goquery.Document) {
 }
 */
 
-func Duration(doc *goquery.Document) string {
+func videoDuration(doc *goquery.Document) string {
 
 	duration := doc.Find(".player-hero__meta").Contents().Text()
 	//fmt.Println(duration)
@@ -75,7 +75,7 @@ func Duration(doc *goquery.Document) string {
 }
 
 // TimeFilmed : Time at which the talk was filmed
-func TimeFilmed(doc *goquery.Document) string {
+func videoTimeFilmed(doc *goquery.Document) string {
 
 	time_filmed := doc.Find(".player-hero__meta").Contents().Text()
 
@@ -86,7 +86,7 @@ func TimeFilmed(doc *goquery.Document) string {
 	return y[11]
 }
 
-func TalkViewsCount(doc *goquery.Document) string {
+func videoTalkViewsCount(doc *goquery.Document) string {
 
 	talk_views_count := doc.Find("#sharing-count").Contents().Text()
 	//	fmt.Println(talk_views_count)
@@ -98,7 +98,7 @@ func TalkViewsCount(doc *goquery.Document) string {
 
 }
 
-func TalkTopicsList(doc *goquery.Document) []string {
+func videoTalkTopicsList(doc *goquery.Document) []string {
 
 	talk_topics := doc.Find(".talk-topics__list").Contents().Text()
 
@@ -115,7 +115,7 @@ func TalkTopicsList(doc *goquery.Document) []string {
 	return topics
 }
 
-func TalkCommentsCount(doc *goquery.Document) string {
+func videoTalkCommentsCount(doc *goquery.Document) string {
 
 	talk_comments_count := doc.Find(".h11").Contents().Text()
 	//fmt.Println(talk_comments_count)
@@ -127,7 +127,7 @@ func TalkCommentsCount(doc *goquery.Document) string {
 // transcriptPage 
 
 
-func DatePosted(doc *goquery.Document) string {
+func transcriptDatePosted(doc *goquery.Document) string {
 	posted := doc.Find(".meta__item").Contents().Text()
 	p := strings.Split(posted, "\n")
 	//fmt.Println(p[3])
@@ -135,7 +135,7 @@ func DatePosted(doc *goquery.Document) string {
 
 }
 
-func Rated(doc *goquery.Document) string {
+func transcriptRated(doc *goquery.Document) string {
 
 	rated := doc.Find(".meta__row").Contents().Text()
 
@@ -156,13 +156,13 @@ func Rated(doc *goquery.Document) string {
 	//return(p[3])
 }
 
-func LocalTalkTitle(doc *goquery.Document) string {
+func transcriptLocalTalkTitle(doc *goquery.Document) string {
 	title := doc.Find(".m5").Contents().Text()
 	//fmt.Println(strings.Split(title, "\n")[2])
 	return strings.Split(title, "\n")[2]
 }
 
-func TimeStamps(doc *goquery.Document) []string {
+func transcriptTimeStamps(doc *goquery.Document) []string {
 	times := doc.Find(".talk-transcript__para__time").Contents().Text()
 	var timestamps []string
 
@@ -179,7 +179,7 @@ func TimeStamps(doc *goquery.Document) []string {
 	return timestamps
 }
 
-func TalkTranscript(doc *goquery.Document) []string {
+func transcriptTalkTranscript(doc *goquery.Document) []string {
 	texts := doc.Find(".talk-transcript__para__text").Contents().Text()
 	var para []string
 	for _, text := range strings.Split(texts, "  ") {
@@ -200,7 +200,7 @@ func TalkTranscript(doc *goquery.Document) []string {
 }
 
 // this should return an array of strings => ["langs"]
-func AvailableTranscripts(doc *goquery.Document) []string {
+func transcriptAvailableTranscripts(doc *goquery.Document) []string {
 
 	var langsList []string
 
