@@ -29,7 +29,7 @@ func main() {
 	// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 	// TRANSCRIPT functions
-	transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=de"
+	//transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=de"
 	//transcriptPage, _ := goquery.NewDocument(transcriptURL)
 	//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
 
@@ -69,7 +69,7 @@ func main() {
 			//fmt.Println(XtranscriptLocalTalkTitle(url))
 
 			//fmt.Println(url)
-			transcriptPage, _ := goquery.NewDocument(transcriptURL)
+			transcriptPage, _ := goquery.NewDocument(url)
 			fmt.Println(transcriptLocalTalkTitle(transcriptPage))
 			defer wg.Done()
 		}(url)
