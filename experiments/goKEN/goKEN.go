@@ -55,7 +55,7 @@ func main() {
 		arr string
 	}
 
-	var col collection
+	var title collection
 
 	for _, url := range urls {
 
@@ -64,8 +64,8 @@ func main() {
 			//fmt.Println(url)
 			transcriptPage, _ := goquery.NewDocument(url)
 			//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
-			col.arr = transcriptLocalTalkTitle(transcriptPage)
-			fmt.Println(col)
+			title.arr = transcriptLocalTalkTitle(transcriptPage)
+			fmt.Println(title)
 			defer wg.Done()
 		}(url)
 	}
