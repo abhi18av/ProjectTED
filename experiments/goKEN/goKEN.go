@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"sync"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -16,22 +17,50 @@ var langCodes = map[string]string{
 
 func main() {
 
-	// VIDEO functions
-	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-	videoPage, _ := goquery.NewDocument(videoURL)
+	/*
+		// VIDEO functions
+		videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+		videoPage, _ := goquery.NewDocument(videoURL)
 
-	fmt.Println(videoTalkTitle(videoPage))
+		fmt.Println(videoTalkTitle(videoPage))
+
+	*/
 
 	// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-	/*
-		// TRANSCRIPT functions
-		transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
-		transcriptPage, _ := goquery.NewDocument(transcriptURL)
+	// TRANSCRIPT functions
+	transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
+	//transcriptPage, _ := goquery.NewDocument(transcriptURL)
+	//fmt.Println(transcriptTimeStamps(transcriptPage))
 
-		fmt.Println(transcriptTimeStamps(transcriptPage))
-	*/
-}
+	var wg sync.WaitGroup
+
+	var urls []string
+
+	langBaseURL := "/transcript?language="
+
+	for _, value := range langCodes {
+		newURL := transcriptURL + langBaseURL + value
+		//fmt.Println(x)
+		urls = append(urls, newURL)
+	}
+	fmt.Println(len(urls))
+
+	fmt.Println(urls)
+	wg.Add(len(urls))
+
+	for _, url := range urls {
+
+		go func(url string) {
+			transcriptPage, _ := goquery.NewDocument(url)
+			fmt.Println(transcriptDatePosted(transcriptPage))
+			defer wg.Done()
+		}(url)
+	}
+
+	wg.Wait()
+
+} // end of main()
 
 // VideoPage FUNCTIONS
 
