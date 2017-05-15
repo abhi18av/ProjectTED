@@ -16,22 +16,21 @@ var langCodes = map[string]string{
 
 func main() {
 
-	/*
-		// VIDEO functions
-		videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-		videoPage, _ := goquery.NewDocument(videoURL)
+	// VIDEO functions
+	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	videoPage, _ := goquery.NewDocument(videoURL)
 
-		fmt.Println(videoTimeFilmed(videoPage))
-	*/
+	fmt.Println(videoTalkTitle(videoPage))
 
 	// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-	// TRANSCRIPT functions
-	transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
-	transcriptPage, _ := goquery.NewDocument(transcriptURL)
+	/*
+		// TRANSCRIPT functions
+		transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
+		transcriptPage, _ := goquery.NewDocument(transcriptURL)
 
-	fmt.Println(transcriptTimeStamps(transcriptPage))
-
+		fmt.Println(transcriptTimeStamps(transcriptPage))
+	*/
 }
 
 // VideoPage FUNCTIONS
@@ -65,13 +64,12 @@ func videoSpeaker(doc *goquery.Document) string {
 	return speaker
 }
 
-/*
 // This is now taken from the transcripts page
-func title(doc *goquery.Document) {
+func videoTalkTitle(doc *goquery.Document) string {
 	title := doc.Find(".player-hero__title__content").Contents().Text()
-	fmt.Println(title)
+	//fmt.Println(title)
+	return title
 }
-*/
 
 // OUTPUT
 // 19:24
