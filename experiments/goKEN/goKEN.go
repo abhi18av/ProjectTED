@@ -1,23 +1,11 @@
 package main
 
 import (
+	"fmt"
+	"strings"
+
 	"github.com/PuerkitoBio/goquery"
 )
-
-func main() {
-	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-
-	//transcriptsURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
-
-	videoURL, _ := goquery.NewDocument(videoURL)
-
-	videoPage.
-
-}
-
-
-// VideoPage FUNCTIONS
-
 
 var langCodes = map[string]string{
 	"Chinese, Simplified": "zh-cn",
@@ -25,6 +13,29 @@ var langCodes = map[string]string{
 	"German":              "de",
 	"Russian":             "ru",
 }
+
+func main() {
+
+	/*
+		// VIDEO functions
+		videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+		videoPage, _ := goquery.NewDocument(videoURL)
+
+		fmt.Println(videoTimeFilmed(videoPage))
+	*/
+
+	// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+	// TRANSCRIPT functions
+	transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
+	transcriptPage, _ := goquery.NewDocument(transcriptURL)
+
+}
+
+// VideoPage FUNCTIONS
+
+// OUTPUT
+// 60
 func videoAvailableSubtitlesCount(doc *goquery.Document) string {
 
 	subtitles := doc.Find(".player-hero__meta__link").Contents().Text()
@@ -43,6 +54,8 @@ func videoAvailableSubtitlesCount(doc *goquery.Document) string {
 	return numOfSubtitles
 }
 
+// OUTPUT
+// Ken Robinson
 func videoSpeaker(doc *goquery.Document) string {
 	speaker := doc.Find(".talk-speaker__name").Contents().Text()
 	//fmt.Println(speaker)
@@ -58,6 +71,8 @@ func title(doc *goquery.Document) {
 }
 */
 
+// OUTPUT
+// 19:24
 func videoDuration(doc *goquery.Document) string {
 
 	duration := doc.Find(".player-hero__meta").Contents().Text()
@@ -69,11 +84,13 @@ func videoDuration(doc *goquery.Document) string {
 	//}
 
 	x := strings.Split(duration, "\n")
-	fmt.Println(x[6])
+	//fmt.Println(x[6])
 	return x[6]
 
 }
 
+// OUTPUT
+// Feb 2006
 // TimeFilmed : Time at which the talk was filmed
 func videoTimeFilmed(doc *goquery.Document) string {
 
@@ -86,6 +103,8 @@ func videoTimeFilmed(doc *goquery.Document) string {
 	return y[11]
 }
 
+// OUTPUT
+// 45,122,067
 func videoTalkViewsCount(doc *goquery.Document) string {
 
 	talk_views_count := doc.Find("#sharing-count").Contents().Text()
@@ -98,6 +117,8 @@ func videoTalkViewsCount(doc *goquery.Document) string {
 
 }
 
+// OUTPUT
+// [Children Creativity Culture Dance Education Parenting Teaching]
 func videoTalkTopicsList(doc *goquery.Document) []string {
 
 	talk_topics := doc.Find(".talk-topics__list").Contents().Text()
@@ -115,6 +136,8 @@ func videoTalkTopicsList(doc *goquery.Document) []string {
 	return topics
 }
 
+// OUTPUT
+// 4526
 func videoTalkCommentsCount(doc *goquery.Document) string {
 
 	talk_comments_count := doc.Find(".h11").Contents().Text()
@@ -124,8 +147,7 @@ func videoTalkCommentsCount(doc *goquery.Document) string {
 	return strings.TrimLeft(d[0], "\n")
 }
 
-// transcriptPage 
-
+// transcriptPage
 
 func transcriptDatePosted(doc *goquery.Document) string {
 	posted := doc.Find(".meta__item").Contents().Text()
