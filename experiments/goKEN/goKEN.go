@@ -29,9 +29,9 @@ func main() {
 	// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 	// TRANSCRIPT functions
-	transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
+	transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=de"
 	//transcriptPage, _ := goquery.NewDocument(transcriptURL)
-	//fmt.Println(transcriptTimeStamps(transcriptPage))
+	//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
 
 	var wg sync.WaitGroup
 
@@ -45,9 +45,9 @@ func main() {
 		//fmt.Println(x)
 		urls = append(urls, newURL)
 	}
-	fmt.Println(len(urls))
+	//fmt.Println(len(urls))
 
-	//fmt.Println(urls)
+	fmt.Println(urls)
 
 	/*
 	   // OUTPUT
@@ -68,7 +68,7 @@ func main() {
 		go func(url string) {
 			//fmt.Println(XtranscriptLocalTalkTitle(url))
 
-			fmt.Println(url)
+			//fmt.Println(url)
 			transcriptPage, _ := goquery.NewDocument(transcriptURL)
 			fmt.Println(transcriptLocalTalkTitle(transcriptPage))
 			defer wg.Done()
