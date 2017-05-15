@@ -1,24 +1,11 @@
-package main
+package goKEN
 
 import (
+	"fmt"
+	"strings"
+
 	"github.com/PuerkitoBio/goquery"
-	"./goKEN/videoPage.go"
 )
-
-func main() {
-	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-
-	//transcriptsURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
-
-	videoURL, _ := goquery.NewDocument(videoURL)
-
-	videoPage.
-
-}
-
-
-// VideoPage FUNCTIONS
-
 
 var langCodes = map[string]string{
 
@@ -123,97 +110,4 @@ func TalkCommentsCount(doc *goquery.Document) string {
 	d := strings.Split(talk_comments_count, " ")
 	//fmt.Println(d[0])
 	return strings.TrimLeft(d[0], "\n")
-}
-
-// transcriptPage 
-
-
-func DatePosted(doc *goquery.Document) string {
-	posted := doc.Find(".meta__item").Contents().Text()
-	p := strings.Split(posted, "\n")
-	//fmt.Println(p[3])
-	return (p[3])
-
-}
-
-func Rated(doc *goquery.Document) string {
-
-	rated := doc.Find(".meta__row").Contents().Text()
-
-	r := strings.Split(rated, "\n")
-	//fmt.Println(r[3])
-	return r[3]
-	/*
-	   rx := strings.Split(r[3], ",")
-
-	   	for _, x := range rx{
-	   		append(ls,x)
-	   	}
-	*/
-
-	//println(len(rx))
-	//println(r[0])
-	//println(r[1])
-	//return(p[3])
-}
-
-func LocalTalkTitle(doc *goquery.Document) string {
-	title := doc.Find(".m5").Contents().Text()
-	//fmt.Println(strings.Split(title, "\n")[2])
-	return strings.Split(title, "\n")[2]
-}
-
-func TimeStamps(doc *goquery.Document) []string {
-	times := doc.Find(".talk-transcript__para__time").Contents().Text()
-	var timestamps []string
-
-	for _, time := range strings.Split(times, " ") {
-		if time == "" {
-
-		} else {
-
-			fmt.Println(time)
-			timestamps = append(timestamps, strings.TrimRight(time, "\n"))
-
-		}
-	}
-	return timestamps
-}
-
-func TalkTranscript(doc *goquery.Document) []string {
-	texts := doc.Find(".talk-transcript__para__text").Contents().Text()
-	var para []string
-	for _, text := range strings.Split(texts, "  ") {
-
-		//fmt.Println(text)
-		para = append(para, text)
-	}
-
-	var lines []string
-	for _, para := range strings.Split(texts, "\n\n") {
-
-		//fmt.Println(text)
-		lines = append(lines, para)
-	}
-
-	return para
-	//return lines
-}
-
-// this should return an array of strings => ["langs"]
-func AvailableTranscripts(doc *goquery.Document) []string {
-
-	var langsList []string
-
-	langs := doc.Find(".talk-transcript__language").Contents().Text()
-
-	//	fmt.Println(langs)
-	langsSeparated := strings.Split(langs, "\n")
-
-	for i := 1; i < len(langsSeparated)-1; i++ {
-		//fmt.Println(i, ":", langsSeparated[i])
-		langsList = append(langsList, langsSeparated[i])
-	}
-
-	return langsList
 }
