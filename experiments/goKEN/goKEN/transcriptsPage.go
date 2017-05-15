@@ -1,4 +1,4 @@
-package main
+package goKEN
 
 import (
 	"fmt"
@@ -211,36 +211,4 @@ func AvailableTranscripts(doc *goquery.Document) []string {
 	}
 
 	return langsList
-}
-
-func main() {
-
-	//url := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
-	url := "https://www.ted.com/talks/jill_bolte_taylor_s_powerful_stroke_of_insight/transcript?language=en"
-	//url := "https://www.ted.com/talks/tony_robbins_asks_why_we_do_what_we_do/transcript?language=en"
-	//url := "https://www.ted.com/talks/shawn_achor_the_happy_secret_to_better_work/transcript?language=en"
-	//url := "https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action/transcript?language=en"
-
-	/*
-		var url string
-
-		fmt.Scanf("%s", &url)
-
-	*/
-
-	doc, err := goquery.NewDocument(url)
-	if err != nil {
-		panic(err)
-	}
-
-	//	posted(doc)
-	//	rated(doc)
-
-	// Use this for the main title in English
-	LocalTitle(doc)
-
-	//println(len(langs(doc)))
-	//	times(doc)
-	//	texts(doc)
-
 }
