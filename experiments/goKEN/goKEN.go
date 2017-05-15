@@ -30,6 +30,8 @@ func main() {
 	transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
 	transcriptPage, _ := goquery.NewDocument(transcriptURL)
 
+	fmt.Println(transcriptTimeStamps(transcriptPage))
+
 }
 
 // VideoPage FUNCTIONS
@@ -149,6 +151,8 @@ func videoTalkCommentsCount(doc *goquery.Document) string {
 
 // transcriptPage
 
+// OUTPUT
+// Jun 2006
 func transcriptDatePosted(doc *goquery.Document) string {
 	posted := doc.Find(".meta__item").Contents().Text()
 	p := strings.Split(posted, "\n")
@@ -157,6 +161,8 @@ func transcriptDatePosted(doc *goquery.Document) string {
 
 }
 
+// OUTPUT
+// Inspiring, Funny
 func transcriptRated(doc *goquery.Document) string {
 
 	rated := doc.Find(".meta__row").Contents().Text()
@@ -178,6 +184,8 @@ func transcriptRated(doc *goquery.Document) string {
 	//return(p[3])
 }
 
+// OUTPUT
+// Do schools kill creativity?
 func transcriptLocalTalkTitle(doc *goquery.Document) string {
 	title := doc.Find(".m5").Contents().Text()
 	//fmt.Println(strings.Split(title, "\n")[2])
@@ -193,8 +201,8 @@ func transcriptTimeStamps(doc *goquery.Document) []string {
 
 		} else {
 
-			fmt.Println(time)
-			timestamps = append(timestamps, strings.TrimRight(time, "\n"))
+			//fmt.Println(time)
+			timestamps = append(timestamps, strings.TrimRight(time, " "))
 
 		}
 	}
@@ -221,7 +229,9 @@ func transcriptTalkTranscript(doc *goquery.Document) []string {
 	//return lines
 }
 
-// this should return an array of strings => ["langs"]
+// OUTPUT
+// [Afrikaans Albanian Arabic Armenian Azerbaijani Basque Belarusian Bengali Bulgarian Catalan Chinese, Simplified Chinese, Traditional Croatian Czech Danish Dutch English Esperanto Estonian Filipino Finnish French French (Canada) Galician Georgian German Greek Hebrew Hungarian Indonesian Ingush Italian Japanese Korean Lao Latvian Lithuanian Macedonian Marathi Mongolian Nepali Norwegian Bokmal Persian Polish Portuguese Portuguese, Brazilian Romanian Russian Serbian Slovak Slovenian Spanish Swedish Thai Turkish Ukrainian Urdu Uzbek Vietnamese]
+// This should return an array of strings => ["langs"]
 func transcriptAvailableTranscripts(doc *goquery.Document) []string {
 
 	var langsList []string
