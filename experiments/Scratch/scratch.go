@@ -3,7 +3,8 @@ package main
 import (
 	"strings"
 
-	"github.com/Jeffail/gabs"
+	"fmt"
+
 	"github.com/PuerkitoBio/goquery"
 )
 
@@ -33,14 +34,13 @@ func main() {
 
 	transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
 
-	transcriptPage, _ := goquery.NewDocument(videoURL)
+	var ken TranscriptPage
 
-	kenJsonObj := gabs.New()
+	transcriptPage, _ := goquery.NewDocument(transcriptURL)
 
-	// Video page
-	kenJsonObj.Set(videoURL, "transcriptPage", "TalkLink")
-	kenJsonObj.Set(availableSubtitlesCount(transcriptPage), "transcriptPage", "AvailableSubtitlesCount")
-	kenJsonObj.Set(talk_topics_list(), "transcriptPage", "TalkTopicsList")
-	kenJsonObj.Set(talk_comments_count(), "transcriptPage", "TalkCommentsCount")
+	ken.LocalTalkTitle = LocalTalkTitle(transcriptPage)
+	ken.TalkTranscript = TalkTranscript(transcriptPage)
+
+	fmt.Println(ken)
 
 }
