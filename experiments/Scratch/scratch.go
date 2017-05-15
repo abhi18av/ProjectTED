@@ -49,7 +49,7 @@ func main() {
 
 	fmt.Println(TalkTranscript(transcriptPage))
 
-	fmt.Println(len(TalkTranscript(transcriptPage)[0]))
+	fmt.Println(len(TalkTranscript(transcriptPage)))
 
 	/*
 		var ken TranscriptPage
