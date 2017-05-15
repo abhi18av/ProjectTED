@@ -47,13 +47,26 @@ func main() {
 	fmt.Println(len(urls))
 
 	fmt.Println(urls)
+
+// OUTPUT
+// Do schools kill creativity?
+func XtranscriptLocalTalkTitle(url string) string{
+
+	transcriptPage, _ := goquery.NewDocument(url)
+	title := doc.Find(".m5").Contents().Text()
+	//fmt.Println(strings.Split(title, "\n")[2])
+	return strings.Split(title, "\n")[2]
+}
+
 	wg.Add(len(urls))
 
 	for _, url := range urls {
 
 		go func(url string) {
-			transcriptPage, _ := goquery.NewDocument(url)
-			fmt.Println(transcriptDatePosted(transcriptPage))
+			//fmt.Println(XtranscriptLocalTalkTitle(url))
+
+			transcriptPage, _ := goquery.NewDocument(transcriptURL)
+			fmt.Println(transcriptLocalTalkTitle(transcriptPage))
 			defer wg.Done()
 		}(url)
 	}
