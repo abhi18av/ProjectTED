@@ -123,11 +123,11 @@ func videoDuration(doc *goquery.Document) string {
 // TimeFilmed : Time at which the talk was filmed
 func videoTimeFilmed(doc *goquery.Document) string {
 
-	time_filmed := doc.Find(".player-hero__meta").Contents().Text()
+	timeFilmed := doc.Find(".player-hero__meta").Contents().Text()
 
-	//	fmt.Println(time_filmed)
+	//	fmt.Println(timeFilmed)
 
-	y := strings.Split(time_filmed, "\n")
+	y := strings.Split(timeFilmed, "\n")
 	//fmt.Println(y[11])
 	return y[11]
 }
