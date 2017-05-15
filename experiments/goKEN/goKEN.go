@@ -47,9 +47,15 @@ func main() {
 	}
 	//fmt.Println(len(urls))
 
-	fmt.Println(urls)
+	//fmt.Println(urls)
 
 	wg.Add(len(urls))
+
+	type collection struct {
+		arr string
+	}
+
+	var col collection
 
 	for _, url := range urls {
 
@@ -57,7 +63,9 @@ func main() {
 
 			//fmt.Println(url)
 			transcriptPage, _ := goquery.NewDocument(url)
-			fmt.Println(transcriptLocalTalkTitle(transcriptPage))
+			//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
+			col.arr = transcriptLocalTalkTitle(transcriptPage)
+			fmt.Println(col)
 			defer wg.Done()
 		}(url)
 	}
