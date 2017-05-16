@@ -25,8 +25,9 @@ func main() {
 	for _, thread := range threadNames {
 		go func(thread string) {
 			defer wg.Done()
-			talk.first = append(talk.first, pair1(thread, timeSeed()))
-			talk.second = append(talk.second, pair2(thread, timeSeed()))
+			//talk.first = append(talk.first, pair1(thread, timeSeed()))
+			//talk.second = append(talk.second, pair2(thread, timeSeed()))
+			pairChan(thread, timeSeed(), &talk)
 		}(thread)
 	}
 
@@ -41,6 +42,15 @@ func timeSeed() time.Duration {
 	duration := time.Millisecond * time.Duration(rand.Intn(1000))
 	return duration
 }
+
+func pairChan(aThread string, seed time.Duration, aStruct chan *collections) {
+
+	aStruct.first = append(aStruct.first, pair1(thread, timeSeed()))
+	aStruct.second = append(aStruct.second, pair2(thread, timeSeed()))
+
+	aStruct <- aStruct
+}
+
 func pair1(aThread string, seed time.Duration) string {
 
 	// Sleep for arbitrary amount of time
