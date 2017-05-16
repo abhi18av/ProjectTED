@@ -1,4 +1,3 @@
-// Have a counting of << 1 to 10 >> in each thread with arbitrary sleep time.
 package main
 
 import (
