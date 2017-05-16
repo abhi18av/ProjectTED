@@ -20,6 +20,9 @@ func main() {
 	}
 
 	var talk collections
+
+	var talkS []collections
+
 	c1 := make(chan string)
 	c2 := make(chan string)
 
@@ -36,14 +39,17 @@ func main() {
 		}(thread)
 	}
 
+	talkS = append(talkS, talk)
+
 	wg.Wait()
+	//fmt.Println(talkS)
 	fmt.Println(talk)
-	fmt.Println(len(talk.first), len(talk.second))
+	//fmt.Println(len(talk.first), len(talk.second))
 } // end of main()
 
 func timeSeed() time.Duration {
 
-	duration := time.Millisecond * time.Duration(rand.Intn(10000))
+	duration := time.Millisecond * time.Duration(rand.Intn(1000))
 	return duration
 }
 
