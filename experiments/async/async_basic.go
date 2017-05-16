@@ -20,49 +20,49 @@ func main() {
 	}
 
 	var talk collections
+	c1 := make(chan string)
+	c2 := make(chan string)
 
 	// Execute this on 5 diferent threads
 	for _, thread := range threadNames {
 		go func(thread string) {
 			defer wg.Done()
-			//talk.first = append(talk.first, pair1(thread, timeSeed()))
-			//talk.second = append(talk.second, pair2(thread, timeSeed()))
-			pairChan(thread, timeSeed(), &talk)
+			go pair1(thread, timeSeed(), c1)
+			go pair2(thread, timeSeed(), c2)
+
+			talk.first = append(talk.first, <-c1)
+			talk.second = append(talk.second, <-c2)
+
 		}(thread)
 	}
 
 	wg.Wait()
-
 	fmt.Println(talk)
 	fmt.Println(len(talk.first), len(talk.second))
 } // end of main()
 
 func timeSeed() time.Duration {
 
-	duration := time.Millisecond * time.Duration(rand.Intn(1000))
+	duration := time.Millisecond * time.Duration(rand.Intn(10000))
 	return duration
 }
 
-func pairChan(aThread string, seed time.Duration, aStruct chan *collections) {
-
-	aStruct.first = append(aStruct.first, pair1(thread, timeSeed()))
-	aStruct.second = append(aStruct.second, pair2(thread, timeSeed()))
-
-	aStruct <- aStruct
-}
-
-func pair1(aThread string, seed time.Duration) string {
+func pair1(aThread string, seed time.Duration, ch chan string) {
 
 	// Sleep for arbitrary amount of time
 	time.Sleep(seed)
 
-	return aThread
+	ch <- aThread
+
+	//return aThread
 }
 
-func pair2(aThread string, seed time.Duration) string {
+func pair2(aThread string, seed time.Duration, ch chan string) {
 
 	// Sleep for arbitrary amount of time
 	time.Sleep(seed)
 
-	return aThread
+	ch <- aThread
+
+	//return aThread
 }
