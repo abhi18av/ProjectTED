@@ -26,7 +26,7 @@ func main() {
 	for _, thread := range threadNames {
 		go func(thread string) {
 			defer wg.Done()
-			//talk.first = append(talk.first, pair1(thread, timeSeed()))
+			talk.first = append(talk.first, pair1(thread, timeSeed()))
 			talk.second = append(talk.second, pair2(thread, timeSeed()))
 		}(thread)
 	}
