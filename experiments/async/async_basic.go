@@ -11,7 +11,7 @@ import (
 func main() {
 	var wg sync.WaitGroup
 
-	var threadNames = [...]string{"T1", "T2", "T3", "T4", "T5"}
+	var threadNames = [...]string{"T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10"}
 
 	wg.Add(len(threadNames))
 
@@ -26,7 +26,7 @@ func main() {
 	for _, thread := range threadNames {
 		go func(thread string) {
 			defer wg.Done()
-			talk.first = append(talk.first, pair1(thread, timeSeed()))
+			//talk.first = append(talk.first, pair1(thread, timeSeed()))
 			talk.second = append(talk.second, pair2(thread, timeSeed()))
 		}(thread)
 	}
@@ -34,6 +34,7 @@ func main() {
 	wg.Wait()
 
 	fmt.Println(talk)
+	fmt.Println(len(talk.first), len(talk.second))
 } // end of main()
 
 func timeSeed() time.Duration {
