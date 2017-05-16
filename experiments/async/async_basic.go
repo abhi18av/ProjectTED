@@ -16,8 +16,8 @@ func main() {
 	wg.Add(len(threadNames))
 
 	type collections struct {
-		thread []string
-		count  [][]int
+		first  []string
+		second []string
 	}
 
 	var talk collections
@@ -26,8 +26,8 @@ func main() {
 	for _, thread := range threadNames {
 		go func(thread string) {
 			defer wg.Done()
-			talk.thread = append(talk.thread, currentThread(thread))
-			talk.count = append(talk.count, one2ten())
+			talk.first = append(talk.first, pair1(thread, timeSeed()))
+			talk.second = append(talk.second, pair2(thread, timeSeed()))
 		}(thread)
 	}
 
@@ -36,23 +36,23 @@ func main() {
 	fmt.Println(talk)
 } // end of main()
 
-func currentThread(aThread string) string {
+func timeSeed() time.Duration {
+
+	duration := time.Millisecond * time.Duration(rand.Intn(1000))
+	return duration
+}
+func pair1(aThread string, seed time.Duration) string {
 
 	// Sleep for arbitrary amount of time
-	time.Sleep(time.Millisecond * time.Duration(rand.Intn(10000)))
+	time.Sleep(seed)
 
-	// Line seperation for better formatting
 	return aThread
 }
 
-func one2ten() []int {
+func pair2(aThread string, seed time.Duration) string {
 
-	var arr []int
+	// Sleep for arbitrary amount of time
+	time.Sleep(seed)
 
-	for i := 1; i <= 10; i++ {
-		arr = append(arr, i)
-	}
-
-	return arr
-
+	return aThread
 }
