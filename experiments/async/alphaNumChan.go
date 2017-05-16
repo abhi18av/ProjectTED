@@ -11,8 +11,8 @@ func main() {
 	ch1 := make(chan string)
 	ch2 := make(chan string)
 
-	alphabets := [...]string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
 	numbers := [...]string{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}
+	alphabets := [...]string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
 
 	type alphanumeric struct {
 		anAlphabet string
@@ -26,17 +26,17 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(len(numbers))
 
-	// Execute this on 5 diferent threads
+	// Execute this on 5 diferent nums
 	for _, num := range numbers {
-		go func(thread string) {
+		go func(num string) {
 			defer wg.Done()
-			go pair1(thread, timeSeed(), ch1)
-			go pair2(thread, timeSeed(), ch2)
+			go pair1(num, timeSeed(), ch1)
+			go pair2(num, timeSeed(), ch2)
 
 			talk.first = append(talk.first, <-ch1)
 			talk.second = append(talk.second, <-ch2)
 
-		}(thread)
+		}(num)
 	}
 
 	talkS = append(talkS, talk)
@@ -53,12 +53,19 @@ func timeSeed() time.Duration {
 	return duration
 }
 
-func pair1(aThread string, seed time.Duration, ch chan string) {
+func pair1(anum string, seed time.Duration, ch chan string) {
 
 	// Sleep for arbitrary amount of time
 	time.Sleep(seed)
 
-	ch <- aThread
+	ch <- anum
 
-	//return aThread
+	//return anum
+}
+
+// mechanism to select 10 alphabets at random
+
+func tenRandomAlphabets(alphabets []string) []string {
+
+	return tenRandomAlphabets
 }
