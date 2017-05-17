@@ -9,13 +9,13 @@ import (
 )
 
 type alphanumeric struct {
-	anAlphabet string `json:"anAlphabet"`
-	aNumber    string `json:"aNumber"`
+	Alphabet string `json:"Alphabet"`
+	Number   string `json:"Number"`
 }
 
 func (someStruct alphanumeric) pairAlphanumeric() string {
 
-	return someStruct.aNumber + someStruct.anAlphabet
+	return someStruct.Number + someStruct.Alphabet
 
 }
 
@@ -64,8 +64,8 @@ func makeAleph(numbers []string, alphabets []string) alphanumeric {
 
 	var aleph alphanumeric
 
-	aleph.anAlphabet = aNum(numbers)
-	aleph.aNumber = anAlph(alphabets)
+	aleph.Alphabet = aNum(numbers)
+	aleph.Number = anAlph(alphabets)
 
 	//fmt.Println(aleph.pairAlphanumeric())
 
