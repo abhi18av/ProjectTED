@@ -1,10 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 type alphanumeric struct {
 	anAlphabet string
 	aNumber    string
+}
+
+func (someStruct alphanumeric) pairAlphanumeric() string {
+
+	return someStruct.aNumber + someStruct.anAlphabet
+
 }
 
 func main() {
@@ -12,14 +22,41 @@ func main() {
 	var aleph alphanumeric
 	var alephS []alphanumeric
 
-	aleph.anAlphabet = "a"
-	aleph.aNumber = "1"
-
-	fmt.Println(aleph.pairAlphanumeric())
+	fmt.Println(alephS)
 }
 
-func (someStruct alphanumeric) pairAlphanumeric() string {
+func makeAleph(numbers []string, alphabets []string) string {
 
-	return someStruct.aNumber + someStruct.anAlphabet
+	var chanAlphabet chan string
+	var chanNumber chan string
+
+	go aNum(chanNumber, numbers)
+	go anAlph(chanAlphabet, alphabets)
+
+	var aleph alphanumeric
+
+	aleph.anAlphabet <- chanAlphabet
+	aleph.aNumber <- chanNumber
+
+	return aleph.pairAlphanumeric()
+}
+
+func randomIndex() int {
+	randTime := time.Time.UnixNano(time.Now())
+
+	rand.Seed(randTime)
+
+	return rand.Intn(10)
+}
+
+func aNum(chanNumber chan string, numbers []string) {
+
+	chanNumber <- numbers[randomIndex()]
+
+}
+
+func anAlph(chanAlphabet chan string, alphabets []string) {
+
+	chanAlphabet <- alphabets[randomIndex()]
 
 }
