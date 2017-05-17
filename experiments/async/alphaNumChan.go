@@ -33,34 +33,34 @@ func main() {
 			go pair1(num, timeSeed(), ch1)
 			go pair2(num, timeSeed(), ch2)
 
-			talk.first = append(talk.first, <-ch1)
-			talk.second = append(talk.second, <-ch2)
+			aleph.anAlphabet = append(aleph.anAlphabet, <-ch1)
+			aleph.aNumber = append(aleph.aNumber, <-ch2)
 
 		}(num)
 	}
 
-	talkS = append(talkS, talk)
+	alephS = append(alephS, aleph)
 
 	wg.Wait()
-	//fmt.Println(talkS)
-	fmt.Println(talk)
-	//fmt.Println(len(talk.first), len(talk.second))
+	//fmt.Println(alephS)
+	fmt.Println(aleph)
+	//fmt.Println(len(aleph.anAlphabet), len(aleph.aNumber))
 } // end of main()
 
 func timeSeed() time.Duration {
 
-	duration := time.Millisecond * time.Duration(rand.Intn(1000))
+	duration := time.MilliaNumber * time.Duration(rand.Intn(1000))
 	return duration
 }
 
-func pair1(anum string, seed time.Duration, ch chan string) {
+func pairAlphanumeric(aNum string, ch chan string) {
 
 	// Sleep for arbitrary amount of time
-	time.Sleep(seed)
+	time.Sleep()
 
-	ch <- anum
+	ch <- aNum
 
-	//return anum
+	//return aNum
 }
 
 // mechanism to select 10 alphabets at random
