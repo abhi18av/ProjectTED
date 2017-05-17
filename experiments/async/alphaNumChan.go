@@ -62,8 +62,21 @@ func (someStruct alphanumeric) pairAlphanumeric(aStruct alphanumeric) string {
 
 func tenRandomAlphabets(alphabets []string) []string {
 
-	// Sleep for arbitrary amount of time
-	time.Sleep(timeSeed())
+	var arr []string
 
-	return tenRandomAlphabets
+	for _, x := range alphabets {
+
+		if len(arr) == 10 {
+			break
+		}
+
+		rand.Seed(time.Time.UnixNano(time.Now()))
+
+		if rand.Intn(10)%2 == 0 {
+
+			arr = append(arr, x)
+		}
+	}
+
+	return arr
 }
