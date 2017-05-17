@@ -47,9 +47,9 @@ func main() {
 
 	wg.Wait()
 
-	fmt.Println(alephS[0])
+	//fmt.Println(alephS)
 
-	body, err := json.Marshal(alephS[0])
+	body, err := json.Marshal(alephS)
 	if err != nil {
 		panic(err)
 	}
