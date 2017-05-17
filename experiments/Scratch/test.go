@@ -16,7 +16,7 @@ func main() {
 	var wg sync.WaitGroup
 	alphabets := []string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
 
-	wg.Add(10)
+	wg.Add(len(alphabets))
 	go func() {
 		defer wg.Done()
 		makeAleph(alphabets)
@@ -30,7 +30,7 @@ func makeAleph(alphabets []string) {
 
 	var chanAlphabet chan string
 
-	go aNum(chanAlphabet, alphabets)
+	aNum(chanAlphabet, alphabets)
 
 	x := <-chanAlphabet
 
