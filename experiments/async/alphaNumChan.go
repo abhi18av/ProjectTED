@@ -24,11 +24,12 @@ func main() {
 	var alephS []alphanumeric
 
 	var wg sync.WaitGroup
-	wg.Add(len(numbers))
 
-	// Execute this on 10 diferent nums
-	for _, num := range numbers {
-		go func(num []string, alphabets []string) {
+	n := 10
+	wg.Add(n)
+
+	for i := 0; i < n; i++ {
+		go func(numbers []string, alphabets []string) {
 			defer wg.Done()
 			x := makeAleph(numbers, alphabets)
 			alephS = append(alephS, x)
