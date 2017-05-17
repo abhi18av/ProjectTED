@@ -3,42 +3,39 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"sync"
 	"time"
 )
 
 type alphanumeric struct {
 	anAlphabet string
-	aNumber    string
-}
-
-func (someStruct alphanumeric) pairAlphanumeric() string {
-
-	return someStruct.aNumber + someStruct.anAlphabet
-
 }
 
 func main() {
 
-	var aleph alphanumeric
-	var alephS []alphanumeric
+	var wg sync.WaitGroup
+	alphabets := []string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
 
-	fmt.Println(alephS)
+	wg.Add(10)
+	go func() {
+		defer wg.Done()
+		makeAleph(alphabets)
+	}()
+	//fmt.Println(makeAleph(alphabets))
+
+	wg.Wait()
 }
 
-func makeAleph(numbers []string, alphabets []string) string {
+func makeAleph(alphabets []string) {
 
 	var chanAlphabet chan string
-	var chanNumber chan string
 
-	go aNum(chanNumber, numbers)
-	go anAlph(chanAlphabet, alphabets)
+	go aNum(chanAlphabet, alphabets)
 
-	var aleph alphanumeric
+	x := <-chanAlphabet
 
-	aleph.anAlphabet <- chanAlphabet
-	aleph.aNumber <- chanNumber
+	fmt.Println(x)
 
-	return aleph.pairAlphanumeric()
 }
 
 func randomIndex() int {
@@ -52,11 +49,5 @@ func randomIndex() int {
 func aNum(chanNumber chan string, numbers []string) {
 
 	chanNumber <- numbers[randomIndex()]
-
-}
-
-func anAlph(chanAlphabet chan string, alphabets []string) {
-
-	chanAlphabet <- alphabets[randomIndex()]
 
 }
