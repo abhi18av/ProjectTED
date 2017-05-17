@@ -26,7 +26,7 @@ func main() {
 	alphabets := []string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
 
 	//var aleph alphanumeric
-	//var alephS []alphanumeric
+	var alephS []alphanumeric
 	n := 10 // number of codes you want to print
 
 	wg.Add(n)
@@ -34,23 +34,27 @@ func main() {
 	for i := 0; i < n; i++ {
 		go func(numbers []string, alphabets []string) {
 			defer wg.Done()
-			makeAleph(numbers, alphabets)
+			x := makeAleph(numbers, alphabets)
+			alephS = append(alephS, x)
+			//fmt.Println(x)
 		}(numbers, alphabets)
 	}
 
 	wg.Wait()
+	fmt.Println(alephS)
 } // end of main()
 
-func makeAleph(numbers []string, alphabets []string) {
+func makeAleph(numbers []string, alphabets []string) alphanumeric {
 
 	var aleph alphanumeric
 
 	aleph.anAlphabet = aNum(numbers)
 	aleph.aNumber = anAlph(alphabets)
 
-	fmt.Println(aleph.pairAlphanumeric())
+	//fmt.Println(aleph.pairAlphanumeric())
 
 	//return aleph.pairAlphanumeric()
+	return aleph
 }
 
 func randomIndex() int {
