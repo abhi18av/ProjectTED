@@ -1,7 +1,7 @@
 package main
 
 
-type TedTalk{
+type goKEN{
 
 TalkMeta Meta
 TalkTranscriptPage TranscriptPage
