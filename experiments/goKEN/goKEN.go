@@ -1,9 +1,9 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"strings"
+	"sync"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -25,78 +25,93 @@ type VideoPage struct {
 	TalkCommentsCount       string   `json:"TalkCommentsCount"`
 }
 
+type TranscriptPage struct {
+	AvailableTranscripts []string `json:"AvailableTranscripts"`
+	DatePosted           string   `json:"DatePosted"`
+	LocalTitle           string   `json:"LocalTitle"`
+	Rated                string   `json:"Rated"`
+	TalkTranscript       talkTranscript
+	TimeStamps           []string `json:"TimeStamps"`
+}
+type talkTranscript struct {
+	LocalTalkTitle string   `json:"LocalTalkTitle"`
+	Paragraphs     []string `json:"Paragraphs"`
+}
+
 func main() {
 
-	// VIDEO functions
-	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-	videoPage, _ := goquery.NewDocument(videoURL)
+	/*
+		// VIDEO functions
+		videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+		videoPage, _ := goquery.NewDocument(videoURL)
 
-	//fmt.Println(videoTalkTitle(videoPage))
+		//fmt.Println(videoTalkTitle(videoPage))
 
-	videoPageInstance := VideoPage{
-		AvailableSubtitlesCount: videoAvailableSubtitlesCount(videoPage),
 
-		Speaker:           videoSpeaker(videoPage),
-		Duration:          videoDuration(videoPage),
-		TimeFilmed:        videoTimeFilmed(videoPage),
-		TalkViewsCount:    videoTalkViewsCount(videoPage),
-		TalkTopicsList:    videoTalkTopicsList(videoPage),
-		TalkCommentsCount: videoTalkCommentsCount(videoPage),
-	}
+			videoPageInstance := VideoPage{
+				AvailableSubtitlesCount: videoAvailableSubtitlesCount(videoPage),
 
-	body, err := json.Marshal(videoPageInstance)
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println(string(body))
+				Speaker:           videoSpeaker(videoPage),
+				Duration:          videoDuration(videoPage),
+				TimeFilmed:        videoTimeFilmed(videoPage),
+				TalkViewsCount:    videoTalkViewsCount(videoPage),
+				TalkTopicsList:    videoTalkTopicsList(videoPage),
+				TalkCommentsCount: videoTalkCommentsCount(videoPage),
+			}
+
+			body, err := json.Marshal(videoPageInstance)
+			if err != nil {
+				panic(err)
+			}
+			fmt.Println(string(body))
+
+	*/
 
 	// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-	/*
-		// TRANSCRIPT functions
-		//transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=de"
-		//transcriptPage, _ := goquery.NewDocument(transcriptURL)
-		//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
+	// TRANSCRIPT functions
+	//transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=de"
+	//transcriptPage, _ := goquery.NewDocument(transcriptURL)
+	//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
 
-		var wg sync.WaitGroup
+	var wg sync.WaitGroup
 
-		var urls []string
+	var urls []string
 
-		transcriptBaseURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-		langBaseURL := "/transcript?language="
+	transcriptBaseURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	langBaseURL := "/transcript?language="
 
-		for _, value := range langCodes {
-			newURL := transcriptBaseURL + langBaseURL + value
-			//fmt.Println(x)
-			urls = append(urls, newURL)
-		}
-		//fmt.Println(len(urls))
+	for _, value := range langCodes {
+		newURL := transcriptBaseURL + langBaseURL + value
+		//fmt.Println(x)
+		urls = append(urls, newURL)
+	}
+	//fmt.Println(len(urls))
 
-		//fmt.Println(urls)
+	//fmt.Println(urls)
 
-		wg.Add(len(urls))
+	wg.Add(len(urls))
 
-		type collection struct {
-			title string
-		}
+	type collection struct {
+		title string
+	}
 
-		var talk collection
+	var talk collection
 
-		for _, url := range urls {
+	for _, url := range urls {
 
-			go func(url string) {
+		go func(url string) {
 
-				//fmt.Println(url)
-				transcriptPage, _ := goquery.NewDocument(url)
-				//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
-				talk.title = transcriptLocalTalkTitle(transcriptPage)
-				fmt.Println(talk)
-				defer wg.Done()
-			}(url)
-		}
+			//fmt.Println(url)
+			transcriptPage, _ := goquery.NewDocument(url)
+			//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
+			talk.title = transcriptLocalTalkTitle(transcriptPage)
+			fmt.Println(talk)
+			defer wg.Done()
+		}(url)
+	}
 
-		wg.Wait()
-	*/
+	wg.Wait()
 
 } // end of main()
 
