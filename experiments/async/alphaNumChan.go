@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"math/rand"
 	"sync"
@@ -8,8 +9,8 @@ import (
 )
 
 type alphanumeric struct {
-	anAlphabet string
-	aNumber    string
+	anAlphabet string `json:"anAlphabet"`
+	aNumber    string `json:"aNumber`
 }
 
 func main() {
@@ -39,6 +40,13 @@ func main() {
 
 	wg.Wait()
 	fmt.Println(alephS)
+
+	body, err := json.Marshal(alephS[0])
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(string(body))
+
 	//fmt.Println(alephS)
 	//fmt.Println(aleph.pairAlphanumeric())
 	//fmt.Println(len(aleph.anAlphabet), len(aleph.aNumber))
