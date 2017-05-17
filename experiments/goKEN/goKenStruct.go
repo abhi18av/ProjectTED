@@ -29,11 +29,11 @@ type TranscriptPage struct {
 }
 
 type VideoPage struct {
-	AvailableSubtitlesCount string
-	Speaker                 string
-	Duration                string
-	TimeFilmed              string
-	TalkViewsCount          string
-	TalkTopicsList          []string
-	TalkCommentsCount       []string
+	AvailableSubtitlesCount string   `json:"AvailableSubtitlesCount"`
+	Speaker                 string   `json:"Speaker"`
+	Duration                string   `json:"Duration"`
+	TimeFilmed              string   `json:"TimeFilmed"`
+	TalkViewsCount          string   `json:"TalkViewsCount"`
+	TalkTopicsList          []string `json:"TalkTopicsList"`
+	TalkCommentsCount       string   `json:"TalkCommentsCount"`
 }
