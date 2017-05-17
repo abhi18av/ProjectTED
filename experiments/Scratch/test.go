@@ -28,42 +28,27 @@ func main() {
 	//var aleph alphanumeric
 	//var alephS []alphanumeric
 
-	wg.Add(10)
+	wg.Add(len(alphabets))
 	go func(numbers []string, alphabets []string) {
 		defer wg.Done()
 		for i := 0; i < 10; i++ {
 			makeAleph(numbers, alphabets)
 		}
 	}(numbers, alphabets)
+
 	wg.Wait()
 } // end of main()
 
 func makeAleph(numbers []string, alphabets []string) {
 
-	var chanAlphabet chan string
-	var chanNumber chan string
-	var wg sync.WaitGroup
-
-	wg.Add(10)
-
-	go func() {
-		defer wg.Done()
-		aNum(chanNumber, numbers)
-	}()
-
-	go func() {
-		defer wg.Done()
-		anAlph(chanAlphabet, alphabets)
-	}()
-
 	var aleph alphanumeric
 
-	aleph.anAlphabet = <-chanAlphabet
-	aleph.aNumber = <-chanNumber
+	aleph.anAlphabet = aNum(numbers)
+	aleph.aNumber = anAlph(alphabets)
 
 	fmt.Println(aleph.pairAlphanumeric())
+
 	//return aleph.pairAlphanumeric()
-	wg.Wait()
 }
 
 func randomIndex() int {
@@ -74,14 +59,14 @@ func randomIndex() int {
 	return rand.Intn(10)
 }
 
-func aNum(chanNumber chan string, numbers []string) {
+func aNum(numbers []string) string {
 
-	chanNumber <- numbers[randomIndex()]
+	return numbers[randomIndex()]
 
 }
 
-func anAlph(chanAlphabet chan string, alphabets []string) {
+func anAlph(alphabets []string) string {
 
-	chanAlphabet <- alphabets[randomIndex()]
+	return alphabets[randomIndex()]
 
 }
