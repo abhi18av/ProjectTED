@@ -70,13 +70,13 @@ func tenRandomAlphabets(alphabets []string) []string {
 			break
 		}
 
-		rand.Seed(time.Time.UnixNano(time.Now()))
+		randTime := time.Time.UnixNano(time.Now())
+		rand.Seed(randTime)
 
-		if rand.Intn(10)%2 == 0 {
+		if rand.Int63n(randTime)%2 == 0 {
 
 			arr = append(arr, x)
 		}
 	}
-
 	return arr
 }
