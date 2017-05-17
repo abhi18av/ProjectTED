@@ -7,17 +7,17 @@ import (
 	"time"
 )
 
+type alphanumeric struct {
+	anAlphabet string
+	aNumber    string
+}
+
 func main() {
 	ch1 := make(chan string)
 	ch2 := make(chan string)
 
 	numbers := [...]string{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}
 	alphabets := [...]string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
-
-	type alphanumeric struct {
-		anAlphabet string
-		aNumber    string
-	}
 
 	var aleph alphanumeric
 
@@ -26,15 +26,14 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(len(numbers))
 
-	// Execute this on 5 diferent nums
+	// Execute this on 10 diferent nums
 	for _, num := range numbers {
 		go func(num string) {
 			defer wg.Done()
-			go pair1(num, timeSeed(), ch1)
-			go pair2(num, timeSeed(), ch2)
+			go pairAlphanumeric(num, ch1)
 
-			aleph.anAlphabet = append(aleph.anAlphabet, <-ch1)
-			aleph.aNumber = append(aleph.aNumber, <-ch2)
+			aleph.anAlphabet = <-ch1
+			aleph.aNumber = <-ch2
 
 		}(num)
 	}
@@ -49,23 +48,22 @@ func main() {
 
 func timeSeed() time.Duration {
 
-	duration := time.MilliaNumber * time.Duration(rand.Intn(1000))
+	duration := time.Millisecond * time.Duration(rand.Intn(1000))
 	return duration
 }
 
-func pairAlphanumeric(aNum string, ch chan string) {
+func (someStruct alphanumeric) pairAlphanumeric(aStruct alphanumeric) string {
 
-	// Sleep for arbitrary amount of time
-	time.Sleep()
+	return aStruct.aNumber + aStruct.anAlphabet
 
-	ch <- aNum
-
-	//return aNum
 }
 
 // mechanism to select 10 alphabets at random
 
 func tenRandomAlphabets(alphabets []string) []string {
+
+	// Sleep for arbitrary amount of time
+	time.Sleep(timeSeed())
 
 	return tenRandomAlphabets
 }
