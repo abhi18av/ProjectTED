@@ -13,6 +13,12 @@ type alphanumeric struct {
 	aNumber    string `json:"aNumber"`
 }
 
+func (someStruct alphanumeric) pairAlphanumeric() string {
+
+	return someStruct.aNumber + someStruct.anAlphabet
+
+}
+
 func main() {
 	//ch1 := make(chan string)
 	//ch2 := make(chan string)
