@@ -1,5 +1,13 @@
 package main
 
+
+type TedTalk{
+
+TalkMeta Meta
+TalkTranscriptPage TranscriptPage
+TalkVideoPage VideoPage
+
+}
 type Meta struct {
 	DateProcessed []string
 }
