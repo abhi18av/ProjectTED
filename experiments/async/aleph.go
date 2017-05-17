@@ -28,7 +28,7 @@ func main() {
 	//var aleph alphanumeric
 	//var alephS []alphanumeric
 
-	wg.Add(1)
+	wg.Add(10)
 	go func(numbers []string, alphabets []string) {
 		defer wg.Done()
 		for i := 0; i < 10; i++ {
