@@ -1,31 +1,25 @@
 package main
 
-import (
-	"fmt"
-	"math/rand"
-	"time"
-)
+import "fmt"
+
+type alphanumeric struct {
+	anAlphabet string
+	aNumber    string
+}
 
 func main() {
 
-	alphabets := [...]string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
+	var aleph alphanumeric
+	var alephS []alphanumeric
 
-	var arr []string
+	aleph.anAlphabet = "a"
+	aleph.aNumber = "1"
 
-	for _, x := range alphabets {
+	fmt.Println(aleph.pairAlphanumeric())
+}
 
-		if len(arr) == 10 {
-			break
-		}
+func (someStruct alphanumeric) pairAlphanumeric() string {
 
-		randTime := time.Time.UnixNano(time.Now())
-		rand.Seed(randTime)
+	return someStruct.aNumber + someStruct.anAlphabet
 
-		if rand.Int63n(randTime)%2 == 0 {
-
-			arr = append(arr, x)
-		}
-	}
-
-	fmt.Println(arr)
 }
