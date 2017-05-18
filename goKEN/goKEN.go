@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"strings"
 	"sync"
@@ -108,12 +109,27 @@ func main() {
 				Paragraphs:     transcriptTalkTranscript(transcriptPage),
 			}
 
-			var transcriptPageInstance TranscriptPage
+			transcriptPageInstance := TranscriptPage{
+
+				AvailableTranscripts: transcriptAvailableTranscripts(transcriptPage),
+				DatePosted:           transcriptDatePosted(transcriptPage),
+				Rated:                transcriptRated(transcriptPage),
+				//TalkTranscript:       transcript,
+				TimeStamps: transcriptTimeStamps(transcriptPage),
+			}
+
 			// Using append here to add to the array-field
 			transcriptPageInstance.TalkTranscript = append(transcriptPageInstance.TalkTranscript, transcript)
 
-			fmt.Println(transcriptPageInstance)
+			//fmt.Println(transcriptPageInstance)
 			//fmt.Println(transcript)
+
+			body, err := json.Marshal(transcriptPageInstance)
+			if err != nil {
+				panic(err)
+			}
+			fmt.Println(string(body))
+
 			defer wg.Done()
 		}(url)
 	}
