@@ -28,11 +28,12 @@ type VideoPage struct {
 type TranscriptPage struct {
 	AvailableTranscripts []string `json:"AvailableTranscripts"`
 	DatePosted           string   `json:"DatePosted"`
-	LocalTitle           string   `json:"LocalTitle"`
-	Rated                string   `json:"Rated"`
-	TalkTranscript       talkTranscript
-	TimeStamps           []string `json:"TimeStamps"`
+	//	LocalTitle           string           `json:"LocalTitle"`
+	Rated          string           `json:"Rated"`
+	TalkTranscript []talkTranscript `json:"TalkTranscript"`
+	TimeStamps     []string         `json:"TimeStamps"`
 }
+
 type talkTranscript struct {
 	LocalTalkTitle string   `json:"LocalTalkTitle"`
 	Paragraphs     []string `json:"Paragraphs"`
@@ -100,11 +101,20 @@ func main() {
 			//fmt.Println(url)
 			transcriptPage, _ := goquery.NewDocument(url)
 			//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
-			transcriptPageInstance := TranscriptPage{
 
-				LocalTitle: transcriptLocalTalkTitle(transcriptPage),
+			transcript := talkTranscript{
+
+				LocalTalkTitle: transcriptLocalTalkTitle(transcriptPage),
+				Paragraphs:     transcriptTalkTranscript(transcriptPage),
 			}
+
+			// Need to use append here
+			transcriptPageInstance := TranscriptPage{
+				TalkTranscript: transcript,
+			}
+
 			fmt.Println(transcriptPageInstance)
+			//fmt.Println(transcript)
 			defer wg.Done()
 		}(url)
 	}
