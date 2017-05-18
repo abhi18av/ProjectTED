@@ -16,6 +16,22 @@ var langCodes = map[string]string{
 	"Russian":             "ru",
 }
 
+func genTranscriptURLs(langCodes map[string]string, videoURL string) []string {
+
+	langBaseURL := "/transcript?language="
+
+	var urls []string
+
+	for _, value := range langCodes {
+		newURL := videoURL + langBaseURL + value
+		//fmt.Println(x)
+		urls = append(urls, newURL)
+	}
+	//fmt.Println(len(urls))
+
+	return urls
+}
+
 type talkTranscript struct {
 	LocalTalkTitle string   `json:"LocalTalkTitle"`
 	Paragraphs     []string `json:"Paragraphs"`
@@ -35,32 +51,13 @@ func main() {
 	//transcriptPage, _ := goquery.NewDocument(transcriptURL)
 	//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
 
-	var wg sync.WaitGroup
-
-
 	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
 
+	urls := genTranscriptURLs(langCodes, videoURL)
 
+	fmt.Println(urls)
 
-urls := func genTranscriptURLs(langCodes map[string]string, videoURL string) []string{
-
-	langBaseURL := "/transcript?language="
-
-	var urls []string
-
-	for _, value := range langCodes {
-		newURL := videoURL + langBaseURL + value
-		//fmt.Println(x)
-		urls = append(urls, newURL)
-	}
-	//fmt.Println(len(urls))
-
-	//fmt.Println(urls)
-
-	return urls
-}
-
-
+	var wg sync.WaitGroup
 	wg.Add(len(urls))
 
 	for _, url := range urls {
@@ -148,6 +145,35 @@ func transcriptLocalTalkTitle(doc *goquery.Document) string {
 	//fmt.Println(strings.Split(title, "\n")[2])
 	return strings.Split(title, "\n")[2]
 }
+
+/*
+
+Need to learn from this function
+
+
+
+func TalkTranscript(doc *goquery.Document) []string {
+	texts := doc.Find(".talk-transcript__para__text").Contents().Text()
+	var para []string
+	for _, text := range strings.Split(texts, "  ") {
+
+		//fmt.Println(text)
+		para = append(para, text)
+	}
+
+	var lines []string
+	for _, para := range strings.Split(texts, "\n\n") {
+
+		//fmt.Println(text)
+		lines = append(lines, para)
+	}
+
+	return para
+	//return lines
+}
+
+
+*/
 
 func transcriptTimeStamps(doc *goquery.Document) []string {
 	times := doc.Find(".talk-transcript__para__time").Contents().Text()

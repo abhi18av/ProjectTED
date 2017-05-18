@@ -16,6 +16,22 @@ var langCodes = map[string]string{
 	"Russian":             "ru",
 }
 
+func genTranscriptURLs(langCodes map[string]string, videoURL string) []string {
+
+	langBaseURL := "/transcript?language="
+
+	var urls []string
+
+	for _, value := range langCodes {
+		newURL := videoURL + langBaseURL + value
+		//fmt.Println(x)
+		urls = append(urls, newURL)
+	}
+	//fmt.Println(len(urls))
+
+	return urls
+}
+
 type VideoPage struct {
 	AvailableSubtitlesCount string   `json:"AvailableSubtitlesCount"`
 	Speaker                 string   `json:"Speaker"`
@@ -76,23 +92,13 @@ func main() {
 	//transcriptPage, _ := goquery.NewDocument(transcriptURL)
 	//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
 
+	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+
+	urls := genTranscriptURLs(langCodes, videoURL)
+
+	fmt.Println(urls)
+
 	var wg sync.WaitGroup
-
-	var urls []string
-
-	transcriptBaseURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-	langBaseURL := "/transcript?language="
-
-	// CONVERT THIS SECTION TO A FUNCTION
-	for _, value := range langCodes {
-		newURL := transcriptBaseURL + langBaseURL + value
-		//fmt.Println(x)
-		urls = append(urls, newURL)
-	}
-	//fmt.Println(len(urls))
-
-	//fmt.Println(urls)
-
 	wg.Add(len(urls))
 
 	for _, url := range urls {
