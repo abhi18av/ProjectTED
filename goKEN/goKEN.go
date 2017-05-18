@@ -83,7 +83,7 @@ func main() {
 	transcriptBaseURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
 	langBaseURL := "/transcript?language="
 
-	// CONVERT THIS SECTION TO A STRUCT
+	// CONVERT THIS SECTION TO A FUNCTION
 	for _, value := range langCodes {
 		newURL := transcriptBaseURL + langBaseURL + value
 		//fmt.Println(x)
