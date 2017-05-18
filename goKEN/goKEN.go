@@ -25,6 +25,11 @@ type VideoPage struct {
 	TalkCommentsCount       string   `json:"TalkCommentsCount"`
 }
 
+type talkTranscript struct {
+	LocalTalkTitle string   `json:"LocalTalkTitle"`
+	Paragraphs     []string `json:"Paragraphs"`
+}
+
 type TranscriptPage struct {
 	AvailableTranscripts []string `json:"AvailableTranscripts"`
 	DatePosted           string   `json:"DatePosted"`
@@ -32,11 +37,6 @@ type TranscriptPage struct {
 	Rated          string           `json:"Rated"`
 	TalkTranscript []talkTranscript `json:"TalkTranscript"`
 	TimeStamps     []string         `json:"TimeStamps"`
-}
-
-type talkTranscript struct {
-	LocalTalkTitle string   `json:"LocalTalkTitle"`
-	Paragraphs     []string `json:"Paragraphs"`
 }
 
 func main() {
@@ -108,10 +108,9 @@ func main() {
 				Paragraphs:     transcriptTalkTranscript(transcriptPage),
 			}
 
-			// Need to use append here
-			transcriptPageInstance := TranscriptPage{
-				TalkTranscript: transcript,
-			}
+			var transcriptPageInstance TranscriptPage
+			// Using append here to add to the array-field
+			transcriptPageInstance.TalkTranscript = append(transcriptPageInstance.TalkTranscript, transcript)
 
 			fmt.Println(transcriptPageInstance)
 			//fmt.Println(transcript)
