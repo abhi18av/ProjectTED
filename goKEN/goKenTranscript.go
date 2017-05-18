@@ -37,20 +37,29 @@ func main() {
 
 	var wg sync.WaitGroup
 
-	var urls []string
 
-	transcriptBaseURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+
+
+
+urls := func genTranscriptURLs(langCodes map[string]string, videoURL string) []string{
+
 	langBaseURL := "/transcript?language="
 
-	// CONVERT THIS SECTION TO A FUNCTION
+	var urls []string
+
 	for _, value := range langCodes {
-		newURL := transcriptBaseURL + langBaseURL + value
+		newURL := videoURL + langBaseURL + value
 		//fmt.Println(x)
 		urls = append(urls, newURL)
 	}
 	//fmt.Println(len(urls))
 
 	//fmt.Println(urls)
+
+	return urls
+}
+
 
 	wg.Add(len(urls))
 
