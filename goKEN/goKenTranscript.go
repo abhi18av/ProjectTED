@@ -67,24 +67,24 @@ func main() {
 			//fmt.Println(url)
 			transcriptPage, _ := goquery.NewDocument(url)
 			//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
-			/*
-				transcript := talkTranscript{
 
-					LocalTalkTitle: transcriptLocalTalkTitle(transcriptPage),
-					Paragraphs:     transcriptTalkTranscript(transcriptPage),
-				}
-			*/
+			transcript := talkTranscript{
+
+				LocalTalkTitle: transcriptLocalTalkTitle(transcriptPage),
+				Paragraphs:     transcriptTalkTranscript(transcriptPage),
+			}
+
 			transcriptPageInstance := TranscriptPage{
 
-				//AvailableTranscripts: transcriptAvailableTranscripts(transcriptPage),
-				//DatePosted:           transcriptDatePosted(transcriptPage),
-				//Rated:                transcriptRated(transcriptPage),
+				AvailableTranscripts: transcriptAvailableTranscripts(transcriptPage),
+				DatePosted:           transcriptDatePosted(transcriptPage),
+				Rated:                transcriptRated(transcriptPage),
 				//TalkTranscript:       transcript,
 				TimeStamps: transcriptTimeStamps(transcriptPage),
 			}
 
 			// Using append here to add to the array-field
-			//transcriptPageInstance.TalkTranscript = append(transcriptPageInstance.TalkTranscript, transcript)
+			transcriptPageInstance.TalkTranscript = append(transcriptPageInstance.TalkTranscript, transcript)
 
 			//fmt.Println(transcriptPageInstance)
 			//fmt.Println(transcript)
