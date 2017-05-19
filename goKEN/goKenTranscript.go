@@ -77,6 +77,9 @@ func main() {
 				TimeStamps:     transcriptTimeStamps(transcriptPage),
 			}
 
+			// Using append here to add to the array-field
+			transcriptPageInstance.TalkTranscript = append(transcriptPageInstance.TalkTranscript, transcript)
+
 			transcriptPageInstance = TranscriptPage{
 
 				AvailableTranscripts: transcriptAvailableTranscripts(transcriptPage),
@@ -84,9 +87,6 @@ func main() {
 				Rated:                transcriptRated(transcriptPage),
 				//TalkTranscript:       transcript,
 			}
-
-			// Using append here to add to the array-field
-			transcriptPageInstance.TalkTranscript = append(transcriptPageInstance.TalkTranscript, transcript)
 
 			//fmt.Println(transcriptPageInstance)
 			//fmt.Println(transcript)
