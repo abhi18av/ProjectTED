@@ -3,8 +3,6 @@ package main
 import (
 	"strings"
 
-	"fmt"
-
 	"github.com/PuerkitoBio/goquery"
 )
 
@@ -15,48 +13,59 @@ type TranscriptPage struct {
 }
 */
 
-func LocalTalkTitle(doc *goquery.Document) string {
-	title := doc.Find(".m5").Contents().Text()
-	//fmt.Println(strings.Split(title, "\n")[2])
-	return strings.Split(title, "\n")[2]
-}
+func transcriptTimeStamps(doc *goquery.Document) []string {
+	times := doc.Find(".talk-transcript__para__time").Contents().Text()
+	var times1 []string
 
-func TalkTranscript(doc *goquery.Document) []string {
-	texts := doc.Find(".talk-transcript__para__text").Contents().Text()
-	var para []string
-	for _, text := range strings.Split(texts, "  ") {
+	for _, time := range strings.Split(times, " ") {
+		if time == "" {
 
-		//fmt.Println(text)
-		para = append(para, text)
+		} else {
+
+			//fmt.Println(time)
+			times1 = append(times1, strings.TrimRight(time, " "))
+
+		}
 	}
 
-	var lines []string
-	for _, para := range strings.Split(texts, "\n\n") {
+	//fmt.Println(times1)
+	var times2 []string
+	for _, time := range strings.Split(times1[len(times1)-1], "\n\n") {
 
-		//fmt.Println(text)
-		lines = append(lines, para)
+		times2 = append(times2, time)
 	}
 
-	return para
-	//return lines
-}
+	//fmt.Println(times2)
+	var timestamps []string
 
+	for i := 0; i < len(times1)-1; i++ {
+
+		timestamps = append(timestamps, times1[i])
+
+	}
+
+	for i := 0; i < len(times2); i++ {
+
+		timestamps = append(timestamps, times2[i])
+	}
+
+	//fmt.Println(timestamps)
+
+	for i := 0; i < len(timestamps); i++ {
+
+		timestamps[i] = strings.Trim(timestamps[i], "\n")
+	}
+
+	//x, _ := json.Marshal(timestamps)
+	//fmt.Println(string(x))
+
+	return timestamps
+}
 func main() {
 
 	transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"
 
 	transcriptPage, _ := goquery.NewDocument(transcriptURL)
 
-	fmt.Println(TalkTranscript(transcriptPage))
-
-	fmt.Println(len(TalkTranscript(transcriptPage)))
-
-	/*
-		var ken TranscriptPage
-				ken.LocalTalkTitle = LocalTalkTitle(transcriptPage)
-				ken.TalkTranscript = TalkTranscript(transcriptPage)
-
-				fmt.Println(ken)
-
-	*/
+	transcriptTimeStamps(transcriptPage)
 }
