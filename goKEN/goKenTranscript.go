@@ -55,7 +55,7 @@ func main() {
 
 	urls := genTranscriptURLs(langCodes, videoURL)
 
-	fmt.Println(urls)
+	//fmt.Println(urls)
 
 	var wg sync.WaitGroup
 	wg.Add(len(urls))
