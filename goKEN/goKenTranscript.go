@@ -59,22 +59,24 @@ func main() {
 
 	var wg sync.WaitGroup
 	wg.Add(len(urls))
+	var transcript talkTranscript
+	var transcriptPageInstance TranscriptPage
 
 	for _, url := range urls {
 
-		go func(url string) {
+		go func(url string, transcript talkTranscript, transcriptPageInstance TranscriptPage) {
 
 			//fmt.Println(url)
 			transcriptPage, _ := goquery.NewDocument(url)
 			//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
 
-			transcript := talkTranscript{
+			transcript = talkTranscript{
 
 				LocalTalkTitle: transcriptLocalTalkTitle(transcriptPage),
 				Paragraphs:     transcriptTalkTranscript(transcriptPage),
 			}
 
-			transcriptPageInstance := TranscriptPage{
+			transcriptPageInstance = TranscriptPage{
 
 				AvailableTranscripts: transcriptAvailableTranscripts(transcriptPage),
 				DatePosted:           transcriptDatePosted(transcriptPage),
@@ -96,7 +98,7 @@ func main() {
 			fmt.Println(string(body))
 
 			defer wg.Done()
-		}(url)
+		}(url, transcript, transcriptPageInstance)
 	}
 
 	wg.Wait()
