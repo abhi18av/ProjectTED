@@ -35,6 +35,7 @@ func genTranscriptURLs(langCodes map[string]string, videoURL string) []string {
 type talkTranscript struct {
 	LocalTalkTitle string   `json:"LocalTalkTitle"`
 	Paragraphs     []string `json:"Paragraphs"`
+	TimeStamps     []string `json:"TimeStamps"`
 }
 
 type TranscriptPage struct {
@@ -42,7 +43,6 @@ type TranscriptPage struct {
 	DatePosted           string           `json:"DatePosted"`
 	Rated                string           `json:"Rated"`
 	TalkTranscript       []talkTranscript `json:"TalkTranscript"`
-	TimeStamps           []string         `json:"TimeStamps"`
 }
 
 func main() {
@@ -74,6 +74,7 @@ func main() {
 
 				LocalTalkTitle: transcriptLocalTalkTitle(transcriptPage),
 				Paragraphs:     transcriptTalkTranscript(transcriptPage),
+				TimeStamps:     transcriptTimeStamps(transcriptPage),
 			}
 
 			transcriptPageInstance = TranscriptPage{
@@ -82,7 +83,6 @@ func main() {
 				DatePosted:           transcriptDatePosted(transcriptPage),
 				Rated:                transcriptRated(transcriptPage),
 				//TalkTranscript:       transcript,
-				TimeStamps: transcriptTimeStamps(transcriptPage),
 			}
 
 			// Using append here to add to the array-field
