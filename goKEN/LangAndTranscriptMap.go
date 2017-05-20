@@ -75,35 +75,29 @@ func main() {
 
 	}
 
-
-
-
 	transcriptEnURL := videoURL + "/transcript?language=en"
 	var transcriptPageCommon TranscriptPage
 
-		go func(url string) {
-			defer wg.Done()
-			transcriptPageCommon = fetchCommon(url)
-		}(transcriptEnURL)
+	go func(url string) {
+		defer wg.Done()
+		transcriptPageCommon = fetchCommon(url)
+	}(transcriptEnURL)
 
 	wg.Wait()
 
-
-
-// Using append here to add to the array-field
+	// Using append here to add to the array-field
 	transcriptPageCommon.TalkTranscript = transcriptS
 
-//	x, _ := json.Marshal(transcriptS)
-//	fmt.Println(string(x))
+	//	x, _ := json.Marshal(transcriptS)
+	//	fmt.Println(string(x))
 
-//	fmt.Println(transcriptS)
+	//	fmt.Println(transcriptS)
 
 	y, _ := json.Marshal(transcriptPageCommon)
 	fmt.Println(string(y))
 
-//	fmt.Println(transcriptPageCommon)
+	//	fmt.Println(transcriptPageCommon)
 } // end of main()
-
 
 /*
 func printJSON(transcriptS []talkTranscript) {
@@ -118,7 +112,6 @@ func printJSON(transcriptPageCommon TranscriptPage) {
 }
 
 */
-
 
 func fetchCommon(url string) TranscriptPage {
 	transcriptPage, _ := goquery.NewDocument(url)
