@@ -53,33 +53,37 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(len(urls))
 	var transcriptS []talkTranscript
-
+	ch := make(chan talkTranscript)
 	for _, url := range urls {
 
-		go func(url string, transcriptS []talkTranscript) {
-
-			//fmt.Println(url)
-			transcriptPage, _ := goquery.NewDocument(url)
-			//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
-
-			transcript := talkTranscript{
-
-				LocalTalkTitle: transcriptLocalTalkTitle(transcriptPage),
-				Paragraphs:     transcriptTalkTranscript(transcriptPage),
-				TimeStamps:     transcriptTimeStamps(transcriptPage),
-			}
-			//fmt.Println(transcript)
-
-			transcriptS = append(transcriptS, transcript)
-			body, _ := json.Marshal(transcriptS)
-			fmt.Println(string(body))
-			defer wg.Done()
-		}(url, transcriptS)
+		go parallelFetch(url, transcriptS, ch)
+		defer wg.Done()
 	}
 
 	wg.Wait()
 
+	transcriptS = append(transcriptS, <-ch)
+	body, _ := json.Marshal(transcriptS)
+	fmt.Println(string(body))
+
 } // end of main()
+
+func parallelFetch(url string, transcriptS []talkTranscript, ch chan talkTranscript) {
+
+	//fmt.Println(url)
+	transcriptPage, _ := goquery.NewDocument(url)
+	//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
+
+	transcript := talkTranscript{
+
+		LocalTalkTitle: transcriptLocalTalkTitle(transcriptPage),
+		Paragraphs:     transcriptTalkTranscript(transcriptPage),
+		TimeStamps:     transcriptTimeStamps(transcriptPage),
+	}
+	//fmt.Println(transcript)
+
+	ch <- transcript
+}
 
 // transcriptPage
 
