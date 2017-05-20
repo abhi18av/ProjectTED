@@ -56,20 +56,19 @@ func main() {
 	ch := make(chan talkTranscript)
 	for _, url := range urls {
 
-		go parallelFetch(url, transcriptS, ch)
+		go parallelFetch(url, ch)
 		defer wg.Done()
 	}
 
 	wg.Wait()
 
-	transcriptS = append(transcriptS)
 	transcriptS = append(transcriptS, <-ch)
 	body, _ := json.Marshal(transcriptS)
 	fmt.Println(string(body))
 
 } // end of main()
 
-func parallelFetch(url string, transcriptS []talkTranscript, ch chan talkTranscript) {
+func parallelFetch(url string, ch chan talkTranscript) {
 
 	//fmt.Println(url)
 	transcriptPage, _ := goquery.NewDocument(url)
@@ -82,7 +81,6 @@ func parallelFetch(url string, transcriptS []talkTranscript, ch chan talkTranscr
 		TimeStamps:     transcriptTimeStamps(transcriptPage),
 	}
 	fmt.Println(transcript)
-
 	ch <- transcript
 }
 
