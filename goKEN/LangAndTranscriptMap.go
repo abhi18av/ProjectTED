@@ -61,7 +61,6 @@ func main() {
 	}
 
 	wg.Wait()
-
 	transcriptS = append(transcriptS, <-ch)
 	body, _ := json.Marshal(transcriptS)
 	fmt.Println(string(body))
@@ -80,44 +79,11 @@ func parallelFetch(url string, ch chan talkTranscript) {
 		Paragraphs:     transcriptTalkTranscript(transcriptPage),
 		TimeStamps:     transcriptTimeStamps(transcriptPage),
 	}
-	fmt.Println(transcript)
+	//fmt.Println(transcript)
 	ch <- transcript
 }
 
 // transcriptPage
-
-// OUTPUT
-// Jun 2006
-func transcriptDatePosted(doc *goquery.Document) string {
-	posted := doc.Find(".meta__item").Contents().Text()
-	p := strings.Split(posted, "\n")
-	//fmt.Println(p[3])
-	return (p[3])
-
-}
-
-// OUTPUT
-// Inspiring, Funny
-func transcriptRated(doc *goquery.Document) string {
-
-	rated := doc.Find(".meta__row").Contents().Text()
-
-	r := strings.Split(rated, "\n")
-	//fmt.Println(r[3])
-	return r[3]
-	/*
-	   rx := strings.Split(r[3], ",")
-
-	   	for _, x := range rx{
-	   		append(ls,x)
-	   	}
-	*/
-
-	//println(len(rx))
-	//println(r[0])
-	//println(r[1])
-	//return(p[3])
-}
 
 // OUTPUT
 // Do schools kill creativity?
@@ -196,24 +162,4 @@ func transcriptTalkTranscript(doc *goquery.Document) []string {
 
 	return para
 	//return lines
-}
-
-// OUTPUT
-// [Afrikaans Albanian Arabic Armenian Azerbaijani Basque Belarusian Bengali Bulgarian Catalan Chinese, Simplified Chinese, Traditional Croatian Czech Danish Dutch English Esperanto Estonian Filipino Finnish French French (Canada) Galician Georgian German Greek Hebrew Hungarian Indonesian Ingush Italian Japanese Korean Lao Latvian Lithuanian Macedonian Marathi Mongolian Nepali Norwegian Bokmal Persian Polish Portuguese Portuguese, Brazilian Romanian Russian Serbian Slovak Slovenian Spanish Swedish Thai Turkish Ukrainian Urdu Uzbek Vietnamese]
-// This should return an array of strings => ["langs"]
-func transcriptAvailableTranscripts(doc *goquery.Document) []string {
-
-	var langsList []string
-
-	langs := doc.Find(".talk-transcript__language").Contents().Text()
-
-	//	fmt.Println(langs)
-	langsSeparated := strings.Split(langs, "\n")
-
-	for i := 1; i < len(langsSeparated)-1; i++ {
-		//fmt.Println(i, ":", langsSeparated[i])
-		langsList = append(langsList, langsSeparated[i])
-	}
-
-	return langsList
 }
