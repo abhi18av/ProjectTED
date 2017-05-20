@@ -26,40 +26,41 @@ func main() {
 	alphabets := []string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
 
 	//var aleph alphanumeric
-	//var alephS []alphanumeric
+	var alephS []alphanumeric
 	n := 10 // number of codes you want to print
 
 	wg.Add(n)
 
-	var z map[string]string
+	z := make(map[string]string)
 
 	for i := 0; i < n; i++ {
 		go func(numbers []string, alphabets []string, z map[string]string) {
 			defer wg.Done()
-			x, y := makeAleph(numbers, alphabets)
+			x, y, alp := makeAleph(numbers, alphabets)
 			z[x] = y
-			//alephS = append(alephS, x)
+			alephS = append(alephS, alp)
 			//fmt.Println(x)
 		}(numbers, alphabets, z)
 	}
 
 	wg.Wait()
-	//fmt.Println(alephS)
-
+	fmt.Println(alephS)
 	fmt.Println(z)
 } // end of main()
 
-func makeAleph(numbers []string, alphabets []string) (string, string) {
+func makeAleph(numbers []string, alphabets []string) (string, string, alphanumeric) {
 
-	//var aleph alphanumeric
+	var aleph alphanumeric
 
 	anAlphabet := aNum(numbers)
 	aNumber := anAlph(alphabets)
 
+	aleph.anAlphabet = anAlphabet
+	aleph.aNumber = aNumber
 	//fmt.Println(aleph.pairAlphanumeric())
 
 	//return aleph.pairAlphanumeric()
-	return aNumber, anAlphabet
+	return aNumber, anAlphabet, aleph
 }
 
 func randomIndex() int {
