@@ -176,7 +176,7 @@ func transcriptTalkTranscript(doc *goquery.Document) []string {
 
 func transcriptTalkTranscriptAndTimeStamps(doc *goquery.Document) {
 
-	title := doc.Find(".talk-transcript__para").Contents().Text()
+	//title := doc.Find(".talk-transcript__para").Contents().Text()
 	//fmt.Println(strings.Split(title, "\n")[2])
 	//return strings.Split(title, "\n")[2]
 }
