@@ -53,14 +53,13 @@ func main() {
 	//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
 
 	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-	transcriptEN := videoURL + "/transcript?language=en"
 
 	urls := genTranscriptURLs(langCodes, videoURL)
 
 	//fmt.Println(urls)
 
 	var wg sync.WaitGroup
-	wg.Add(len(urls))
+	wg.Add(len(urls) + 1)
 
 	var transcriptS []talkTranscript
 
@@ -70,34 +69,64 @@ func main() {
 
 		go func(url string) {
 			defer wg.Done()
-			x := fetch(url)
+			x := fetchUncommon(url)
 			transcriptS = append(transcriptS, x)
 		}(url)
 
 	}
 
+
+
+
+	transcriptEnURL := videoURL + "/transcript?language=en"
 	var transcriptPageCommon TranscriptPage
 
-	// Using append here to add to the array-field
-	transcriptPageCommon.TalkTranscript = append(transcriptPageInstance.TalkTranscript, transcript)
+		go func(url string) {
+			defer wg.Done()
+			transcriptPageCommon = fetchCommon(url)
+		}(transcriptEnURL)
 
 	wg.Wait()
-	//fmt.Println(transcriptS)
-	//printJSON(transcriptS)
+
+
+
+// Using append here to add to the array-field
+	transcriptPageCommon.TalkTranscript = transcriptS
+
+//	x, _ := json.Marshal(transcriptS)
+//	fmt.Println(string(x))
+
+//	fmt.Println(transcriptS)
+
+	y, _ := json.Marshal(transcriptPageCommon)
+	fmt.Println(string(y))
+
+//	fmt.Println(transcriptPageCommon)
 } // end of main()
 
+
+/*
 func printJSON(transcriptS []talkTranscript) {
 	body, _ := json.Marshal(transcriptS)
 	fmt.Println(string(body))
 }
 
-func fetchCommon(transcriptEnUrl string) TranscriptPage {
+
+func printJSON(transcriptPageCommon TranscriptPage) {
+	body, _ := json.Marshal(transcriptPageCommon)
+	fmt.Println(string(body))
+}
+
+*/
+
+
+func fetchCommon(url string) TranscriptPage {
 	transcriptPage, _ := goquery.NewDocument(url)
 
 	// Using append here to add to the array-field
 	//transcriptPageInstance.TalkTranscript = append(transcriptPageInstance.TalkTranscript, transcript)
 
-	transcriptPageInstance = TranscriptPage{
+	transcriptPageInstance := TranscriptPage{
 
 		AvailableTranscripts: transcriptAvailableTranscripts(transcriptPage),
 		DatePosted:           transcriptDatePosted(transcriptPage),
@@ -186,7 +215,7 @@ func transcriptTimeStamps(doc *goquery.Document) []string {
 }
 
 // OUTPUT
-// Huge chunks of the Textual string
+// Seperate hunks of the Textual string
 func transcriptTalkTranscript(doc *goquery.Document) []string {
 	texts := doc.Find(".talk-transcript__para__text").Contents().Text()
 	var para []string
@@ -207,7 +236,7 @@ func transcriptTalkTranscript(doc *goquery.Document) []string {
 	//return lines
 }
 
-// OUTPU
+// OUTPUT
 // The entire text chunk
 func transcriptTalkTranscriptAndTimeStamps(doc *goquery.Document) []string {
 
