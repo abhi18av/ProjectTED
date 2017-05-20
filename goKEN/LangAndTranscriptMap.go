@@ -62,6 +62,7 @@ func main() {
 
 	wg.Wait()
 
+	transcriptS = append(transcriptS)
 	transcriptS = append(transcriptS, <-ch)
 	body, _ := json.Marshal(transcriptS)
 	fmt.Println(string(body))
@@ -80,7 +81,7 @@ func parallelFetch(url string, transcriptS []talkTranscript, ch chan talkTranscr
 		Paragraphs:     transcriptTalkTranscript(transcriptPage),
 		TimeStamps:     transcriptTimeStamps(transcriptPage),
 	}
-	//fmt.Println(transcript)
+	fmt.Println(transcript)
 
 	ch <- transcript
 }
