@@ -52,17 +52,17 @@ func main() {
 
 	var wg sync.WaitGroup
 	wg.Add(len(urls))
-	var transcript talkTranscript
+	var transcriptS []talkTranscript
 
 	for _, url := range urls {
 
-		go func(url string, transcript talkTranscript) {
+		go func(url string, transcriptS []talkTranscript) {
 
 			//fmt.Println(url)
 			transcriptPage, _ := goquery.NewDocument(url)
 			//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
 
-			transcript = talkTranscript{
+			transcript := talkTranscript{
 
 				LocalTalkTitle: transcriptLocalTalkTitle(transcriptPage),
 				Paragraphs:     transcriptTalkTranscript(transcriptPage),
@@ -70,14 +70,11 @@ func main() {
 			}
 			//fmt.Println(transcript)
 
-			body, err := json.Marshal(transcript)
-			if err != nil {
-				panic(err)
-			}
+			transcriptS = append(transcriptS, transcript)
+			body, _ := json.Marshal(transcriptS)
 			fmt.Println(string(body))
-
 			defer wg.Done()
-		}(url, transcript)
+		}(url, transcriptS)
 	}
 
 	wg.Wait()
