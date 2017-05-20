@@ -69,7 +69,7 @@ func main() {
 
 		go func(url string) {
 			defer wg.Done()
-			x := fetchUncommon(url)
+			x, _ := fetchUncommon(url)
 			transcriptS = append(transcriptS, x)
 		}(url)
 
@@ -143,7 +143,10 @@ func fetchUncommon(url string) talkTranscript {
 		TalkTranscriptAndTimeStamps: transcriptTalkTranscriptAndTimeStamps(transcriptPage),
 	}
 	//fmt.Println(transcript)
-	return transcript
+
+	langName := strings.Split(url, "=")[1]
+	//color.Blue(langName)
+	return transcript, langName
 }
 
 // transcriptPage
