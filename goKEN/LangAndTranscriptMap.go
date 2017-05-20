@@ -38,6 +38,13 @@ type talkTranscript struct {
 	TimeStamps     []string `json:"TimeStamps"`
 }
 
+type TranscriptPage struct {
+	AvailableTranscripts []string         `json:"AvailableTranscripts"`
+	DatePosted           string           `json:"DatePosted"`
+	Rated                string           `json:"Rated"`
+	TalkTranscript       []talkTranscript `json:"TalkTranscript"`
+}
+
 func main() {
 	// TRANSCRIPT functions
 	//transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=de"
@@ -165,4 +172,11 @@ func transcriptTalkTranscript(doc *goquery.Document) []string {
 
 	return para
 	//return lines
+}
+
+func transcriptTalkTranscriptAndTimeStamps(doc *goquery.Document) {
+
+	title := doc.Find(".talk-transcript__para").Contents().Text()
+	//fmt.Println(strings.Split(title, "\n")[2])
+	return strings.Split(title, "\n")[2]
 }

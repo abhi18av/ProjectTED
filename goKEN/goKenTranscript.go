@@ -105,6 +105,22 @@ func main() {
 
 } // end of main()
 
+func fetch(url string, ch chan talkTranscript) talkTranscript {
+
+	//fmt.Println(url)
+	transcriptPage, _ := goquery.NewDocument(url)
+	//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
+
+	transcript := talkTranscript{
+
+		LocalTalkTitle: transcriptLocalTalkTitle(transcriptPage),
+		Paragraphs:     transcriptTalkTranscript(transcriptPage),
+		TimeStamps:     transcriptTimeStamps(transcriptPage),
+	}
+	//fmt.Println(transcript)
+	return transcript
+}
+
 // transcriptPage
 
 // OUTPUT
@@ -237,4 +253,12 @@ func transcriptAvailableTranscripts(doc *goquery.Document) []string {
 	}
 
 	return langsList
+}
+
+// WORK ON THIS
+func transcriptTalkTranscriptAndTimeStamps(doc *goquery.Document) {
+
+	title := doc.Find(".talk-transcript__para").Contents().Text()
+	//fmt.Println(strings.Split(title, "\n")[2])
+	return strings.Split(title, "\n")[2]
 }
