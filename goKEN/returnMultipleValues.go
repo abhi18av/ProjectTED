@@ -70,6 +70,7 @@ func main() {
 		go func(url string) {
 			defer wg.Done()
 			x, _ := fetchUncommon(url)
+			//color.Blue(langName)
 			transcriptS = append(transcriptS, x)
 		}(url)
 
@@ -129,7 +130,7 @@ func fetchCommon(url string) TranscriptPage {
 	return transcriptPageInstance
 }
 
-func fetchUncommon(url string) talkTranscript {
+func fetchUncommon(url string) (talkTranscript, string) {
 
 	//fmt.Println(url)
 	transcriptPage, _ := goquery.NewDocument(url)

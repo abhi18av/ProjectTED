@@ -34,8 +34,8 @@ func main() {
 	for i := 0; i < n; i++ {
 		go func(numbers []string, alphabets []string) {
 			defer wg.Done()
-			x := makeAleph(numbers, alphabets)
-			alephS = append(alephS, x)
+			x, y := makeAleph(numbers, alphabets)
+			//alephS = append(alephS, x)
 			//fmt.Println(x)
 		}(numbers, alphabets)
 	}
@@ -44,17 +44,17 @@ func main() {
 	fmt.Println(alephS)
 } // end of main()
 
-func makeAleph(numbers []string, alphabets []string) alphanumeric {
+func makeAleph(numbers []string, alphabets []string) (aNumber, anAlphabet) {
 
-	var aleph alphanumeric
+	//var aleph alphanumeric
 
-	aleph.anAlphabet = aNum(numbers)
-	aleph.aNumber = anAlph(alphabets)
+	anAlphabet := aNum(numbers)
+	aNumber := anAlph(alphabets)
 
 	//fmt.Println(aleph.pairAlphanumeric())
 
 	//return aleph.pairAlphanumeric()
-	return aleph
+	return aNumber, anAlphabet
 }
 
 func randomIndex() int {
