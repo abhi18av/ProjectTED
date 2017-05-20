@@ -11,7 +11,7 @@ import (
 
 var langCodes = map[string]string{
 	"Chinese, Simplified": "zh-cn",
-	"English":             "en",
+	"English":             "fr",
 	"German":              "de",
 	"Russian":             "ru",
 }
@@ -33,9 +33,10 @@ func genTranscriptURLs(langCodes map[string]string, videoURL string) []string {
 }
 
 type talkTranscript struct {
-	LocalTalkTitle string   `json:"LocalTalkTitle"`
-	Paragraphs     []string `json:"Paragraphs"`
-	TimeStamps     []string `json:"TimeStamps"`
+	LocalTalkTitle              string   `json:"LocalTalkTitle"`
+	Paragraphs                  []string `json:"Paragraphs"`
+	TimeStamps                  []string `json:"TimeStamps"`
+	TalkTranscriptAndTimeStamps []string `json:"TalkTranscriptAndTimeStamps"`
 }
 
 type TranscriptPage struct {
@@ -60,24 +61,30 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(len(urls))
 	var transcriptS []talkTranscript
-	ch := make(chan talkTranscript)
+
+	//ch := make(chan talkTranscript)
+
 	for _, url := range urls {
 
-		go func(url string, ch chan talkTranscript) {
+		go func(url string) {
 			defer wg.Done()
-			x := fetch(url, ch)
+			x := fetch(url)
 			transcriptS = append(transcriptS, x)
-		}(url, ch)
+		}(url)
 
 	}
 
 	wg.Wait()
-	body, _ := json.Marshal(transcriptS)
-	fmt.Println(string(body))
 
+	fmt.Println(transcriptS)
+	//printJSON(transcriptS)
 } // end of main()
 
-func fetch(url string, ch chan talkTranscript) talkTranscript {
+func printJSON(transcriptS []talkTranscript) {
+	body, _ := json.Marshal(transcriptS)
+	fmt.Println(string(body))
+}
+func fetch(url string) talkTranscript {
 
 	//fmt.Println(url)
 	transcriptPage, _ := goquery.NewDocument(url)
@@ -85,9 +92,10 @@ func fetch(url string, ch chan talkTranscript) talkTranscript {
 
 	transcript := talkTranscript{
 
-		LocalTalkTitle: transcriptLocalTalkTitle(transcriptPage),
-		Paragraphs:     transcriptTalkTranscript(transcriptPage),
-		TimeStamps:     transcriptTimeStamps(transcriptPage),
+		LocalTalkTitle:              transcriptLocalTalkTitle(transcriptPage),
+		Paragraphs:                  transcriptTalkTranscript(transcriptPage),
+		TimeStamps:                  transcriptTimeStamps(transcriptPage),
+		TalkTranscriptAndTimeStamps: transcriptTalkTranscriptAndTimeStamps(transcriptPage),
 	}
 	//fmt.Println(transcript)
 	return transcript
@@ -174,9 +182,23 @@ func transcriptTalkTranscript(doc *goquery.Document) []string {
 	//return lines
 }
 
-func transcriptTalkTranscriptAndTimeStamps(doc *goquery.Document) {
+func transcriptTalkTranscriptAndTimeStamps(doc *goquery.Document) []string {
 
-	//title := doc.Find(".talk-transcript__para").Contents().Text()
-	//fmt.Println(strings.Split(title, "\n")[2])
-	//return strings.Split(title, "\n")[2]
+	texts := doc.Find(".talk-transcript__para").Contents().Text()
+	var para []string
+	for _, text := range strings.Split(texts, "  ") {
+
+		//fmt.Println(text)
+		para = append(para, text)
+	}
+
+	var lines []string
+	for _, para := range strings.Split(texts, "\n\n") {
+
+		//fmt.Println(text)
+		lines = append(lines, para)
+	}
+
+	return para
+	//return lines
 }
