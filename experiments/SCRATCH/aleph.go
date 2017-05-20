@@ -37,7 +37,7 @@ func main() {
 		go func(numbers []string, alphabets []string, z map[string]string) {
 			defer wg.Done()
 			x, y, alp := makeAleph(numbers, alphabets)
-			z[x] = y
+			z[y] = x
 			alephS = append(alephS, alp)
 			//fmt.Println(x)
 		}(numbers, alphabets, z)

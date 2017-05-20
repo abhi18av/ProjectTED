@@ -1,10 +1,10 @@
 package main
 
 import (
-	"encoding/json"
-	"fmt"
 	"strings"
 	"sync"
+
+	"fmt"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -63,14 +63,16 @@ func main() {
 
 	var transcriptS []talkTranscript
 
-	//ch := make(chan talkTranscript)
+	langSpecificMap := make(map[string]talkTranscript)
 
 	for _, url := range urls {
 
 		go func(url string) {
 			defer wg.Done()
-			x, _ := fetchUncommon(url)
+			x, langName := fetchUncommon(url)
 			//color.Blue(langName)
+
+			langSpecificMap[langName] = x
 			transcriptS = append(transcriptS, x)
 		}(url)
 
@@ -86,16 +88,17 @@ func main() {
 
 	wg.Wait()
 
+	fmt.Println(langSpecificMap)
 	// Using append here to add to the array-field
-	transcriptPageCommon.TalkTranscript = transcriptS
+	//transcriptPageCommon.TalkTranscript = transcriptS
 
 	//	x, _ := json.Marshal(transcriptS)
 	//	fmt.Println(string(x))
 
 	//	fmt.Println(transcriptS)
 
-	y, _ := json.Marshal(transcriptPageCommon)
-	fmt.Println(string(y))
+	//y, _ := json.Marshal(transcriptPageCommon)
+	//fmt.Println(string(y))
 
 	//	fmt.Println(transcriptPageCommon)
 } // end of main()
