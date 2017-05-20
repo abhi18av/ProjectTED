@@ -53,6 +53,7 @@ func main() {
 	//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
 
 	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	transcriptEN := videoURL + "/transcript?language=en"
 
 	urls := genTranscriptURLs(langCodes, videoURL)
 
@@ -60,6 +61,7 @@ func main() {
 
 	var wg sync.WaitGroup
 	wg.Add(len(urls))
+
 	var transcriptS []talkTranscript
 
 	//ch := make(chan talkTranscript)
@@ -74,9 +76,13 @@ func main() {
 
 	}
 
-	wg.Wait()
+	var transcriptPageCommon TranscriptPage
 
-	fmt.Println(transcriptS)
+	// Using append here to add to the array-field
+	transcriptPageCommon.TalkTranscript = append(transcriptPageInstance.TalkTranscript, transcript)
+
+	wg.Wait()
+	//fmt.Println(transcriptS)
 	//printJSON(transcriptS)
 } // end of main()
 
@@ -84,7 +90,24 @@ func printJSON(transcriptS []talkTranscript) {
 	body, _ := json.Marshal(transcriptS)
 	fmt.Println(string(body))
 }
-func fetch(url string) talkTranscript {
+
+func fetchCommon(transcriptEnUrl string) TranscriptPage {
+	transcriptPage, _ := goquery.NewDocument(url)
+
+	// Using append here to add to the array-field
+	//transcriptPageInstance.TalkTranscript = append(transcriptPageInstance.TalkTranscript, transcript)
+
+	transcriptPageInstance = TranscriptPage{
+
+		AvailableTranscripts: transcriptAvailableTranscripts(transcriptPage),
+		DatePosted:           transcriptDatePosted(transcriptPage),
+		Rated:                transcriptRated(transcriptPage),
+		//TalkTranscript:       transcriptS,
+	}
+	return transcriptPageInstance
+}
+
+func fetchUncommon(url string) talkTranscript {
 
 	//fmt.Println(url)
 	transcriptPage, _ := goquery.NewDocument(url)
@@ -162,6 +185,8 @@ func transcriptTimeStamps(doc *goquery.Document) []string {
 	return timestamps
 }
 
+// OUTPUT
+// Huge chunks of the Textual string
 func transcriptTalkTranscript(doc *goquery.Document) []string {
 	texts := doc.Find(".talk-transcript__para__text").Contents().Text()
 	var para []string
@@ -182,6 +207,8 @@ func transcriptTalkTranscript(doc *goquery.Document) []string {
 	//return lines
 }
 
+// OUTPU
+// The entire text chunk
 func transcriptTalkTranscriptAndTimeStamps(doc *goquery.Document) []string {
 
 	texts := doc.Find(".talk-transcript__para").Contents().Text()
