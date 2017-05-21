@@ -43,3 +43,9 @@ github.com/msoap/go-carpet
 "github.com/ChimeraCoder/gojson"
 "github.com/yosssi/ace"
 
+
+
+- micro text editor based plugin for learning language via text
+- we can rely upon hyper-term to provide the more dynamic features like music player
+
+- OR pray to god that the VsCode team liberates more API for the editor
