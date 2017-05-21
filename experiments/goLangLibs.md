@@ -10,6 +10,9 @@ https://github.com/flimzy/go-sql.js
 https://github.com/gopherjs/vecty
 go get github.com/yuin/gopher-lua/cmd/glua
 https://github.com/siongui/godom
+https://github.com/andlabs/ui
+https://github.com/go-vgo/robotgo
+https://github.com/asticode/astilectron
 "github.com/src-d/go-git"
 "github.com/gizak/termui"
 "github.com/spf13/cobra"

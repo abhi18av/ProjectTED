@@ -163,13 +163,12 @@ func main() {
 	WiFi()
 
 	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-	urls := genTranscriptURLs(langCodes, videoURL)
 
+	urls := genTranscriptURLs(langCodes, videoURL)
+	wg.Add(len(urls) + 1)
 	//fmt.Println(urls)
 
 	var wg sync.WaitGroup
-	wg.Add(len(urls) + 1)
-
 	// @@@@@@@@@@
 	// Page Common
 	transcriptEnURL := videoURL + "/transcript?language=en"
