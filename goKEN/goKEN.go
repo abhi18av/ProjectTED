@@ -51,7 +51,7 @@ type TranscriptPage struct {
 	TalkTranscript       map[string]talkTranscript `json:"TalkTranscript"`
 }
 
-func WiFi() {
+func checkWiFi() {
 	// Make a get request
 	rs, err := http.Get("https://google.com")
 	// Process response
@@ -69,7 +69,7 @@ func WiFi() {
 
 func main() {
 
-	WiFi()
+	checkWiFi()
 
 	// TRANSCRIPT functions
 	//transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=de"
