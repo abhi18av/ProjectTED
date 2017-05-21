@@ -175,10 +175,14 @@ func main() {
 	transcriptEnURL := videoURL + "/transcript?language=en"
 
 	var transcriptPageCommon TranscriptPage
+	transcriptPage, _ := goquery.NewDocument(url)
+
+	// Using append here to add to the array-field
+	//transcriptPageInstance.TalkTranscript = append(transcriptPageInstance.TalkTranscript, transcript)
 
 	go func(url string) {
 		defer wg.Done()
-		transcriptPageCommon = fetchCommon(url)
+		transcriptAvailableTranscripts(transcriptPage)
 	}(transcriptEnURL)
 
 	// @@@@@@@@@@@@
