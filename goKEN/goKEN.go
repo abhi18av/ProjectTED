@@ -2,11 +2,13 @@ package main
 
 import (
 	"encoding/json"
+	"net/http"
 	"os"
 	"strings"
 	"sync"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/fatih/color"
 	"github.com/imdario/mergo"
 )
 
@@ -48,6 +50,19 @@ type TranscriptPage struct {
 }
 
 func main() {
+	// Make a get request
+	rs, err := http.Get("https://google.com")
+	// Process response
+	if err != nil {
+		color.Red("WiFI OFF")
+		//panic("Not connected to the net") // More idiomatic way would be to print the error and die unless it's a serious error
+
+		// Learn about exit status in Golang
+		os.Exit(1)
+	}
+
+	defer rs.Body.Close()
+
 	// TRANSCRIPT functions
 	//transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=de"
 	//transcriptPage, _ := goquery.NewDocument(transcriptURL)
