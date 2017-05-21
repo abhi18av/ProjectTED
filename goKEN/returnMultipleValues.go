@@ -40,10 +40,10 @@ type talkTranscript struct {
 }
 
 type TranscriptPage struct {
-	AvailableTranscripts []string         `json:"AvailableTranscripts"`
-	DatePosted           string           `json:"DatePosted"`
-	Rated                string           `json:"Rated"`
-	TalkTranscript       []talkTranscript `json:"TalkTranscript"`
+	AvailableTranscripts []string                    `json:"AvailableTranscripts"`
+	DatePosted           string                      `json:"DatePosted"`
+	Rated                string                      `json:"Rated"`
+	TalkTranscript       map[string][]talkTranscript `json:"TalkTranscript"`
 }
 
 func main() {

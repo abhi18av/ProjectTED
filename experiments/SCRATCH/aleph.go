@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"math/rand"
 	"sync"
@@ -8,13 +9,14 @@ import (
 )
 
 type alphanumeric struct {
-	anAlphabet string
-	aNumber    string
+	Alphabet string            `json:"anAlphabet"`
+	Number   string            `json:"aNumber"`
+	AlNum    map[string]string `json:"AlNum"`
 }
 
 func (someStruct alphanumeric) pairAlphanumeric() string {
 
-	return someStruct.aNumber + someStruct.anAlphabet
+	return someStruct.Number + someStruct.Alphabet
 
 }
 
@@ -38,14 +40,19 @@ func main() {
 			defer wg.Done()
 			x, y, alp := makeAleph(numbers, alphabets)
 			z[y] = x
+			alp.AlNum = z
 			alephS = append(alephS, alp)
 			//fmt.Println(x)
 		}(numbers, alphabets, z)
 	}
 
 	wg.Wait()
-	fmt.Println(alephS)
-	fmt.Println(z)
+	//fmt.Println(alephS)
+	//fmt.Println(z)
+	//alephS.AlNum = z
+	body, _ := json.Marshal(alephS)
+	fmt.Println(string(body))
+
 } // end of main()
 
 func makeAleph(numbers []string, alphabets []string) (string, string, alphanumeric) {
@@ -55,8 +62,8 @@ func makeAleph(numbers []string, alphabets []string) (string, string, alphanumer
 	anAlphabet := aNum(numbers)
 	aNumber := anAlph(alphabets)
 
-	aleph.anAlphabet = anAlphabet
-	aleph.aNumber = aNumber
+	aleph.Alphabet = anAlphabet
+	aleph.Number = aNumber
 	//fmt.Println(aleph.pairAlphanumeric())
 
 	//return aleph.pairAlphanumeric()
