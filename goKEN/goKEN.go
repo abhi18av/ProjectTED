@@ -54,7 +54,7 @@ func WiFi() {
 	rs, err := http.Get("https://google.com")
 	// Process response
 	if err != nil {
-		color.Red("WiFI OFF")
+		color.Red("WiFi OFF")
 		//panic("Not connected to the net") // More idiomatic way would be to print the error and die unless it's a serious error
 
 		// Learn about exit status in Golang
