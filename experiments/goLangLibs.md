@@ -37,6 +37,7 @@ github.com/knq/chromedp
 github.com/msoap/go-carpet
 "github.com/ahmetb/go-linq"
 "github.com/dave/jennifer"
+https://github.com/imdario/mergo
 "github.com/jinzhu/now"
 "github.com/jteeuwen/go-bindata"
 "github.com/GeertJohan/go.rice"
