@@ -4,6 +4,7 @@ import (
 	"strings"
 	"sync"
 
+	"encoding/json"
 	"fmt"
 
 	"github.com/PuerkitoBio/goquery"
@@ -40,10 +41,10 @@ type talkTranscript struct {
 }
 
 type TranscriptPage struct {
-	AvailableTranscripts []string                    `json:"AvailableTranscripts"`
-	DatePosted           string                      `json:"DatePosted"`
-	Rated                string                      `json:"Rated"`
-	TalkTranscript       map[string][]talkTranscript `json:"TalkTranscript"`
+	AvailableTranscripts []string                  `json:"AvailableTranscripts"`
+	DatePosted           string                    `json:"DatePosted"`
+	Rated                string                    `json:"Rated"`
+	TalkTranscript       map[string]talkTranscript `json:"TalkTranscript"`
 }
 
 func main() {
@@ -61,6 +62,8 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(len(urls) + 1)
 
+	var transcriptPageUnCommon TranscriptPage
+
 	var transcriptS []talkTranscript
 
 	langSpecificMap := make(map[string]talkTranscript)
@@ -74,11 +77,14 @@ func main() {
 
 			langSpecificMap[langName] = x
 			transcriptS = append(transcriptS, x)
+			//transcriptS.TalkTranscript = langSpecificMap
 		}(url)
 
 	}
 
+	// @@@@@@@@@@@@
 	transcriptEnURL := videoURL + "/transcript?language=en"
+
 	var transcriptPageCommon TranscriptPage
 
 	go func(url string) {
@@ -88,12 +94,16 @@ func main() {
 
 	wg.Wait()
 
-	fmt.Println(langSpecificMap)
+	//fmt.Println(langSpecificMap)
+	transcriptPageUnCommon.TalkTranscript = langSpecificMap
+	y, _ := json.Marshal(transcriptPageUnCommon)
+	fmt.Println(string(y))
+
 	// Using append here to add to the array-field
 	//transcriptPageCommon.TalkTranscript = transcriptS
 
-	//	x, _ := json.Marshal(transcriptS)
-	//	fmt.Println(string(x))
+	//x, _ := json.Marshal(transcriptS)
+	//fmt.Println(string(x))
 
 	//	fmt.Println(transcriptS)
 
