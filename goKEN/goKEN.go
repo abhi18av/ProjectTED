@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
+	"os"
 	"strings"
 	"sync"
 
@@ -121,7 +121,14 @@ func main() {
 
 	mergo.Merge(&transcriptPageComplete, transcriptPageUnCommon)
 	z, _ := json.Marshal(transcriptPageComplete)
-	fmt.Println(string(z))
+
+	f, err := os.Create("./file.json")
+
+	f.Write(z)
+	check(err)
+	defer f.Close()
+	//fmt.Println(string(z))
+
 	//fmt.Println(transcriptPageCommon)
 	//	fmt.Println(transcriptS)
 
@@ -141,6 +148,12 @@ func printJSON(transcriptPageCommon TranscriptPage) {
 }
 
 */
+
+func check(e error) {
+	if e != nil {
+		panic(e)
+	}
+}
 
 func fetchCommon(url string) TranscriptPage {
 	transcriptPage, _ := goquery.NewDocument(url)
