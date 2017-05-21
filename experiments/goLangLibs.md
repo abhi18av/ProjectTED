@@ -1,5 +1,15 @@
 https://github.com/cloudson/gitql
 https://github.com/dinedal/textql
+https://github.com/fabioberger/chrome
+https://github.com/EngoEngine/audio
+https://github.com/EngoEngine/engo
+https://github.com/brentp/go-chartjs
+https://github.com/iansmith/d3
+https://github.com/gopherjs/gopherpen
+https://github.com/flimzy/go-sql.js
+https://github.com/gopherjs/vecty
+go get github.com/yuin/gopher-lua/cmd/glua
+https://github.com/siongui/godom
 "github.com/src-d/go-git"
 "github.com/gizak/termui"
 "github.com/spf13/cobra"
