@@ -1,17 +1,13 @@
 package main
 
 import (
-	"encoding/json"
 	"net/http"
 	"os"
 	"strings"
 	"sync"
 
-	"fmt"
-
 	"github.com/PuerkitoBio/goquery"
 	"github.com/fatih/color"
-	"github.com/imdario/mergo"
 )
 
 var langCodes = map[string]string{
@@ -185,41 +181,8 @@ func main() {
 		transcriptPageCommon = fetchCommon(url)
 	}(transcriptEnURL)
 
-	// @@@@@@@@@@
-	// Page UnCommon
-
-	var transcriptS []talkTranscript
-
-	langSpecificMap := make(map[string]talkTranscript)
-
-	for _, url := range urls {
-
-		go func(url string) {
-			defer wg.Done()
-			x, langName := fetchUncommon(url)
-			//color.Blue(langName)
-
-			langSpecificMap[langName] = x
-			transcriptS = append(transcriptS, x)
-			//transcriptS.TalkTranscript = langSpecificMap
-		}(url)
-
-	}
-
 	// @@@@@@@@@@@@
 	wg.Wait()
-
-	var transcriptPageUnCommon TranscriptPage
-	//fmt.Println(langSpecificMap)
-	transcriptPageUnCommon.TalkTranscript = langSpecificMap
-	transcriptPageComplete := transcriptPageCommon
-
-	mergo.Merge(&transcriptPageComplete, transcriptPageUnCommon)
-	z, _ := json.Marshal(transcriptPageComplete)
-	htmlSplit := strings.Split(videoURL, "/")
-	talkName := htmlSplit[len(htmlSplit)-1]
-	fmt.Println(talkName)
-
 }
 
 // transcriptPage
