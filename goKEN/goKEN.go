@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"strings"
 	"sync"
@@ -116,10 +117,12 @@ func main() {
 	// Using append here to add to the array-field
 	//transcriptPageCommon.TalkTranscript = transcriptS
 
-	mergo.Merge(&transcriptPageCommon, transcriptPageUnCommon)
-	//z, _ := json.Marshal(transcriptPageCommon)
-	//fmt.Println(string(z))
-	fmt.Println(transcriptPageCommon)
+	transcriptPageComplete := transcriptPageCommon
+
+	mergo.Merge(&transcriptPageComplete, transcriptPageUnCommon)
+	z, _ := json.Marshal(transcriptPageComplete)
+	fmt.Println(string(z))
+	//fmt.Println(transcriptPageCommon)
 	//	fmt.Println(transcriptS)
 
 	//	fmt.Println(transcriptPageCommon)
