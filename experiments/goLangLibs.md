@@ -9,6 +9,9 @@ https://github.com/gopherjs/gopherpen
 https://github.com/flimzy/go-sql.js
 https://github.com/gopherjs/vecty
 go get github.com/yuin/gopher-lua/cmd/glua
+go get github.com/BurntSushi/toml
+https://github.com/jinzhu/configor
+https://github.com/unrolled/render
 https://github.com/siongui/godom
 https://github.com/andlabs/ui
 https://github.com/go-vgo/robotgo

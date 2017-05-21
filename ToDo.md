@@ -1,0 +1,1 @@
+1. Need to learn from the xkcd to transfer the images from the TedTalk pages
