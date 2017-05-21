@@ -7,6 +7,7 @@ import (
 	"sync"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/imdario/mergo"
 )
 
 var langCodes = map[string]string{
@@ -96,29 +97,29 @@ func main() {
 	// @@@@@@@@@@@@
 	wg.Wait()
 
-	/*
-		var transcriptPageUnCommon TranscriptPage
-			//fmt.Println(langSpecificMap)
-			transcriptPageUnCommon.TalkTranscript = langSpecificMap
-			y, _ := json.Marshal(transcriptPageUnCommon)
-			fmt.Println(string(y))
-	*/
+	var transcriptPageUnCommon TranscriptPage
+	//fmt.Println(langSpecificMap)
+	transcriptPageUnCommon.TalkTranscript = langSpecificMap
+	//y, _ := json.Marshal(transcriptPageUnCommon)
+	//fmt.Println(string(y))
 
-	var transcriptPageComplete TranscriptPage
+	//var transcriptPageComplete TranscriptPage
 	//		transcriptPageComplete.AvailableTranscripts = transcriptPageCommon.AvailableTranscripts
 	//		transcriptPageComplete.DatePosted = transcriptPageCommon.DatePosted
 	//		transcriptPageComplete.Rated = transcriptPageCommon.Rated
 	//		transcriptPageComplete.TalkTranscript = langSpecificMap
 	//x, _ := json.Marshal(transcriptS)
 
-	x, _ := json.Marshal(transcriptPageComplete)
+	//x, _ := json.Marshal(transcriptPageComplete)
 
-	fmt.Println(string(x))
+	//fmt.Println(string(x))
 
 	// Using append here to add to the array-field
 	//transcriptPageCommon.TalkTranscript = transcriptS
-	//z, _ := json.Marshal(transcriptPageCommon)
-	//fmt.Println(string(z))
+
+	mergo.Merge(&transcriptPageCommon, transcriptPageUnCommon)
+	z, _ := json.Marshal(transcriptPageCommon)
+	fmt.Println(string(z))
 
 	//	fmt.Println(transcriptS)
 
