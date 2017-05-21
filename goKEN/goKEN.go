@@ -1,17 +1,18 @@
 package main
 
 import (
-	"encoding/json"
-	"fmt"
 	"strings"
 	"sync"
+
+	"encoding/json"
+	"fmt"
 
 	"github.com/PuerkitoBio/goquery"
 )
 
 var langCodes = map[string]string{
 	"Chinese, Simplified": "zh-cn",
-	"English":             "en",
+	"English":             "fr",
 	"German":              "de",
 	"Russian":             "ru",
 }
@@ -32,61 +33,21 @@ func genTranscriptURLs(langCodes map[string]string, videoURL string) []string {
 	return urls
 }
 
-type VideoPage struct {
-	AvailableSubtitlesCount string   `json:"AvailableSubtitlesCount"`
-	Speaker                 string   `json:"Speaker"`
-	Duration                string   `json:"Duration"`
-	TimeFilmed              string   `json:"TimeFilmed"`
-	TalkViewsCount          string   `json:"TalkViewsCount"`
-	TalkTopicsList          []string `json:"TalkTopicsList"`
-	TalkCommentsCount       string   `json:"TalkCommentsCount"`
-}
-
 type talkTranscript struct {
-	LocalTalkTitle string   `json:"LocalTalkTitle"`
-	Paragraphs     []string `json:"Paragraphs"`
+	LocalTalkTitle              string   `json:"LocalTalkTitle"`
+	Paragraphs                  []string `json:"Paragraphs"`
+	TimeStamps                  []string `json:"TimeStamps"`
+	TalkTranscriptAndTimeStamps []string `json:"TalkTranscriptAndTimeStamps"`
 }
 
 type TranscriptPage struct {
-	AvailableTranscripts []string `json:"AvailableTranscripts"`
-	DatePosted           string   `json:"DatePosted"`
-	//	LocalTitle           string           `json:"LocalTitle"`
-	Rated          string           `json:"Rated"`
-	TalkTranscript []talkTranscript `json:"TalkTranscript"`
-	TimeStamps     []string         `json:"TimeStamps"`
+	AvailableTranscripts []string                  `json:"AvailableTranscripts"`
+	DatePosted           string                    `json:"DatePosted"`
+	Rated                string                    `json:"Rated"`
+	TalkTranscript       map[string]talkTranscript `json:"TalkTranscript"`
 }
 
 func main() {
-
-	/*
-		// VIDEO functions
-		videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-		videoPage, _ := goquery.NewDocument(videoURL)
-
-		//fmt.Println(videoTalkTitle(videoPage))
-
-
-			videoPageInstance := VideoPage{
-				AvailableSubtitlesCount: videoAvailableSubtitlesCount(videoPage),
-
-				Speaker:           videoSpeaker(videoPage),
-				Duration:          videoDuration(videoPage),
-				TimeFilmed:        videoTimeFilmed(videoPage),
-				TalkViewsCount:    videoTalkViewsCount(videoPage),
-				TalkTopicsList:    videoTalkTopicsList(videoPage),
-				TalkCommentsCount: videoTalkCommentsCount(videoPage),
-			}
-
-			body, err := json.Marshal(videoPageInstance)
-			if err != nil {
-				panic(err)
-			}
-			fmt.Println(string(body))
-
-	*/
-
-	// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
 	// TRANSCRIPT functions
 	//transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=de"
 	//transcriptPage, _ := goquery.NewDocument(transcriptURL)
@@ -96,202 +57,121 @@ func main() {
 
 	urls := genTranscriptURLs(langCodes, videoURL)
 
-	fmt.Println(urls)
+	//fmt.Println(urls)
 
 	var wg sync.WaitGroup
-	wg.Add(len(urls))
+	wg.Add(len(urls) + 1)
+
+	// @@@@@@@@@@
+	// Page Common
+	transcriptEnURL := videoURL + "/transcript?language=en"
+
+	var transcriptPageCommon TranscriptPage
+
+	go func(url string) {
+		defer wg.Done()
+		transcriptPageCommon = fetchCommon(url)
+	}(transcriptEnURL)
+
+	// @@@@@@@@@@
+	// Page UnCommon
+
+	var transcriptPageUnCommon TranscriptPage
+
+	var transcriptS []talkTranscript
+
+	langSpecificMap := make(map[string]talkTranscript)
 
 	for _, url := range urls {
 
 		go func(url string) {
-
-			//fmt.Println(url)
-			transcriptPage, _ := goquery.NewDocument(url)
-			//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
-
-			transcript := talkTranscript{
-
-				LocalTalkTitle: transcriptLocalTalkTitle(transcriptPage),
-				Paragraphs:     transcriptTalkTranscript(transcriptPage),
-			}
-
-			transcriptPageInstance := TranscriptPage{
-
-				AvailableTranscripts: transcriptAvailableTranscripts(transcriptPage),
-				DatePosted:           transcriptDatePosted(transcriptPage),
-				Rated:                transcriptRated(transcriptPage),
-				//TalkTranscript:       transcript,
-				TimeStamps: transcriptTimeStamps(transcriptPage),
-			}
-
-			// Using append here to add to the array-field
-			transcriptPageInstance.TalkTranscript = append(transcriptPageInstance.TalkTranscript, transcript)
-
-			//fmt.Println(transcriptPageInstance)
-			//fmt.Println(transcript)
-
-			body, err := json.Marshal(transcriptPageInstance)
-			if err != nil {
-				panic(err)
-			}
-			fmt.Println(string(body))
-
 			defer wg.Done()
+			x, langName := fetchUncommon(url)
+			//color.Blue(langName)
+
+			langSpecificMap[langName] = x
+			transcriptS = append(transcriptS, x)
+			//transcriptS.TalkTranscript = langSpecificMap
 		}(url)
+
 	}
 
+	// @@@@@@@@@@@@
 	wg.Wait()
 
+	//fmt.Println(langSpecificMap)
+	transcriptPageUnCommon.TalkTranscript = langSpecificMap
+	y, _ := json.Marshal(transcriptPageUnCommon)
+	fmt.Println(string(y))
+
+	// Using append here to add to the array-field
+	transcriptPageCommon.TalkTranscript = transcriptS
+	z, _ := json.Marshal(transcriptPageCommon)
+	fmt.Println(string(z))
+
+	var transcriptPageComplete TranscriptPage
+
+	transcriptPageComplete.TalkTranscript = transcriptPageCommon
+	transcriptPageUnComplete. = transcriptPageUncommon
+	//x, _ := json.Marshal(transcriptS)
+	//fmt.Println(string(x))
+
+	//	fmt.Println(transcriptS)
+
+	//	fmt.Println(transcriptPageCommon)
 } // end of main()
 
-// VideoPage FUNCTIONS
-
-// OUTPUT
-// 60
-func videoAvailableSubtitlesCount(doc *goquery.Document) string {
-
-	subtitles := doc.Find(".player-hero__meta__link").Contents().Text()
-	//fmt.Println(subtitles)
-
-	//for _, x := range strings.Split(subtitles, "\n") {
-	//fmt.Println(x)
-	//println("~~~~~~")
-	//}
-
-	y := strings.Split(subtitles, "\n")
-	z := strings.Split(y[3], " ")[0]
-	// In case I need an INT
-	//numOfSubtitles, _ := strconv.ParseInt(z, 10, 32)
-	numOfSubtitles := z
-	return numOfSubtitles
+/*
+func printJSON(transcriptS []talkTranscript) {
+	body, _ := json.Marshal(transcriptS)
+	fmt.Println(string(body))
 }
 
-// OUTPUT
-// Ken Robinson
-func videoSpeaker(doc *goquery.Document) string {
-	speaker := doc.Find(".talk-speaker__name").Contents().Text()
-	//fmt.Println(speaker)
-	speaker = strings.Trim(speaker, "\n")
-	return speaker
+
+func printJSON(transcriptPageCommon TranscriptPage) {
+	body, _ := json.Marshal(transcriptPageCommon)
+	fmt.Println(string(body))
 }
 
-// This is now taken from the transcripts page
-func videoTalkTitle(doc *goquery.Document) string {
-	title := doc.Find(".player-hero__title__content").Contents().Text()
-	//fmt.Println(title)
-	return title
-}
+*/
 
-// OUTPUT
-// 19:24
-func videoDuration(doc *goquery.Document) string {
+func fetchCommon(url string) TranscriptPage {
+	transcriptPage, _ := goquery.NewDocument(url)
 
-	duration := doc.Find(".player-hero__meta").Contents().Text()
-	//fmt.Println(duration)
+	// Using append here to add to the array-field
+	//transcriptPageInstance.TalkTranscript = append(transcriptPageInstance.TalkTranscript, transcript)
 
-	//for _, x := range strings.Split(duration, "\n") {
-	//	fmt.Println(x)
-	//	println("~~~~~~")
-	//}
+	transcriptPageInstance := TranscriptPage{
 
-	x := strings.Split(duration, "\n")
-	//fmt.Println(x[6])
-	return x[6]
-
-}
-
-// OUTPUT
-// Feb 2006
-// TimeFilmed : Time at which the talk was filmed
-func videoTimeFilmed(doc *goquery.Document) string {
-
-	timeFilmed := doc.Find(".player-hero__meta").Contents().Text()
-
-	//	fmt.Println(timeFilmed)
-
-	y := strings.Split(timeFilmed, "\n")
-	//fmt.Println(y[11])
-	return y[11]
-}
-
-// OUTPUT
-// 45,122,067
-func videoTalkViewsCount(doc *goquery.Document) string {
-
-	talkViewsCount := doc.Find("#sharing-count").Contents().Text()
-	//	fmt.Println(talkViewsCount)
-
-	a := strings.Split(talkViewsCount, "\n")
-	b := strings.TrimSpace(a[2])
-	//fmt.Println(b)
-	return b
-
-}
-
-// OUTPUT
-// [Children Creativity Culture Dance Education Parenting Teaching]
-func videoTalkTopicsList(doc *goquery.Document) []string {
-
-	talkTopics := doc.Find(".talk-topics__list").Contents().Text()
-
-	c := strings.Split(talkTopics, "\n")
-	var topics []string
-	for i := 3; i < len(c); i++ {
-		//fmt.Println(c[i])
-		if c[i] == "" {
-
-		} else {
-			topics = append(topics, c[i])
-		}
+		AvailableTranscripts: transcriptAvailableTranscripts(transcriptPage),
+		DatePosted:           transcriptDatePosted(transcriptPage),
+		Rated:                transcriptRated(transcriptPage),
+		//TalkTranscript:       transcriptS,
 	}
-	return topics
+	return transcriptPageInstance
 }
 
-// OUTPUT
-// 4526
-func videoTalkCommentsCount(doc *goquery.Document) string {
+func fetchUncommon(url string) (talkTranscript, string) {
 
-	talkCommentsCount := doc.Find(".h11").Contents().Text()
-	//fmt.Println(talkCommentsCount)
-	d := strings.Split(talkCommentsCount, " ")
-	//fmt.Println(d[0])
-	return strings.TrimLeft(d[0], "\n")
+	//fmt.Println(url)
+	transcriptPage, _ := goquery.NewDocument(url)
+	//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
+
+	transcript := talkTranscript{
+
+		LocalTalkTitle:              transcriptLocalTalkTitle(transcriptPage),
+		Paragraphs:                  transcriptTalkTranscript(transcriptPage),
+		TimeStamps:                  transcriptTimeStamps(transcriptPage),
+		TalkTranscriptAndTimeStamps: transcriptTalkTranscriptAndTimeStamps(transcriptPage),
+	}
+	//fmt.Println(transcript)
+
+	langName := strings.Split(url, "=")[1]
+	//color.Blue(langName)
+	return transcript, langName
 }
 
 // transcriptPage
-
-// OUTPUT
-// Jun 2006
-func transcriptDatePosted(doc *goquery.Document) string {
-	posted := doc.Find(".meta__item").Contents().Text()
-	p := strings.Split(posted, "\n")
-	//fmt.Println(p[3])
-	return (p[3])
-
-}
-
-// OUTPUT
-// Inspiring, Funny
-func transcriptRated(doc *goquery.Document) string {
-
-	rated := doc.Find(".meta__row").Contents().Text()
-
-	r := strings.Split(rated, "\n")
-	//fmt.Println(r[3])
-	return r[3]
-	/*
-	   rx := strings.Split(r[3], ",")
-
-	   	for _, x := range rx{
-	   		append(ls,x)
-	   	}
-	*/
-
-	//println(len(rx))
-	//println(r[0])
-	//println(r[1])
-	//return(p[3])
-}
 
 // OUTPUT
 // Do schools kill creativity?
@@ -352,8 +232,33 @@ func transcriptTimeStamps(doc *goquery.Document) []string {
 	return timestamps
 }
 
+// OUTPUT
+// Seperate hunks of the Textual string
 func transcriptTalkTranscript(doc *goquery.Document) []string {
 	texts := doc.Find(".talk-transcript__para__text").Contents().Text()
+	var para []string
+	for _, text := range strings.Split(texts, "  ") {
+
+		//fmt.Println(text)
+		para = append(para, text)
+	}
+
+	var lines []string
+	for _, para := range strings.Split(texts, "\n\n") {
+
+		//fmt.Println(text)
+		lines = append(lines, para)
+	}
+
+	return para
+	//return lines
+}
+
+// OUTPUT
+// The entire text chunk
+func transcriptTalkTranscriptAndTimeStamps(doc *goquery.Document) []string {
+
+	texts := doc.Find(".talk-transcript__para").Contents().Text()
 	var para []string
 	for _, text := range strings.Split(texts, "  ") {
 
@@ -392,10 +297,35 @@ func transcriptAvailableTranscripts(doc *goquery.Document) []string {
 	return langsList
 }
 
-// WORK ON THIS
-func transcriptTalkTranscriptAndTimeStamps(doc *goquery.Document) {
+// OUTPUT
+// Jun 2006
+func transcriptDatePosted(doc *goquery.Document) string {
+	posted := doc.Find(".meta__item").Contents().Text()
+	p := strings.Split(posted, "\n")
+	//fmt.Println(p[3])
+	return (p[3])
 
-	title := doc.Find(".talk-transcript__para").Contents().Text()
-	//fmt.Println(strings.Split(title, "\n")[2])
-	//return strings.Split(title, "\n")[2]
+}
+
+// OUTPUT
+// Inspiring, Funny
+func transcriptRated(doc *goquery.Document) string {
+
+	rated := doc.Find(".meta__row").Contents().Text()
+
+	r := strings.Split(rated, "\n")
+	//fmt.Println(r[3])
+	return r[3]
+	/*
+	   rx := strings.Split(r[3], ",")
+
+	   	for _, x := range rx{
+	   		append(ls,x)
+	   	}
+	*/
+
+	//println(len(rx))
+	//println(r[0])
+	//println(r[1])
+	//return(p[3])
 }
