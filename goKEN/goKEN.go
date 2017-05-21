@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"strings"
 	"sync"
@@ -118,9 +117,9 @@ func main() {
 	//transcriptPageCommon.TalkTranscript = transcriptS
 
 	mergo.Merge(&transcriptPageCommon, transcriptPageUnCommon)
-	z, _ := json.Marshal(transcriptPageCommon)
-	fmt.Println(string(z))
-
+	//z, _ := json.Marshal(transcriptPageCommon)
+	//fmt.Println(string(z))
+	fmt.Println(transcriptPageCommon)
 	//	fmt.Println(transcriptS)
 
 	//	fmt.Println(transcriptPageCommon)
