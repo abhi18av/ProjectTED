@@ -1,11 +1,10 @@
 package main
 
 import (
-	"strings"
-	"sync"
-
 	"encoding/json"
 	"fmt"
+	"strings"
+	"sync"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -76,8 +75,6 @@ func main() {
 	// @@@@@@@@@@
 	// Page UnCommon
 
-	var transcriptPageUnCommon TranscriptPage
-
 	var transcriptS []talkTranscript
 
 	langSpecificMap := make(map[string]talkTranscript)
@@ -99,23 +96,29 @@ func main() {
 	// @@@@@@@@@@@@
 	wg.Wait()
 
-	//fmt.Println(langSpecificMap)
-	transcriptPageUnCommon.TalkTranscript = langSpecificMap
-	y, _ := json.Marshal(transcriptPageUnCommon)
-	fmt.Println(string(y))
-
-	// Using append here to add to the array-field
-	transcriptPageCommon.TalkTranscript = transcriptS
-	z, _ := json.Marshal(transcriptPageCommon)
-	fmt.Println(string(z))
+	/*
+		var transcriptPageUnCommon TranscriptPage
+			//fmt.Println(langSpecificMap)
+			transcriptPageUnCommon.TalkTranscript = langSpecificMap
+			y, _ := json.Marshal(transcriptPageUnCommon)
+			fmt.Println(string(y))
+	*/
 
 	var transcriptPageComplete TranscriptPage
+	transcriptPageComplete.AvailableTranscripts = transcriptPageCommon.AvailableTranscripts
+	transcriptPageComplete.DatePosted = transcriptPageCommon.DatePosted
+	transcriptPageComplete.Rated = transcriptPageCommon.Rated
+	transcriptPageComplete.TalkTranscript = langSpecificMap
+	x, _ := json.Marshal(transcriptS)
+	fmt.Println(string(x))
 
-	transcriptPageComplete.TalkTranscript = transcriptPageCommon
-	transcriptPageUnComplete. = transcriptPageUncommon
-	//x, _ := json.Marshal(transcriptS)
-	//fmt.Println(string(x))
+	/*
+		// Using append here to add to the array-field
+		transcriptPageCommon.TalkTranscript = transcriptS
+		z, _ := json.Marshal(transcriptPageCommon)
+		fmt.Println(string(z))
 
+	*/
 	//	fmt.Println(transcriptS)
 
 	//	fmt.Println(transcriptPageCommon)
