@@ -7,6 +7,8 @@ import (
 	"strings"
 	"sync"
 
+	"fmt"
+
 	"github.com/PuerkitoBio/goquery"
 	"github.com/fatih/color"
 	"github.com/imdario/mergo"
@@ -75,7 +77,6 @@ func main() {
 	//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
 
 	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-
 	urls := genTranscriptURLs(langCodes, videoURL)
 
 	//fmt.Println(urls)
@@ -142,8 +143,12 @@ func main() {
 
 	mergo.Merge(&transcriptPageComplete, transcriptPageUnCommon)
 	z, _ := json.Marshal(transcriptPageComplete)
+	htmlSplit := strings.Split(videoURL, "/")
+	talkName := htmlSplit[len(htmlSplit)-1]
+	fmt.Println(talkName)
 
-	f, err := os.Create("./file.json")
+	fileName := "./" + talkName + ".json"
+	f, err := os.Create(fileName)
 
 	f.Write(z)
 	check(err)
