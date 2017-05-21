@@ -1,4 +1,6 @@
-
+https://github.com/cloudson/gitql
+https://github.com/dinedal/textql
+"github.com/src-d/go-git"
 "github.com/gizak/termui"
 "github.com/spf13/cobra"
 "github.com/fatih/color"
@@ -17,7 +19,8 @@
 go get github.com/gonum/plot/...
 go get -u github.com/zieckey/gochart
 "github.com/robertkrimen/otto"
-"github.com/Shopify/go-lua"
+//"github.com/Shopify/go-lua"
+"github.com/yuin/gopher-lua"
 "github.com/hjson/hjson-go"
 "github.com/fogleman/gg"
 "github.com/pravj/geopattern"
