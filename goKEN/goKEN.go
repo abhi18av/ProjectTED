@@ -104,21 +104,23 @@ func main() {
 			fmt.Println(string(y))
 	*/
 
-	var transcriptPageComplete TranscriptPage
-	transcriptPageComplete.AvailableTranscripts = transcriptPageCommon.AvailableTranscripts
-	transcriptPageComplete.DatePosted = transcriptPageCommon.DatePosted
-	transcriptPageComplete.Rated = transcriptPageCommon.Rated
-	transcriptPageComplete.TalkTranscript = langSpecificMap
-	x, _ := json.Marshal(transcriptS)
-	fmt.Println(string(x))
-
 	/*
-		// Using append here to add to the array-field
-		transcriptPageCommon.TalkTranscript = transcriptS
-		z, _ := json.Marshal(transcriptPageCommon)
-		fmt.Println(string(z))
+		var transcriptPageComplete TranscriptPage
+		transcriptPageComplete.AvailableTranscripts = transcriptPageCommon.AvailableTranscripts
+		transcriptPageComplete.DatePosted = transcriptPageCommon.DatePosted
+		transcriptPageComplete.Rated = transcriptPageCommon.Rated
+		transcriptPageComplete.TalkTranscript = langSpecificMap
+		x, _ := json.Marshal(transcriptS)
+		fmt.Println(string(x))
+
 
 	*/
+
+	// Using append here to add to the array-field
+	//transcriptPageCommon.TalkTranscript = transcriptS
+	z, _ := json.Marshal(transcriptPageCommon)
+	fmt.Println(string(z))
+
 	//	fmt.Println(transcriptS)
 
 	//	fmt.Println(transcriptPageCommon)
