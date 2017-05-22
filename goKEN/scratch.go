@@ -133,10 +133,10 @@ func genTranscriptURLs(langCodes map[string]string, avaiLableLanguages []string,
 
 	var urls []string
 
-	for key, _ := range avaiLableLanguages {
+	for key, _ := range langCodes {
 
-		value := avaiLableLanguages[key]
-		newURL := videoURL + langBaseURL + value
+		aLangCode := langCodes[key]
+		newURL := videoURL + langBaseURL + aLangCode
 		//fmt.Println(x)
 		urls = append(urls, newURL)
 	}
@@ -144,6 +144,7 @@ func genTranscriptURLs(langCodes map[string]string, avaiLableLanguages []string,
 
 	return urls
 }
+
 func main() {
 
 	WiFi()
@@ -152,12 +153,12 @@ func main() {
 
 	transcriptEnURL := videoURL + "/transcript?language=en"
 
-	transcriptPage, _ := goquery.NewDocument(url)
+	transcriptPage, _ := goquery.NewDocument(transcriptEnURL)
 
 	// Using append here to add to the array-field
-	avaiLableLanguages := append(transcriptPageInstance.TalkTranscript, transcript)
+	avaiLableLanguages := transcriptAvailableTranscripts(transcriptPage)
 
-	urls := genTranscriptURLs(langCodes, videoURL)
+	urls := genTranscriptURLs(langCodes, avaiLableLanguages, videoURL)
 
 	fmt.Println(urls)
 	/*

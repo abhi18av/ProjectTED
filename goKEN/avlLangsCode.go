@@ -132,10 +132,10 @@ func genTranscriptURLs(langCodes map[string]string, avaiLableLanguages []string,
 
 	var urls []string
 
-	for key, _ := range avaiLableLanguages {
+	for key, _ := range langCodes {
 
-		value := avaiLableLanguages[key]
-		newURL := videoURL + langBaseURL + value
+		aLangCode := langCodes[key]
+		newURL := videoURL + langBaseURL + aLangCode
 		//fmt.Println(x)
 		urls = append(urls, newURL)
 	}
