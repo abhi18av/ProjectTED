@@ -192,8 +192,9 @@ func main() {
 	numOfSubtitles, _ := strconv.ParseInt(videoPageInfo.AvailableSubtitlesCount, 10, 64)
 
 	// This function will cause the program to EXIT if there are no subtitles
-	exitIfNoSubtitlesExist(numOfSubtitles)
 	// Else we continue to fill the basic page
+	exitIfNoSubtitlesExist(numOfSubtitles)
+
 	transcriptEnURL := videoURL + "/transcript?language=en"
 
 	// Since we've already made the request to default lang transcript
@@ -201,6 +202,7 @@ func main() {
 	transcriptCommonInfo := transcriptFetchCommonInfo(transcriptEnURL)
 
 	urls := genTranscriptURLs(langCodes, transcriptCommonInfo.AvailableTranscripts, videoURL)
+	//fmt.Println(urls)
 
 	// @@@@@@@@@@
 	// Page UnCommon
@@ -210,24 +212,25 @@ func main() {
 	langSpecificMap := make(map[string]talkTranscript)
 
 	var wg sync.WaitGroup
-	wg.Add(len(urls) + 1)
+	wg.Add(len(urls))
+
 	for _, url := range urls {
 
 		go func(url string) {
 			defer wg.Done()
-			color.Yellow(url)
+			color.Green(url)
 			x, langName := transcriptFetchUncommonInfo(url)
 			langSpecificMap[langName] = x
 			transcriptS = append(transcriptS, x)
 		}(url)
 
-		wg.Wait()
-
-		//writeJSON(videoPageInfo)
-
-		fmt.Println(transcriptS)
 	}
 
+	wg.Wait()
+
+	//writeJSON(videoPageInfo)
+
+	fmt.Println(transcriptS)
 }
 
 func writeJSON(videoPageInfo VideoPage) {
