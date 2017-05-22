@@ -4,7 +4,6 @@ import (
 	"net/http"
 	"os"
 	"strings"
-
 	"sync"
 
 	"encoding/json"
@@ -183,10 +182,11 @@ func main() {
 	// more async. requests
 	var videoPageInfo VideoPage
 	videoPageInfo = videoFetchInfo(videoURL)
-
 	// Checking if there are any subtitles at all
 	// In case there are, we send a default query to fetch the list of available languages
+
 	if videoPageInfo.AvailableSubtitlesCount > 0 {
+
 		transcriptEnURL := videoURL + "/transcript?language=en"
 
 		transcriptPage, _ := goquery.NewDocument(transcriptEnURL)
@@ -200,9 +200,9 @@ func main() {
 	} else {
 		color.Magenta("No subtitles available yet")
 	}
+
 	var wg sync.WaitGroup
 	wg.Add(1)
-
 	wg.Wait()
 
 	writeJSON(videoPageInfo)
