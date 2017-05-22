@@ -10,8 +10,6 @@ import (
 
 	"encoding/json"
 
-	"fmt"
-
 	"github.com/PuerkitoBio/goquery"
 	"github.com/fatih/color"
 	"github.com/imdario/mergo"
@@ -187,8 +185,8 @@ func main() {
 	// Add logger and stubs for better debugging
 	checkInternet()
 
-	//videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-	videoURL := "https://www.ted.com/talks/elon_musk_the_future_we_re_building_and_boring"
+	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	//videoURL := "https://www.ted.com/talks/elon_musk_the_future_we_re_building_and_boring"
 
 	// We are knowingly making sync. calls to the main Video page and
 	// in case we find there are One or more subtitle lanuguages we make
@@ -253,23 +251,24 @@ func main() {
 	mergo.Merge(&transcriptPageCompleteInfo, transcriptPageUnCommonInfo)
 	//writeJSON(transcriptPageCompleteInfo)
 
-	temp1, _ := json.Marshal(transcriptPageCompleteInfo)
-	fmt.Println(string(temp1))
+	//temp1, _ := json.Marshal(transcriptPageCompleteInfo)
+	//fmt.Println(string(temp1))
 
 	var tedTalk TedTalk
 	tedTalk.TalkVideoPage = videoPageInfo
-	mergo.Merge(&tedTalk, transcriptPageCompleteInfo)
+	tedTalk.TalkTranscriptPage = transcriptPageCompleteInfo
+	//mergo.Merge(&tedTalk, transcriptPageCompleteInfo)
 	//fmt.Println(tedTalk)
 	//temp2, _ := json.Marshal(tedTalk)
 	//fmt.Println(string(temp2))
+	writeJSON(tedTalk)
 } // end of main()
 
-/*
 func writeJSON(aStruct TedTalk) {
 
 	temp1, _ := json.Marshal(aStruct)
 	//fmt.Println(string(temp1))
-	htmlSplit := strings.Split(aStruct.VideoPage.TalkURL, "/")
+	htmlSplit := strings.Split(aStruct.TalkVideoPage.TalkURL, "/")
 	talkName := htmlSplit[len(htmlSplit)-1]
 
 	fileName := "./" + talkName + ".json"
@@ -280,7 +279,6 @@ func writeJSON(aStruct TedTalk) {
 	f.Write(temp1)
 	defer f.Close()
 }
-*/
 
 func checkErr(e error) {
 	if e != nil {
