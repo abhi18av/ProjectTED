@@ -182,9 +182,9 @@ func main() {
 	// more async. requests
 	var videoPageInfo VideoPage
 	videoPageInfo = videoFetchInfo(videoURL)
+
 	// Checking if there are any subtitles at all
 	// In case there are, we send a default query to fetch the list of available languages
-
 	if videoPageInfo.AvailableSubtitlesCount > 0 {
 
 		transcriptEnURL := videoURL + "/transcript?language=en"
