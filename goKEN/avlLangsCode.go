@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"os"
 	"strings"
@@ -143,7 +144,6 @@ func genTranscriptURLs(langCodes map[string]string, avaiLableLanguages []string,
 
 	return urls
 }
-
 func WiFi() {
 	// Make a get request
 	rs, err := http.Get("https://google.com")
@@ -165,8 +165,17 @@ func main() {
 	WiFi()
 
 	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	transcriptEnURL := videoURL + "/transcript?language=en"
 
-	urls := genTranscriptURLs(langCodes, videoURL)
+	transcriptPage, _ := goquery.NewDocument(transcriptEnURL)
+
+	// Using append here to add to the array-field
+	avaiLableLanguages := transcriptAvailableTranscripts(transcriptPage)
+
+	urls := genTranscriptURLs(langCodes, avaiLableLanguages, videoURL)
+
+	fmt.Println(urls)
+
 	wg.Add(len(urls) + 1)
 	//fmt.Println(urls)
 

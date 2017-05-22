@@ -15,29 +15,139 @@ import (
 )
 
 var langCodes = map[string]string{
-	"Chinese, Simplified": "zh-cn",
-	"English":             "fr",
-	"German":              "de",
-	"Russian":             "ru",
+	"Afrikaans":             "af",
+	"Albanian":              "sq",
+	"Algerian Arabic":       "arq",
+	"Amharic":               "am",
+	"Arabic":                "ar",
+	"Armenian":              "hy",
+	"Assamese":              "as",
+	"Asturian":              "ast",
+	"Azerbaijani":           "az",
+	"Basque":                "eu",
+	"Belarusian":            "be",
+	"Bengali":               "bn",
+	"Bislama":               "bi",
+	"Bosnian":               "bs",
+	"Bulgarian":             "bg",
+	"Burmese":               "my",
+	"Catalan":               "ca",
+	"Cebuano":               "ceb",
+	"Chinese, Simplified":   "zh-cn",
+	"Chinese, Traditional":  "zh-tw",
+	"Chinese, Yue":          "zh",
+	"Creole, Haitian":       "ht",
+	"Croatian":              "hr",
+	"Czech":                 "cs",
+	"Danish":                "da",
+	"Dutch":                 "nl",
+	"Dzongkha":              "dz",
+	"English":               "en",
+	"Esperanto":             "eo",
+	"Estonian":              "et",
+	"Filipino":              "fil",
+	"Finnish":               "fi",
+	"French":                "fr",
+	"French (Canada)":       "fr-ca",
+	"Galician":              "gl",
+	"Georgian":              "ka",
+	"German":                "de",
+	"Greek":                 "el",
+	"Gujarati":              "gu",
+	"Hakha Chin":            "cnh",
+	"Hausa":                 "ha",
+	"Hebrew":                "he",
+	"Hindi":                 "hi",
+	"Hungarian":             "hu",
+	"Hupa":                  "hup",
+	"Icelandic":             "is",
+	"Igbo":                  "ig",
+	"Indonesian":            "id",
+	"Ingush":                "inh",
+	"Irish":                 "ga",
+	"Italian":               "it",
+	"Japanese":              "ja",
+	"Kannada":               "kn",
+	"Kazakh":                "kk",
+	"Khmer":                 "km",
+	"Klingon":               "tlh",
+	"Korean":                "ko",
+	"Kurdish":               "ku",
+	"Kyrgyz":                "ky",
+	"Lao":                   "lo",
+	"Latgalian":             "ltg",
+	"Latin":                 "la",
+	"Latvian":               "lv",
+	"Lithuanian":            "lt",
+	"Luxembourgish":         "lb",
+	"Macedo":                "rup",
+	"Macedonian":            "mk",
+	"Malagasy":              "mg",
+	"Malay":                 "ms",
+	"Malayalam":             "ml",
+	"Maltese":               "mt",
+	"Marathi":               "mr",
+	"Mauritian Creole":      "mfe",
+	"Mongolian":             "mn",
+	"Montenegrin":           "srp",
+	"Nepali":                "ne",
+	"Norwegian Bokmal":      "nb",
+	"Norwegian Nynorsk":     "nn",
+	"Occitan":               "oc",
+	"Pashto":                "ps",
+	"Persian":               "fa",
+	"Polish":                "pl",
+	"Portuguese":            "pt",
+	"Portuguese, Brazilian": "pt-br",
+	"Punjabi":               "pa",
+	"Romanian":              "ro",
+	"Russian":               "ru",
+	"Rusyn":                 "ry",
+	"Serbian":               "sr",
+	"Serbo-Croatian":        "sh",
+	"Silesian":              "szl",
+	"Sinhala":               "si",
+	"Slovak":                "sk",
+	"Slovenian":             "sl",
+	"Somali":                "so",
+	"Spanish":               "es",
+	"Swahili":               "sw",
+	"Swedish":               "sv",
+	"Swedish Chef":          "art-x-bork",
+	"Tagalog":               "tl",
+	"Tajik":                 "tg",
+	"Tamil":                 "ta",
+	"Tatar":                 "tt",
+	"Telugu":                "te",
+	"Thai":                  "th",
+	"Tibetan":               "bo",
+	"Turkish":               "tr",
+	"Turkmen":               "tk",
+	"Ukrainian":             "uk",
+	"Urdu":                  "ur",
+	"Uyghur":                "ug",
+	"Uzbek":                 "uz",
+	"Vietnamese":            "vi",
 }
 
-func genTranscriptURLs(langCodes map[string]string, videoURL string) []string {
+
+func genTranscriptURLs(langCodes map[string]string, avaiLableLanguages []string, videoURL string) []string {
 
 	langBaseURL := "/transcript?language="
 
 	var urls []string
 
-	for _, value := range langCodes {
-		newURL := videoURL + langBaseURL + value
+	for key, _ := range langCodes {
+
+		aLangCode := langCodes[key]
+		newURL := videoURL + langBaseURL + aLangCode
 		//fmt.Println(x)
 		urls = append(urls, newURL)
 	}
 	//fmt.Println(len(urls))
 
 	return urls
-}
-
-type talkTranscript struct {
+}type talkTranscript struct {
 	LocalTalkTitle              string   `json:"LocalTalkTitle"`
 	Paragraphs                  []string `json:"Paragraphs"`
 	TimeStamps                  []string `json:"TimeStamps"`
