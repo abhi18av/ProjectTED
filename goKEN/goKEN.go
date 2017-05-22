@@ -231,6 +231,37 @@ func videoFetchInfo(url string) VideoPage {
 	return videoPageInstance
 }
 
+func transcriptFetchCommonInfo(url string) TranscriptPage {
+	transcriptPage, _ := goquery.NewDocument(url)
+
+	transcriptPageInstance := TranscriptPage{
+
+		AvailableTranscripts: transcriptAvailableTranscripts(transcriptPage),
+		DatePosted:           transcriptDatePosted(transcriptPage),
+		Rated:                transcriptRated(transcriptPage),
+	}
+	return transcriptPageInstance
+}
+
+func transcriptFetchUncommonInfo(url string) (talkTranscript, string) {
+
+	//fmt.Println(url)
+	transcriptPage, _ := goquery.NewDocument(url)
+	//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
+
+	transcript := talkTranscript{
+
+		LocalTalkTitle:              transcriptLocalTalkTitle(transcriptPage),
+		Paragraphs:                  transcriptTalkTranscript(transcriptPage),
+		TimeStamps:                  transcriptTimeStamps(transcriptPage),
+		TalkTranscriptAndTimeStamps: transcriptTalkTranscriptAndTimeStamps(transcriptPage),
+	}
+
+	langName := strings.Split(url, "=")[1]
+	return transcript, langName
+}
+
+// @@@@@@@@@@@@@@@@@@
 // VIDEO PAGE
 
 func videoAvailableSubtitlesCount(doc *goquery.Document) string {
