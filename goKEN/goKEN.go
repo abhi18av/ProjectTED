@@ -1,19 +1,26 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 	"os"
 	"strings"
 	"sync"
 
+	"strconv"
+
 	"encoding/json"
 
-	"strconv"
+	"fmt"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/fatih/color"
+	"github.com/imdario/mergo"
 )
+
+type TedTalk struct {
+	TalkVideoPage      VideoPage      `json:"TalkVideoPage"`
+	TalkTranscriptPage TranscriptPage `json:"TalkTranscriptPage"`
+}
 
 type VideoPage struct {
 	TalkURL                 string   `json:"VideoURL"`
@@ -201,15 +208,15 @@ func main() {
 
 	// Since we've already made the request to default lang transcript
 	// we fill in the common details into a transcript info struct
-	transcriptCommonInfo := transcriptFetchCommonInfo(transcriptEnURL)
+	transcriptPageCommonInfo := transcriptFetchCommonInfo(transcriptEnURL)
 
-	urls := genTranscriptURLs(langCodes, transcriptCommonInfo.AvailableTranscripts, videoURL)
+	urls := genTranscriptURLs(langCodes, transcriptPageCommonInfo.AvailableTranscripts, videoURL)
 	//fmt.Println(transcriptCommonInfo.AvailableTranscripts)
 
 	// @@@@@@@@@@
 	// Page UnCommon
 
-	var transcriptS []talkTranscript
+	//var transcriptS []talkTranscript
 
 	langSpecificMap := make(map[string]talkTranscript)
 
@@ -226,7 +233,7 @@ func main() {
 			//color.Green(url)
 			x, langName := transcriptFetchUncommonInfo(url)
 			langSpecificMap[langName] = x
-			transcriptS = append(transcriptS, x)
+			//transcriptS = append(transcriptS, x)
 		}(url)
 
 	}
@@ -235,17 +242,34 @@ func main() {
 
 	//writeJSON(videoPageInfo)
 
-	fmt.Println(transcriptS)
+	//fmt.Println(transcriptS)
 
 	// STUB for the actual construction of the complete talk struct
 
-}
+	var transcriptPageUnCommonInfo TranscriptPage
+	transcriptPageUnCommonInfo.TalkTranscript = langSpecificMap
 
-func writeJSON(videoPageInfo VideoPage) {
+	transcriptPageCompleteInfo := transcriptPageCommonInfo
+	mergo.Merge(&transcriptPageCompleteInfo, transcriptPageUnCommonInfo)
+	//writeJSON(transcriptPageCompleteInfo)
 
-	temp1, _ := json.Marshal(videoPageInfo)
+	temp1, _ := json.Marshal(transcriptPageCompleteInfo)
+	fmt.Println(string(temp1))
+
+	var tedTalk TedTalk
+	tedTalk.TalkVideoPage = videoPageInfo
+	mergo.Merge(&tedTalk, transcriptPageCompleteInfo)
+	//fmt.Println(tedTalk)
+	//temp2, _ := json.Marshal(tedTalk)
+	//fmt.Println(string(temp2))
+} // end of main()
+
+/*
+func writeJSON(aStruct TedTalk) {
+
+	temp1, _ := json.Marshal(aStruct)
 	//fmt.Println(string(temp1))
-	htmlSplit := strings.Split(videoPageInfo.TalkURL, "/")
+	htmlSplit := strings.Split(aStruct.VideoPage.TalkURL, "/")
 	talkName := htmlSplit[len(htmlSplit)-1]
 
 	fileName := "./" + talkName + ".json"
@@ -256,6 +280,7 @@ func writeJSON(videoPageInfo VideoPage) {
 	f.Write(temp1)
 	defer f.Close()
 }
+*/
 
 func checkErr(e error) {
 	if e != nil {

@@ -262,8 +262,8 @@ func main() {
 	var transcriptPageUnCommon TranscriptPage
 	transcriptPageUnCommon.TalkTranscript = langSpecificMap
 	transcriptPageComplete := transcriptPageCommon
-
 	mergo.Merge(&transcriptPageComplete, transcriptPageUnCommon)
+
 	z, _ := json.Marshal(transcriptPageComplete)
 	htmlSplit := strings.Split(videoURL, "/")
 	talkName := htmlSplit[len(htmlSplit)-1]
