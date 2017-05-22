@@ -1,16 +1,13 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"net/http"
 	"os"
 	"strings"
-	"sync"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/fatih/color"
-	"github.com/imdario/mergo"
 )
 
 var langCodes = map[string]string{
@@ -165,6 +162,7 @@ type Meta struct {
 
 */
 type VideoPage struct {
+	TalkURL                 string   `json:"URL"`
 	AvailableSubtitlesCount string   `json:"AvailableSubtitlesCount"`
 	Speaker                 string   `json:"Speaker"`
 	Duration                string   `json:"Duration"`
@@ -188,12 +186,12 @@ type TranscriptPage struct {
 	TalkTranscript       map[string]talkTranscript `json:"TalkTranscript"`
 }
 
-func checkWiFi() {
-	// Make a get request
+func checkInternet() {
+	// Make a GET request
 	rs, err := http.Get("https://google.com")
 	// Process response
 	if err != nil {
-		color.Red("WiFi OFF")
+		color.Red("OFF-Line")
 		//panic("Not connected to the net") // More idiomatic way would be to print the error and die unless it's a serious error
 
 		// Learn about exit status in Golang
@@ -206,111 +204,76 @@ func checkWiFi() {
 
 func main() {
 
-	checkWiFi()
-
-	// TRANSCRIPT functions
-	//transcriptURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=de"
-	//transcriptPage, _ := goquery.NewDocument(transcriptURL)
-	//fmt.Println(transcriptLocalTalkTitle(transcriptPage))
+	checkInternet()
 
 	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-	urls := genTranscriptURLs(langCodes, videoURL)
-
-	//fmt.Println(urls)
-
-	var wg sync.WaitGroup
-	wg.Add(len(urls) + 1)
-
-	// @@@@@@@@@@
-	// Page Common
 	transcriptEnURL := videoURL + "/transcript?language=en"
 
-	var transcriptPageCommon TranscriptPage
+	transcriptPage, _ := goquery.NewDocument(transcriptEnURL)
 
-	go func(url string) {
-		defer wg.Done()
-		transcriptPageCommon = fetchCommon(url)
-	}(transcriptEnURL)
+	// Using append here to add to the array-field
+	avaiLableLanguages := transcriptAvailableTranscripts(transcriptPage)
 
-	// @@@@@@@@@@
-	// Page UnCommon
+	urls := genTranscriptURLs(langCodes, avaiLableLanguages, videoURL)
 
-	var transcriptS []talkTranscript
+	fmt.Println(urls)
 
-	langSpecificMap := make(map[string]talkTranscript)
+	fmt.Println(urls)
 
-	for _, url := range urls {
+	/*
+		var wg sync.WaitGroup
+		wg.Add(len(urls) + 1)
+
+		// @@@@@@@@@@
+		// Page Common
+
+		var transcriptPageCommon TranscriptPage
 
 		go func(url string) {
 			defer wg.Done()
-			x, langName := fetchUncommon(url)
-			//color.Blue(langName)
+			transcriptPageCommon = fetchCommon(url)
+		}(transcriptEnURL)
 
-			langSpecificMap[langName] = x
-			transcriptS = append(transcriptS, x)
-			//transcriptS.TalkTranscript = langSpecificMap
-		}(url)
+		// @@@@@@@@@@
+		// Page UnCommon
 
-	}
+		var transcriptS []talkTranscript
 
-	// @@@@@@@@@@@@
-	wg.Wait()
+		langSpecificMap := make(map[string]talkTranscript)
 
-	var transcriptPageUnCommon TranscriptPage
-	//fmt.Println(langSpecificMap)
-	transcriptPageUnCommon.TalkTranscript = langSpecificMap
-	//y, _ := json.Marshal(transcriptPageUnCommon)
-	//fmt.Println(string(y))
+		for _, url := range urls {
 
-	//var transcriptPageComplete TranscriptPage
-	//		transcriptPageComplete.AvailableTranscripts = transcriptPageCommon.AvailableTranscripts
-	//		transcriptPageComplete.DatePosted = transcriptPageCommon.DatePosted
-	//		transcriptPageComplete.Rated = transcriptPageCommon.Rated
-	//		transcriptPageComplete.TalkTranscript = langSpecificMap
-	//x, _ := json.Marshal(transcriptS)
+			go func(url string) {
+				defer wg.Done()
+				x, langName := fetchUncommon(url)
+				langSpecificMap[langName] = x
+				transcriptS = append(transcriptS, x)
+			}(url)
 
-	//x, _ := json.Marshal(transcriptPageComplete)
+		}
 
-	//fmt.Println(string(x))
+		// @@@@@@@@@@@@
+		wg.Wait()
 
-	// Using append here to add to the array-field
-	//transcriptPageCommon.TalkTranscript = transcriptS
+		var transcriptPageUnCommon TranscriptPage
+		transcriptPageUnCommon.TalkTranscript = langSpecificMap
+		transcriptPageComplete := transcriptPageCommon
 
-	transcriptPageComplete := transcriptPageCommon
+		mergo.Merge(&transcriptPageComplete, transcriptPageUnCommon)
+		z, _ := json.Marshal(transcriptPageComplete)
+		htmlSplit := strings.Split(videoURL, "/")
+		talkName := htmlSplit[len(htmlSplit)-1]
+		fmt.Println(talkName)
 
-	mergo.Merge(&transcriptPageComplete, transcriptPageUnCommon)
-	z, _ := json.Marshal(transcriptPageComplete)
-	htmlSplit := strings.Split(videoURL, "/")
-	talkName := htmlSplit[len(htmlSplit)-1]
-	fmt.Println(talkName)
+		fileName := "./" + talkName + ".json"
+		f, err := os.Create(fileName)
 
-	fileName := "./" + talkName + ".json"
-	f, err := os.Create(fileName)
+		f.Write(z)
+		check(err)
+		defer f.Close()
 
-	f.Write(z)
-	check(err)
-	defer f.Close()
-	//fmt.Println(string(z))
-
-	//fmt.Println(transcriptPageCommon)
-	//	fmt.Println(transcriptS)
-
-	//	fmt.Println(transcriptPageCommon)
+	*/
 } // end of main()
-
-/*
-func printJSON(transcriptS []talkTranscript) {
-	body, _ := json.Marshal(transcriptS)
-	fmt.Println(string(body))
-}
-
-
-func printJSON(transcriptPageCommon TranscriptPage) {
-	body, _ := json.Marshal(transcriptPageCommon)
-	fmt.Println(string(body))
-}
-
-*/
 
 func check(e error) {
 	if e != nil {
@@ -612,4 +575,8 @@ func videoTalkCommentsCount(doc *goquery.Document) string {
 	d := strings.Split(talk_comments_count, " ")
 	//fmt.Println(d[0])
 	return strings.TrimLeft(d[0], "\n")
+}
+
+func videoTalkURL(videoURL string) string {
+	return videoURL
 }
