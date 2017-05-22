@@ -160,15 +160,14 @@ func main() {
 
 	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
 
-	var wg sync.WaitGroup
+	// We are knowingly making sync. calls to the main Video page and
+	// in case we find there are One or more subtitle lanuguages we make
+	// more async. requests
 	var videoPageInfo VideoPage
+	videoPageInfo = videoFetchInfo(videoURL)
+
+	var wg sync.WaitGroup
 	wg.Add(1)
-
-	go func(videoURL string) {
-		defer wg.Done()
-		videoPageInfo = videoFetchInfo(videoURL)
-
-	}(videoURL)
 
 	wg.Wait()
 
