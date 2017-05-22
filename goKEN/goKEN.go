@@ -2,12 +2,11 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"os"
 	"strings"
 	"sync"
-
-	"fmt"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/fatih/color"
@@ -130,7 +129,6 @@ var langCodes = map[string]string{
 	"Vietnamese":            "vi",
 }
 
-
 func genTranscriptURLs(langCodes map[string]string, avaiLableLanguages []string, videoURL string) []string {
 
 	langBaseURL := "/transcript?language="
@@ -147,7 +145,36 @@ func genTranscriptURLs(langCodes map[string]string, avaiLableLanguages []string,
 	//fmt.Println(len(urls))
 
 	return urls
-}type talkTranscript struct {
+}
+
+type goKEN struct {
+
+	//TalkMeta Meta `json:"Meta"`
+	TalkTranscriptPage TranscriptPage `json:"TranscriptPage"`
+	TalkVideoPage      VideoPage      `json:"VideoPage"`
+}
+
+/*
+type Meta struct {
+	DateProcessed []string
+	type ItemsUpdated struct{
+   	TranscriptPage
+      	VideoPage
+	}
+}
+
+*/
+type VideoPage struct {
+	AvailableSubtitlesCount string   `json:"AvailableSubtitlesCount"`
+	Speaker                 string   `json:"Speaker"`
+	Duration                string   `json:"Duration"`
+	TimeFilmed              string   `json:"TimeFilmed"`
+	TalkViewsCount          string   `json:"TalkViewsCount"`
+	TalkTopicsList          []string `json:"TalkTopicsList"`
+	TalkCommentsCount       string   `json:"TalkCommentsCount"`
+}
+
+type talkTranscript struct {
 	LocalTalkTitle              string   `json:"LocalTalkTitle"`
 	Paragraphs                  []string `json:"Paragraphs"`
 	TimeStamps                  []string `json:"TimeStamps"`
@@ -484,4 +511,105 @@ func transcriptRated(doc *goquery.Document) string {
 	//println(r[0])
 	//println(r[1])
 	//return(p[3])
+}
+
+// VIDEO functions
+
+func videoAvailableSubtitlesCount(doc *goquery.Document) string {
+
+	subtitles := doc.Find(".player-hero__meta__link").Contents().Text()
+	//fmt.Println(subtitles)
+
+	//for _, x := range strings.Split(subtitles, "\n") {
+	//fmt.Println(x)
+	//println("~~~~~~")
+	//}
+
+	y := strings.Split(subtitles, "\n")
+	z := strings.Split(y[3], " ")[0]
+	// In case I need an INT
+	//numOfSubtitles, _ := strconv.ParseInt(z, 10, 32)
+	numOfSubtitles := z
+	return numOfSubtitles
+}
+
+func videoSpeaker(doc *goquery.Document) string {
+	speaker := doc.Find(".talk-speaker__name").Contents().Text()
+	//fmt.Println(speaker)
+	speaker = strings.Trim(speaker, "\n")
+	return speaker
+}
+
+/*
+// This is now taken from the transcripts page
+func title(doc *goquery.Document) {
+	title := doc.Find(".player-hero__title__content").Contents().Text()
+	fmt.Println(title)
+}
+*/
+
+func videoDuration(doc *goquery.Document) string {
+
+	duration := doc.Find(".player-hero__meta").Contents().Text()
+	//fmt.Println(duration)
+
+	//for _, x := range strings.Split(duration, "\n") {
+	//	fmt.Println(x)
+	//	println("~~~~~~")
+	//}
+
+	x := strings.Split(duration, "\n")
+	fmt.Println(x[6])
+	return x[6]
+
+}
+
+// TimeFilmed : Time at which the talk was filmed
+func videoTimeFilmed(doc *goquery.Document) string {
+
+	time_filmed := doc.Find(".player-hero__meta").Contents().Text()
+
+	//	fmt.Println(time_filmed)
+
+	y := strings.Split(time_filmed, "\n")
+	//fmt.Println(y[11])
+	return y[11]
+}
+
+func videoTalkViewsCount(doc *goquery.Document) string {
+
+	talk_views_count := doc.Find("#sharing-count").Contents().Text()
+	//	fmt.Println(talk_views_count)
+
+	a := strings.Split(talk_views_count, "\n")
+	b := strings.TrimSpace(a[2])
+	//fmt.Println(b)
+	return b
+
+}
+
+func videoTalkTopicsList(doc *goquery.Document) []string {
+
+	talk_topics := doc.Find(".talk-topics__list").Contents().Text()
+
+	c := strings.Split(talk_topics, "\n")
+	var topics []string
+	for i := 3; i < len(c); i++ {
+		//fmt.Println(c[i])
+		if c[i] == "" {
+
+		} else {
+			topics = append(topics, c[i])
+		}
+	}
+	return topics
+}
+
+func videoTalkCommentsCount(doc *goquery.Document) string {
+
+	talk_comments_count := doc.Find(".h11").Contents().Text()
+	//fmt.Println(talk_comments_count)
+	d := strings.Split(talk_comments_count, " ")
+	//fmt.Println(d[0])
+	return strings.TrimLeft(d[0], "\n")
 }
