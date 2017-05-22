@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 	"os"
 	"strings"
@@ -43,8 +42,29 @@ func main() {
 
 	wg.Wait()
 
+	writeJSON(videoPageInfo)
+}
+
+func writeJSON(videoPageInfo VideoPage) {
+
 	temp1, _ := json.Marshal(videoPageInfo)
-	fmt.Println(string(temp1))
+	//fmt.Println(string(temp1))
+	htmlSplit := strings.Split(videoPageInfo.TalkURL, "/")
+	talkName := htmlSplit[len(htmlSplit)-1]
+
+	fileName := "./" + talkName + ".json"
+
+	f, err := os.Create(fileName)
+
+	f.Write(temp1)
+	check(err)
+	defer f.Close()
+}
+
+func check(e error) {
+	if e != nil {
+		panic(e)
+	}
 }
 
 func checkInternet() {
