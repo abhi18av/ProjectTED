@@ -8,6 +8,10 @@ import (
 
 	"encoding/json"
 
+	"strconv"
+
+	"fmt"
+
 	"github.com/PuerkitoBio/goquery"
 	"github.com/fatih/color"
 )
@@ -185,27 +189,45 @@ func main() {
 
 	// Checking if there are any subtitles at all
 	// In case there are, we send a default query to fetch the list of available languages
-	if videoPageInfo.AvailableSubtitlesCount > 0 {
+	numOfSubtitles, _ := strconv.ParseInt(videoPageInfo.AvailableSubtitlesCount, 10, 64)
 
-		transcriptEnURL := videoURL + "/transcript?language=en"
+	// This function will cause the program to EXIT if there are no subtitles
+	checkIfSubtitlesExist(numOfSubtitles)
+	// Else we continue to fill the basic page
+	transcriptEnURL := videoURL + "/transcript?language=en"
 
-		transcriptPage, _ := goquery.NewDocument(transcriptEnURL)
+	// Since we've already made the request to default lang transcript
+	// we fill in the common details into a transcript info struct
+	transcriptCommonInfo := transcriptFetchCommonInfo(transcriptEnURL)
 
-		avaiLableLanguages := transcriptAvailableTranscripts(transcriptPage)
+	urls := genTranscriptURLs(langCodes, transcriptCommonInfo.AvailableTranscripts, videoURL)
 
-		urls := genTranscriptURLs(langCodes, avaiLableLanguages, videoURL)
+	// @@@@@@@@@@
+	// Page UnCommon
 
-		// Since we've already made the request to default lang transcript
-		// we fill in the common details into a transcript info struct
-	} else {
-		color.Magenta("No subtitles available yet")
-	}
+	var transcriptS []talkTranscript
+
+	langSpecificMap := make(map[string]talkTranscript)
 
 	var wg sync.WaitGroup
-	wg.Add(1)
-	wg.Wait()
+	wg.Add(len(urls) + 1)
+	for _, url := range urls {
 
-	writeJSON(videoPageInfo)
+		go func(url string) {
+			defer wg.Done()
+			color.Yellow(url)
+			x, langName := transcriptFetchUncommonInfo(url)
+			langSpecificMap[langName] = x
+			transcriptS = append(transcriptS, x)
+		}(url)
+
+		wg.Wait()
+
+		//writeJSON(videoPageInfo)
+
+		fmt.Println(transcriptS)
+	}
+
 }
 
 func writeJSON(videoPageInfo VideoPage) {
@@ -235,7 +257,7 @@ func checkInternet() {
 	rs, err := http.Get("https://google.com")
 	// Process response
 	if err != nil {
-		color.Red("OFF-Line")
+		color.Red("We're OFF-Line!")
 		//panic("Not connected to the net") // More idiomatic way would be to print the error and die unless it's a serious error
 
 		// Learn about exit status in Golang
@@ -244,6 +266,13 @@ func checkInternet() {
 
 	defer rs.Body.Close()
 
+}
+
+func checkIfSubtitlesExist(numOfSubtitles int64) {
+	if numOfSubtitles < 1 {
+		color.Red("No subtitles available yet")
+		os.Exit(1)
+	}
 }
 
 func videoFetchInfo(url string) VideoPage {
