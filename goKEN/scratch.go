@@ -4,7 +4,8 @@ import (
 	"net/http"
 	"os"
 	"strings"
-	"sync"
+
+	"fmt"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/fatih/color"
@@ -143,6 +144,38 @@ func genTranscriptURLs(langCodes map[string]string, avaiLableLanguages []string,
 
 	return urls
 }
+func main() {
+
+	WiFi()
+
+	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+
+	transcriptEnURL := videoURL + "/transcript?language=en"
+
+	transcriptPage, _ := goquery.NewDocument(url)
+
+	// Using append here to add to the array-field
+	avaiLableLanguages := append(transcriptPageInstance.TalkTranscript, transcript)
+
+	urls := genTranscriptURLs(langCodes, videoURL)
+
+	fmt.Println(urls)
+	/*
+		wg.Add(len(urls) + 1)
+		//fmt.Println(urls)
+
+		var wg sync.WaitGroup
+		// @@@@@@@@@@
+		// Page Common
+		go func(url string) {
+			defer wg.Done()
+			transcriptAvailableTranscripts(transcriptPage)
+		}(transcriptEnURL)
+
+		// @@@@@@@@@@@@
+		wg.Wait()
+	*/
+} // end of main()
 
 func WiFi() {
 	// Make a get request
@@ -158,36 +191,6 @@ func WiFi() {
 
 	defer rs.Body.Close()
 
-}
-
-func main() {
-
-	WiFi()
-
-	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
-
-	urls := genTranscriptURLs(langCodes, videoURL)
-	wg.Add(len(urls) + 1)
-	//fmt.Println(urls)
-
-	var wg sync.WaitGroup
-	// @@@@@@@@@@
-	// Page Common
-	transcriptEnURL := videoURL + "/transcript?language=en"
-
-	var transcriptPageCommon TranscriptPage
-	transcriptPage, _ := goquery.NewDocument(url)
-
-	// Using append here to add to the array-field
-	//transcriptPageInstance.TalkTranscript = append(transcriptPageInstance.TalkTranscript, transcript)
-
-	go func(url string) {
-		defer wg.Done()
-		transcriptAvailableTranscripts(transcriptPage)
-	}(transcriptEnURL)
-
-	// @@@@@@@@@@@@
-	wg.Wait()
 }
 
 // transcriptPage
