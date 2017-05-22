@@ -4,7 +4,6 @@ import (
 	"net/http"
 	"os"
 	"strings"
-	"sync"
 
 	"encoding/json"
 
@@ -151,12 +150,11 @@ func genTranscriptURLs(langCodes map[string]string, avaiLableLanguages []string,
 
 	for key, _ := range langCodes {
 
-		aLangCode := langCodes[key]
-		newURL := videoURL + langBaseURL + aLangCode
+		newURL := videoURL + langBaseURL + langCodes[key]
 		//fmt.Println(x)
 		urls = append(urls, newURL)
 	}
-	//fmt.Println(len(urls))
+	fmt.Println(len(urls))
 
 	return urls
 }
@@ -177,9 +175,11 @@ type TranscriptPage struct {
 
 func main() {
 
+	// Add logger and stubs for better debugging
 	checkInternet()
 
-	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	//videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	videoURL := "https://www.ted.com/talks/elon_musk_the_future_we_re_building_and_boring"
 
 	// We are knowingly making sync. calls to the main Video page and
 	// in case we find there are One or more subtitle lanuguages we make
@@ -202,35 +202,44 @@ func main() {
 	transcriptCommonInfo := transcriptFetchCommonInfo(transcriptEnURL)
 
 	urls := genTranscriptURLs(langCodes, transcriptCommonInfo.AvailableTranscripts, videoURL)
-	//fmt.Println(urls)
+	//fmt.Println(transcriptCommonInfo.AvailableTranscripts)
 
-	// @@@@@@@@@@
-	// Page UnCommon
+	/*
+			// @@@@@@@@@@
+			// Page UnCommon
 
-	var transcriptS []talkTranscript
+			var transcriptS []talkTranscript
 
-	langSpecificMap := make(map[string]talkTranscript)
+			langSpecificMap := make(map[string]talkTranscript)
 
-	var wg sync.WaitGroup
-	wg.Add(len(urls))
+			var wg sync.WaitGroup
 
-	for _, url := range urls {
+			numOfURLs := len(urls) + 1
+			//fmt.Println(numOfURLs)
+			wg.Add(numOfURLs)
 
-		go func(url string) {
-			defer wg.Done()
-			color.Green(url)
-			x, langName := transcriptFetchUncommonInfo(url)
-			langSpecificMap[langName] = x
-			transcriptS = append(transcriptS, x)
-		}(url)
+			for _, url := range urls {
 
-	}
+				go func(url string) {
+					defer wg.Done()
+					//color.Green(url)
+					x, langName := transcriptFetchUncommonInfo(url)
+					langSpecificMap[langName] = x
+					transcriptS = append(transcriptS, x)
+				}(url)
 
-	wg.Wait()
+			}
 
-	//writeJSON(videoPageInfo)
 
-	fmt.Println(transcriptS)
+		wg.Wait()
+
+		//writeJSON(videoPageInfo)
+
+		fmt.Println(transcriptS)
+
+		for the actual construction of the complete talk struct
+
+	*/
 }
 
 func writeJSON(videoPageInfo VideoPage) {
