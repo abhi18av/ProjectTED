@@ -41,10 +41,10 @@ func main() {
 
 	}(videoURL)
 
-	temp1, _ := json.Marshal(videoPageInfo)
-	fmt.Println(string(temp1))
 	wg.Wait()
 
+	temp1, _ := json.Marshal(videoPageInfo)
+	fmt.Println(string(temp1))
 }
 
 func checkInternet() {
@@ -127,7 +127,7 @@ func videoDuration(doc *goquery.Document) string {
 	//}
 
 	x := strings.Split(duration, "\n")
-	fmt.Println(x[6])
+	//fmt.Println(x[6])
 	return x[6]
 
 }
