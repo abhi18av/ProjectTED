@@ -140,6 +140,24 @@ var langCodes = map[string]string{
 	"Vietnamese":            "vi",
 }
 
+func genTranscriptURLs(langCodes map[string]string, avaiLableLanguages []string, videoURL string) []string {
+
+	langBaseURL := "/transcript?language="
+
+	var urls []string
+
+	for key, _ := range langCodes {
+
+		aLangCode := langCodes[key]
+		newURL := videoURL + langBaseURL + aLangCode
+		//fmt.Println(x)
+		urls = append(urls, newURL)
+	}
+	//fmt.Println(len(urls))
+
+	return urls
+}
+
 type talkTranscript struct {
 	LocalTalkTitle              string   `json:"LocalTalkTitle"`
 	Paragraphs                  []string `json:"Paragraphs"`
@@ -166,6 +184,22 @@ func main() {
 	var videoPageInfo VideoPage
 	videoPageInfo = videoFetchInfo(videoURL)
 
+	// Checking if there are any subtitles at all
+	// In case there are, we send a default query to fetch the list of available languages
+	if videoPageInfo.AvailableSubtitlesCount > 0 {
+		transcriptEnURL := videoURL + "/transcript?language=en"
+
+		transcriptPage, _ := goquery.NewDocument(transcriptEnURL)
+
+		avaiLableLanguages := transcriptAvailableTranscripts(transcriptPage)
+
+		urls := genTranscriptURLs(langCodes, avaiLableLanguages, videoURL)
+
+		// Since we've already made the request to default lang transcript
+		// we fill in the common details into a transcript info struct
+	} else {
+		color.Magenta("No subtitles available yet")
+	}
 	var wg sync.WaitGroup
 	wg.Add(1)
 
