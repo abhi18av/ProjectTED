@@ -185,13 +185,13 @@ func writeJSON(videoPageInfo VideoPage) {
 	fileName := "./" + talkName + ".json"
 
 	f, err := os.Create(fileName)
+	checkErr(err)
 
 	f.Write(temp1)
-	check(err)
 	defer f.Close()
 }
 
-func check(e error) {
+func checkErr(e error) {
 	if e != nil {
 		panic(e)
 	}
