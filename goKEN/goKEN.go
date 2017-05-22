@@ -1,15 +1,15 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"os"
 	"strings"
+	"sync"
 
 	"encoding/json"
 
 	"strconv"
-
-	"fmt"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/fatih/color"
@@ -142,19 +142,21 @@ var langCodes = map[string]string{
 	"Vietnamese":            "vi",
 }
 
-func genTranscriptURLs(langCodes map[string]string, avaiLableLanguages []string, videoURL string) []string {
+func genTranscriptURLs(langCodes map[string]string, availableLanguages []string, videoURL string) []string {
 
 	langBaseURL := "/transcript?language="
 
 	var urls []string
 
-	for key, _ := range langCodes {
+	for _, lang := range availableLanguages {
 
-		newURL := videoURL + langBaseURL + langCodes[key]
+		newURL := videoURL + langBaseURL + langCodes[lang]
 		//fmt.Println(x)
 		urls = append(urls, newURL)
 	}
-	fmt.Println(len(urls))
+
+	//numOfURLs := len(urls)
+	//fmt.Println("generated URLs : ", numOfURLs)
 
 	return urls
 }
@@ -204,42 +206,39 @@ func main() {
 	urls := genTranscriptURLs(langCodes, transcriptCommonInfo.AvailableTranscripts, videoURL)
 	//fmt.Println(transcriptCommonInfo.AvailableTranscripts)
 
-	/*
-			// @@@@@@@@@@
-			// Page UnCommon
+	// @@@@@@@@@@
+	// Page UnCommon
 
-			var transcriptS []talkTranscript
+	var transcriptS []talkTranscript
 
-			langSpecificMap := make(map[string]talkTranscript)
+	langSpecificMap := make(map[string]talkTranscript)
 
-			var wg sync.WaitGroup
+	var wg sync.WaitGroup
 
-			numOfURLs := len(urls) + 1
-			//fmt.Println(numOfURLs)
-			wg.Add(numOfURLs)
+	numOfURLs := len(urls)
+	//fmt.Println(numOfURLs)
+	wg.Add(numOfURLs)
 
-			for _, url := range urls {
+	for _, url := range urls {
 
-				go func(url string) {
-					defer wg.Done()
-					//color.Green(url)
-					x, langName := transcriptFetchUncommonInfo(url)
-					langSpecificMap[langName] = x
-					transcriptS = append(transcriptS, x)
-				}(url)
+		go func(url string) {
+			defer wg.Done()
+			//color.Green(url)
+			x, langName := transcriptFetchUncommonInfo(url)
+			langSpecificMap[langName] = x
+			transcriptS = append(transcriptS, x)
+		}(url)
 
-			}
+	}
 
+	wg.Wait()
 
-		wg.Wait()
+	//writeJSON(videoPageInfo)
 
-		//writeJSON(videoPageInfo)
+	fmt.Println(transcriptS)
 
-		fmt.Println(transcriptS)
+	// STUB for the actual construction of the complete talk struct
 
-		for the actual construction of the complete talk struct
-
-	*/
 }
 
 func writeJSON(videoPageInfo VideoPage) {

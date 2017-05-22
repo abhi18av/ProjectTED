@@ -118,19 +118,21 @@ var langCodes = map[string]string{
 	"Vietnamese":            "vi",
 }
 
-func genTranscriptURLs(langCodes map[string]string, avaiLableLanguages []string, videoURL string) []string {
+func genTranscriptURLs(langCodes map[string]string, availableLanguages []string, videoURL string) []string {
 
 	langBaseURL := "/transcript?language="
 
 	var urls []string
 
-	for key, _ := range langCodes {
+	for _, lang := range availableLanguages {
 
-		newURL := videoURL + langBaseURL + langCodes[key]
+		newURL := videoURL + langBaseURL + langCodes[lang]
 		//fmt.Println(x)
 		urls = append(urls, newURL)
 	}
-	fmt.Println(len(urls))
+
+	//numOfURLs := len(urls)
+	//fmt.Println("generated URLs : ", numOfURLs)
 
 	return urls
 }
@@ -140,5 +142,10 @@ func main() {
 	videoURL := "https://www.ted.com/talks/elon_musk_the_future_we_re_building_and_boring"
 	// [Afrikaans Albanian Arabic Armenian Azerbaijani Basque Belarusian Bengali Bulgarian Catalan Chinese, Simplified Chinese, Traditional Croatian Czech Danish Dutch English Esperanto Estonian Filipino Finnish French French (Canada) Galician Georgian German Greek Hebrew Hungarian Indonesian Ingush Italian Japanese Korean Lao Latvian Lithuanian Macedonian Marathi Mongolian Nepali Norwegian Bokmal Persian Polish Portuguese Portuguese, Brazilian Romanian Russian Serbian Slovak Slovenian Spanish Swedish Thai Turkish Ukrainian Urdu Uzbek Vietnamese]
 	availableLanguages := []string{"Chinese, Simplified", "Russian", "Korean", "German", "Spanish", "English"}
-	genTranscriptURLs(langCodes, availableLanguages, videoURL)
+	urls := genTranscriptURLs(langCodes, availableLanguages, videoURL)
+
+	numOfURLs := len(urls)
+	fmt.Println("generated URLs : ", numOfURLs)
+
+	fmt.Println(urls)
 }
