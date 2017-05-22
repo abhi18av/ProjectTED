@@ -192,7 +192,7 @@ func main() {
 	numOfSubtitles, _ := strconv.ParseInt(videoPageInfo.AvailableSubtitlesCount, 10, 64)
 
 	// This function will cause the program to EXIT if there are no subtitles
-	checkIfSubtitlesExist(numOfSubtitles)
+	exitIfNoSubtitlesExist(numOfSubtitles)
 	// Else we continue to fill the basic page
 	transcriptEnURL := videoURL + "/transcript?language=en"
 
@@ -268,7 +268,7 @@ func checkInternet() {
 
 }
 
-func checkIfSubtitlesExist(numOfSubtitles int64) {
+func exitIfNoSubtitlesExist(numOfSubtitles int64) {
 	if numOfSubtitles < 1 {
 		color.Red("No subtitles available yet")
 		os.Exit(1)
