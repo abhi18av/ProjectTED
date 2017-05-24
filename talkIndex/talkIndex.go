@@ -1,6 +1,7 @@
 package main
 
 import (
+	"os"
 	"strings"
 
 	"fmt"
@@ -39,6 +40,8 @@ func main() {
 			links := collectTalkLinks(aPage)
 
 			allTalksLinks = append(allTalksLinks, links)
+
+			fmt.Println(URL)
 		}(URL)
 
 	}
@@ -48,6 +51,12 @@ func main() {
 	//fmt.Println(len(allTalksLinks))
 	x, _ := json.Marshal(collectTalkLinks)
 	fmt.Println(x)
+}
+
+func checkErr(e error) {
+	if e != nil {
+		panic(e)
+	}
 }
 
 func collectTalkLinks(doc *goquery.Document) []string {
@@ -68,4 +77,15 @@ func lastIndex(doc *goquery.Document) string {
 	y := strings.Split(x, "|")
 	//fmt.Println(y[1])
 	return y[1]
+}
+
+func writeJSON(aStruct [][]string) {
+
+	temp1, _ := json.Marshal(aStruct)
+
+	f, err := os.Create("./out.txt")
+	checkErr(err)
+
+	f.Write(temp1)
+	defer f.Close()
 }
