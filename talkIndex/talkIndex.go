@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/PuerkitoBio/goquery"
 )
 
@@ -8,7 +10,8 @@ func main() {
 
 	startingIndexURL := "https://www.ted.com/talks?page=2"
 	aPage, _ := goquery.NewDocument(startingIndexURL)
-	collectTalkLinks(aPage)
+	linksInAPage := collectTalkLinks(aPage)
+	fmt.Println(linksInAPage)
 }
 
 func collectTalkLinks(doc *goquery.Document) []string {
