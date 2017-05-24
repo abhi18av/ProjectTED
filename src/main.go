@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 	"sync"
-	//"TheTwinFiles/talkFetch"
+	//"theTwinFiles/talkFetch"
 	// "./talkFetch/transcriptsPage"
 	// "./talkFetch/videoPage"
 
