@@ -2,11 +2,9 @@ package main
 
 import (
 	"os"
-	"strings"
-
-	"sync"
-
 	"strconv"
+	"strings"
+	"sync"
 
 	"encoding/json"
 
@@ -52,13 +50,14 @@ func main() {
 
 	wg.Wait()
 
-	writeJSON(allTalksLinks)
+	outPut := flattenStringMatrix(allTalksLinks)
+	writeJSON(outPut)
 
 	//fmt.Println(len(allTalksLinks))
 	//x, _ := json.Marshal(collectTalkLinks)
 	//fmt.Println(x)
-}
 
+}
 func checkErr(e error) {
 	if e != nil {
 		panic(e)
@@ -94,4 +93,24 @@ func writeJSON(aStruct [][]string) {
 
 	f.Write(temp1)
 	defer f.Close()
+}
+
+//twoDArr := [][]string{[]string{"a", "b", "c"}, []string{"x", "y", "z"}}
+//flattenStringMatrix(twoDArr)
+
+func flattenStringMatrix(aMatrix [][]string) []string {
+
+	var arr []string
+
+	for _, anArr := range aMatrix {
+
+		for i := 0; i < len(anArr); i++ {
+
+			arr = append(arr, anArr[i])
+
+		}
+
+	}
+
+	//fmt.Println(arr)
 }
