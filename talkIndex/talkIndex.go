@@ -1,24 +1,53 @@
 package main
 
 import (
-	"fmt"
-
 	"strings"
+
+	"fmt"
+	"sync"
+
+	"strconv"
+
+	"encoding/json"
 
 	"github.com/PuerkitoBio/goquery"
 )
 
 func main() {
 
-	startingIndexURL := "https://www.ted.com/talks?page=2"
-	aPage, _ := goquery.NewDocument(startingIndexURL)
+	startingIndexURL := "https://www.ted.com/talks?page=1"
+	page, _ := goquery.NewDocument(startingIndexURL)
 
-	linksInAPage := collectTalkLinks(aPage)
-	fmt.Println(linksInAPage)
+	lastIndex := lastIndex(page)
+	numLastIndex, _ := strconv.ParseInt(lastIndex, 10, 64)
+	fmt.Println(lastIndex)
 
-	lastPage := lastIndex(aPage)
-	fmt.Println(lastPage)
+	//linksInAPage := collectTalkLinks(page)
+	//fmt.Println(linksInAPage)
 
+	mainTedURL := "https://www.ted.com"
+
+	var allTalksLinks [][]string
+	var wg sync.WaitGroup
+	wg.Add(int(numLastIndex))
+	for _, index := range lastIndex {
+		URL := mainTedURL + "/talks?page=" + string(index)
+
+		go func(URL string) {
+			defer wg.Done()
+			aPage, _ := goquery.NewDocument(URL)
+			links := collectTalkLinks(aPage)
+
+			allTalksLinks = append(allTalksLinks, links)
+		}(URL)
+
+	}
+
+	wg.Wait()
+
+	//fmt.Println(len(allTalksLinks))
+	x, _ := json.Marshal(collectTalkLinks)
+	fmt.Println(x)
 }
 
 func collectTalkLinks(doc *goquery.Document) []string {
