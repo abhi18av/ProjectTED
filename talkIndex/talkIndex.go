@@ -13,12 +13,11 @@ func main() {
 	startingIndexURL := "https://www.ted.com/talks?page=2"
 	aPage, _ := goquery.NewDocument(startingIndexURL)
 
-	//linksInAPage := collectTalkLinks(aPage)
-	//fmt.Println(linksInAPage)
+	linksInAPage := collectTalkLinks(aPage)
+	fmt.Println(linksInAPage)
 
-	//lastPage(aPage)
-
-	numBeforeNext(aPage)
+	lastPage := lastIndex(aPage)
+	fmt.Println(lastPage)
 
 }
 
@@ -35,21 +34,9 @@ func collectTalkLinks(doc *goquery.Document) []string {
 	return urls
 }
 
-func lastPage(doc *goquery.Document) {
-	index := doc.Find(".results__pagination").Contents().Text()
-	x := strings.Split(index, "|")
-	fmt.Println(x)
-
-}
-
-func numBeforeNext(doc *goquery.Document) {
-
-	doc.Find(".pagination__item").Each(func(i int, s *goquery.Selection) {
-		num := s.Find("a").Contents().Text()
-		fmt.Println(i+1, " : ", num)
-	})
-
-	//x := doc.Find(".pagination__link").Prev().Contents().Text()
-	//fmt.Println(x)
-
+func lastIndex(doc *goquery.Document) string {
+	x := doc.Find(".pagination__flipper").PrevUntil(".pagination__gap").Contents().Text()
+	y := strings.Split(x, "|")
+	//fmt.Println(y[1])
+	return y[1]
 }
