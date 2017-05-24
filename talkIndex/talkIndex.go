@@ -4,7 +4,6 @@ import (
 	"os"
 	"strings"
 
-	"fmt"
 	"sync"
 
 	"strconv"
@@ -12,6 +11,7 @@ import (
 	"encoding/json"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/fatih/color"
 )
 
 func main() {
@@ -21,7 +21,8 @@ func main() {
 
 	lastIndex := lastIndex(page)
 	numLastIndex, _ := strconv.ParseInt(lastIndex, 10, 64)
-	//fmt.Println(lastIndex)
+	intLastIndex := int(numLastIndex)
+	//fmt.Println(numLastIndex)
 
 	//linksInAPage := collectTalkLinks(page)
 	//fmt.Println(linksInAPage)
@@ -30,9 +31,12 @@ func main() {
 
 	var allTalksLinks [][]string
 	var wg sync.WaitGroup
-	wg.Add(int(numLastIndex))
-	for _, index := range lastIndex {
-		URL := mainTedURL + "/talks?page=" + string(index)
+	wg.Add(intLastIndex)
+	for i := 1; i < intLastIndex; i++ {
+		URL := mainTedURL + "/talks?page=" + strconv.FormatInt(int64(i), 10)
+		color.Blue(URL)
+
+		//fmt.Println("Page : ", index)
 
 		go func(URL string) {
 			defer wg.Done()
@@ -41,7 +45,7 @@ func main() {
 
 			allTalksLinks = append(allTalksLinks, links)
 
-			fmt.Println(URL)
+			color.Green(URL)
 		}(URL)
 
 	}
