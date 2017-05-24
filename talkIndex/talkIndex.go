@@ -50,7 +50,7 @@ func main() {
 
 	wg.Wait()
 
-	outPut := flattenStringMatrix(allTalksLinks)
+	outPut := flattenMatrix(allTalksLinks)
 	writeJSON(outPut)
 
 	//fmt.Println(len(allTalksLinks))
@@ -98,7 +98,7 @@ func writeJSON(aStruct []string) {
 //twoDArr := [][]string{[]string{"a", "b", "c"}, []string{"x", "y", "z"}}
 //flattenStringMatrix(twoDArr)
 
-func flattenStringMatrix(aMatrix [][]string) []string {
+func flattenMatrix(aMatrix [][]string) []string {
 
 	var arr []string
 
