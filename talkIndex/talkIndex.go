@@ -88,7 +88,7 @@ func writeJSON(aStruct []string) {
 
 	temp1, _ := json.Marshal(aStruct)
 
-	f, err := os.Create("./out.txt")
+	f, err := os.Create("./talkIndex.json")
 	checkErr(err)
 
 	f.Write(temp1)
