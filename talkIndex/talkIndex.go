@@ -32,7 +32,7 @@ func main() {
 	var allTalksLinks [][]string
 	var wg sync.WaitGroup
 	wg.Add(intLastIndex)
-	for i := 1; i < intLastIndex; i++ {
+	for i := 1; i <= intLastIndex; i++ {
 		URL := mainTedURL + "/talks?page=" + strconv.FormatInt(int64(i), 10)
 		color.Blue(URL)
 
