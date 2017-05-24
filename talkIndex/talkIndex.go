@@ -113,4 +113,5 @@ func flattenStringMatrix(aMatrix [][]string) []string {
 	}
 
 	//fmt.Println(arr)
+	return arr
 }
