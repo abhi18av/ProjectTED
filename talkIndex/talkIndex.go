@@ -84,7 +84,7 @@ func lastIndex(doc *goquery.Document) string {
 	return y[1]
 }
 
-func writeJSON(aStruct [][]string) {
+func writeJSON(aStruct []string) {
 
 	temp1, _ := json.Marshal(aStruct)
 
