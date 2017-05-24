@@ -4,6 +4,8 @@ import (
 	"net/http"
 	"os"
 	"strings"
+	// "./talkFetch/transcriptsPage"
+	// "./talkFetch/videoPage"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/fatih/color"
