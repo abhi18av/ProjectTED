@@ -2,6 +2,7 @@ https://github.com/cloudson/gitql
 https://github.com/dinedal/textql
 https://github.com/fabioberger/chrome
 https://github.com/EngoEngine/audio
+go get github.com/glycerine/zygomys/cmd/zygo
 https://github.com/EngoEngine/engo
 https://github.com/brentp/go-chartjs
 https://github.com/iansmith/d3

@@ -1,0 +1,3 @@
+* 22-05-2017
+** Installed the `zygomys` golang package so as to work on the basic computer science within the context of golang.
+** Grow zygomyx into a proper Racket-system on golang.
