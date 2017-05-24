@@ -1,14 +1,18 @@
 package main
 
 import (
+	"encoding/json"
 	"net/http"
 	"os"
+	"strconv"
 	"strings"
+	"sync"
 	// "./talkFetch/transcriptsPage"
 	// "./talkFetch/videoPage"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/fatih/color"
+	"github.com/imdario/mergo"
 )
 
 type TedTalk struct {
@@ -43,6 +47,102 @@ type TranscriptPage struct {
 
 func main() {
 
+	// Add logger and stubs for better debugging
+	checkInternet()
+
+	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	//videoURL := "https://www.ted.com/talks/elon_musk_the_future_we_re_building_and_boring"
+
+	// We are knowingly making sync. calls to the main Video page and
+	// in case we find there are One or more subtitle lanuguages we make
+	// more async. requests
+	var videoPageInfo VideoPage
+	videoPageInfo = videoFetchInfo(videoURL)
+
+	// Checking if there are any subtitles at all
+	// In case there are, we send a default query to fetch the list of available languages
+	numOfSubtitles, _ := strconv.ParseInt(videoPageInfo.AvailableSubtitlesCount, 10, 64)
+
+	// This function will cause the program to EXIT if there are no subtitles
+	// Else we continue to fill the basic page
+	exitIfNoSubtitlesExist(numOfSubtitles)
+
+	transcriptEnURL := videoURL + "/transcript?language=en"
+
+	// Since we've already made the request to default lang transcript
+	// we fill in the common details into a transcript info struct
+	transcriptPageCommonInfo := transcriptFetchCommonInfo(transcriptEnURL)
+
+	urls := genTranscriptURLs(langCodes, transcriptPageCommonInfo.AvailableTranscripts, videoURL)
+	//fmt.Println(transcriptCommonInfo.AvailableTranscripts)
+
+	// @@@@@@@@@@
+	// Page UnCommon
+
+	//var transcriptS []talkTranscript
+
+	langSpecificMap := make(map[string]talkTranscript)
+
+	var wg sync.WaitGroup
+
+	numOfURLs := len(urls)
+	//fmt.Println(numOfURLs)
+	wg.Add(numOfURLs)
+
+	for _, url := range urls {
+
+		go func(url string) {
+			defer wg.Done()
+			//color.Green(url)
+			x, langName := transcriptFetchUncommonInfo(url)
+			langSpecificMap[langName] = x
+			//transcriptS = append(transcriptS, x)
+		}(url)
+
+	}
+
+	wg.Wait()
+
+	//writeJSON(videoPageInfo)
+
+	//fmt.Println(transcriptS)
+
+	// STUB for the actual construction of the complete talk struct
+
+	var transcriptPageUnCommonInfo TranscriptPage
+	transcriptPageUnCommonInfo.TalkTranscript = langSpecificMap
+
+	transcriptPageCompleteInfo := transcriptPageCommonInfo
+	mergo.Merge(&transcriptPageCompleteInfo, transcriptPageUnCommonInfo)
+	//writeJSON(transcriptPageCompleteInfo)
+
+	//temp1, _ := json.Marshal(transcriptPageCompleteInfo)
+	//fmt.Println(string(temp1))
+
+	var tedTalk TedTalk
+	tedTalk.TalkVideoPage = videoPageInfo
+	tedTalk.TalkTranscriptPage = transcriptPageCompleteInfo
+	//mergo.Merge(&tedTalk, transcriptPageCompleteInfo)
+	//fmt.Println(tedTalk)
+	//temp2, _ := json.Marshal(tedTalk)
+	//fmt.Println(string(temp2))
+	writeJSON(tedTalk)
+} // end of main()
+
+func writeJSON(aStruct TedTalk) {
+
+	temp1, _ := json.Marshal(aStruct)
+	//fmt.Println(string(temp1))
+	htmlSplit := strings.Split(aStruct.TalkVideoPage.TalkURL, "/")
+	talkName := htmlSplit[len(htmlSplit)-1]
+
+	fileName := "./" + talkName + ".json"
+
+	f, err := os.Create(fileName)
+	checkErr(err)
+
+	f.Write(temp1)
+	defer f.Close()
 }
 
 func checkErr(e error) {
