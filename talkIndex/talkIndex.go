@@ -21,7 +21,7 @@ func main() {
 
 	lastIndex := lastIndex(page)
 	numLastIndex, _ := strconv.ParseInt(lastIndex, 10, 64)
-	fmt.Println(lastIndex)
+	//fmt.Println(lastIndex)
 
 	//linksInAPage := collectTalkLinks(page)
 	//fmt.Println(linksInAPage)
@@ -48,9 +48,11 @@ func main() {
 
 	wg.Wait()
 
+	writeJSON(allTalksLinks)
+
 	//fmt.Println(len(allTalksLinks))
-	x, _ := json.Marshal(collectTalkLinks)
-	fmt.Println(x)
+	//x, _ := json.Marshal(collectTalkLinks)
+	//fmt.Println(x)
 }
 
 func checkErr(e error) {
