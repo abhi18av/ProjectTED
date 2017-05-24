@@ -1,0 +1,34 @@
+package talkFetch
+
+
+type TedTalk struct {
+	TalkVideoPage      VideoPage      `json:"TalkVideoPage"`
+	TalkTranscriptPage TranscriptPage `json:"TalkTranscriptPage"`
+}
+
+type VideoPage struct {
+	TalkURL                 string   `json:"VideoURL"`
+	AvailableSubtitlesCount string   `json:"AvailableSubtitlesCount"`
+	Speaker                 string   `json:"Speaker"`
+	Duration                string   `json:"Duration"`
+	TimeFilmed              string   `json:"TimeFilmed"`
+	TalkViewsCount          string   `json:"TalkViewsCount"`
+	TalkTopicsList          []string `json:"TalkTopicsList"`
+	TalkCommentsCount       string   `json:"TalkCommentsCount"`
+}
+
+
+
+type talkTranscript struct {
+	LocalTalkTitle              string   `json:"LocalTalkTitle"`
+	Paragraphs                  []string `json:"Paragraphs"`
+	TimeStamps                  []string `json:"TimeStamps"`
+	TalkTranscriptAndTimeStamps []string `json:"TalkTranscriptAndTimeStamps"`
+}
+
+type TranscriptPage struct {
+	AvailableTranscripts []string                  `json:"AvailableTranscripts"`
+	DatePosted           string                    `json:"DatePosted"`
+	Rated                string                    `json:"Rated"`
+	TalkTranscript       map[string]talkTranscript `json:"TalkTranscript"`
+}
