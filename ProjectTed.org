@@ -1,0 +1,37 @@
+* TedTalks
+Approach everything from a lone researcher's point of view - first. You need to get the idea off the ground, in your own personal lab first.
+** DataScience
+*** Machine Learning / Artificial Intelligence
+*** Data Visualization
+*** Statistics
+*** Data Bases
+*** Data Aggregation
+*** File I/O
+*** Progress Log
+*** Jupyter / RStudio etc
+*** Competitions
+*** Mathematics
+** Computer Science
+*** Tools
+*** Data Structures
+*** Algorithms
+*** Competitions
+** Software Engineering
+*** GUI
+*** WebDev
+*** Cloud Based ecosystem
+*** API
+*** Project management tools
+*** Git
+*** Docker
+*** Linux-Ubuntu
+*** Automation - Bash/PowerShell/ Scripts
+*** StackOverflow etc
+*** Documentation Reader
+*** GitHub
+*** Text Editor
+
+* Genomics and Computer Science
+** Online Courses
+** Importance
+** Design exercises and books based on Biology and Computer Science
