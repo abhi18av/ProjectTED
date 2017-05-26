@@ -299,3 +299,34 @@ func transcriptRated(doc *goquery.Document) string {
 	//println(r[1])
 	//return(p[3])
 }
+
+func transcriptGetImage(doc *goquery.Document) string {
+
+	imageURL, _ := doc.Find(".thumb__image").Attr("src")
+
+
+ response, e := http.Get(url)
+    if e != nil {
+        log.Fatal(e)
+    }
+
+    defer response.Body.Close()
+
+    //open a file for writing
+    file, err := os.Create("/home/abhi18av/ken.jpg")
+    if err != nil {
+        log.Fatal(err)
+    }
+    // Use io.Copy to just dump the response body to the file. This supports huge files
+    _, err = io.Copy(file, response.Body)
+    if err != nil {
+        log.Fatal(err)
+    }
+    file.Close()
+
+
+
+
+	return imageURL
+
+}

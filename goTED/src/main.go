@@ -43,6 +43,7 @@ type TranscriptPage struct {
 	AvailableTranscripts []string                  `json:"AvailableTranscripts"`
 	DatePosted           string                    `json:"DatePosted"`
 	Rated                string                    `json:"Rated"`
+	ImageURL             string                    `json:"ImageURL"`
 	TalkTranscript       map[string]talkTranscript `json:"TalkTranscript"`
 }
 
@@ -201,6 +202,7 @@ func transcriptFetchCommonInfo(url string) TranscriptPage {
 		AvailableTranscripts: transcriptAvailableTranscripts(transcriptPage),
 		DatePosted:           transcriptDatePosted(transcriptPage),
 		Rated:                transcriptRated(transcriptPage),
+		ImageURL:             transcriptGetImage(transcriptPage),
 	}
 	return transcriptPageInstance
 }
