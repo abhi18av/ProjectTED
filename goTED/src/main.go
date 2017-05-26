@@ -51,8 +51,8 @@ func main() {
 
 	// Add logger and stubs for better debugging
 	checkInternet()
-
-	videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
+	videoURL := os.Args[1]
+	//videoURL := "https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity"
 	//videoURL := "https://www.ted.com/talks/elon_musk_the_future_we_re_building_and_boring"
 
 	// We are knowingly making sync. calls to the main Video page and
@@ -133,7 +133,7 @@ func main() {
 
 func writeJSON(aStruct TedTalk) {
 
-	temp1, _ := json.Marshal(aStruct)
+	temp1, _ := json.MarshalIndent(aStruct, "", "  ")
 	//fmt.Println(string(temp1))
 	htmlSplit := strings.Split(aStruct.TalkVideoPage.TalkURL, "/")
 	talkName := htmlSplit[len(htmlSplit)-1]
@@ -202,7 +202,7 @@ func transcriptFetchCommonInfo(url string) TranscriptPage {
 		AvailableTranscripts: transcriptAvailableTranscripts(transcriptPage),
 		DatePosted:           transcriptDatePosted(transcriptPage),
 		Rated:                transcriptRated(transcriptPage),
-		ImageURL:             transcriptGetImage(transcriptPage),
+		ImageURL:             transcriptGetImage(transcriptPage, url),
 	}
 	return transcriptPageInstance
 }

@@ -1,6 +1,9 @@
 package talkFetch
 
 import (
+	"io"
+	"net/http"
+	"os"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
@@ -300,33 +303,28 @@ func transcriptRated(doc *goquery.Document) string {
 	//return(p[3])
 }
 
-func transcriptGetImage(doc *goquery.Document) string {
+func transcriptGetImage(doc *goquery.Document, videoURL string) string {
 
 	imageURL, _ := doc.Find(".thumb__image").Attr("src")
 
+	response, e := http.Get(imageURL)
+	checkErr(e)
+	defer response.Body.Close()
 
- response, e := http.Get(url)
-    if e != nil {
-        log.Fatal(e)
-    }
+	//open a file for writing
+	htmlSplit := strings.Split(videoURL, "/")
+	talkName := htmlSplit[len(htmlSplit)-2]
 
-    defer response.Body.Close()
+	// Establish a file name
+	fileName := "./" + talkName + ".jpg"
 
-    //open a file for writing
-    file, err := os.Create("/home/abhi18av/ken.jpg")
-    if err != nil {
-        log.Fatal(err)
-    }
-    // Use io.Copy to just dump the response body to the file. This supports huge files
-    _, err = io.Copy(file, response.Body)
-    if err != nil {
-        log.Fatal(err)
-    }
-    file.Close()
+	f, err := os.Create(fileName)
+	checkErr(err)
+	defer f.Close()
 
-
-
+	// Use io.Copy to just dump the response body to the file. This supports huge files
+	_, err = io.Copy(f, response.Body)
+	checkErr(err)
 
 	return imageURL
-
 }
