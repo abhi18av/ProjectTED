@@ -2,6 +2,8 @@
 Approach everything from a lone researcher's point of view - first. You need to get the idea off the ground, in your own personal lab first.
 ** DataScience
 *** Machine Learning / Artificial Intelligence
+**** Textual
+**** Image Processing
 *** Data Visualization
 *** Statistics
 *** Data Bases
