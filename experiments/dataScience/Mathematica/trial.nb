@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1077,         41]
-NotebookOptionsPosition[       767,         26]
-NotebookOutlinePosition[      1120,         42]
-CellTagsIndexPosition[      1077,         39]
+NotebookDataLength[     63967,       1155]
+NotebookOptionsPosition[     59840,       1046]
+NotebookOutlinePosition[     60193,       1062]
+CellTagsIndexPosition[     60150,       1059]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,10 +22,1030 @@ Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.704846116591367*^9, 3.704846148891996*^9}, {
   3.7048461988838863`*^9, 
   3.7048462098199987`*^9}},ExpressionUUID->"dd2dd9ee-2f1a-4534-94be-\
-f5e195ae40cc"]
+f5e195ae40cc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  "\"\<~/Projects/Polyglot/TedTalks/ProjectTED/experiments/dataScience/\
+Mathematica\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.704855336981762*^9, 
+  3.704855356120736*^9}},ExpressionUUID->"3f9c7eeb-96e9-433d-8fe9-\
+fc3a21eb34b9"],
+
+Cell[BoxData["\<\"/Users/eklavya/Projects/Polyglot/TedTalks/ProjectTED/\
+experiments/dataScience/Mathematica\"\>"], "Output",
+ CellChangeTimes->{
+  3.704855356814015*^9},ExpressionUUID->"27b6b085-699d-404a-b002-\
+5681dcac7b65"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Directory", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.704849252154364*^9, 
+  3.704849253902151*^9}},ExpressionUUID->"c64f2867-dedd-4958-8cce-\
+29b94b733790"],
+
+Cell[BoxData["\<\"/Users/eklavya/Projects/Polyglot/TedTalks/ProjectTED/\
+experiments/dataScience/Mathematica\"\>"], "Output",
+ CellChangeTimes->{3.704849255305949*^9, 
+  3.70485536694917*^9},ExpressionUUID->"31ac2150-e633-406c-99f2-1985e5d4431f"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"file", " ", "=", " ", 
+   RowBox[{
+   "Import", "[", 
+    "\"\<../JSONLab/al-How_humans_could_evolve_to_survive_in_space__2__.json\>\
+\"", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.704855371634041*^9, 3.704855429511056*^9}, {
+  3.704855467621966*^9, 3.704855502962441*^9}, {3.70485553615679*^9, 
+  3.7048555411154327`*^9}},ExpressionUUID->"9f867ae3-ff61-44ee-a88b-\
+4ece95fe1cd6"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.704855544985248*^9, 
+  3.704855549381445*^9}},ExpressionUUID->"aef97046-792b-4c35-b2f6-\
+1c5f393af86f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Head", "[", "file", "]"}]], "Input",
+ CellChangeTimes->{{3.7048556111392317`*^9, 
+  3.704855613115686*^9}},ExpressionUUID->"b77c3be7-6926-49da-8be4-\
+14cfca884ce0"],
+
+Cell[BoxData["List"], "Output",
+ CellChangeTimes->{
+  3.704855613436129*^9},ExpressionUUID->"0f6db4d1-3f60-4f6e-a54b-\
+dbb463cf4347"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "file", "]"}]], "Input",
+ CellChangeTimes->{{3.704855652485183*^9, 
+  3.7048556545056553`*^9}},ExpressionUUID->"02488eca-7e06-4445-b236-\
+a80299a72e4a"],
+
+Cell[BoxData["7"], "Output",
+ CellChangeTimes->{
+  3.704855655008873*^9},ExpressionUUID->"343c64fd-b37a-48f8-86d4-\
+dc01d56dd70b"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"assoc1", " ", "=", " ", 
+   RowBox[{"Association", "[", "file", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.704855986987089*^9, 3.704856063299364*^9}, {
+   3.704856101409751*^9, 3.704856137973692*^9}, {3.704856183620895*^9, 
+   3.704856196347089*^9}, 
+   3.7048563495210247`*^9},ExpressionUUID->"34045f66-5a49-47a1-b21d-\
+62a86ef6bbdc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Keys", "[", "assoc1", "]"}]], "Input",
+ CellChangeTimes->{{3.70485620097431*^9, 3.704856214172929*^9}, 
+   3.7048563472711773`*^9},ExpressionUUID->"86d932e7-70bb-4848-b90b-\
+53b6a7f7133e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"transcript\"\>", ",", "\<\"posted_date\"\>", 
+   ",", "\<\"talk_link\"\>", ",", "\<\"talk_title\"\>", 
+   ",", "\<\"update_date\"\>", ",", "\<\"talk_topics\"\>", 
+   ",", "\<\"time\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.704856205006856*^9, 3.704856214476061*^9}, 
+   3.7048563527304373`*^9},ExpressionUUID->"d5b9fda4-e7a9-4135-90b3-\
+1629365fea43"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"file", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "[", 
+    RowBox[{"[", "2", "]"}], "]"}], "[", 
+   RowBox[{"[", "1", "]"}], "]"}], "[", 
+  RowBox[{"[", "2", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Part", "[", 
+    RowBox[{"file", ",", " ", "1", ",", "2", ",", "2", ",", "2"}], "]"}], 
+   ";"}], "\n", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"file", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "[", 
+      RowBox[{"[", "2", "]"}], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "[", 
+    RowBox[{"[", "2", "]"}], "]"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.7048566673923693`*^9, 
+  3.704856667656756*^9}},ExpressionUUID->"c11dc05c-5c6c-4f16-8f0b-\
+3ded77263006"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\" En este planeta hay pocas tierras y est\[AAcute]n distantes \
+entre s\[IAcute], no son hospitalarias con los humanos de ning\[UAcute]n \
+modo, pero tenemos que sobrevivir. Nuestros antepasados primitivos, al ver \
+sus hogares y medios de vida en peligro, se atrevieron a adentrarse en \
+territorios desconocidos en busca de mejores oportunidades. Y como \
+descendientes de estos exploradores, su sangre n\[OAcute]mada corre por \
+nuestras venas. Pero al mismo tiempo, distra\[IAcute]dos por nuestro pan y \
+circo y envueltos en las guerras que hemos librado entre nosotros, parece que \
+hemos olvidado este deseo de explorar. Como especie, hemos evolucionado de \
+una forma \[UAcute]nica para la Tierra, en la Tierra, y con la Tierra, y \
+contentos con nuestras condiciones de vida nos hemos vuelto complacientes y \
+estamos demasiado ocupados para darnos cuenta de que sus recursos son \
+finitos, y que la vida de nuestro sol es tambi\[EAcute]n limitada. Mientras \
+que Marte y todas las pel\[IAcute]culas creadas acerca de \[EAcute]l han \
+reforzado la \[EAcute]tica del viaje espacial, pocos de nosotros parecemos \
+darnos cuenta de que la fr\[AAcute]gil constituci\[OAcute]n de nuestra \
+especie est\[AAcute] muy mal preparada para los largos viajes espaciales. \
+\"\>", ",", "\<\" Emprendamos una caminata por el bosque m\[AAcute]s cercano \
+y analicemos cuidadosamente la realidad. Levanten r\[AAcute]pidamente la \
+mano: \[DownQuestion]Cu\[AAcute]ntos de Uds. piensan que podr\[IAcute]an \
+sobrevivir en esta naturaleza exuberante unos d\[IAcute]as? Bueno, bastantes. \
+\[DownQuestion]Qu\[EAcute] tal un par de semanas? Un buen n\[UAcute]mero. \
+\[DownQuestion]Qu\[EAcute] tal un par de meses? Bastante bien \
+tambi\[EAcute]n. Ahora, imaginemos que este bosque pasa por un invierno \
+eterno. La misma pregunta: \[DownQuestion]Cu\[AAcute]ntos de Uds. piensan que \
+podr\[IAcute]an sobrevivir unos d\[IAcute]as? Unos cuantos. \[DownQuestion]Qu\
+\[EAcute] tal un par de semanas? Ahora un toque divertido: imaginemos que la \
+\[UAcute]nica fuente de agua disponible est\[AAcute] atrapada en bloques \
+congelados a kil\[OAcute]metros debajo de la superficie. La cantidad de \
+nutrientes en el suelo es tan reducida que no se encuentra en la vegetaci\
+\[OAcute]n, y, por supuesto, casi no hay atm\[OAcute]sfera. \"\>", 
+   ",", "\<\" Estos ejemplos son solo unos pocos de los muchos retos que \
+enfrentar\[IAcute]amos en un planeta como Marte. \[DownQuestion]C\[OAcute]mo \
+podemos prepararnos para viajes a destinos mucho m\[AAcute]s remotos que unas \
+vacaciones al tr\[OAcute]pico? \[DownQuestion]Enviaremos suministros de forma \
+continua desde la Tierra, construiremos ascensores espaciales o \
+kil\[OAcute]metros de cintas transportadoras que conecten ese nuevo planeta a \
+nuestro planeta natal? \[DownQuestion]Y c\[OAcute]mo cultivaremos alimentos \
+que crecen en la Tierra, como nosotros? \"\>", 
+   ",", "\<\" Pero me estoy adelantando. En el viaje de nuestra especie para \
+encontrar un nuevo hogar bajo un nuevo sol, es muy probable que invirtamos \
+mucho tiempo en el viaje en s\[IAcute], en el espacio, en una nave, una lata \
+herm\[EAcute]tica voladora probablemente por muchas generaciones. \"\>", 
+   ",", "\<\" El ser humano ha pasado tiempo de forma continuada en el \
+espacio un m\[AAcute]ximo de 12 a 14 meses. A partir de las experiencias \
+espaciales de los astronautas sabemos que pasar tiempo en un ambiente de \
+microgravedad lleva a p\[EAcute]rdida \[OAcute]sea, atrofia muscular, y \
+problemas cardiovasculares entre muchas otras complicaciones de \
+\[IAcute]ndole fisiol\[OAcute]gico y psicol\[OAcute]gico. Para no hablar de \
+la macrogravedad o cualquier otra variaci\[OAcute]n de la fuerza \
+gravitacional ejercida por el planeta en el que nos encontramos. \"\>", 
+   ",", "\<\" En resumen, nuestros viajes c\[OAcute]smicos estar\[AAcute]n \
+plagados de peligros tanto conocidos como desconocidos. Hasta ahora hemos \
+estado buscando a esta nueva tecnolog\[IAcute]a mec\[AAcute]nica o a esa pr\
+\[OAcute]xima generaci\[OAcute]n de robots que puedan asegurarnos, como \
+especie, un viaje seguro por el espacio. Por maravillosos que sean, creo que \
+ha llegado el momento de complementar a estos gigantes electr\[OAcute]nicos \
+voluminosos con algo que la naturaleza ya ha inventado: el microbio, un \
+organismo unicelular, una m\[AAcute]quina viva, capaz de auto-regenerarse y \
+auto-mantenerse, que necesita bastante poco para mantenerse, ofrece mucha \
+flexibilidad en el dise\[NTilde]o y solo hace falta transportarlo en un solo \
+tubo de pl\[AAcute]stico. \"\>", 
+   ",", "\<\" El campo que nos ha permitido usar el potencial del microbio se \
+conoce como la biolog\[IAcute]a sint\[EAcute]tica. Proviene de la biolog\
+\[IAcute]a molecular, que nos ha dado antibi\[OAcute]ticos, vacunas, y las \
+mejores pautas para la observaci\[OAcute]n de los matices \
+fisiol\[OAcute]gicos del cuerpo humano. Con la ayuda de las herramientas de \
+la biolog\[IAcute]a sint\[EAcute]tica, podemos editar los genes de casi \
+cualquier organismo, microsc\[OAcute]pico o no, a una velocidad y fidelidad \
+incre\[IAcute]bles. Dadas las limitaciones de las m\[AAcute]quinas hechas por \
+el hombre, la biolog\[IAcute]a sint\[EAcute]tica ser\[AAcute] un nuevo medio \
+para dise\[NTilde]ar no solo nuestra comida, combustible y medioambiente, \
+sino tambi\[EAcute]n a nosotros mismos para compensar nuestros defectos f\
+\[IAcute]sicos y asegurar nuestra supervivencia en el espacio. \"\>", 
+   ",", "\<\" Para dar un ejemplo de c\[OAcute]mo podemos usar la biolog\
+\[IAcute]a sint\[EAcute]tica para la exploraci\[OAcute]n espacial, volvamos \
+al medioambiente marciano. La composici\[OAcute]n del suelo marciano es \
+similar a la de cenizas volc\[AAcute]nicas de Haw\[AAcute]i, con trazas de \
+material org\[AAcute]nico. Digamos, hipot\[EAcute]ticamente, que el suelo de \
+Marte podr\[IAcute]a sustentar en realidad el crecimiento de plantas sin \
+necesidad de nutrientes derivados de la Tierra. Quiz\[AAcute]s la primera \
+pregunta que deber\[IAcute]amos hacer es \[DownQuestion]c\[OAcute]mo podemos \
+hacer las plantas tolerantes al fr\[IAcute]o? Porque, en promedio, la \
+temperatura en Marte es de unos muy atractivos 60 grados bajo cero. La \
+siguiente pregunta es \[DownQuestion]c\[OAcute]mo hacemos las plantas \
+tolerantes a la sequ\[IAcute]a? La mayor parte del agua que se forma tras una \
+helada se evapora antes de que pueda decir la palabra \\\"evaporar\\\". \
+Resulta que ya tenemos hecho este tipo de cosas. Al tomar prestadas genes de \
+peces para obtener prote\[IAcute]nas anticongelantes y genes de otras plantas \
+como el arroz para desarrollar resistencia a la sequ\[IAcute]a e insertarlas \
+luego en las plantas que los necesitan, acabamos por tener plantas que \
+toleran la mayor\[IAcute]a de las sequ\[IAcute]as y heladas. Son conocidas en \
+la Tierra como los transg\[EAcute]nicos, u organismos gen\[EAcute]ricamente \
+modificados, y confiamos en ellos para alimentar a toda la \
+civilizaci\[OAcute]n humana. La naturaleza hace este tipo de cosas tambi\
+\[EAcute]n, sin nuestra ayuda. Nosotros hemos encontrado simplemente maneras \
+m\[AAcute]s precisas de hacerlo. \"\>", 
+   ",", "\<\" As\[IAcute] que \[DownQuestion]por qu\[EAcute] queremos cambiar \
+la composici\[OAcute]n gen\[EAcute]tica de las plantas para el espacio? \
+Bueno, no hacerlo significar\[IAcute]a usar la ingenier\[IAcute]a para un \
+sinf\[IAcute]n de hect\[AAcute]reas de tierra en todo un nuevo planeta \
+liberando billones de litros de gases atmosf\[EAcute]ricos para luego \
+construir una c\[UAcute]pula de cristal gigante para contenerlo todo. Es una \
+empresa de ingenier\[IAcute]a poco realista que puede convertirse \
+r\[AAcute]pidamente en una misi\[OAcute]n de transporte de carga de alto \
+costo. Una de las mejores maneras de asegurarnos de tener los suministros \
+necesarios de alimento y aire, es llevar con nosotros organismos que han sido \
+dise\[NTilde]ados para adaptarse a entornos nuevos y dif\[IAcute]ciles. o sea \
+organismos manipulados para ayudarnos a terraformar un planeta tanto a corto \
+como a largo plazo. Estos organismos pueden tambi\[EAcute]n ser \
+dise\[NTilde]ados para crear medicinas o combustible. \"\>", 
+   ",", "\<\" As\[IAcute] que podemos usar la biolog\[IAcute]a \
+sint\[EAcute]tica para llevar plantas de alta ingenier\[IAcute]a con \
+nosotros, pero \[DownQuestion]qu\[EAcute] otra cosa podemos hacer? Bueno, he \
+mencionado anteriormente que nosotros, como especie, fuimos evolucionado de \
+forma \[UAcute]nica para el planeta Tierra. Este hecho no ha cambiado mucho \
+en los \[UAcute]ltimos cinco minutos mientras Uds. estaban sentados y yo \
+estaba aqu\[IAcute] de pie. As\[IAcute] que si tuvi\[EAcute]ramos que mandar \
+a cualquiera de nosotros a Marte en este mismo momento, con comida, agua, \
+aire y un traje espacial estar\[IAcute]amos propensos a experimentar \
+problemas de salud muy desagradables debido a la radiaci\[OAcute]n ionizante \
+que bombardea la superficie de planetas como Marte que tienen poco o nada de \
+atm\[OAcute]sfera. A menos que contemos con quedarnos bajo tierra durante \
+nuestra estancia en cada uno de estos nuevos planetas, tenemos que encontrar \
+mejores maneras de protegernos sin necesidad de recurrir a llevar una \
+armadura que pese casi lo mismo que nuestro propio peso corporal, o la \
+necesidad de ocultarnos detr\[AAcute]s de una pared de plomo. \"\>", 
+   ",", "\<\" As\[IAcute] que recurramos a la naturaleza en busca de \
+inspiraci\[OAcute]n. Entre las formas de vida que existen aqu\[IAcute] en la \
+Tierra, hay un subconjunto de organismos conocido como extrem\[OAcute]filos, \
+o amantes de las condiciones de vida extremas, si recuerdan la clase de \
+biolog\[IAcute]a. Y entre estos organismos hay una bacteria llamada \
+Deinococcus radiodurans, capaz de soportar el fr\[IAcute]o, la deshidrataci\
+\[OAcute]n, el vac\[IAcute]o, los \[AAcute]cidos y, sobre todo, la radiaci\
+\[OAcute]n. Aunque se conocen sus mecanismos de tolerancia a la radiaci\
+\[OAcute]n, a\[UAcute]n tenemos que adaptar sus genes a los \
+mam\[IAcute]feros. Eso no es nada f\[AAcute]cil. Hay muchas facetas de su \
+tolerancia a la radiaci\[OAcute]n, y el proceso no es tan simple como \
+transferir un solo gen. Pero con un poco de ingenio humano y un poco de \
+tiempo, creo que no es muy dif\[IAcute]cil hacerlo tampoco. Incluso si \
+tomamos prestado solo una fracci\[OAcute]n de su capacidad para tolerar la \
+radiaci\[OAcute]n, estar\[IAcute]amos infinitamente mejor de lo que ya \
+estamos que es disponer de la melanina de nuestra piel. Con la ayuda de las \
+herramientas de la biolog\[IAcute]a sint\[EAcute]tica, podemos aprovechar las \
+propiedades de la Deinococcus radiodurans para prosperar en lo que de lo \
+contrario ser\[IAcute]a una dosis muy letal de radiaci\[OAcute]n. Con lo dif\
+\[IAcute]cil que es vislumbrarlo, el Homo sapiens, es decir, los seres \
+humanos, evolucionamos todos los d\[IAcute]as, y todav\[IAcute]a seguimos \
+evolucionando. Miles de a\[NTilde]os de evoluci\[OAcute]n humana no solo \
+hicieron posible la existencia de seres humanos como los tibetanos, que \
+pueden vivir con poco ox\[IAcute]geno, sino tambi\[EAcute]n argentinos, que \
+pueden ingerir y metabolizar ars\[EAcute]nico, un elemento qu\[IAcute]mico \
+que puede matar a un humano. Cada d\[IAcute]a, el cuerpo humano evoluciona \
+debido a mutaciones accidentales igual que permite que ciertos humanos \
+sobrevivan en condiciones sombr\[IAcute]as. \"\>", 
+   ",", "\<\" Pero, y esto es un gran pero, dicha evoluci\[OAcute]n requiere \
+dos cosas que no siempre tenemos o podemos permitirnos: la muerte y el \
+tiempo. En la lucha de nuestra especie por encontrar nuestro lugar en el \
+universo, puede ser que no siempre tengamos el tiempo necesario para \
+desarrollar de manera natural las funciones adicionales necesarias para la \
+supervivencia en otros planetas. Estamos viviendo en lo que E.O. Wilson \
+denomin\[OAcute] la edad de la elusi\[OAcute]n gen\[EAcute]tica, durante la \
+cual remediamos nuestros defectos gen\[EAcute]ticos como la fibrosis qu\
+\[IAcute]stica o la distrofia muscular con suplementos externos temporales. \
+Pero con cada d\[IAcute]a que pasa, nos acercamos a la edad de la evoluci\
+\[OAcute]n volitiva, una edad en la que, como especie, podremos decidir por \
+nosotros mismos nuestro propio destino gen\[EAcute]tico. Mejorar el cuerpo \
+humano con nuevas habilidades es m\[AAcute]s bien una cuesti\[OAcute]n de c\
+\[OAcute]mo y no de cu\[AAcute]ndo. \"\>", 
+   ",", "\<\" El uso de la biolog\[IAcute]a sint\[EAcute]tica para alterar la \
+composici\[OAcute]n gen\[EAcute]tica de cualquier organismo vivo, \
+especialmente la nuestra, no est\[AAcute] exenta de dilemas morales y \
+\[EAcute]ticos. \[DownQuestion]Alterarnos a nosotros mismos nos hace menos \
+humanos? Pero, de nuevo, \[DownQuestion]qu\[EAcute] es la humanidad sino \
+polvo de estrellas dotado de consciencia? \[DownQuestion]Hacia d\[OAcute]nde \
+deber\[IAcute]a encaminarse el genio humano? Sin duda, es una p\[EAcute]rdida \
+de tiempo reclinarse para solo maravillarse con \[EAcute]l. \[DownQuestion]C\
+\[OAcute]mo podemos usar nuestro conocimiento para protegernos de los \
+peligros externos y luego protegernos de nosotros mismos? \"\>", 
+   ",", "\<\" Planteo estas preguntas no para crear miedo a la ciencia sino \
+para sacar a la luz las muchas posibilidades que la ciencia nos ofrece y nos \
+sigue ofreciendo. Como seres humanos hay que reunirse para discutir y adoptar \
+las soluciones tanto con precauci\[OAcute]n c\[OAcute]mo tambi\[EAcute]n con \
+valor. \"\>", 
+   ",", "\<\" Marte es un destino, pero no ser\[AAcute] el \[UAcute]ltimo. \
+Nuestra verdadera y \[UAcute]ltima frontera es la l\[IAcute]nea que debemos \
+cruzar para decidir lo que podemos y debemos hacer con la inteligencia de \
+nuestra especie. \"\>", 
+   ",", "\<\" El espacio es un lugar fr\[IAcute]o, brutal e implacable. \
+Nuestro camino a las estrellas estar\[AAcute] plagado de intentos que nos \
+llevar\[AAcute]n a preguntas no solo del tipo de qui\[EAcute]nes somos sino \
+tambi\[EAcute]n ad\[OAcute]nde vamos a ir. Las respuestas consistir\[AAcute]n \
+en nuestra elecci\[OAcute]n de usar o abandonar la tecnolog\[IAcute]a que \
+hemos creado a partir de la vida misma, y nos definir\[AAcute]n para el resto \
+de  nuestra existencia en este universo. \"\>", ",", "\<\" Gracias. \"\>", 
+   ",", "\<\" (Aplausos) \"\>"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.704856668860681*^9},ExpressionUUID->"17c30151-641c-41ed-be84-\
+4faffc047fd5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"assoc1", "[", 
+    RowBox[{"[", "\"\<transcript\>\"", "]"}], "]"}], "[", 
+   RowBox[{"[", "1", "]"}], "]"}], "  ", "//", " ", "Association"}]], "Input",\
+
+ CellChangeTimes->{{3.7048562213514547`*^9, 3.704856260179223*^9}, {
+  3.704856306268587*^9, 
+  3.704856345304184*^9}},ExpressionUUID->"a79b4671-0830-4f14-b187-\
+5ea23c0eb8f2"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{"\<\"es\"\>", "\[Rule]", 
+   RowBox[{"{", 
+    RowBox[{"\<\" En este planeta hay pocas tierras y est\[AAcute]n distantes \
+entre s\[IAcute], no son hospitalarias con los humanos de ning\[UAcute]n \
+modo, pero tenemos que sobrevivir. Nuestros antepasados primitivos, al ver \
+sus hogares y medios de vida en peligro, se atrevieron a adentrarse en \
+territorios desconocidos en busca de mejores oportunidades. Y como \
+descendientes de estos exploradores, su sangre n\[OAcute]mada corre por \
+nuestras venas. Pero al mismo tiempo, distra\[IAcute]dos por nuestro pan y \
+circo y envueltos en las guerras que hemos librado entre nosotros, parece que \
+hemos olvidado este deseo de explorar. Como especie, hemos evolucionado de \
+una forma \[UAcute]nica para la Tierra, en la Tierra, y con la Tierra, y \
+contentos con nuestras condiciones de vida nos hemos vuelto complacientes y \
+estamos demasiado ocupados para darnos cuenta de que sus recursos son \
+finitos, y que la vida de nuestro sol es tambi\[EAcute]n limitada. Mientras \
+que Marte y todas las pel\[IAcute]culas creadas acerca de \[EAcute]l han \
+reforzado la \[EAcute]tica del viaje espacial, pocos de nosotros parecemos \
+darnos cuenta de que la fr\[AAcute]gil constituci\[OAcute]n de nuestra \
+especie est\[AAcute] muy mal preparada para los largos viajes espaciales. \
+\"\>", ",", "\<\" Emprendamos una caminata por el bosque m\[AAcute]s cercano \
+y analicemos cuidadosamente la realidad. Levanten r\[AAcute]pidamente la \
+mano: \[DownQuestion]Cu\[AAcute]ntos de Uds. piensan que podr\[IAcute]an \
+sobrevivir en esta naturaleza exuberante unos d\[IAcute]as? Bueno, bastantes. \
+\[DownQuestion]Qu\[EAcute] tal un par de semanas? Un buen n\[UAcute]mero. \
+\[DownQuestion]Qu\[EAcute] tal un par de meses? Bastante bien \
+tambi\[EAcute]n. Ahora, imaginemos que este bosque pasa por un invierno \
+eterno. La misma pregunta: \[DownQuestion]Cu\[AAcute]ntos de Uds. piensan que \
+podr\[IAcute]an sobrevivir unos d\[IAcute]as? Unos cuantos. \[DownQuestion]Qu\
+\[EAcute] tal un par de semanas? Ahora un toque divertido: imaginemos que la \
+\[UAcute]nica fuente de agua disponible est\[AAcute] atrapada en bloques \
+congelados a kil\[OAcute]metros debajo de la superficie. La cantidad de \
+nutrientes en el suelo es tan reducida que no se encuentra en la vegetaci\
+\[OAcute]n, y, por supuesto, casi no hay atm\[OAcute]sfera. \"\>", 
+     ",", "\<\" Estos ejemplos son solo unos pocos de los muchos retos que \
+enfrentar\[IAcute]amos en un planeta como Marte. \[DownQuestion]C\[OAcute]mo \
+podemos prepararnos para viajes a destinos mucho m\[AAcute]s remotos que unas \
+vacaciones al tr\[OAcute]pico? \[DownQuestion]Enviaremos suministros de forma \
+continua desde la Tierra, construiremos ascensores espaciales o \
+kil\[OAcute]metros de cintas transportadoras que conecten ese nuevo planeta a \
+nuestro planeta natal? \[DownQuestion]Y c\[OAcute]mo cultivaremos alimentos \
+que crecen en la Tierra, como nosotros? \"\>", 
+     ",", "\<\" Pero me estoy adelantando. En el viaje de nuestra especie \
+para encontrar un nuevo hogar bajo un nuevo sol, es muy probable que \
+invirtamos mucho tiempo en el viaje en s\[IAcute], en el espacio, en una \
+nave, una lata herm\[EAcute]tica voladora probablemente por muchas \
+generaciones. \"\>", 
+     ",", "\<\" El ser humano ha pasado tiempo de forma continuada en el \
+espacio un m\[AAcute]ximo de 12 a 14 meses. A partir de las experiencias \
+espaciales de los astronautas sabemos que pasar tiempo en un ambiente de \
+microgravedad lleva a p\[EAcute]rdida \[OAcute]sea, atrofia muscular, y \
+problemas cardiovasculares entre muchas otras complicaciones de \
+\[IAcute]ndole fisiol\[OAcute]gico y psicol\[OAcute]gico. Para no hablar de \
+la macrogravedad o cualquier otra variaci\[OAcute]n de la fuerza \
+gravitacional ejercida por el planeta en el que nos encontramos. \"\>", 
+     ",", "\<\" En resumen, nuestros viajes c\[OAcute]smicos estar\[AAcute]n \
+plagados de peligros tanto conocidos como desconocidos. Hasta ahora hemos \
+estado buscando a esta nueva tecnolog\[IAcute]a mec\[AAcute]nica o a esa pr\
+\[OAcute]xima generaci\[OAcute]n de robots que puedan asegurarnos, como \
+especie, un viaje seguro por el espacio. Por maravillosos que sean, creo que \
+ha llegado el momento de complementar a estos gigantes electr\[OAcute]nicos \
+voluminosos con algo que la naturaleza ya ha inventado: el microbio, un \
+organismo unicelular, una m\[AAcute]quina viva, capaz de auto-regenerarse y \
+auto-mantenerse, que necesita bastante poco para mantenerse, ofrece mucha \
+flexibilidad en el dise\[NTilde]o y solo hace falta transportarlo en un solo \
+tubo de pl\[AAcute]stico. \"\>", 
+     ",", "\<\" El campo que nos ha permitido usar el potencial del microbio \
+se conoce como la biolog\[IAcute]a sint\[EAcute]tica. Proviene de la biolog\
+\[IAcute]a molecular, que nos ha dado antibi\[OAcute]ticos, vacunas, y las \
+mejores pautas para la observaci\[OAcute]n de los matices \
+fisiol\[OAcute]gicos del cuerpo humano. Con la ayuda de las herramientas de \
+la biolog\[IAcute]a sint\[EAcute]tica, podemos editar los genes de casi \
+cualquier organismo, microsc\[OAcute]pico o no, a una velocidad y fidelidad \
+incre\[IAcute]bles. Dadas las limitaciones de las m\[AAcute]quinas hechas por \
+el hombre, la biolog\[IAcute]a sint\[EAcute]tica ser\[AAcute] un nuevo medio \
+para dise\[NTilde]ar no solo nuestra comida, combustible y medioambiente, \
+sino tambi\[EAcute]n a nosotros mismos para compensar nuestros defectos f\
+\[IAcute]sicos y asegurar nuestra supervivencia en el espacio. \"\>", 
+     ",", "\<\" Para dar un ejemplo de c\[OAcute]mo podemos usar la biolog\
+\[IAcute]a sint\[EAcute]tica para la exploraci\[OAcute]n espacial, volvamos \
+al medioambiente marciano. La composici\[OAcute]n del suelo marciano es \
+similar a la de cenizas volc\[AAcute]nicas de Haw\[AAcute]i, con trazas de \
+material org\[AAcute]nico. Digamos, hipot\[EAcute]ticamente, que el suelo de \
+Marte podr\[IAcute]a sustentar en realidad el crecimiento de plantas sin \
+necesidad de nutrientes derivados de la Tierra. Quiz\[AAcute]s la primera \
+pregunta que deber\[IAcute]amos hacer es \[DownQuestion]c\[OAcute]mo podemos \
+hacer las plantas tolerantes al fr\[IAcute]o? Porque, en promedio, la \
+temperatura en Marte es de unos muy atractivos 60 grados bajo cero. La \
+siguiente pregunta es \[DownQuestion]c\[OAcute]mo hacemos las plantas \
+tolerantes a la sequ\[IAcute]a? La mayor parte del agua que se forma tras una \
+helada se evapora antes de que pueda decir la palabra \\\"evaporar\\\". \
+Resulta que ya tenemos hecho este tipo de cosas. Al tomar prestadas genes de \
+peces para obtener prote\[IAcute]nas anticongelantes y genes de otras plantas \
+como el arroz para desarrollar resistencia a la sequ\[IAcute]a e insertarlas \
+luego en las plantas que los necesitan, acabamos por tener plantas que \
+toleran la mayor\[IAcute]a de las sequ\[IAcute]as y heladas. Son conocidas en \
+la Tierra como los transg\[EAcute]nicos, u organismos gen\[EAcute]ricamente \
+modificados, y confiamos en ellos para alimentar a toda la \
+civilizaci\[OAcute]n humana. La naturaleza hace este tipo de cosas tambi\
+\[EAcute]n, sin nuestra ayuda. Nosotros hemos encontrado simplemente maneras \
+m\[AAcute]s precisas de hacerlo. \"\>", 
+     ",", "\<\" As\[IAcute] que \[DownQuestion]por qu\[EAcute] queremos \
+cambiar la composici\[OAcute]n gen\[EAcute]tica de las plantas para el \
+espacio? Bueno, no hacerlo significar\[IAcute]a usar la ingenier\[IAcute]a \
+para un sinf\[IAcute]n de hect\[AAcute]reas de tierra en todo un nuevo \
+planeta liberando billones de litros de gases atmosf\[EAcute]ricos para luego \
+construir una c\[UAcute]pula de cristal gigante para contenerlo todo. Es una \
+empresa de ingenier\[IAcute]a poco realista que puede convertirse \
+r\[AAcute]pidamente en una misi\[OAcute]n de transporte de carga de alto \
+costo. Una de las mejores maneras de asegurarnos de tener los suministros \
+necesarios de alimento y aire, es llevar con nosotros organismos que han sido \
+dise\[NTilde]ados para adaptarse a entornos nuevos y dif\[IAcute]ciles. o sea \
+organismos manipulados para ayudarnos a terraformar un planeta tanto a corto \
+como a largo plazo. Estos organismos pueden tambi\[EAcute]n ser \
+dise\[NTilde]ados para crear medicinas o combustible. \"\>", 
+     ",", "\<\" As\[IAcute] que podemos usar la biolog\[IAcute]a \
+sint\[EAcute]tica para llevar plantas de alta ingenier\[IAcute]a con \
+nosotros, pero \[DownQuestion]qu\[EAcute] otra cosa podemos hacer? Bueno, he \
+mencionado anteriormente que nosotros, como especie, fuimos evolucionado de \
+forma \[UAcute]nica para el planeta Tierra. Este hecho no ha cambiado mucho \
+en los \[UAcute]ltimos cinco minutos mientras Uds. estaban sentados y yo \
+estaba aqu\[IAcute] de pie. As\[IAcute] que si tuvi\[EAcute]ramos que mandar \
+a cualquiera de nosotros a Marte en este mismo momento, con comida, agua, \
+aire y un traje espacial estar\[IAcute]amos propensos a experimentar \
+problemas de salud muy desagradables debido a la radiaci\[OAcute]n ionizante \
+que bombardea la superficie de planetas como Marte que tienen poco o nada de \
+atm\[OAcute]sfera. A menos que contemos con quedarnos bajo tierra durante \
+nuestra estancia en cada uno de estos nuevos planetas, tenemos que encontrar \
+mejores maneras de protegernos sin necesidad de recurrir a llevar una \
+armadura que pese casi lo mismo que nuestro propio peso corporal, o la \
+necesidad de ocultarnos detr\[AAcute]s de una pared de plomo. \"\>", 
+     ",", "\<\" As\[IAcute] que recurramos a la naturaleza en busca de \
+inspiraci\[OAcute]n. Entre las formas de vida que existen aqu\[IAcute] en la \
+Tierra, hay un subconjunto de organismos conocido como extrem\[OAcute]filos, \
+o amantes de las condiciones de vida extremas, si recuerdan la clase de \
+biolog\[IAcute]a. Y entre estos organismos hay una bacteria llamada \
+Deinococcus radiodurans, capaz de soportar el fr\[IAcute]o, la deshidrataci\
+\[OAcute]n, el vac\[IAcute]o, los \[AAcute]cidos y, sobre todo, la radiaci\
+\[OAcute]n. Aunque se conocen sus mecanismos de tolerancia a la radiaci\
+\[OAcute]n, a\[UAcute]n tenemos que adaptar sus genes a los \
+mam\[IAcute]feros. Eso no es nada f\[AAcute]cil. Hay muchas facetas de su \
+tolerancia a la radiaci\[OAcute]n, y el proceso no es tan simple como \
+transferir un solo gen. Pero con un poco de ingenio humano y un poco de \
+tiempo, creo que no es muy dif\[IAcute]cil hacerlo tampoco. Incluso si \
+tomamos prestado solo una fracci\[OAcute]n de su capacidad para tolerar la \
+radiaci\[OAcute]n, estar\[IAcute]amos infinitamente mejor de lo que ya \
+estamos que es disponer de la melanina de nuestra piel. Con la ayuda de las \
+herramientas de la biolog\[IAcute]a sint\[EAcute]tica, podemos aprovechar las \
+propiedades de la Deinococcus radiodurans para prosperar en lo que de lo \
+contrario ser\[IAcute]a una dosis muy letal de radiaci\[OAcute]n. Con lo dif\
+\[IAcute]cil que es vislumbrarlo, el Homo sapiens, es decir, los seres \
+humanos, evolucionamos todos los d\[IAcute]as, y todav\[IAcute]a seguimos \
+evolucionando. Miles de a\[NTilde]os de evoluci\[OAcute]n humana no solo \
+hicieron posible la existencia de seres humanos como los tibetanos, que \
+pueden vivir con poco ox\[IAcute]geno, sino tambi\[EAcute]n argentinos, que \
+pueden ingerir y metabolizar ars\[EAcute]nico, un elemento qu\[IAcute]mico \
+que puede matar a un humano. Cada d\[IAcute]a, el cuerpo humano evoluciona \
+debido a mutaciones accidentales igual que permite que ciertos humanos \
+sobrevivan en condiciones sombr\[IAcute]as. \"\>", 
+     ",", "\<\" Pero, y esto es un gran pero, dicha evoluci\[OAcute]n \
+requiere dos cosas que no siempre tenemos o podemos permitirnos: la muerte y \
+el tiempo. En la lucha de nuestra especie por encontrar nuestro lugar en el \
+universo, puede ser que no siempre tengamos el tiempo necesario para \
+desarrollar de manera natural las funciones adicionales necesarias para la \
+supervivencia en otros planetas. Estamos viviendo en lo que E.O. Wilson \
+denomin\[OAcute] la edad de la elusi\[OAcute]n gen\[EAcute]tica, durante la \
+cual remediamos nuestros defectos gen\[EAcute]ticos como la fibrosis qu\
+\[IAcute]stica o la distrofia muscular con suplementos externos temporales. \
+Pero con cada d\[IAcute]a que pasa, nos acercamos a la edad de la evoluci\
+\[OAcute]n volitiva, una edad en la que, como especie, podremos decidir por \
+nosotros mismos nuestro propio destino gen\[EAcute]tico. Mejorar el cuerpo \
+humano con nuevas habilidades es m\[AAcute]s bien una cuesti\[OAcute]n de c\
+\[OAcute]mo y no de cu\[AAcute]ndo. \"\>", 
+     ",", "\<\" El uso de la biolog\[IAcute]a sint\[EAcute]tica para alterar \
+la composici\[OAcute]n gen\[EAcute]tica de cualquier organismo vivo, \
+especialmente la nuestra, no est\[AAcute] exenta de dilemas morales y \
+\[EAcute]ticos. \[DownQuestion]Alterarnos a nosotros mismos nos hace menos \
+humanos? Pero, de nuevo, \[DownQuestion]qu\[EAcute] es la humanidad sino \
+polvo de estrellas dotado de consciencia? \[DownQuestion]Hacia d\[OAcute]nde \
+deber\[IAcute]a encaminarse el genio humano? Sin duda, es una p\[EAcute]rdida \
+de tiempo reclinarse para solo maravillarse con \[EAcute]l. \[DownQuestion]C\
+\[OAcute]mo podemos usar nuestro conocimiento para protegernos de los \
+peligros externos y luego protegernos de nosotros mismos? \"\>", 
+     ",", "\<\" Planteo estas preguntas no para crear miedo a la ciencia sino \
+para sacar a la luz las muchas posibilidades que la ciencia nos ofrece y nos \
+sigue ofreciendo. Como seres humanos hay que reunirse para discutir y adoptar \
+las soluciones tanto con precauci\[OAcute]n c\[OAcute]mo tambi\[EAcute]n con \
+valor. \"\>", 
+     ",", "\<\" Marte es un destino, pero no ser\[AAcute] el \[UAcute]ltimo. \
+Nuestra verdadera y \[UAcute]ltima frontera es la l\[IAcute]nea que debemos \
+cruzar para decidir lo que podemos y debemos hacer con la inteligencia de \
+nuestra especie. \"\>", 
+     ",", "\<\" El espacio es un lugar fr\[IAcute]o, brutal e implacable. \
+Nuestro camino a las estrellas estar\[AAcute] plagado de intentos que nos \
+llevar\[AAcute]n a preguntas no solo del tipo de qui\[EAcute]nes somos sino \
+tambi\[EAcute]n ad\[OAcute]nde vamos a ir. Las respuestas consistir\[AAcute]n \
+en nuestra elecci\[OAcute]n de usar o abandonar la tecnolog\[IAcute]a que \
+hemos creado a partir de la vida misma, y nos definir\[AAcute]n para el resto \
+de  nuestra existencia en este universo. \"\>", ",", "\<\" Gracias. \"\>", 
+     ",", "\<\" (Aplausos) \"\>"}], "}"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{{3.7048562280307837`*^9, 3.704856261227869*^9}, {
+  3.70485630911694*^9, 
+  3.704856353960058*^9}},ExpressionUUID->"a0effa08-6029-42b4-a4b6-\
+5917b9e4df00"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"assoc2", " ", "=", 
+   RowBox[{"Association", "[", " ", 
+    RowBox[{"assoc1", "[", 
+     RowBox[{"[", "\"\<transcript\>\"", "]"}], "]"}], "]"}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.7048564265233088`*^9, 3.704856447034362*^9}, {
+  3.704856494188265*^9, 
+  3.704856499478816*^9}},ExpressionUUID->"bf14c51a-92cb-4477-8421-\
+5dc6579796c0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Keys", "[", "assoc2", "]"}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.704856361616641*^9, 3.7048564120588617`*^9}, {
+  3.7048564515391912`*^9, 
+  3.704856451697537*^9}},ExpressionUUID->"d9a79af5-583e-4ff6-8ee5-\
+d037053babb2"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"es\"\>", ",", "\<\"fi\"\>", ",", "\<\"ar\"\>", 
+   ",", "\<\"cs\"\>", ",", "\<\"ja\"\>", ",", "\<\"he\"\>", ",", "\<\"fr\"\>",
+    ",", "\<\"el\"\>", ",", "\<\"lv\"\>", ",", "\<\"en\"\>", 
+   ",", "\<\"bg\"\>", ",", "\<\"vi\"\>", ",", "\<\"pt-br\"\>", 
+   ",", "\<\"de\"\>", ",", "\<\"it\"\>", ",", "\<\"id\"\>", ",", "\<\"fa\"\>",
+    ",", "\<\"ko\"\>", ",", "\<\"nl\"\>", ",", "\<\"pl\"\>", 
+   ",", "\<\"th\"\>", ",", "\<\"ru\"\>", ",", "\<\"zh-cn\"\>", 
+   ",", "\<\"sr\"\>", ",", "\<\"zh-tw\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.7048563749994164`*^9, 3.704856412285708*^9}, 
+   3.704856452427291*^9, 
+   3.704856502764366*^9},ExpressionUUID->"636ca254-b2fc-4710-bafe-\
+ffaf833d6014"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"textEN", " ", "=", " ", 
+  RowBox[{"assoc2", "[", 
+   RowBox[{"[", "\"\<en\>\"", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7048564549381638`*^9, 3.704856523176947*^9}, {
+  3.704856635950117*^9, 3.7048566408324537`*^9}, {3.704856966103446*^9, 
+  3.704856967314734*^9}},ExpressionUUID->"bf7b0dcc-c8d6-4ecf-85dd-\
+2af13355a429"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\" So there are lands few and far between on Earth itself that \
+are hospitable to humans by any measure, but survive we have. Our primitive \
+ancestors, when they found their homes and livelihood endangered, they dared \
+to make their way into unfamiliar territories in search of better \
+opportunities. And as the descendants of these explorers, we have their \
+nomadic blood coursing through our own veins. But at the same time, \
+distracted by our bread and circuses and embroiled in the wars that we have \
+waged on each other, it seems that we have forgotten this desire to explore. \
+We, as a species, we're evolved uniquely for Earth, on Earth, and by Earth, \
+and so content are we with our living conditions that we have grown \
+complacent and just too busy to notice that its resources are finite, and \
+that our Sun's life is also finite. While Mars and all the movies made in its \
+name have reinvigorated the ethos for space travel, few of us seem to truly \
+realize that our species' fragile constitution is woefully unprepared for \
+long duration journeys into space. \"\>", 
+   ",", "\<\" Let us take a trek to your local national forest for a quick \
+reality check. So just a quick show of hands here: how many of you think you \
+would be able to survive in this lush wilderness for a few days? Well, that's \
+a lot of you. How about a few weeks? That's a decent amount. How about a few \
+months? That's pretty good too. Now, let us imagine that this local national \
+forest experiences an eternal winter. Same questions: how many of you think \
+you would be able to survive for a few days? That's quite a lot. How about a \
+few weeks? So for a fun twist, let us imagine that the only source of water \
+available is trapped as frozen blocks miles below the surface. Soil nutrients \
+are so minimal that no vegetation can be found, and of course hardly any \
+atmosphere exists to speak of. \"\>", 
+   ",", "\<\" Such examples are only a few of the many challenges we would \
+face on a planet like Mars. So how do we steel ourselves for voyages whose \
+destinations are so far removed from a tropical vacation? Will we \
+continuously ship supplies from Planet Earth? Build space elevators, or \
+impossible miles of transport belts that tether your planet of choice to our \
+home planet? And how do we grow things like food that grew up on Earth like \
+us? \"\>", 
+   ",", "\<\" But I'm getting ahead of myself. In our species' journey to \
+find a new home under a new sun, we are more likely than not going to be \
+spending much time in the journey itself, in space, on a ship, a hermetic \
+flying can, possibly for many generations. \"\>", 
+   ",", "\<\" The longest continuous amount of time that any human has spent \
+in space is in the vicinity of 12 to 14 months. From astronauts' experiences \
+in space, we know that spending time in a microgravity environment means bone \
+loss, muscle atrophy, cardiovascular problems, among many other complications \
+that range for the physiological to the psychological. And what about \
+macrogravity, or any other variation in gravitational pull of the planet that \
+we find ourselves on? \"\>", 
+   ",", "\<\" In short, our cosmic voyages will be fraught with dangers both \
+known and unknown. So far we've been looking to this new piece of mechanical \
+technology or that great next generation robot as part of a lineup to ensure \
+our species safe passage in space. Wonderful as they are, I believe the time \
+has come for us to complement these bulky electronic giants with what nature \
+has already invented: the microbe, a single-celled organism that is itself a \
+self-generating, self-replenishing, living machine. It requires fairly little \
+to maintain, offers much flexibility in design and only asks to be carried in \
+a single plastic tube. \"\>", 
+   ",", "\<\" The field of study that has enabled us to utilize the \
+capabilities of the microbe is known as synthetic biology. It comes from \
+molecular biology, which has given us antibiotics, vaccines and better ways \
+to observe the physiological nuances of the human body. Using the tools of \
+synthetic biology, we can now edit the genes of nearly any organism, \
+microscopic or not, with incredible speed and fidelity. Given the limitations \
+of our man-made machines, synthetic biology will be a means for us to \
+engineer not only our food, our fuel and our environment, but also ourselves \
+to compensate for our physical inadequacies and to ensure our survival in \
+space. \"\>", 
+   ",", "\<\" To give you an example of how we can use synthetic biology for \
+space exploration, let us return to the Mars environment. The Martian soil \
+composition is similar to that of Hawaiian volcanic ash, with trace amounts \
+of organic material. Let's say, hypothetically, what if martian soil could \
+actually support plant growth without using Earth-derived nutrients? The \
+first question we should probably ask is, how would we make our plants \
+cold-tolerant? Because, on average, the temperature on Mars is a very \
+uninviting negative 60 degrees centigrade. The next question we should ask \
+is, how do we make our plants drought-tolerant? Considering that most of the \
+water that forms as frost evaporates more quickly than I can say the word \
+\\\"evaporate.\\\" Well, it turns out we've already done things like this. By \
+borrowing genes for anti-freeze protein from fish and genes for drought \
+tolerance from other plants like rice and then stitching them into the plants \
+that need them, we now have plants that can tolerate most droughts and \
+freezes. They're known on Earth as GMOs, or genetically modified organisms, \
+and we rely on them to feed all the mouths of human civilization. Nature does \
+stuff like this already, without our help. We have simply found more precise \
+ways to do it. \"\>", 
+   ",", "\<\" So why would we want to change the genetic makeup of plants for \
+space? Well, to not do so would mean needing to engineer endless acres of \
+land on an entirely new planet by releasing trillions of gallons of \
+atmospheric gasses and then constructing a giant glass dome to contain it \
+all. It's an unrealistic engineering enterprise that quickly becomes a \
+high-cost cargo transport mission. One of the best ways to ensure that we \
+will have the food supplies and the air that we need is to bring with us \
+organisms that have been engineered to adapt to new and harsh environments. \
+In essence, using engineered organisms to help us terraform a planet both in \
+the short and long term. These organisms can then also be engineered to make \
+medicine or fuel. \"\>", 
+   ",", "\<\" So we can use synthetic biology to bring highly engineered \
+plants with us, but what else can we do? Well, I mentioned earlier that we, \
+as a species, were evolved uniquely for planet Earth. That fact has not \
+changed much in the last five minutes that you were sitting here and I was \
+standing there. And so, if we were to dump any of us on Mars right this \
+minute, even given ample food, water, air and a suit, we are likely to \
+experience very unpleasant health problems from the amount of ionizing \
+radiation that bombards the surface of planets like Mars that have little or \
+nonexistent atmosphere. Unless we plan to stay holed up underground for the \
+duration of our stay on every new planet, we must find better ways of \
+protecting ourselves without needing to resort to wearing a suit of armor \
+that weighs something equal to your own body weight, or needing to hide \
+behind a wall of lead. \"\>", 
+   ",", "\<\" So let us appeal to nature for inspiration. Among the plethora \
+of life here on Earth, there's a subset of organisms known as extremophiles, \
+or lovers of extreme living conditions, if you'll remember from high school \
+biology. And among these organisms is a bacterium by the name of Deinococcus \
+radiodurans. It is known to be able to withstand cold, dehydration, vacuum, \
+acid, and, most notably, radiation. While its radiation tolerance mechanisms \
+are known, we have yet to adapt the relevant genes to mammals. To do so is \
+not particularly easy. There are many facets that go into its radiation \
+tolerance, and it's not as simple as transferring one gene. But given a \
+little bit of human ingenuity and a little bit of time, I think to do so is \
+not very hard either. Even if we borrow just a fraction of its ability to \
+tolerate radiation, it would be infinitely better than what we already have, \
+which is just the melanin in our skin. Using the tools of synthetic biology, \
+we can harness Deinococcus radiodurans' ability to thrive under otherwise \
+very lethal doses of radiation. As difficult as it is to see, homo sapiens, \
+that is humans, evolves every day, and still continues to evolve. Thousands \
+of years of human evolution has not only given us humans like Tibetans, who \
+can thrive in low-oxygen conditions, but also Argentinians, who can ingest \
+and metabolize arsenic, the chemical element that can kill the average human \
+being. Every day, the human body evolves by accidental mutations that equally \
+accidentally allow certain humans to persevere in dismal situations. \"\>", 
+   ",", "\<\" But, and this is a big but, such evolution requires two things \
+that we may not always have, or be able to afford, and they are death and \
+time. In our species' struggle to find our place in the universe, we may not \
+always have the time necessary for the natural evolution of extra functions \
+for survival on non-Earth planets. We're living in what E.O. Wilson has \
+termed the age of gene circumvention, during which we remedy our genetic \
+defects like cystic fibrosis or muscular dystrophy with temporary external \
+supplements. But with every passing day, we approach the age of volitional \
+evolution, a time during which we as a species will have the capacity to \
+decide for ourselves our own genetic destiny. Augmenting the human body with \
+new abilities is no longer a question of how, but of when. \"\>", 
+   ",", "\<\" Using synthetic biology to change the genetic makeup of any \
+living organisms, especially our own, is not without its moral and ethical \
+quandaries. Will engineering ourselves make us less human? But then again, \
+what is humanity but star stuff that happens to be conscious? Where should \
+human genius direct itself? Surely it is a bit of a waste to sit back and \
+marvel at it. How do we use our knowledge to protect ourselves from the \
+external dangers and then protect ourselves from ourselves? \"\>", 
+   ",", "\<\" I pose these questions not to engender the fear of science but \
+to bring to light the many possibilities that science has afforded and \
+continues to afford us. We must coalesce as humans to discuss and embrace the \
+solutions not only with caution but also with courage. \"\>", 
+   ",", "\<\" Mars is a destination, but it will not be our last. Our true \
+final frontier is the line we must cross in deciding what we can and should \
+make of our species' improbable intelligence. \"\>", 
+   ",", "\<\" Space is cold, brutal and unforgiving. Our path to the stars \
+will be rife with trials that will bring us to question not only who we are \
+but where we will be going. The answers will lie in our choice to use or \
+abandon the technology that we have gleaned from life itself, and it will \
+define us for the remainder of our term in this universe. \"\>", 
+   ",", "\<\" Thank you. \"\>", ",", "\<\" (Applause) \"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.7048565240957937`*^9, 3.704856676164239*^9, 
+  3.704856967802903*^9},ExpressionUUID->"0202539a-df8b-4d18-91d3-\
+26b827299c86"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WordFrequency", "[", 
+  RowBox[{"textEN", ",", " ", "\"\<and\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.704856679261118*^9, 3.704856721401834*^9}, {
+  3.7048569720995903`*^9, 
+  3.704856974532385*^9}},ExpressionUUID->"19db789f-961c-4dfa-9650-\
+c1c3985fc8b6"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0.04918032786885246`", ",", "0.006666666666666667`", ",", "0.`", ",", 
+   "0.`", ",", "0.`", ",", "0.019230769230769232`", ",", 
+   "0.03669724770642202`", ",", "0.018957345971563982`", ",", 
+   "0.030303030303030304`", ",", "0.012345679012345678`", ",", 
+   "0.01893939393939394`", ",", "0.02158273381294964`", ",", 
+   "0.03571428571428571`", ",", "0.0425531914893617`", ",", 
+   "0.029411764705882353`", ",", "0.029850746268656716`", ",", "0.`", ",", 
+   "0.`"}], "}"}]], "Output",
+ CellChangeTimes->{{3.7048566841420183`*^9, 3.7048567219211493`*^9}, {
+  3.704856975496716*^9, 
+  3.704856977278969*^9}},ExpressionUUID->"f50b782b-a3df-44d8-b6bd-\
+c3e68ef5f040"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "textEN", "]"}]], "Input",
+ CellChangeTimes->{{3.704856861006749*^9, 3.704856873151766*^9}, {
+  3.7048569810623426`*^9, 
+  3.7048569835617113`*^9}},ExpressionUUID->"226f5431-c29f-491d-956c-\
+b5a8ff82d1f7"],
+
+Cell[BoxData["18"], "Output",
+ CellChangeTimes->{3.70485687349561*^9, 
+  3.704856984023086*^9},ExpressionUUID->"b90b4578-727e-4355-b712-\
+3b2ad839315f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"paraEN", " ", "=", " ", 
+  RowBox[{"textEN", "[", 
+   RowBox[{"[", "1", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.704856876279958*^9, 3.704856887599272*^9}, {
+  3.704856988701479*^9, 
+  3.7048569903854027`*^9}},ExpressionUUID->"46a7e988-8e46-4a09-82c0-\
+23df29b2cda7"],
+
+Cell[BoxData["\<\" So there are lands few and far between on Earth itself \
+that are hospitable to humans by any measure, but survive we have. Our \
+primitive ancestors, when they found their homes and livelihood endangered, \
+they dared to make their way into unfamiliar territories in search of better \
+opportunities. And as the descendants of these explorers, we have their \
+nomadic blood coursing through our own veins. But at the same time, \
+distracted by our bread and circuses and embroiled in the wars that we have \
+waged on each other, it seems that we have forgotten this desire to explore. \
+We, as a species, we're evolved uniquely for Earth, on Earth, and by Earth, \
+and so content are we with our living conditions that we have grown \
+complacent and just too busy to notice that its resources are finite, and \
+that our Sun's life is also finite. While Mars and all the movies made in its \
+name have reinvigorated the ethos for space travel, few of us seem to truly \
+realize that our species' fragile constitution is woefully unprepared for \
+long duration journeys into space. \"\>"], "Output",
+ CellChangeTimes->{{3.704856878907879*^9, 3.704856887835211*^9}, 
+   3.7048569907947493`*^9},ExpressionUUID->"a6deefe6-6ba5-4c06-85b6-\
+ac9f8f0a05a3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DeleteStopwords", "[", "paraEN", "]"}]], "Input",
+ CellChangeTimes->{{3.704856836979548*^9, 
+  3.7048568492638083`*^9}},ExpressionUUID->"acb9e12f-c436-40c5-90f7-\
+99e331a23003"],
+
+Cell[BoxData["\<\"    lands   far   Earth    hospitable  humans   measure,  \
+survive  .  primitive ancestors,   found  homes  livelihood endangered,  \
+dared  make  way  unfamiliar territories  search  better opportunities.    \
+descendants   explorers,    nomadic blood coursing    veins.     time, \
+distracted   bread  circuses  embroiled   wars    waged   ,      forgotten  \
+desire  explore. ,   species,  evolved uniquely  Earth,  Earth,   Earth,   \
+content     living conditions    grown complacent  just  busy  notice   \
+resources  finite,    Sun's life   finite.  Mars    movies    name  \
+reinvigorated  ethos  space travel,      truly realize   species' fragile \
+constitution  woefully unprepared  long duration journeys  space. \"\>"], \
+"Output",
+ CellChangeTimes->{3.704856849586089*^9, 
+  3.704856995175755*^9},ExpressionUUID->"945c7c85-ccdb-4051-8ece-\
+47f3c31be136"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"wordCounts", " ", "=", " ", 
+  RowBox[{"WordCounts", "[", " ", "paraEN", "]"}]}]], "Input",
+ CellChangeTimes->{{3.704856998760976*^9, 3.704857007876803*^9}, {
+  3.704857041534808*^9, 3.704857059458939*^9}, {3.704857106821756*^9, 
+  3.7048571114424047`*^9}},ExpressionUUID->"c3fcdb5b-9307-41c5-ad91-\
+0f4ec9a7b55c"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"and\"\>", "\[Rule]", "9"}], ",", 
+   RowBox[{"\<\"that\"\>", "\[Rule]", "7"}], ",", 
+   RowBox[{"\<\"have\"\>", "\[Rule]", "6"}], ",", 
+   RowBox[{"\<\"we\"\>", "\[Rule]", "6"}], ",", 
+   RowBox[{"\<\"our\"\>", "\[Rule]", "5"}], ",", 
+   RowBox[{"\<\"the\"\>", "\[Rule]", "5"}], ",", 
+   RowBox[{"\<\"to\"\>", "\[Rule]", "5"}], ",", 
+   RowBox[{"\<\"Earth\"\>", "\[Rule]", "4"}], ",", 
+   RowBox[{"\<\"are\"\>", "\[Rule]", "4"}], ",", 
+   RowBox[{"\<\"for\"\>", "\[Rule]", "3"}], ",", 
+   RowBox[{"\<\"of\"\>", "\[Rule]", "3"}], ",", 
+   RowBox[{"\<\"in\"\>", "\[Rule]", "3"}], ",", 
+   RowBox[{"\<\"their\"\>", "\[Rule]", "3"}], ",", 
+   RowBox[{"\<\"by\"\>", "\[Rule]", "3"}], ",", 
+   RowBox[{"\<\"on\"\>", "\[Rule]", "3"}], ",", 
+   RowBox[{"\<\"space\"\>", "\[Rule]", "2"}], ",", 
+   RowBox[{"\<\"is\"\>", "\[Rule]", "2"}], ",", 
+   RowBox[{"\<\"finite\"\>", "\[Rule]", "2"}], ",", 
+   RowBox[{"\<\"its\"\>", "\[Rule]", "2"}], ",", 
+   RowBox[{"\<\"species\"\>", "\[Rule]", "2"}], ",", 
+   RowBox[{"\<\"as\"\>", "\[Rule]", "2"}], ",", 
+   RowBox[{"\<\"into\"\>", "\[Rule]", "2"}], ",", 
+   RowBox[{"\<\"they\"\>", "\[Rule]", "2"}], ",", 
+   RowBox[{"\<\"few\"\>", "\[Rule]", "2"}], ",", 
+   RowBox[{"\<\"journeys\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"duration\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"long\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"unprepared\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"woefully\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"constitution\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"fragile\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"realize\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"truly\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"seem\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"us\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"travel\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"ethos\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"reinvigorated\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"name\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"made\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"movies\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"all\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"Mars\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"While\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"also\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"life\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"Sun's\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"resources\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"notice\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"busy\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"too\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"just\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"complacent\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"grown\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"conditions\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"living\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"with\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"content\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"so\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"uniquely\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"evolved\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"we're\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"a\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"We\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"explore\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"desire\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"this\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"forgotten\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"seems\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"it\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"other\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"each\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"waged\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"wars\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"embroiled\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"circuses\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"bread\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"distracted\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"time\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"same\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"at\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"But\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"veins\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"own\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"through\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"coursing\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"blood\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"nomadic\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"explorers\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"these\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"descendants\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"And\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"opportunities\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"better\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"search\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"territories\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"unfamiliar\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"way\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"make\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"dared\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"endangered\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"livelihood\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"homes\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"found\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"when\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"ancestors\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"primitive\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"Our\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"survive\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"but\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"measure\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"any\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"humans\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"hospitable\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"itself\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"between\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"far\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"lands\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"there\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"So\"\>", "\[Rule]", "1"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{
+  3.704857008155466*^9, {3.704857047518527*^9, 3.7048570600590963`*^9}, 
+   3.704857112271131*^9},ExpressionUUID->"400241cb-59cc-49b2-94f2-\
+c64ce5c99fdd"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Histogram", "[", 
+  RowBox[{"wordCounts", ",", " ", 
+   RowBox[{"Label", " ", "=", " ", 
+    RowBox[{"Keys", "[", "wordCounts", "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.704857066029483*^9, 
+  3.704857159725355*^9}},ExpressionUUID->"262c4636-cd5e-4477-a4aa-\
+89f1c72ac33a"]
 },
-WindowSize->{808, 774},
-WindowMargins->{{4, Automatic}, {Automatic, 4}},
+WindowSize->{720, 874},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 16, \
 2017)",
 StyleDefinitions->"Default.nb"
@@ -42,7 +1062,101 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 205, 4, 32, "Input", "ExpressionUUID" -> \
-"dd2dd9ee-2f1a-4534-94be-f5e195ae40cc"]
+"dd2dd9ee-2f1a-4534-94be-f5e195ae40cc"],
+Cell[CellGroupData[{
+Cell[788, 28, 278, 6, 75, "Input", "ExpressionUUID" -> \
+"3f9c7eeb-96e9-433d-8fe9-fc3a21eb34b9"],
+Cell[1069, 36, 227, 4, 54, "Output", "ExpressionUUID" -> \
+"27b6b085-699d-404a-b002-5681dcac7b65"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1333, 45, 183, 4, 32, "Input", "ExpressionUUID" -> \
+"c64f2867-dedd-4958-8cce-29b94b733790"],
+Cell[1519, 51, 246, 3, 54, "Output", "ExpressionUUID" -> \
+"31ac2150-e633-406c-99f2-1985e5d4431f"]
+}, Open  ]],
+Cell[1780, 57, 421, 10, 75, "Input", "ExpressionUUID" -> \
+"9f867ae3-ff61-44ee-a88b-4ece95fe1cd6"],
+Cell[2204, 69, 152, 3, 32, "Input", "ExpressionUUID" -> \
+"aef97046-792b-4c35-b2f6-1c5f393af86f"],
+Cell[CellGroupData[{
+Cell[2381, 76, 188, 4, 32, "Input", "ExpressionUUID" -> \
+"b77c3be7-6926-49da-8be4-14cfca884ce0"],
+Cell[2572, 82, 133, 3, 32, "Output", "ExpressionUUID" -> \
+"0f6db4d1-3f60-4f6e-a54b-dbb463cf4347"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2742, 90, 190, 4, 32, "Input", "ExpressionUUID" -> \
+"02488eca-7e06-4445-b236-a80299a72e4a"],
+Cell[2935, 96, 130, 3, 32, "Output", "ExpressionUUID" -> \
+"343c64fd-b37a-48f8-86d4-dc01d56dd70b"]
+}, Open  ]],
+Cell[3080, 102, 375, 8, 32, "Input", "ExpressionUUID" -> \
+"34045f66-5a49-47a1-b21d-62a86ef6bbdc"],
+Cell[CellGroupData[{
+Cell[3480, 114, 212, 4, 32, "Input", "ExpressionUUID" -> \
+"86d932e7-70bb-4848-b90b-53b6a7f7133e"],
+Cell[3695, 120, 401, 8, 54, "Output", "ExpressionUUID" -> \
+"d5b9fda4-e7a9-4135-90b3-1629365fea43"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4133, 133, 833, 26, 96, "Input", "ExpressionUUID" -> \
+"c11dc05c-5c6c-4f16-8f0b-3ded77263006"],
+Cell[4969, 161, 14621, 200, 3771, "Output", "ExpressionUUID" -> \
+"17c30151-641c-41ed-be84-4faffc047fd5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19627, 366, 378, 10, 32, "Input", "ExpressionUUID" -> \
+"a79b4671-0830-4f14-b187-5ea23c0eb8f2"],
+Cell[20008, 378, 14829, 205, 4026, "Output", "ExpressionUUID" -> \
+"a0effa08-6029-42b4-a4b6-5917b9e4df00"]
+}, Open  ]],
+Cell[34852, 586, 378, 10, 32, "Input", "ExpressionUUID" -> \
+"bf14c51a-92cb-4477-8421-5dc6579796c0"],
+Cell[CellGroupData[{
+Cell[35255, 600, 277, 6, 54, "Input", "ExpressionUUID" -> \
+"d9a79af5-583e-4ff6-8ee5-d037053babb2"],
+Cell[35535, 608, 742, 13, 54, "Output", "ExpressionUUID" -> \
+"636ca254-b2fc-4710-bafe-ffaf833d6014"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36314, 626, 355, 7, 32, "Input", "ExpressionUUID" -> \
+"bf7b0dcc-c8d6-4ecf-85dd-2af13355a429"],
+Cell[36672, 635, 11710, 162, 3477, "Output", "ExpressionUUID" -> \
+"0202539a-df8b-4d18-91d3-26b827299c86"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[48419, 802, 286, 6, 32, "Input", "ExpressionUUID" -> \
+"19db789f-961c-4dfa-9650-c1c3985fc8b6"],
+Cell[48708, 810, 706, 14, 75, "Output", "ExpressionUUID" -> \
+"f50b782b-a3df-44d8-b6bd-c3e68ef5f040"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49451, 829, 243, 5, 32, "Input", "ExpressionUUID" -> \
+"226f5431-c29f-491d-956c-b5a8ff82d1f7"],
+Cell[49697, 836, 152, 3, 32, "Output", "ExpressionUUID" -> \
+"b90b4578-727e-4355-b712-3b2ad839315f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49886, 844, 298, 7, 32, "Input", "ExpressionUUID" -> \
+"46a7e988-8e46-4a09-82c0-23df29b2cda7"],
+Cell[50187, 853, 1268, 17, 382, "Output", "ExpressionUUID" -> \
+"a6deefe6-6ba5-4c06-85b6-ac9f8f0a05a3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51492, 875, 201, 4, 32, "Input", "ExpressionUUID" -> \
+"acb9e12f-c436-40c5-90f7-99e331a23003"],
+Cell[51696, 881, 887, 13, 243, "Output", "ExpressionUUID" -> \
+"945c7c85-ccdb-4051-8ece-47f3c31be136"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52620, 899, 338, 6, 32, "Input", "ExpressionUUID" -> \
+"c3fcdb5b-9307-41c5-ad91-0f4ec9a7b55c"],
+Cell[52961, 907, 6555, 127, 393, "Output", "ExpressionUUID" -> \
+"400241cb-59cc-49b2-94f2-c64ce5c99fdd"]
+}, Open  ]],
+Cell[59531, 1037, 305, 7, 32, "Input", "ExpressionUUID" -> \
+"262c4636-cd5e-4477-a4aa-89f1c72ac33a"]
 }
 ]
 *)
