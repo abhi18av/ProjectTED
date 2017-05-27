@@ -1,3 +1,6 @@
 * 22-05-2017
 ** Installed the `zygomys` golang package so as to work on the basic computer science within the context of golang.
-** Grow zygomyx into a proper Racket-system on golang.
+** Grow zygomys into a proper Racket-system on golang.
+* 27-05-2017
+** Today, I'll be  converting the JSON data to simple TOML-YAML-TXT
+*** `remarshal` module in python makes it so easy!
