@@ -68,6 +68,9 @@ Awk is a POSIX-standard command line tool and programming language for processin
 | [Xidel](http://www.videlibri.de/xidel.html) | Scrape or transform XML and HTML pages with XPath, XQuery 3 and CSS selectors. |
 | [xml2](http://www.ofb.net/~egnor/xml2/) | Convert XML and HTML to and from flat, greppable lists of "path=value" statements. |
 | [XMLStarlet](http://xmlstar.sourceforge.net/overview.php) | Transform, query, validate and edit XML documents. |
+| https://github.com/abdmob/x2js 
+|https://github.com/buglabs/node-xml2json
+| https://github.com/Jxck/html2json
 
 See also: [Grep and Sed Equivalent for XML Command Line Processing](http://stackoverflow.com/questions/91791/grep-and-sed-equivalent-for-xml-command-line-processing) on StackOverflow.
 

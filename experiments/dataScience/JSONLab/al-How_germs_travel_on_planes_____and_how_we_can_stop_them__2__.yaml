@@ -1,0 +1,2459 @@
+posted_date: '2015-12-01'
+talk_link: https://www.ted.com/talks/raymond_wang_how_germs_travel_on_planes_and_how_we_can_stop_them
+talk_title: How germs travel on planes — and how we can stop them
+talk_topics:
+- TEDYouth
+- Aircraft
+- Bacteria
+- Design
+- Engineering
+- Flight
+- Health
+- Illness
+- Innovation
+- Invention
+- Physics
+- Science
+- Transportation
+time:
+- 0:12
+- 0:36
+- '1:14'
+- '1:34'
+- '2:06'
+- '2:55'
+- '3:21'
+- '3:41'
+- '4:08'
+- '4:46'
+- '5:02'
+- '5:48'
+- '6:16'
+- '6:22'
+- '6:23'
+transcript:
+  ar:
+  - ' هل ترفعون ايديكم كم شخص منكم استقل  الطائرة خلال السنة الماضية؟ جميل جدا حسنا،
+    اتضح أنكم تتشاركون تلك التجربة مع أكثر من ثلاث بلايين شخص كل عام. وعندما نضع الكثير
+    من الناس في كل هذه الأنابيب المعدنية التي تدور حول العالم، في بعض الأحيان، يمكن
+    أن تحدث مثل  هذه الامور وتصاب بوباء. '
+  - ' لامرة مرة اهتممت بذلك الموضوع عندما سمعت عن ظهور فيروس إيبولا العام الماضي.
+    واتضح أن، رغم ان فيروس إيبولا ينتشر أكثر من خلال طرق محدودة من خلال الرذاذ بشكل
+    كبير كل الأنواع الأخرى من الأمراض يمكن أن تنتشر في مقصورة الطائرة. أسوأ جزء هو،
+    عندما نلقي نظرة على بعض الأرقام، مرعبة. H1N1, كان هناك ذاك الرجل الذي قرر الذهاب
+    على متن الطائرة وفي رحلة واحدة نشر المرض الى 17 شخص شخص أخر مصاب بسارس أستقل طائرة
+    لثلاث ساعات ونشر المرض الى 22 شخص . هذا ليست بالضبط فكرتي عن القوة العظمى '
+  - ' عندما نلقي نظرة أخرى، ما نجده أيضا أنه من الصعب جدا فحص هذه الأمراض. لذلك عندما
+    يقوم شخص ما بالذهاب على متن طائرة، من الممكن أن يكون مريضا من المحتمل أن يكون
+    في طور الكمون في الواقع يمكن أن يكونوا مصابين بهذا المرض ولكن لا تظهر أي أعراض،
+    ومن المحتمل نشرهم لذلك المرض الى أشخاص أخرين في المقصورة. '
+  - ' كيف يحدث هذا لدينا هواء يأتي من الجزء العلوي بالمقصورة وفي الجانب ايضا كما ترون
+    بالأزرق . ثم يخرج الهواء عبر فلاتر فعّالة جدا التي تقضي على 99.97 في المئة مسببات
+    الأمراض بالقرب من المنافذ . ماذا يحدث الأن، لدينا الأن خلط في تدفق الهواء. حتى
+    إذا ما كان هناك شخص  يعطس في الواقع، فالهواء يلفها عدة مرات حتى قبل أن تحصل على
+    فرصة لتمر عبر الفلاتر. مشكلة خطيرة جدا '
+  - ' أنا لا املك مال كافي لشراء طائرة. فقررت بناء حاسب عوضا عن ذلك في الواقع يتعامل  مع
+    ديناميكيات حاسوبية متدفقة ما نحن قادرون على فعله هو إنشاء هذه المحاكاة هذا يعطينا
+    دقة أعلى من الذهاب جسديا وأخذ قراءات من الطائرة. إذن، كيف، في الأساس، هذا يعمل
+    وهل بدأت مع هذا الرسم ثنائي الأبعاد تلك لأوراق التقنية تطوف حول الإنترنت. أغتنمتها
+    ووضعتها في برنامج  نماذج ثلاثي الأبعاد ، ليبني مجسم ثلاثي الأبعاد . وبعد ذلك يقسم
+    هذا النموذج القطع التي بنيتها الى قطع الصغيرة، وربطها معا حتى يستطيع الحاسب  فهمها
+    على نحو افضل . ثم أخبر الحاسب أين يدخل ويخرج الهواء عن طريق حسابات فيزيائية واجلس
+    منتظرا الحاسب ليقوم بحساباته '
+  - ' ما حصلنا عليه من المقصورة التقليدية هو : ستلاحظ الشخص في الوسط يعطس، يصل الرذاذ
+    لوجوه الناس. مثير جدا للاشمئزاز في المقدمة، سنلاحظ اثنين من المسافرين يجلسون بجوار
+    االراكب بالوسط ليس لديهم وقت ممتعا. وعندما نلقي نظرة من الجانب، سنلاحظ أن مسببات
+    الأمراض تنتشر  عبر المقصورة '
+  - ' كان أول ما فكرت به "هذا ليس جيدا" لذا أجريت أكثر من 32 محاكاة مختلفة وفي نهاية
+    المطاف، خطر لي الحل هنا. هذا ما أسميه Global Inlet Director -براءة اختراع تنتظر
+    المصادقة- مع هذا، نحن قادرون على الحد من انتقال مسببات المرض بنحو 55 مرة، وزيادة
+    استنشاق الهواء النقي. بنحو 190 في المئة. '
+  - ' كيف يعمل هذا نود تثبيت هذه القطعة من المواد المركبة في هذه البقع الموجودة التي
+    هي بالفعل في الطائرة. لذلك فهي فعّالة جدا من حيث التكلفة ويمكن القيام بذلك بين
+    عشية وضحاها كل ما علينا القيام به هو وضع بضعة مراوح هناك، والنتائج التي سنحصل
+    عليها مذهلة. بدلا من وجود تلك الإشكالية في أنماط تدفق الهواء، يمكن أن نخلق هذه
+    الجدران من الهواء في المناطق الفاصلة بين المسافرين . لخلق منطقة تنفس شخصية '
+  - ' سنلاحظ المسافر الاوسط يعطس مجددا، ولكن هذه المرة يمكننا دفعها  بفاعلية الى اسفل
+    الى الفلاتر للإزالة والشيء نفسه في الجانب، ستلاحظ أننا دفعنا مسببات الأمراض لأسفل.
+    أذا القينا نظرة مرة اخرى على نفس السيناريو ولكن بعد تثبيت الأبتكار، ستلاحظ المسافر
+    الأوسط يعطس، ولكن هذه المرة ندفعها الى المنافذ قبل ان تصيب شخص أخر . لذلك ستلاحظ
+    اثنين من الركاب يجلسون إلى جوار الرجل بالوسط يتنفسون بلا مسببات للأمراض على الأطلاق
+    . فلننظر من الجانب، ترى نظام فعّال للغاية. '
+  - ' وباختصار، مع هذا النظام، فزنا. عندما نلقي نظرة على ما يعنيه هذا، ما نراه هو
+    أن هذا لايعمل فقط إذا كان الراكب الأوسط ولكن ايضا اذا عطس الراكب بجوار النافذة
+    او حتى عطس الراكب بجوار الممر ، '
+  - ' مع هذا الحل, ماذا يعنيه الى العالم؟ حسنا, عندما نلقي نظرة على هذا من محاكاة
+    الحاسب للحياة الواقعية، نرى من خلال النموذج ثلاثي الأبعاد الذي بنيته هنا باستخدام
+    طابعة ثلاثية الأبعاد، يمكننا أن نرى نفس  أنماط تدفق الهواء تأتي مباشرة الى الركاب.
+    في الماضي، كلف وباء السارس العالم حوالي 40 مليار دولار . وفي المستقبل، تفشي مرض
+    كبير يمكن فعلا أن يكلف العالم ما يزيد على ثلاثة تريليونات دولار. لذلك من قبل،
+    كان عليك أن تأخذ طائرة خارج الخدمة لمدة شهر الى شهرين، تنفق عشرات الآلاف من ساعات
+    الطيران وعدة ملايين من الدولارات محاولا تغير شيء. ولكن الآن، ونحن قادرون على تثبيت
+    شيء أساسي بين عشية وضحاها ونرى النتائج على الفور. '
+  - ' لذلك فالمهم حقا الآن هي مسألة الحصول  على الموافقات أختبار الطيران ، وتمر كل
+    هذه العمليات عبر الموافقات التنظيمية. لكنها تظهر لنا في بعض الأحيان أن أفضل الحلول
+    هي أسهل الحلول. وحتى قبل عامين، هذا المشروع لم يحدث، لمجرد أن التكنولوجيا وقتها
+    لم تكن داعمة لذلك ولكن الآن مع الحوسبة المتقدمة وكيف تطورت شبكة الإنترنت لدينا،
+    انه حقا العصر الذهبي للابتكار. '
+  - ' وبالتالي فإن السؤال الذي أطرحه عليكم جميعا اليوم هو: لماذا الانتظار؟ معا, يمكننا
+    بناء المستقبل اليوم . '
+  - ' شكرا . '
+  - ' (تصفيق) '
+  cs:
+  - ' Zvedněte prosím ruku, kdo jste letos cestoval letadlem? To není špatné. Více
+    než 3 miliardy lidí ročně mají tento stejný zážitek. A když do létajících kovových
+    krabiček zavřete tolik lidí, stane se občas něco jako tohle - - a je tady epidemie. '
+  - ' Poprvé mi to došlo, když loni propukla Ebola. Ta se sice šíří většími kapénkami,
+    takže má menší infekční rozptyl, ale řada dalších chorob se v letadle šíří snadno.
+    A čísla, která vám teď ukážu, jsou celkem děsivá. Do jednoho letadla se dostal
+    chlápek s H1N1 a za jediný let nakazil 17 dalších lidí. Jindy zas chlápek se SARS
+    nakazil během 3hodinového letu dalších 22 lidí. Takovouto superschopnost bych
+    nechtěl. '
+  - ' Dokládá to, že nemoci se před vstupem do letadla jen těžko odhalují. Můžete
+    nastoupit do letadla a být v latentní fázi nějaké nemoci, takže i když jste nemocní,
+    nemáte žádné příznaky. A potom tu nemoc přenášíte na své spolucestující. '
+  - ' Ukážu vám jak. Ze strany a seshora proudí letadlem vzduch. Je vyznačený modře.
+    Potom je vzduch odsáván výkonnými filtry. Když filtr nasaje vzduch, eliminuje
+    asi 99,97 % patogenů. Jenomže vzduchové proudy se před odsátím promísí. Když někdo
+    kýchne, tak než filtry ten vzduch odsají, stihne se kolem vás několikrát protočit.
+    Přišlo mi to jako vážný problém. '
+  - ' Ale nemám peníze, abych si postavil letadlo, a tak jsem si postavil počítač.
+    Ten mi s pomocí výpočetní aerodynamiky umožnil vše simulovat s ještě přesnějšími
+    daty, než kdybych to měřil přímo v letadle. Vyšel jsem z 2D nákresů technické
+    dokumentace letadla. Je dostupná na internetu. Já si ji stáhl a s pomocí modelovacího
+    softwaru vytvořil 3D model. Ten jsem potom rozdělil na malinké části a ty zase
+    poskládal, aby to počítač lépe pochopil. Potom jsem zadal, kde jsou vzduchové
+    filtry, přihodil spoustu fyziky a počkal, dokud počítač nepropočítá simulaci. '
+  - ' V běžném letadle to vypadá následovně. Osoba na prostředním sedadle například
+    kýchne a ostatním lidem to jde přímo do obličeje. Pěkná nechuťárna. Při pohledu
+    zepředu vidíte, '
+  - ' že si to lidé sedící  vedle osoby uprostřed pěkně odskáčou. A při pohledu z
+    boku vidíte, že se patogeny šíří letadlem i na délku. '
+  - ' "To není dobrý," řekl jsem si hned. A tak jsem provedl dalších 32 simulací a
+    přišel nakonec na tohle řešení. Dal jsem to patentovat jako "Komplexní vstupní
+    směrovač". Tahle věc asi 55x snižuje riziko přenosu patogenů a o 190 % zvyšuje  přívod
+    čerstvého vzduchu. '
+  - ' Úplně stačí, když kousky tohoto kompozitního materiálu připevníte v letadle
+    na vytipovaná místa. Instalace je tedy nenákladná a dá se udělat ze dne na den.
+    Stačí pár šroubků,  a je hotovo. A vede to k naprosto báječným výsledkům. Vzduch
+    se přestane vířivě mísit, a vytvoří naopak pro každého pasažéra individuální dechovou
+    zónu. '
+  - ' Takže když ten pasažér uprostřed zase kýchne, jde to hned dolů a pak skrze filtry
+    ven. Totéž ze strany: patogeny jdou hned dolů. Teď pustím simulaci, jak to vypadá
+    po instalaci našeho zařízení. Osoba uprostřed kýchne, ale teď to jde rovnou dolů
+    a pryč, takže není prostor pro vznik nákazy. Ke spolucestujícím na krajních sedadlech
+    se prakticky žádné patogeny nedostanou. Totéž ještě ze strany. Vidíte, jak je
+    to účinné. '
+  - ' Za tento systém jsme ostatně vyhráli cenu. Funguje to samozřejmě nejen na kýchající
+    pasažéry, co sedí uprostřed, ale i na ty, co sedí u okýnka nebo u uličky. '
+  - ' A co to znamená v reálu? Tohle už není počítačová simulace, ale jak to vypadá
+    ve skutečnosti. Je to 3D model, který jsem vytvořil s pomocí 3D tiskárny. Proud
+    vzduchu opět stéká dolů na pasažéry. Epidemie SARS způsobila před časem škody
+    asi za 40 miliard dolarů. Kdyby v budoucnu propukla nějaká závažná epidemie, náklady
+    patrně převýší 3 biliony dolarů. Dříve to znamenalo vyřadit letadlo na jeden dva
+    měsíce z provozu. Na zlepšení se pracovalo tisíce hodin a vynaložilo se několik
+    milionů dolarů. Teď stačí jednoduchá instalace v podstatě ze dne na den a hned
+    vidíte výsledky. '
+  - ' Čekáme tedy už jen na certifikaci, první testy a různé schvalovací procesy.
+    Věříme, že se potvrdí, že nejlepší řešení jsou někdy ta nejjednodušší. Ještě před
+    dvěma lety  by takový projekt nebyl možný. Nebyla tehdy dostupná potřebná technologie.
+    Díky pokročilým možnostem programování a internetu nastala zlatá éra inovací. '
+  - ' Otázka tak zní: Nač čekat? Už dnes můžeme společně tvořit budoucnost. '
+  - ' Děkuji. '
+  - ' (potlesk.) '
+  da:
+  - ' Må jeg få en håndsoprækning, hvor mange af jer, i dette rum, har været på et
+    fly i det seneste år? Det er udemærket. Det viser sig, at I deler den oplevelse
+    med flere end tre milliarder mennesker hvert år. Og når vi sætter så mange mennesker
+    ind i alle de metal rør som flyver overalt i verden, kan ting som dette forekomme
+    og vi får en sygdoms epidemi. '
+  - ' Jeg kom først rigtigt ind i dette emne da jeg hørte om ebolaens udbrud sidste
+    år. Og det viser sig, at selvom ebola spreder sig gennem dråber indenfor en begrænset
+    afstand, er der mange andre typer sygdomme der kan spredes i et flys kabine. Det
+    værste er, når vi ser på nogle af tallene, det er temmelig skræmmende. Med H1N1,
+    (svineinfluenza), var der en mand der valgte at rejse med fly og i løbet af denne
+    ene flyvning spredte sygdommen sig til 17 andre mennesker. Og så var der fyren
+    med SARS, som under en 3-timers flyvning spredte sygdommen til 22 andre. Det er
+    ikke just min ide om et stort talent. '
+  - ' Når kigger på dette, finder vi også ud af at det faktisk er ret svært, at spore
+    disse sygdomme. Så når nogen stiger på et fly, kan de være syge og de kunne faktisk
+    være i den latens periode hvor de har sygdommen men ikke viser nogen symptoner,
+    og de kan sprede sygdommen til mange andre i flyet. '
+  - ' I øjeblikket fungerer det således at, luften kommer ind øverst i kabinen og
+    fra siden af kabinen, som du kan se med blåt. Luften ledes ud gennem disse meget
+    effektive filtre, som eliminerer 99,97 procent af patogenerne, nær udsugene .
+    Det der sker nu, er dog at luften blandes. Dvs. hvis nogen nyser, bliver luften
+    hvirvlet rundt flere gange inden det passerer  gennem et filter. Jeg tænkte: "Der
+    er et helt indlysende alvorligt problem her. '
+  - ' Jeg havde ikke pengene til at  købe et fly, og valgte istedet at bygge en computer.
+    Det viste sig, at ved beregning af væskers bevægelse, kan vi skabe simulationer
+    der giver os mere nøjagtige resultater end de vi kan få ved fysisk at foretage
+    aflæsninger i flyet. Det virker helt basalt ved at vi starter med 2D tegninger
+    — som man kan i tekniske dokumenter  overalt på Internettet. Dem lægger jeg ind
+    i et 3D-modellerings program, og bygger 3D-modeller. Derefter deler jeg modellen
+    i meget små dele, som computeren bedre kan forstå. Jeg fortæller den herefter,
+    hvor luften kommer ind og ud af kabinen, tilføjer lidt fysik og venter så mens
+    computeren beregner simulationen. '
+  - ' Resultatet vi får i med en  almindelig kabine er: Bemærk personen i midten der
+    nyser, og så "Splat!" - direkte ind i folks ansigter. Det er temmelig ulækkert.
+    Set forfra har vi disse  to passagerer ved siden af ham i midten, der ikke har
+    det særlig sjovt. Og når vi ser det fra siden, vil du også bemærke patogenerne
+    der spredes igennem kabinen. '
+  - ' Det første jeg tænkte var: "Det her er ikke godt." Og så gennemførte jeg over
+    32 forskellige simulationer og til sidst kom jeg frem til denne løsning. Det er
+    hvad jeg kalder - patent afventer -  Global Inlet Director. Nu kan vi reducere
+    overførelsen af patogener ca 55 gange, og forøge indånding af frisk luft  med
+    cirka 190 procent. '
+  - ' Det fungerer ved at vi installerer et  sammensat materiale eksisterende steder
+    i flyet. Det er derfor billigt at installere og kan udføres på en enkelt dag.
+    Der skal blot isættes et par skruer, og så er den klar igen. Og resultaterne heraf,
+    er fuldstændig fantastiske. Istedet for at have de problematiske, hvirvlende luftmønstre,
+    så kan vi lave vægge af luft som kommer ned mellem passagerene og laver personlige
+    åndezoner. '
+  - ' Her ser vi igen passagereren  i midten der nyser, men denne gang kan vi effektivt
+    presse det ned og eliminere det i filtrene. Og det samme fra siden, hvor vi direkte
+    kan skubbe patogenerne ned. Når vi ser samme scenarie igen, men den nye opfindelse
+    installeret, ser du passageren i  midten nyse, og denne gang presser vi det direkte
+    ned i udsugningen før det smitter andre personer. De to passagerer ved siden af  ham
+    i midten indånder stort set ingen patogener. Se det også fra siden, det er et
+    meget effektivt system. '
+  - ' Kort fortalt: Med dette system vinder vi. Dette betyder ikke kun at det virker
+    når personen i midten nyser, men også når personen ved vinduet nyser, eller hvis
+    personen ved gangen nyser. '
+  - ' Hvad betyder dette for verden? Når vi overfører det fra computer simulation
+    til det virkelige liv kan vi med 3D modellen, og et 3D print, se at luftens mønster  er
+    nedadgående direkte til passagererne. Førhen kostede SARS epidemien verden ca
+    40 milliarder dollars. Og i fremtiden, kunne et stort sygdomsudbrud koste kloden
+    mere end 3 billioner dollars. Tidligere måtte man tage  et fly ud af drift i en
+    til to måneder bruge flere tusinde mandetimer og flere millioner dollars for at
+    ændre noget. Men nu kan vi installere  fra dag til dag og se resultater med det
+    samme. '
+  - ' Så nu er det bare et spørgsmål om at få dette certificeret, testfløjet, og igennem
+    alle de lovgivningsmæssige godkendelser. Men det viser bare at nogle af de bedste
+    løsninger er de mest simple. For bare to år siden, ville dette projekt ikke være
+    sket, fordi vi ikke havde den  nødvendige teknologi. Men med avancerede computere
+    og et Internet i udvikling, har vi nu en gylden æra for innovation. '
+  - ' Og spørgsmålet jeg stiller Jer alle i dag er: "Hvorfor vente?" Sammen kan vi
+    bygge fremtiden idag. '
+  - ' Tak. '
+  - ' (Bifald) '
+  el:
+  - ' Μπορούν να σηκώσουν το χέρι τους όσοι από εσάς έχουν μπει  σε αεροπλάνο τον
+    τελευταίο χρόνο; Αυτό είναι πολύ καλό. Αποδεικνύεται ότι εσείς μοιράζεστε αυτή
+    την εμπειρία με περισσότερους από  τρία δις ανθρώπους κάθε χρόνο. Όταν τοποθετούμε
+    πολλούς ανθρώπους σε αυτούς τους μεταλλικούς σωλήνες, που πετούν ανά τον κόσμο,
+    μερικές φορές μπορούν να συμβούν πράγματα σαν κι αυτό, και να υπάρξει μια επιδημία. '
+  - ' Άρχισα να ασχολούμαι με αυτό το θέμα όταν έμαθα για την έξαρση  του ιού Έμπολα
+    πέρσι. Αποδείχτηκε ότι αν και ο ιός Έμπολα  μεταδίδεται μέσω σταγονιδίων με μειωμένη
+    εμβέλεια υπάρχουν πολλά άλλα είδη ασθενειών που μπορούν να εξαπλωθούν στην καμπίνα.
+    Το χειρότερο είναι πώς αν αναλογιστούμε τις στατιστικές, γίνεται αρκετά τρομακτικό.
+    Όσον αφορά τον ιό H1N1, υπήρξε κάποιος που ταξίδεψε με αεροπλάνο και κατά τη διάρκεια
+    μιας πτήσης μετάδωσε την ασθένεια σε άλλους 17 ανθρώπους. Έπειτα υπήρξε κάποιος
+    με τον ιό SARS, ο οποίος ταξίδεψε σε μια πτήση τριών ωρών και μετέδωσε την ασθένεια  σε
+    22 ανθρώπους. Δεν έχω ακριβώς αυτό το σκεπτικό για μια μεγάλη υπερδύναμη. '
+  - ' Αν εξετάσουμε το θέμα περαιτέρω θα ανακαλύψουμε ότι είναι δύσκολο να προβούμε
+    σε προέλεγχο αυτών των ασθενειών. Όταν κάποιος ταξιδεύει με αεροπλάνο θα μπορούσε
+    να είναι ήδη άρρωστος, ή ακόμη να βρίσκεται σε μια λανθάνουσα περίοδο, όπου είναι
+    φορέας της ασθένειας αλλά δεν παρουσιάζει κανένα σύμπτωμα και με την σειρά του  να
+    μεταδώσει την ασθένεια σε πολλούς ανθρώπους στην καμπίνα. Ο τρόπος με τον οποίο
+    λειτουργεί τώρα είναι, ο αέρας εισέρχεται από την κορυφή της κάμπινας και από
+    τις πλευρές, όπως δείχνουν τα μπλε βέλη. Έπειτα ο αέρα εξέρχεται μέσω αυτών των
+    πολύ αποτελεσματικών φίλτρων. που εξαλείφουν το 99,97%  των παθογόνων κοντά στις
+    εξόδους. Αυτό που συμβαίνει τώρα είναι ότι έχουμε αυτό το μοτίβο ανάμιξης του
+    αέρα. Έτσι, εάν κάποιος πράγματι φταρνιζόταν ο αέρας θα στροβιλιζόταν τριγύρω
+    πολλές φορές πριν βρει καν την ευκαιρία να εξέλθει μέσω του φίλτρου. Έτσι σκέφτηκα,
+    σαφώς αυτό είναι ένα αρκετά σοβαρό πρόβλημα. '
+  - ' Δεν είχα τα χρήματα για να αγοράσω ένα αεροπλάνο και έτσι αποφάσισα να φτιάξω
+    έναν υπολογιστή. Πράγματι αποδεικνύεται ότι με υπολογιστική ρευστομηχανική μπορούμε
+    να δημιουργούμε  αυτές τις προσομοιώσεις που μας δίνουν υψηλότερες αναλύσεις από
+    αυτές που παίρνουμε με φυσικό τρόπο με μετρήσεις μέσα στο αεροπλάνο. Ο τρόπος
+    με τον οποίο ουσιαστικά λειτουργεί αυτό είναι ότι θα αρχίσετε με αυτά τα δισδιάστατα
+    σχέδια - αυτά υπάρχουν σε τεχνικά έγγραφα μέσα στο διαδίκτυο. Τα παίρνω αυτά και
+    τα εισάγω σε πρόγραμμα τρισδιάστατου μοντέλου, κατασκευάζουν αυτό το μοντέλο.
+    Έπειτα κατανέμω αυτό το μοντέλο σε μικροσκοπικά κομμάτια όπου βασικά τα εναρμονίζω
+    έτσι ώστε ο υπολογιστής να τα κατανοεί καλύτερα. Τέλος λέω στον υπολογιστή πού
+    θα μπαίνει  και θα βγαίνει ο αέρας στην καμπίνα, γράφω ένα σωρό φυσικούς τύπους
+    και κάθομαι εδώ περιμένοντας έως ότου ο υπολογιστής να κάνει την προσομοίωση. '
+  - ' Έτσι, αυτό που έχουμε στην συμβατική καμπίνα είναι το εξής: θα παρατηρήσετε
+    ότι  το μεσαίο πρόσωπο φταρνίζεται και «πλατς!» - πηγαίνει κατευθείαν  στα πρόσωπα
+    των ανθρώπων. Είναι αρκετά αηδιαστικό. Από το μπροστινό μέρος  θα δείτε τους δύο
+    επιβάτες δίπλα στον κεντρικό επιβάτη, δεν είναι μια καλή στιγμή γι'' αυτούς. Όταν
+    ρίχνουμε μια ματιά από το πλάι θα παρατηρήσετε επίσης τα παθογόνα να εξαπλώνονται
+    σε όλη την καμπίνα. '
+  - ' Το πρώτο που σκέφτηκα ήταν, «Αυτό δεν είναι καθόλου καλό». Έτσι διενέργησα περισσότερες  από
+    32 διαφορετικές προσομοιώσεις και τελικά κατέληξα σε αυτήν εδώ τη λύση. Αυτό αποκαλώ
+    -η πατέντα είναι υπό κατοχύρωση- Παγκόσμιος Διευθετήρας Εισαγωγής. Με αυτό μπορούμε
+    να μειώσουμε  τη μετάδοση των παθογόνων μέχρι και 55 φορές '
+  - ' και να αυξήσουμε την εισπνοή  φρέσκου αέρα περίπου κατά 190%. Ο τρόπος με τον
+    οποίο λειτουργεί είναι, θα εγκαταστήσουμε  αυτό το κομμάτι από σύνθετο υλικό στις
+    ήδη υπάρχουσες θέσεις μέσα στο αεροπλάνο. Η εγκατάσταση είναι ολιγοδάπανη, μπορούμε
+    να την κάνουμε σε μια μέρα. Χρειάζεται μόνο δυο-τρεις βίδες και είστε έτοιμοι.
+    Τα αποτελέσματα που πήραμε είναι απολύτως εντυπωσιακά. Αντί για τα προβληματικά
+    πρότυπα ροής του στροβιλιζόμενου αέρα, δημιουργούμε αυτά τα φράγματα αέρα που
+    κατεβαίνουν ανάμεσα στους επιβάτες '
+  - ' δημιουργώντας προσωπικές ζώνες αναπνοής. Θα παρατηρήσετε ότι ο μεσαίος επιβάτης
+    φτερνίζεται ξανά, όμως αυτή τη φορά, ωθούμε αποτελεσματικά τον αέρα κάτω προς
+    τα φίλτρα για την αποβολή του. Το ίδιο πράγματα από το πλάι, θα παρατηρήσετε ότι
+    ωθούμε προς τα κάτω αυτά τα παθογόνα. Έτσι, εάν ξανακοιτάξετε το ίδιο σενάριο
+    αλλά με εγκατεστημένη αυτήν την καινοτομία θα δείτε ότι ο μεσαίος επιβάτης φταρνίζεται
+    κι αυτή τη φορά ωθούμε τον αέρα προς τα κάτω προς την έξοδο πριν να έχει την ευκαιρία
+    να μολύνει άλλα άτομα. Θα δείτε ότι οι δύο επιβάτες που κάθονται δίπλα στον μεσαίο
+    αναπνέουν χωρίς ουσιαστικά κανένα παθογόνο. Δείτε το και από μπροστά επίσης, '
+  - ' βλέπετε ένα πολύ αποδοτικό σύστημα. Εν ολίγοις, με αυτό το σύστημα έχουμε νικήσει.
+    Παρατηρώντας διαπιστώνουμε ότι δεν λειτουργεί μόνο  εάν φταρνιστεί ο μεσαίος επιβάτης '
+  - ' αλλά και όταν φταρνιστεί ο επιβάτης που κάθεται στο παράθυρο ή αυτός που κάθεται
+    σε θέση διαδρόμου. Τι σημαίνει για τον κόσμο αυτή η λύση; Αν ρίξουμε μια ματιά
+    σε αυτό, από την προσομοίωση στον υπολογιστή στην πραγματική ζωή, με το τρισδιάστατο
+    μοντέλο που δημιούργησα εδώ, ουσιαστικά με τρισδιάστατη εκτύπωση, βλέπουμε τα
+    ίδια μοτίβα ροής αέρα να κατεβαίνουν προς τους επιβάτες. Στο παρελθόν, η επιδημία
+    του SARS  κόστισε στην πραγματικότητα περίπου 40 δις δολάρια. Στο μέλλον μια μεγάλη
+    έξαρση επιδημίας θα μπορούσε να κοστίσει περισσότερο από 3 τρις δολάρια. Στο παρελθόν
+    βγάζαμε ένα αεροπλάνο  εκτός λειτουργίας για ένα με δύο μήνες, ξοδεύοντας δεκάδες
+    χιλιάδες ανθρωποώρες και αρκετά εκατομμύρια δολάρια στην προσπάθεια να αλλαχθεί
+    κάτι. '
+  - ' Τώρα μπορούμε να εγκαταστήσουμε  κάτι, βασικά σε μια μέρα, και βλέπουμε άμεσα
+    αποτελέσματα. Τώρα είναι θέμα να περάσει από την πιστοποίηση, τον έλεγχο πτήσης,
+    και από όλες τις προβλεπόμενες  διαδικασίες εγκρίσεων. Αλλά μερικές φορές οι καλύτερες
+    λύσεις είναι οι απλούστερες. Ακόμα και πριν από δύο χρόνια αυτό το έργο δεν θα
+    είχε υλοποιηθεί απλώς επειδή η τότε τεχνολογία δεν το υποστήριζε. Όμως, σήμερα  με
+    την προηγμένη υπολογιστική '
+  - ' και τον τρόπο που έχει αναπτυχθεί το Διαδίκτυο είναι πραγματικά  η χρυσή εποχή
+    για καινοτομία. '
+  - ' Η ερώτηση που σας κάνω σήμερα είναι: Γιατί περιμένουμε; '
+  - ' Μαζί τώρα μπορούμε  να οικοδομήσουμε μέλλον. Ευχαριστώ. (Χειροκρότημα) '
+  en:
+  - ' Can I get a show of hands — how many of you in this room have been on a plane
+    in this past year? That''s pretty good. Well, it turns out that you share that
+    experience with more than three billion people every year. And when we put so
+    many people in all these metal tubes that fly all over the world, sometimes, things
+    like this can happen and you get a disease epidemic. '
+  - ' I first actually got into this topic when I heard about the Ebola outbreak last
+    year. And it turns out that, although Ebola spreads through these more range-limited,
+    large-droplet routes, there''s all these other sorts of diseases that can be spread
+    in the airplane cabin. The worst part is, when we take a look at some of the numbers,
+    it''s pretty scary. So with H1N1, there was this guy that decided to go on the
+    plane and in the matter of a single flight actually spread the disease to 17 other
+    people. And then there was this other guy with SARS, who managed to go on a three-hour
+    flight and spread the disease to 22 other people. That''s not exactly my idea
+    of a great superpower. '
+  - ' When we take a look at this, what we also find is that it''s very difficult
+    to pre-screen for these diseases. So when someone actually goes on a plane, they
+    could be sick and they could actually be in this latency period in which they
+    could actually have the disease but not exhibit any symptoms, and they could,
+    in turn, spread the disease to many other people in the cabin. '
+  - ' How that actually works is that right now we''ve got air coming in from the
+    top of the cabin and from the side of the cabin, as you see in blue. And then
+    also, that air goes out through these very efficient filters that eliminate 99.97
+    percent of pathogens near the outlets. What happens right now, though, is that
+    we have this mixing airflow pattern. So if someone were to actually sneeze, that
+    air would get swirled around multiple times before it even has a chance to go
+    out through the filter. So I thought: clearly, this is a pretty serious problem. '
+  - ' I didn''t have the money to go out and buy a plane, so I decided to build a
+    computer instead. It actually turns out that with computational fluid dynamics,
+    what we''re able to do is create these simulations that give us higher resolutions
+    than actually physically going in and taking readings in the plane. And so how,
+    essentially, this works is you would start out with these 2D drawings — these
+    are floating around in technical papers around the Internet. I take that and then
+    I put it into this 3D-modeling software, really building that 3D model. And then
+    I divide that model that I just built into these tiny pieces, essentially meshing
+    it so that the computer can better understand it. And then I tell the computer
+    where the air goes in and out of the cabin, throw in a bunch of physics and basically
+    sit there and wait until the computer calculates the simulation. '
+  - ' So what we get, actually, with the conventional cabin is this: you''ll notice
+    the middle person sneezing, and we go "Splat!" — it goes right into people''s
+    faces. It''s pretty disgusting. From the front, you''ll notice those two passengers
+    sitting next to the central passenger not exactly having a great time. And when
+    we take a look at that from the side, you''ll also notice those pathogens spreading
+    across the length of the cabin. '
+  - ' The first thing I thought was, "This is no good." So I actually conducted more
+    than 32 different simulations and ultimately, I came up with this solution right
+    here. This is what I call a — patent pending — Global Inlet Director. With this,
+    we''re able to reduce pathogen transmission by about 55 times, and increase fresh-air
+    inhalation by about 190 percent. '
+  - ' So how this actually works is we would install this piece of composite material
+    into these existing spots that are already in the plane. So it''s very cost-effective
+    to install and we can do this directly overnight. All we have to do is put a couple
+    of screws in there and you''re good to go. And the results that we get are absolutely
+    amazing. Instead of having those problematic swirling airflow patterns, we can
+    create these walls of air that come down in-between the passengers to create personalized
+    breathing zones. '
+  - ' So you''ll notice the middle passenger here is sneezing again, but this time,
+    we''re able to effectively push that down to the filters for elimination. And
+    same thing from the side, you''ll notice we''re able to directly push those pathogens
+    down. So if you take a look again now at the same scenario but with this innovation
+    installed, you''ll notice the middle passenger sneezes, and this time, we''re
+    pushing that straight down into the outlet before it gets a chance to infect any
+    other people. So you''ll notice the two passengers sitting next to the middle
+    guy are breathing virtually no pathogens at all. Take a look at that from the
+    side as well, you see a very efficient system. '
+  - ' And in short, with this system, we win. When we take a look at what this means,
+    what we see is that this not only works if the middle passenger sneezes, but also
+    if the window-seat passenger sneezes or if the aisle-seat passenger sneezes. '
+  - ' And so with this solution, what does this mean for the world? Well, when we
+    take a look at this from the computer simulation into real life, we can see with
+    this 3D model that I built over here, essentially using 3D printing, we can see
+    those same airflow patterns coming down, right to the passengers. In the past,
+    the SARS epidemic actually cost the world about 40 billion dollars. And in the
+    future, a big disease outbreak could actually cost the world in excess of three
+    trillion dollars. So before, it used to be that you had to take an airplane out
+    of service for one to two months, spend tens of thousands of man hours and several
+    million dollars to try to change something. But now, we''re able to install something
+    essentially overnight and see results right away. '
+  - ' So it''s really now a matter of taking this through to certification, flight
+    testing, and going through all of these regulatory approvals processes. But it
+    just really goes to show that sometimes the best solutions are the simplest solutions.
+    And two years ago, even, this project would not have happened, just because the
+    technology then wouldn''t have supported it. But now with advanced computing and
+    how developed our Internet is, it''s really the golden era for innovation. '
+  - ' And so the question I ask all of you today is: why wait? Together, we can build
+    the future today. '
+  - ' Thanks. '
+  - ' (Applause) '
+  es:
+  - ' Levanten la mano los que viajaron en avión el año pasado. ¡Bien! Bueno, han
+    compartido esa experiencia con más de 3000 millones de personas cada año. Y cuando
+    ponemos a tanta gente dentro de estos tubos de metal para volar alrededor del
+    mundo, a veces suceden cosas así y luego tenemos una epidemia. '
+  - ' Me interesé en el tema al enterarme del brote de Ébola del año pasado. Y resulta
+    que aunque el Ébola se propaga a través de rutas  de alcance más limitado, hay
+    otras enfermedades que pueden extenderse en un avión. Lo peor es que cuando miramos
+    las estadísticas, es bastante aterrador. Por ejemplo, en el caso del H1N1 hay
+    un individuo que  decidió viajar en avión y durante un solo vuelo, transmitió
+    la enfermedad a otras 17 personas. Luego había otro chico con SARS que embarcó
+    en un vuelo de tres horas y transmitió la enfermedad a 22 personas. Esta no es
+    exactamente mi idea de poseer un súper poder. '
+  - ' Al verlo, encontramos también que es muy difícil controlar esto. Porque cuando
+    uno viaja en avión puede estar enfermo, y la enfermedad sigue latente es decir,
+    la persona ya está enferma, pero todavía no tiene síntomas por lo tanto, puede
+    transmitir la enfermedad a otros pasajeros en la cabina. '
+  - ' Actualmente, el sistema funciona con el aire procedente de la parte superior
+    y del lateral de la cabina, como se puede ver aquí en azul. Este aire pasa por
+    filtros eficientes que eliminan en un 99,97 % los patógenos procedente de las
+    salidas de aire. Sin embargo, tenemos un patrón de flujo de aire mixto. Así que
+    si alguien estornuda, el aire puede circular varias veces antes de siquiera pasar
+    por el filtro. Creo que sin duda este problema es muy grave. '
+  - ' Como no tengo dinero para comprar un avión, decidí entonces  construir una computadora.
+    Resulta que con la dinámica de fluidos computacional podemos hacer simulaciones
+    que nos dan mayores resoluciones que si hiciésemos lecturas dentro del avión mismo.
+    Y básicamente esto empieza con estos dibujos en 2D, que se pueden encontrar en
+    documentos técnicos en Internet. Los tomo y luego pongo este software para modelar
+    en 3D para obtener un modelo 3D. Luego divido este modelo que acabo de construir
+    en partes muy pequeñas a escala, de modo que la computadora pueda entender mejor.
+    Luego informo al equipo por dónde  entra y sale el aire de la cabina, aplico un
+    montón de física y luego me siento y espero a que la computadora calcule la simulación. '
+  - ' Por lo tanto, lo que tenemos en una cabina convencional es lo siguiente: vean
+    a la persona colocada en el medio estornudar, y rocía las caras de las personas.
+    Es bastante repugnante. Delante, vemos estos dos pasajeros sentados justo al lado
+    del otro pasajero que no deben pasárselo muy bien. Y si miramos de lado, podemos
+    ver los patógenos que  se propagan por toda la cabina. '
+  - ' Pensé: "Eso no es bueno". Así que hice más de 32 simulaciones y al final, he
+    llegado a esta solución de aquí. Esto es lo que yo llamo —aún pendiente de patente—
+    Director Global de entrada. Esto hace que sea posible reducir la transmisión de
+    patógenos unas 55 veces e incrementar la inhalación  de aire fresco un 190 %. '
+  - ' Así que esto realmente funciona con la instalación de ese pedazo de material
+    compuesto en estos lugares que ya están en los aviones. Por lo tanto, el costo
+    de instalación es bajo, se pueden hacer de un día para otro. Solo se requiere
+    algunos  tornillos allí y listo. Los resultados obtenidos fueron absolutamente
+    increíbles. En lugar de patrones problemáticos en la circulación del flujo de
+    aire se pueden crear columnas de aire que descienden entre los pasajeros para
+    crear zonas personalizadas de respiración. '
+  - ' Vemos que el pasajero del medio está estornudando de nuevo pero esta vez pudimos
+    empujarlo hacia abajo hacia los filtros y eliminarlo. Visto desde el lado, es
+    lo mismo. Noten que podemos empujar los patógenos hacia abajo. Ahora bien, si
+    observamos de nuevo el mismo escenario pero con la innovación instalada, vemos
+    el pasajero del medio estornudar pero esta vez lo empujó directamente a la salida
+    antes de infectar a otra persona. Vemos a los dos pasajeros sentados  cerca del
+    hombre en el medio prácticamente sin respirar patógenos. También de lado, vemos
+    que es un sistema muy eficiente. '
+  - ' En definitiva, con este sistema vamos a ganar. Si uno piensa qué significa esto,
+    vemos que no solo funciona si el pasajero del medio estornuda sino también con
+    el pasajero de la ventana, o si estornuda el pasajero que  está sentado cerca
+    del pasillo. '
+  - ' Y bien, ¿qué significa esta solución para el mundo? Bueno, al comparar el equipo
+    de simulación con la vida real, podemos ver cómo este modelo en 3D construido
+    aquí con impresión 3D, muestra los mismos patrones de flujo de aire que bajan
+    directo hacia los pasajeros. En el pasado, la epidemia de SARS supuso un costo
+    de unos USD 40 000 millones. Y en el futuro, un brote importante  podría suponerle
+    al mundo más de USD 3 billones. Antes, teníamos que tomar un avión durante un
+    mes o dos, gastar decenas de miles de horas de  trabajo y varios millones de dólares
+    para tratar de cambiar algo. Pero ahora podemos instalarlo prácticamente de la
+    noche a la mañana y ver resultados inmediatos. '
+  - ' Es básicamente una cuestión de lograr la certificación para el vuelo de prueba
+    y pasar todos estos procesos de aprobación reglamentaria. Pero viene a demostrar
+    que  a veces las mejores soluciones son las más simples. Hace dos años, esta proyecto
+    no podría haber sucedido, simplemente porque no existía la tecnología para hacerlo
+    posible. Pero ahora, con el avance y el desarrollo en Internet vivimos la edad
+    de oro de la innovación. '
+  - ' Y así, la pregunta que les hago  a todos hoy es: ¿por qué esperar? Juntos podemos
+    construir el futuro hoy. '
+  - ' Gracias. '
+  - ' (Aplausos) '
+  fa:
+  - ' میشه لطفا با بالا بردن دست نشون بدین چند نفر از شما در این سالن  سال گذشته سوار
+    هواپیما شدند؟ خیلی عالیه. خُب، معلوم شد شما هم تجربه ای همانند بیش از سه میلیارد
+    نفردر هر سال داشتید. و وقتی اینهمه آدم را در چنین لوله های آهنی که سرتاسر دنیا
+    پرواز می کند،  قرار می دهیم، گاهی چنین چیزهایی رخ می دهد، و یک بیماری را همه گیر
+    می کنید. '
+  - ' در واقع اولین باری که درگیراین مسئله شدم وقتی بود که شیوع بیماری ایبولا در سال
+    گذشته بگوشم رسید. و معلوم شد که، هرچند ایبولا از راههای تماس نزدیک و تراوشات بزرگ
+    تنفسی گسترش می‌یابد، کلی بیماریهای دیگری هستند که می توانند در کابین هواپیما پخش
+    شوند. بدترین چیز،  وقتی است که به برخی ارقام نگاهی می اندازیم، خیلی وحشتناکه.
+    خُب در مورد H1N1، این آدم تصمیم گرفت سوار هواپیما بشه و در یک پرواز در واقع بیماری
+    را به ١٧ نفر دیگر منتقل کرد. و یک نفر دیگر مبتلا به سارس (SARS)، در یک پرواز سه
+    ساعته، بیماری را به ٢٢ نفر دیگر انتقال داد. این در واقع ایده من در مورد یک ابَر
+    قدرت نیست. '
+  - ' وقتی نگاهی به این می اندازیم، چیز دیگری که درمیابیم این است که شناخت از پیش
+    این بیماریها بسیار دشوار است. بنابراین وقتی کسی سوار هواپیما می شود، شاید بیمار
+    باشد و شاید در دوره کمون بیماری باشد یعنی در واقع بیماری را داشته ولی نشانه های
+    آن بروز نیافته است، ولی در عوض می تواند بیماری را به خیلی افراد دیگر در کابین
+    انتقال دهد. '
+  - ' اینطور اتفاق می افتد که هم اکنون هوا از بالای کابین و از طرفین کابین به داخل
+    در جریان است، که آن را به رنگ آبی می بینید. و سپس، همان هوا از طریق این فیلترهای
+    بسیار کارآمد بیرون می رود که ٩٩/٩٧ درصد عوامل بیماری زا را در مدخل خروجی خود از
+    بین می برند. هرچند آنچه هم اکنون اتفاق می افتد، اینه که ما چنین آمیزه ای از جریان
+    هوا را داریم. بدین ترتیب اگر کسی قرار باشه عسطه کند، هوا چندین بار چرخش کرده قبل
+    از اینکه بتواند از  طریق فیلتر بیرون رود. پس فکر کردم:  براستی این مسئله ای بسیار
+    جدی است. '
+  - ' پولی نداشتم که برم و یک هواپیما بخرم، پس تصمیم گرفتم که بجاش یک کامپیوتر بسازم.
+    در واقع اینطور شد که با روشِ دینامیک سیالات عددی، قادر هستیم چنین شبیه سازیهایی
+    ایجاد کنیم که تفکیک های مناسب تری در اختیار ما قرار می دهد تا اینکه بخواهیم شخصا
+    داخل هواپیما رفته  و محاسبات را بررسی کنیم. و اساساً کارکرد آن بدین گونه است که
+    با چنین طرحهای دو بعدی شروع می کنید آنها در مقالاتِ تخصصی  در تمام اینترنت یافت
+    می شوند. من آن را انتخاب و  در این نرم افزار طراحی سه بعدی گذاشتم، اون مدل سه
+    بعدی را واقعا ساختم. سپس اون مدلی که تازه ساخته بودم را  به قطعات کوچکی تقسیم
+    کردم، اساسا" آنرا ریز ریز کرده  تا کامپیوتر بهتر آنرا تحلیل کند. بعد اطلاعات راه
+    های ورود و خروج هوا در کابین را در کامپیوتر وارد کردم یکسری اطلاعات فیزیکی را
+    وارد کردم و عملا نشستم و صبر کردم  تا کامپیوتر شبیه سازی را محاسبه کند. '
+  - ' بدین ترتیب،  آنچه در واقع در کابین معمولی داریم اینه: می بینید که فرد وسطی عطسه
+    می کند، "اچو" — صاف می ره به صورت مردم. خیلی چندش آوره. از روبرو، اون دو نفر رو
+    می بینید که دو طرف فرد وسطی نشسته اند خیلی حال و روز خوبی ندارند. و وقتی از کنار
+    به صحنه نگاه می کنیم، متوجه می شوید که اون عوامل بیماری زا در طول کابین پخش می
+    شوند. '
+  - ' اولین چیزی که به فکرم رسید: "این خوب نیست" پس در واقع بیش از ٣٢ شبیه سازی  انجام
+    دادم و در نهایت به این راه حل رسیدم. این چیزی است که آن را "هدایت کننده ورودی
+    جهانی" می نامم - پروانه اختراع آن برای ثبت ارائه شده. با استفاده از این، قادریم
+    انتقال عوامل بیماری زا را تا ٥٥ برابر کاهش داده، و تنفس هوای تازه را تا حدود ١٩٠
+    درصد بیفزاییم. '
+  - ' خُب چگونگی کار کرد آن بدین طریق است که این قطعه ساخته شده از مواد مختلف را در
+    این قسمتهای موجود در هواپیما کار می گذاریم. نصب آن کم هزینه بوده و می توانیم یک
+    شبه اینکار را انجام دهیم. تنها لازمه چند پیچ آنجا گذاشته و تمام. و نتیجۀ آن فوق
+    العاده خواهد بود. بجای اون مدل گردش هوای مشکل آفرین، می توانیم چنین جدارهای هوا
+    را بسازیم که هوا را مابین مسافرین جریان داده و فضای اختصاصی برای تنفس ایجاد می
+    کند. '
+  - ' بدین ترتیب ملاحظه می کنید که  فرد وسطی مجدد عطسه می کند، اما این بار،  می توانیم
+    آن هوا را به سمت پایین در جهت فیلترها هدایت کرده تا از بین برود. به همین صورت
+    برای طرفین، مشاهده می کنید که عوامل بیماری زا را  مستقیما" به پایین سوق می دهیم.
+    بدین ترتیب اگر اکنون  نگاهی مجدد به همان سناریو اما با این نوآوری نصب شده بکنید،
+    فرد وسط را می بینید که عطسه می کند، و اینبار ما آنرا به سمت پایین  در جهت منفذ
+    خروجی سوق می دهیم قبل از اینکه فرصتی برای آلوده کردن دیگران پیدا کند. بدین ترتیب
+    دو مسافر کناری اون فرد وسط را می بینید که بدون هیچ عامل بیماری زا در هوا، تنفس
+    می کنند. از کنار هم نگاهی به آن بیندازید، شاهد سیستم بسیار کارآمدی هستید. '
+  - ' خلاصه، با این سیستم ما برنده ایم. وقتی به کارایی آن دقت می کنیم، ملاحظه می کنیم
+    که این سیستم نه تنها برای  عطسه های فرد وسط، بلکه برای عطسه های فرد کنار پنجره
+    و فرد کنار راهرو نیز کارایی دارد. '
+  - ' و بدین ترتیب معنی این راهکاربرای جهانیان چیست؟ خُب، وقتی نگاه خود را از شبیه
+    سازی کامپیوتری به دنیای واقعی ببریم، دراین مدل سه بعدی که اینجا ساختم، و اساسا"
+    از پرینتر سه بعدی استفاده کردم، همان مدل جریان هوا را می بینیم که به سمت مسافرین
+    در حرکت است. در گذشته، بیماری همه گیر سارس، عملا" حدود ٤٠ میلیارد دلار برای جهان
+    هزینه داشت. و در آینده، یک شیوع بزرگ بیماری عملا می تواند بیش از سه تریلیون دلار
+    برای جهان هزینه بردارد. قبلا" می بایست یک هواپیما را برای یک یا دو ماه از سرویس
+    خارج می کردید، دهها هزار دلار نفر ساعت و چندین میلیون دلار دیگر هزینه کرده تا
+    چیزی را عوض کنید. ولی اکنون، می توانیم چیزی به این مهمی را یک شبه نصب و نتیجه
+    آنرا بلافاصله مشاهده کنیم. '
+  - ' بدین ترتیب فقط مانده که مجوز آن صادر شده، در پرواز آزمایش شود، و کلیه مراحل
+    قانونی تایید را پشت سر بگذارد. اما براستی نشانگر آنست که  گاهی اوقات بهترین راه
+    حلها ساده ترین آنهاست. و حتی دو سال پیش، این پروژه اتفاق نمی افتاد، چون تکنولوژی
+    در آنزمان قادر به حمایت آن نبود. اما حالا با وجود محاسبات پیشرفته و اینترنت توسعه
+    یافته ما، واقعا" عصر طلایی اختراعات است. '
+  - ' پس سوالی که امروز از همه شما دارم: چرا صبر کنیم؟ امروز با کمک هم می توانیم آینده
+    را بسازیم. '
+  - ' متشکرم. '
+  fr:
+  - ' A main levée, combien ont pris l''avion cette année ? C''est très bien. Apparemment,
+    vous partagez cette expérience avec plus de 3 milliards de personnes chaque année.
+    Quand on met tant de gens dans ces tubes métalliques qui survolent le monde, parfois,
+    de telles choses arrivent et on a des épidémies. '
+  - ' Je me suis intéressé à ce sujet quand j''ai entendu parler d''Ebola l''an dernier.
+    Et il s''est avéré que, bien qu''Ebola se propage dans un rayon limité, par de
+    grosses gouttes, il existe de nombreuses maladies qui se propagent dans les cabines
+    d''avion. Le pire est que, lorsqu''on observe les statistiques, c''est effrayant.
+    Donc avec le H1N1, un homme a décidé de prendre l''avion et, en un seul vol, il
+    a transmis la maladie à 17 autres personnes. Puis il y a eu cet autre homme atteint
+    de SRAS, qui a pris un vol de 3 heures et a transmis la maladie à 22 personnes.
+    Ce n''est pas la définition que j''ai d''un super-pouvoir. '
+  - ' Lorsqu''on observe ceci, on trouve aussi qu''il est difficile de détecter ces
+    maladies en avance. Alors lorsque quelqu''un prend l''avion, il peut être malade
+    et il peut être en période de latence, dans laquelle il est porteur de la maladie
+    mais n''en montre aucun symptôme, mais peut toujours la transmettre à d''autres
+    personnes dans l''avion. '
+  - ' Comment cela fonctionne-t-il ? On a l''air qui arrive du haut de la cabine et
+    du coté de la cabine, comme vous le voyez en bleu. Cet air passe par des filtres
+    très efficaces qui éliminent 99,97% des pathogènes près des sorties. Cependant,
+    ce qui arrive, c''est qu''on a ces mélanges de flux d''air. Donc, si jamais quelqu''un
+    éternue, l''air va tourbillonner plusieurs fois avant de pouvoir passer par les
+    filtres. Donc j''ai pensé que cela était un sérieux problème. '
+  - ' Je n''avais pas d''argent pour acheter un avion, j''ai alors décidé de créer
+    un ordinateur. Il s''est avéré qu''avec l’informatisation de la dynamique des
+    fluides, nous pouvons créer des simulations donnant de plus hautes résolutions
+    que si on était physiquement présents à l’intérieur de l''avion. Alors, comment
+    cela fonctionne-t-il ? On commence avec des dessins en 2D qu''on retrouve dans
+    des fiches techniques disponibles sur internet. Je les prends et les mets dans
+    ce logiciel de modélisation 3D qui construit un modèle 3D. Puis je divise en petits
+    morceaux ce modèle que je viens de créer, je le réduis en mailles que l''ordinateur
+    assimile mieux. Après je montre à l''ordinateur d''où l''air sort et entre dans
+    la cabine, j''y ajoute de la physique. puis je m''assois et attends que l''ordinateur
+    calcule la simulation. '
+  - ' Ce qu''on obtient avec la cabine conventionnelle est ceci : vous voyez la personne
+    au milieu éternuant, et cela arrive droit au visage des autres personnes. Plutôt
+    dégoûtant. Vu du devant, vous voyez ces deux passagers assis à coté du passager
+    central qui ne passent pas un bon moment. Et lorsqu''on regarde du coté, vous
+    voyez que les germes se propagent le long de la cabine. '
+  - ' J''ai d''abord pensé : « Pas bon ». Donc j''ai fait plus de 32 simulations et
+    j''ai enfin trouvé cette solution. Je l''ai appelée un Global Inlet Director,
+    le brevet est en instance. Avec cela on peut diminuer la transmission de pathogènes
+    d''un facteur 55 et d''augmenter l''inhalation  d''air frais de 190%. '
+  - ' Alors, comment cela fonctionne ? On doit installer cette pièce à base de matériau
+    composite dans ces endroits déjà existants dans l''avion. L''installation est
+    très rentable et faisable en une journée. Il ne faut que quelques vis et tout
+    est réglé. Les résultats obtenus sont extraordinaires. Au lieu d''avoir ces flux
+    d''air en tourbillon qui sont problématiques, on crée ces murs d''air entre les
+    passagers, pour créer des zones de respiration individuelles. '
+  - ' Vous voyez le passager éternuer à nouveau, mais, cette fois, on peut pousser
+    cet air vers les filtres pour l''éliminer. Et pareil vu du coté, vous voyez qu''on
+    arrive à pousser les germes vers le bas. Alors si on reprend le même scénario
+    mais avec cette innovation installée, vous voyez le passager au centre éternuer,
+    mais cette fois, le flux est poussé directement vers la sortie avant qu''il n''infecte
+    un autre passager. Vous voyez que les deux passagers à coté de cet homme ne respirent
+    aucun pathogène. Regardez aussi de coté, un système très efficace. '
+  - ' En bref, avec ce système, on gagne. Quand on observe ce que cela signifie, on
+    remarque que ceci ne fonctionne pas seulement pour le passager central mais aussi
+    pour celui  du siège à la fenêtre ou encore le passager sur le couloir. '
+  - ' Que signifie cette solution pour le monde ? Quand on observe ceci en partant
+    de la simulation pour aller vers la vraie vie, on peut voir, avec ce modèle 3D
+    que j''ai fait en utilisant une imprimante 3D, on voit les mêmes flux d''air descendre
+    directement vers les passagers. A l''époque, l’épidémie du SARS a coûté au monde
+    environ 40 milliards de dollars. Et à l''avenir, une grande épidémie peut coûter
+    jusqu''à 3 trillions de dollars. Avant, on devait arrêter l''avion pendant un
+    à deux mois, dépenser des millions de dollars et des mililers d''heures pour changer
+    quelque chose, mais là on peut installer le dispositif en un jour et le résultat
+    est immédiat. '
+  - ' Maintenant il est question de le faire certifier, tester en vol et passer les
+    étapes réglementaires d''approbation. Ceci prouve que parfois les meilleures solutions
+    sont les plus simples. Il y a deux ans, ce projet n''aurait pas vu le jour, parce
+    que la technologie d''alors ne l''encourageait pas. Mais maintenant avec  les
+    technologies avancées et le développement d''internet, c''est vraiment l''âge
+    d''or pour l''innovation. '
+  - ' Ma question pour vous est : pourquoi attendre ? Ensemble, nous pouvons construire
+    le futur dès aujourd''hui. '
+  - ' Merci. '
+  - ' (Applaudissements) '
+  he:
+  - ' תראו לי בהצבעה כמה מכם היו על מטוס בשנה החולפת? יפה. מסתבר שאתם שותפים לחוויה
+    הזו עם עוד 3 מיליארד אנשים בכל שנה וכשאנו מכניסים כל כך הרבה אנשים לתוך  צינורות
+    המתכת האלו שטסים בכל העולם לעיתים דברים כאלו יכולים לקרות ואתם יכולים לקבל מחלה. '
+  - ' התחלתי למעשה עם הנושא הזה כששמעתי על התפרצות האבולה שנה שעברה ומסתבר ש למרות
+    שאבולה מתפשט בטווחים מוגבלים במסלולי התפרסות גדולים יש מחלות אחרות שיכולות להתפשט
+    במטוסים החלק הכי נורא,זה כשאנחנו מתבוננים במספרים זה די מבהיל אז עם וירוס H1N1
+    היה בחור אחד שהחליט לעלות לטיסה ובטיסה אחת בלבד הפיץ את המחלה לעוד 17 אנשים והבחור
+    עם סארס שעלה לטיסה של 3 שעות והפיץ את המחלה ל 22 אנשים נוספים זה לא יכולת על-טבעית,
+    שאני מגדיר כמעולה '
+  - ' כשאנו מתבוננים בזה, אנחנו יכולים גם למצוא שקשה מאד לסנן מראש את המחלות האלו
+    אז כשמישהו מחליט לעלות לטיסה הם יכולים להיות חולים והם יכולים להיות בתקופת דגירה
+    שיש להם את המחלה אבל היא לא מציגה שום סימפטומים והם יכולים להפיץ אותה לאנשים רבים
+    על המטוס '
+  - ' איך זה עובד בפועל הוא שעכשיו יש לנו אוויר שמגיע מהחלק העליון של התא ומהצד של
+    התא, כפי שאתם רואים בכחול. וגם אוויר שיוצא דרך המסננים היעילים האלה שמחסלים 99.97%
+    פתוגנים ליד השקעים מה שקורה עכשיו שיש לנו זה דפוס של זרימת אוויר מעורבב כך שאם
+    משהו למעשה מתעטש האוויר יסתובב מספר פעמים לפני שתהיה לו הזדמנות לעבור דרך המסנן
+    אז חשבתי: ברור שיש פה בעיה רצינית '
+  - ' לא היה לי את הכסף לקנות מטוס אז החלטתי במקום לבנות מחשב מסתבר שבעזרת חישוביות
+    דינמיקה של נוזלים מה שהצלחנו ליצור זה את הסימולציות האלו שנתנו לנו רזולוציה גבוהה
+    יותר מאשר ללכת פיזית למטוס ולבצע מדידות אז איך, בעצם, זה עובד אתה מתחיל עם ציורי
+    דו מימד שנמצאים במסמכים טכניים ברחבי האנטרנט הזנתי אותם לתוכנת מידול תלת מימד
+    שת׳כלס בונה מודל תלת מימדי ואז חילקתי את המודל שהרגע בניתי  לחתיכות קטנות בעצם
+    משלב אותם בצורה כזו  שמחשב יבין אותם טוב יותר ואז אני מזין למחשב מאיפה נכנס ויוצא
+    האויר לתא הנוסעים זורק פנימה קצת פיזיקה ולמעשה יושב ומחכה עד שהמחשב יחשב את ההדמייה '
+  - ' מה שאנחנו מקבלים בתא נוסעים רגיל זה זה: אתם תבחינו שהאיש באמצע התעטש ו..טראח
+    זה הולך ישר לתוך הפנים של אנשים שזה די מגעיל מקדימה, שימו לב, לשני הנוסעים שיושבים
+    לצידי המתעטש לא בדיוק נהנים ואם מסתכלים על זה מהצד שימו לב גם לפתוגנים שמתפזרים
+    לאורך תא הנוסעים '
+  - ' הדבר הראשון שחשבתי: זה לא טוב אז יצרתי יותר מ 32 סימולציות שונות ולבסוף הגעתי
+    לפתרון הזה זה מה שאני מכנה, (ממתין לאישור פטנט) מפרצון הכוון גלובלי. בעזרתו אנו
+    יכולים לצמצם העברת פתוגנים בערך פי ,55 ולהגדיל את שאיפת האויר הנקי ב 190%. '
+  - ' אז איך זה בעצם עובד זה שאנחנו מתקינים את החתיכה הזו בנויה מחומר מרוכב לתוך המקומות
+    האלו שכבר קיימים במטוס. כך שההתקנה מאד חסכונית וניתן לעשות את זה מיידית במהלך
+    לילה. כל מה שצריך זה להבריג שני ברגים  ואנחנו מסודרים. והתוצאות שמתקבלות הן פשוט
+    מדהימות. במקום דפוסי זרימת אויר בעייתיים, אנחנו יכולים לצור קירות אויר שיורדים
+    בין הנוסעים ליצירת איזורי נשימה אישיים. '
+  - ' אז אתם שמים לב שהנוסע באמצע מתעטש שוב, אבל הפעם, אנו מסוגלים לדחוף את זה ביעילות
+    למטה אל הפילטרים להשמדה ואותו הדבר מהצדדים, שימו לב שאנו מסוגלים לדחוף את הפתוגנים
+    מטה. אז אם נסתכל שוב על אותו תרחיש הפעם עם ההמצאה, תראו שהנוסע באמצע מתעטש, והפעם
+    אנחנו דוחפים את זה ישירות ליציאה לפני שיש לזה הזדמנות להדביק נוסעים נוספים. שימו
+    לב ששני הנוסעים שיושבים  לצד הבחור באמצע לא נושמים פתוגנים כלל. בואו נראה את זה
+    גם מהצד, אתם רואים מערכת יעילה ביותר. '
+  - ' ובקיצור עם המערכת הזו, אנו מנצחים. כשמסתכלים על המשמעויות, מה שאנחנו רואים לא
+    רק שעובד אם הנוסע במרכז מתעטש, אלא גם אם מדובר בנוסע שליד חלון שמתעטש או נוסע
+    במעבר שמתעטש. '
+  - ' אם כך מה המשמעות לעולם, עם הפתרון הזה? ובכן כשאנחנו מסתכלים על זה מהסימולציה
+    אל החיים האמיתיים, ניתן לראות עם מודל התלת מימד שבניתי כאן, באמצעות מדפסת תלת
+    מימד, ניתן להבחין באותם דפוסי זרימת אויר שיורדים, ישירות אל הנוסעים. בעבר, מגיפת
+    הסארס עלתה לעולם בערך 40 מיליארד דולר. ובעתיד, התפרצות מחלה יכולה לעלות לעולם
+    יותר משלושה טריליון דולרים. בעבר נדרשת להוציא את המטוס משירות למשך חודש או חודשיים,
+    להוציא אלפי שעות עבודה וכמה מליוני דולרים בנסיון לשנות משהו. אבל כיום אנו יכולים
+    להתקין משהו במהלך לילה ולראות תוצאות מיידית. '
+  - ' כרגע זה עניין של קבלת הסמכה, מבחני טיסה, הרבה תהליכים לקבלת אישורים רגולטוריים.
+    אבל זה בא להראות שלפעמים הפתרונות  הטובים ביותר הם הפתרונות הפשוטים. ולפני שנתיים,
+    הפרוייקט הזה לא יכל להתקיים, רק בגלל שהטכנולוגיה אז לא איפשרה את זה. אבל כיום
+    עם יכולות מחשוב מתקדמות ואינטרנט מפותח, זה עידן הזהב להמצאות '
+  - ' אז השאלה שאני שואל את כולכם: למה לחכות? יחד אנו יכולים לבנות את העתיד היום. '
+  - ' תודה '
+  - ' (מחיאות כפיים) '
+  hr:
+  - ' Dignite ruku — svi vi koji ste putovali avionom unazad godinu dana. Odlično
+    Ispada da dijelite to iskustvo s više od tri milijarde ljudi svake godine. A kada
+    strpamo toliko ljudi u sve te metalne cijevi što lete diljem svijeta, ponekada
+    se ovakve stvari dogode i dobijemo epidemiju bolesti. '
+  - ' Prvi puta sam se počeo baviti ovom temom prošle godine, kada sam čuo za epidemiju
+    Ebole. I ispada da, iako se Ebola širi tjelesnim tekućinama velikih kapljica ograničenim
+    dosegom, postoji širok spektar drugih bolesti koje se mogu raširiti avionskom
+    kabinom. Najgore je da kada gledamo razne statistike, to je prilično zastrašujuće.
+    Na primjeru H1N1, jedan je čovjek odlučio ući u avion te je za vrijeme jednog
+    jedinog leta uspio zaraziti 17 osoba. Jedan drugi čovjek, zaražen SARS-om, se
+    ukrcao na trosatni let i zarazio 22 osobe. Nije baš nešto čime se ti ljudi mogu
+    ponositi. '
+  - ' Analizirajući situaciju, pronalazimo da je zaista vrlo teško zapaziti ove bolesti.
+    Tako da kada se neka osoba ukrca na avion, ona može biti oboljela i mogla bi zaista
+    biti u periodu latentnosti u kojem bi mogla biti nositelj bolesti bez ikakvih
+    simptoma, i mogla bi, zauzvrat, zaraziti mnoge osobe u avionu. '
+  - ' Kako se to zaista događa je da zrak ulazi kroz gornji dio kabine i s obje strane
+    kabine, označeno plavim strelicama. Taj zrak zatim izlazi kroz vrlo učinkovite
+    filtere koji eliminiraju 99.97 posto patogena blizu ispusta. Međutim, ono što
+    se događa je pojava kružnog protoka miješanog zraka. Tako da ako netko kihne,
+    taj zrak bi se uskovitlao nekoliko puta prije nego bi uopće uspio proći kroz filtere.
+    Stoga sam pomislio: ovo je očito prilično ozbiljan problem. '
+  - ' Nisam imao dovoljno novca da odem i kupim avion, tako da sam odlučio sastaviti
+    kompjuter. Ispada da računalnom dinamikom fluida možemo pokretati simulacije koje
+    rezultiraju podacima veće preciznosti nego da fizički mjerimo iste podatke u avionu.
+    I to, u biti, funkcionira tako da započnete s ovim 2D crtežima — ove crteže možete
+    naći u tehničkim nacrtima svugdje po internetu. Uzmete ih, umetnete u softver
+    za 3D modeliranje, koji konstruiraju taj 3D model. Zatim podijelite taj izgrađeni
+    model u sitne komadiće, u biti pretvorite u mrežu koju računalo može bolje razumjeti.
+    I onda pokažete računalu gdje zrak ulazi i izlazi iz kabine, ubacite tonu fizike
+    i praktički sjedite i čekate dok računalo ne završi sa simulacijom. '
+  - ' Ono što zapravo dobijemo s konvencionalnom kabinom je sljedeće: primjećujete
+    da osoba u sredini kiše, i PAF — zrak ode ljudima u lice. Prilično je odvratno.
+    Primjećujete ona dva putnika, s prednje strane koji sjede uz centralnog putnika,
+    da baš i ne uživaju. A kada pogledamo situaciju s boka, primjećujete kako se patogeni
+    raspoređuju uzduž kabine. '
+  - ' Prvo što sam pomislio je bilo, "Ovo nije dobro." Tako da sam proveo više od
+    32 različite simulacije i na koncu došao do narednog zaključka. Ovo zovem — patent
+    u postupku — Globalni Ulazni Usmjerivač. S time smo u mogućnosti smanjiti prijenos
+    patogena za otprilike 55 puta, i povisiti udisanje svježeg zraka za otprilike
+    190 posto. '
+  - ' Ovo radi tako što bismo montirali ovaj komad kompozitnog materijala u ova postojeća
+    mjesta u avionu. Instalacija je troškovno vrlo efikasna i možemo ju sprovesti
+    preko noći. Sve što trebamo učiniti je zašarafiti par šarafa i spremni smo. Rezultati
+    koje dobivamo su apsolutno zadivljujući. Umjesto onih problematičnih zračnih kovitlanja
+    stvaramo ove zračne zidove koji se spuštaju između putnika i stvaraju osobne zone
+    za disanje. '
+  - ' Možete primijetiti da putnik u sredini ponovno kiše, no ovaj put njegovo kihanje
+    možemo efektivno gurati dolje prema filterima za eliminaciju. Isto vrijedi i za
+    bok, možete primijetiti da možemo direktno gurati patogene prema dolje. Tako da
+    ako pogledate ponovno isti scenarij no s ovim izumom instaliranim, primjećujete
+    kako srednji putnik kiše, no ovaj put guramo njegov kašalj direktno dolje u ispuh
+    prije nego dobije priliku zaraziti ostale putnike. Primijetite da dva putnika
+    koja sjede uz našeg srednjeg putnika praktički ne udišu nikakve patogene. Pogledajte
+    također isto s boka, i vidite vrlo efikasan sustav. '
+  - ' Ukratko, s ovim sustavom pobjeđujemo zarazu. Kada razmislimo što ovo znači,
+    vidimo da to ne funckionira samo ako putnik u sredini kihne, nego i ako putnik
+    u sjedalu uz prozor kihne ili ako putnik uz prolaz kihne. '
+  - ' Što ovo rješenje znači za svijet? Pa, kada sagledamo sve od računalne simulacije
+    preko stvarnog života, možemo vidjeti s ovim 3D modelom izrađenim ovdje, isprintanim
+    3D pisačem, možemo vidjeti isto kolanje zraka prema dnu, dolje prema putnicima.
+    U prošlosti, epidemija SARS-a je koštala svijet oko 40 milijardi dolara. A u budućnosti,
+    veliko izbijanje bolesti bi moglo koštati čitav svijet više of tri trilijuna dolara.
+    U prošlosti smo morali povući avion iz službe jedan do dva mjeseca, potrošiti
+    desetke tisuća sati rada i nekoliko milijuna dolara da bismo pokušali učiniti
+    nešto. Međutim, sada možemo nešto instalirati praktički preko noći i odmah vidjeti
+    rezultate. '
+  - ' Tako da ovo trebamo sprovesti kroz certifikaciju, i testiranja u letu, i kroz
+    sve one regulatorne procese za odobrenje. No ono što se da zaključiti je da su
+    ponekad najbolja rješenja ujedino i najjednostavnija. I prije dvije godine, na
+    primjer, ovaj projekt se ne bi ni ostvario, čisto zbog nedostatka tehnologija.
+    No trenutno, s naprednim računalnim simulacijama i razvojem Interneta, nalazimo
+    se u zlatnoj eri inovacija. '
+  - ' Stoga vas sve želim danas upitati: čemu čekanje? Zajedno možemo izgraditi budućnost
+    danas. '
+  - ' Hvala '
+  - ' (Aplauz) '
+  hu:
+  - ' Feltennék a kezüket? — önök közül hányan utaztak repülőn idén? Nagyon jó. Akkor
+    tehát ön is egyike az évi három milliárd embernek, akik szintén repülőre ülnek.
+    És amikor sok embert teszünk ezekbe a fémcsövekbe, amik ide-oda repülnek a világban,
+    olykor ilyesmi is történik, mint ez, ön is elkap egy fertőzést. '
+  - ' Akkor kezdtem ezzel a témával foglalkozni, amikor tavaly hallottam az Ebola-járvány
+    kitöréséről. És kiderült, hogy bár az Ebola leginkább adott körzetben, cseppfertőzéssel
+    terjed, egy sor más betegség is képes a repülő utasterében terjedni. A legrosszabb
+    az benne, hogy ha vetünk egy pillantást a számokra, az nagyon ijesztő. A H1N1
+    esetében volt egy fickó, aki úgy döntött, repülővel utazik, és bár csak egyszerű
+    útnak indult, valójában 17 másik embert fertőzött meg. Aztán volt egy másik fickó,
+    SARS vírussal, aki egy háromórás útra indult, és 22 másik embert fertőzött meg.
+    Én nem igazán ezt értem szupererő alatt. '
+  - ' Ha megnézzük ezt az ábrát, arra is rájöhetünk, hogy nagyon nehéz  ezeket a betegségeket
+    kiszűrni. Így amikor valaki felszáll a repülőre, akár beteg is lehet, vagy lappangó
+    időszakban, amikor már bennük van a betegség, de még nem mutatnak tüneteket, és
+    így is elterjeszthetik a kórokozókat a többi emberre az utasfülkében. '
+  - ' Jelenleg úgy működik ez, hogy a fülke tetejéről érkezik  befelé a levegő, valamint
+    a fülke oldaláról, kék színnel jelölve. A levegő nagyon hatékony szűrőkön keresztül
+    távozik, amik a kórokozók 99,97%-át elpusztítják. Mindamellett jelenleg levegőkeringetés
+    működik. Tehát, amikor valaki tüsszent, az a levegő többszörösen megfordul mielőtt
+    esélye lenne a szűrőkön keresztül távozni. Úgy gondoltam, ez egy elég komoly probléma. '
+  - ' Nem volt pénzem arra, hogy menjek és vegyek egy repülőt, így inkább egy számítógépet
+    építettem. Kiderült, hogy a számítógépes folyadékdinamika segítségével szimulációkat
+    végezhetünk el, és pontosabb eredményeket kapunk, mintha ténylegesen odamennénk,  és
+    egy repülőben méricskélnénk. Tehát tulajdonképpen úgy kezdődik, hogy ezek a 2D-s
+    rajzok — ezek az egész neten fellelhetők. Fogtam hát őket, és betöltöttem ebbe
+    a 3D-modellező szoftverbe, igazából is megépítve a 3D-s modellt. Aztán felosztottam
+    ezt a modellt apró darabokra, gyakorlatilag hálókra,  hogy a számítógép jobban
+    megértse. Aztán megmondtam a gépnek, hogy hol megy be a levegő, és hol jön ki,
+    megsoroztam egy adag fizikával, aztán csak ültem és vártam,  amíg a gép elvégezte
+    a szimulációt. '
+  - ' Tehát egy normál utasfülke esetében azt kapjuk, hogy ha valaki középen tüsszent,
+    az egyből az emberek arcába jut. Eléggé undorító. Szemből nézve láthatjuk,  hogy
+    az a két utas, akik a középső mellett ülnek, nem igazán szórakoznak jól. És ha
+    mindezt oldalról nézzük, itt is láthatjuk, hogy a kórokozók az utastér egész hosszában
+    ott vannak. '
+  - ' Rögtön arra gondoltam, "Ez nem jó." Így 32 különböző szimulációt futtattam még
+    le, és végül ezzel a megoldással álltam elő. Úgy neveztem el – minden jog fenntartva
+    –, hogy Globális Beömlésvezérlő. Ezzel a kórokozók átterjedését kb. 55-öd részére
+    csökkenthetjük, és a friss levegő beszívását kb. 190%-kal növelhetjük. '
+  - ' A működési elve a következő: behelyezzük ezt a kompozit anyagot a megfelelő,
+    és már eleve létező helyre. Tehát nagyon költséghatékony a beszerelése, és egy
+    éjszaka alatt beépíthető. Csupán néhány csavarra van szükség, és máris kész. És
+    az eredmény lenyűgöző. A problémás levegőkeringés helyett egyfajta levegőfalak
+    jönnek létre, amik az utasok között szállnak, személyes légzési zónákként. '
+  - ' Látható, hogy a középső utas most ismét tüsszent, de ezúttal hatékonyan leszoríthatjuk
+    a filterek felé, ahol is kiszorul. Oldalról nézve ugyanez, látható, ahogyan lefelé
+    nyomható a kórokozó. Nézzük meg ugyanazt ismét, az innovatív megoldással látható,
+    hogy a középső utas, ha tüsszent, a levegő egyenesen lefelé nyomul a kivezetőhöz,
+    még mielőtt lehetősége lenne másokat megfertőzni. A két szélső utas gyakorlatilag
+    egyáltalán nem lélegez be kórokozót. Ismét nézzük oldalról, látható a rendszer
+    hatékonysága. '
+  - ' Röviden szólva, ez egy nyerő rendszer. Ha megvizsgáljuk, mit is jelent, azt
+    láthatjuk, hogy nemcsak a középen ülő tüsszentésekor működik jól, hanem az ablaknál
+    ülő utasnál is, vagy a folyosónál ülő esetében is. '
+  - ' Mit adhat ez a megoldás a világnak? Nos, ha megnézzük ezt a számítógépes szimuláció
+    után a való életben, építettem ehhez egy 3D-modellt, 3D-nyomtatás segítségével,
+    látható, hogy ugyanaz a légmozgás iránya, egyenesen az utasok felé. Régebben a
+    SARS járvány nagyjából 40 milliárd dollárjába került a világnak. A jövőben pedig
+    egy nagy betegség kitörésének költsége világszinten elérheti a három billió dollárt.
+    Korábban ki kellett vonni a forgalomból egy egész repülőt egy vagy két hónapra,
+    több tízezer órányi munkaidőt,  és sok millió dollárt rákölteni, hogy megpróbáljanak
+    változtatni. De most képesek vagyunk egyetlen éjszaka alatt beépíteni valamit,
+    és az eredmények azonnal láthatóak. '
+  - ' Most már csak az engedélyeztetési eljáráson, tesztelésen, és ehhez hasonló hivatalos
+    folyamatokon kell végigvinni. De ez is nagyon jól mutatja, hogy néha a legjobb
+    megoldások a legegyszerűbb megoldások. Két évvel ezelőtt még ez a projekt nem
+    is működhetett volna, mert a technológia akkor még nem volt meg hozzá. De most,
+    a fejlett számítógépekkel, és az internet fejlettségével ez a mostani az innováció
+    aranykora. '
+  - ' Így tehát a kérdésem mindenkihez: miért várunk? Együtt már ma megépíthetjük
+    a jövőt. '
+  - ' Köszönöm. '
+  - ' (taps) '
+  id:
+  - ' Tolong angkat tangan — berapa dari kalian di ruangan ini yang sudah naik pesawat
+    tahun lalu? Cukup bagus. Sepertinya kalian memiliki pengalaman yang sama seperti
+    lebih dari 3 milyar orang lainnya setiap tahun. Ketika kita masukkan cukup banyak
+    orang  ke dalam tabung logam yang terbang ke seluruh dunia, kadang, hal seperti
+    ini bisa terjadi dan kamu terjangkit wabah penyakit. '
+  - ' Saya pertama kali tertarik dengan topik ini saat mendengar tentang wabah Ebola
+    tahun lalu. Dan ternyata, meski Ebola memiliki  jangkauan infeksi terbatas, melalui
+    cairan tubuh, terdapat berbagai macam penyakit lain yang dapat menyebar di kabin
+    pesawat. Yang paling buruk adalah, kalau kita lihat statistiknya, cukup mengerikan.
+    Jadi dengan H1N1, seorang pria yang memutuskan naik pesawat dan hanya dalam satu
+    kali penerbangan menularkan penyakitnya pada 17 orang. Lalu ada pria ini, yang
+    menderita SARS, yang duduk dalam penerbangan selama 3 jam dan menulari 22 orang
+    lainnya. Tentu saja itu tidak keren. '
+  - ' Kalau kita pelajari, kita akan menemukan bahwa sangat sulit melakukan pemindaian
+    dini penyakit ini. Jadi ketika seseorang naik pesawat, dia bisa saja sakit dan
+    dia bisa saja masih berada  dalam periode latensi dimana dia sudah terjangkit
+    namun belum menunjukkan gejala, dan karenanya, dapat menyebarkan penyakit itu
+    ke banyak penumpang lain di kabin. '
+  - ' Bagaimana ini terjadi, yaitu melalui udara yang masuk melalui bagian atas kabin
+    dan dari bagian samping kabin, yang warna biru. Lalu, udara yang sama keluar melalui  saringan
+    udara yang sangat efisien ini mampu menghilangkan 99,97 persen patogen, yang terletak
+    di ventilasi. Namun yang terjadi sekarang, kita mendapatkan percampuran aliran
+    udara. Jadi jika seseorang bersin. udara terkontaminasi menyebar di sekeliling
+    beberapa kali sebelum dapat melewati saringan udara. Jadi saya pikir: ini jelas
+    merupakan masalah serius. '
+  - ' Saya tak punya uang untuk membeli pesawat, jadi saya putuskan merakit komputer
+    saja. Ternyata dengan memakai dinamika fluida komputasi, kita bisa membuat simulasi
+    berikut dengan resolusi lebih tinggi pula daripada benar-benar menggunakan pesawat
+    sungguhan. Cara kerjanya seperti ini, kita mulai dengan gambar 2D ini — gambar
+    ini banyak terdapat pada karya ilmiah teknis di Internet. Saya mengambil dan memasukkannya
+    di program modeling 3D ini, dan benar-benar dapat berhasil. Lalu saya memisahkan
+    model yang saya buat itu menjadi bagian-bagian kecil ini, pada dasarnya membuat
+    mesh darinya agar komputer lebih mampu memahaminya. Saya masukkan data tentang
+    keluar-masuk udara kabin ke komputer, dan menggunakan hukum fisika, saya tinggal
+    duduk menunggu komputer mengkalkulasi simulasi itu. '
+  - ' Jadi yang kita dapatkan dari kabin konvensional adalah: ketika orang di tengah
+    itu bersin, semburannya langsung mengenai muka penumpang lain. Sungguh menijikkan.
+    Dari depan, kalian bisa lihat dua penumpang yang duduk di sampingya pasti merasa
+    jengkel. dan kalau kita lihat dari samping, kalian bisa lihat bahwa patogen menyebar
+    sepanjang kabin. '
+  - ' Saya langsung berpikir, "Ini nggak bagus." Jadi saya sudah melakukan lebih dari
+    32 simulasi berbeda dan puncaknya, saya menemukan solusi ini. Ini yang saya sebut
+    — masih menunggu hak paten — Global Inlet Director. Dengan ini, kita dapat mengurangi
+    transmisi patogen 55 kali (lebih baik), dan menambahkan inhalasi  udara bersih
+    sebesar 190 persen. '
+  - ' Jadi begini cara kerjanya. Kita pasang bagian yang terbuat dari material komposit
+    ini pada titik-titik berikut di dalam pesawat. Jadi pemasangan benda ini sangat
+    hemat dan dapat dilakukan dalam semalam. Kita cukup memasang beberapa baut dan
+    selesai sudah. Dan hasilnya sungguh menakjubkan. Alih-alih aliran udara yang berputar  tak
+    karuan seperti tadi, kita dapat membuat dinding udara ini yang bergerak turun
+    di antara penumpang guna memberikan zona-bernafas pribadi. '
+  - ' Jadi ketika penumpang di tengah ini bersin lagi, kali ini kita bisa mengarahkannya
+    ke bawah dengan efektif menuju saringan udara untuk dieliminasi. Di samping terjadi
+    hal sama, kamu bisa lihat kini patogen  terdorong ke bawah. Jadi kalau kamu lihat
+    lagi skenario yang sama sekarang, tapi dengan inovasi ini terpasang, ketika penumpang
+    di tengah bersin, dan kali ini, kita membuatnya langsung ke bawah menuju outlet
+    sebelum mendapat kesempatan untuk menjangkiti orang lain. Jadi kedua penumpang
+    yang duduk di samping orang itu hampir tidak menghirup  patogen sama sekali. Dilihat
+    dari samping juga, sistem ini sangat efisien. '
+  - ' Pendek kata, dengan sistem ini, kita menang. Jadi apa artinya, yang kita lihat
+    disini sistem ini tidak hanya bekerja jika penumpang di tengah bersin, namun juga
+    ketika penumpang yang duduk di dekat jendela atau penumpang di sisi lorong bersin. '
+  - ' Jadi apa arti solusi ini untuk dunia? Jadi kalau kita lihat aplikasi simulasi
+    computer dalam kehidupan nyata, dapat kita lihat dengan model 3D menggunakan printer
+    3D yang saya buat di sini, kita bisa melihat pola aliran udara  yang sama menuju
+    ke bawah, langsung ke penumpang. Dulu, wabah SARS menghabiskan biaya sekitar 40
+    milyar dolar. Dan di masa depan, wabah besar dapat memakan biaya hingga lebih
+    dari 3 triliun dolar. Jadi sebelumnya, kita harus  mengistirahatkan pesawat selama
+    1 hingga 2 bulan, menghabiskan ribuan jam dan beberapa juta dolar untuk mencoba
+    mengubah sesuatu. Tapi sekarang, kita dapat memasang system ini dengan mudah dalam
+    semalam dan langsung mendapatkan hasil. '
+  - ' Jadi kini tinggal mendapatkan sertifikasi atas penemuan ini, uji coba penerbangan,
+    dan melalui semua proses perizinan yang ada. Tapi ini juga menunjukkan bahwa terkadang
+    solusi terbaik adalah solusi termudah. Dan bahkan dua tahun yang lalu, proyek
+    ini tidak mungkin dilakukan, hanya karena teknologi yang ada tidak mendukung.
+    Namun sekarang, dengan komputasi lanjutan dan perkembangan Internet, kita ada
+    dalam masa keemasaan bagi inovasi. '
+  - ' Dan pertanyaan yang saya tanyakan pada kalian semua hari ini: Kenapa menunggu?
+    Bersama, kita dapat membangun masa depan, hari ini. '
+  - ' Terima kasih. '
+  - ' (Tepuk tangan) '
+  it:
+  - ' Possono alzare la mano quanti di voi in questa stanza sono stati su un aereo
+    lo scorso anno? Non è male. Bene, risulta che voi condividete questa esperienza
+    con più di tre bilioni di persone ogni anno. Quando mettiamo così tante persone
+    in tutti questi tubi metallici che volano per tutto il mondo, a volte, possono
+    accadere cose come questa e voi rendete una malattia epidemica. '
+  - ' Mi sono interessato a questo tema quando ho sentito dell''epidemia di Ebola
+    l''anno scorso. Ed è venuto fuori che, sebbene l''Ebola si diffonde in campo più
+    limitato attraverso delle grosse goccioline ci sono tanti altri tipi di malattie
+    che si diffondono nella cabina di un aereo. La parte peggiore è quando diamo un''occhiata
+    a qualche numero, è abbastanza spaventoso. Così con la H1N1, c''era questo tipo
+    che decise di andare sull''aereo e nel giro di un singolo volo in realtà trasmise
+    la malattia ad altre 17 persone. E poi c''è stato quest''altro con la SARS che
+    è riuscito ad andare su un volo di 3 ore e ha trasmesso la malattia ad altre 22
+    persone. Questa non è esattamente la mia idea di un grande superpotere. '
+  - ' Quando diamo un''occhiata a questo, quello che troviamo anche è che è molto
+    difficile fare controlli preventivi per queste malattie. Così quando le persone
+    salgono su un aereo, potrebbero essere malate e potrebbero essere in un periodo
+    di latenza nel quale potrebbero davvero avere la malattia ma non esibire alcun
+    sintomo, e potrebbero trasmettere la malattia a molte altre persone nella cabina. '
+  - ' Come realmente funziona la cosa è che ora abbiamo l''aria che entra dal tetto
+    della cabina e dai lati della cabina, come vedete in blu. E poi anche, quell''aria
+    esce fuori attraverso questi filtri molto efficienti che eliminano il 99.97 percento
+    dei patogeni vicino agli sbocchi. Quello che succede ora, però, è che abbiamo
+    queste correnti che si mescolano. Così se qualcuno starnutisse davvero, quell''aria
+    verrebbe fatta mulinare più volte prima di avere una possibilità di passare attraverso
+    il filtro. Così ho pensato: evidentemente questo è un problema piuttosto serio. '
+  - ' Non avevo i soldi per uscire e comprarmi un aereo, così ho deciso invece di
+    costruire un computer. Risulta in realtà che con la fluidodinamica computazionale
+    quello che possiamo fare è creare queste simulazioni che ci danno risoluzioni
+    più alte rispetto a salire fisicamente sull''aereo e fare delle misurazioni. E
+    così ecco come fondamentalmente funziona potreste cominciare con questi disegni
+    2D, questi circolano in articoli tecnici su Internet. Li prendo e li metto in
+    questo software di modellazione 3D, costruendo davvero quel modello 3D. E poi
+    divido quel modello che avevo appena costruito in questi pezzetti, dimensionandoli
+    in modo che il computer possa comprenderli meglio. Poi dico al computer dove l''aria
+    entra e esce dalla cabina, butto dentro un sacco di fisica e in pratica siedo
+    lì e aspetto finché il computer calcola la simulazione. '
+  - ' Così quello che abbiamo realmente con una cabina convenzionale è questo: noterete
+    la persona nel mezzo starnutire, e andiamo "Splat!", va dritto in faccia alle
+    persone. È abbastanza disgustoso. Visto da davanti, noterete quei due passeggeri
+    seduti accanto al passeggero centrale che non si stanno divertendo. E se gli diamo
+    un''occhiata dal lato, noterete anche quei patogeni che si diffondono per la lunghezza
+    della cabina. '
+  - ' La prima cosa che ho pensato è stata:" Questo non va bene." Così ho realmente
+    condotto più di 32 diverse simulazioni e alla fine, ho messo insieme questa soluzione
+    qui. Questo è quello che io chiamo, in attesa di brevetto, Global Inlet Director.
+    Con questo possiamo ridurre la trasmissione di patogeni di circa 55 volte, e incrementare
+    l''inalazione di aria fresca di circa il 190 percento '
+  - ' Ecco come funziona noi installeremmo questo pezzo di materiale composito in
+    questi spazi esistenti che sono già nell''aereo. Quindi è molto economico da installare,
+    possiamo farlo da un giorno all''altro. Tutto quello che dobbiamo fare è mettere
+    un paio di viti lì e sei pronto. E i risultati che otteniamo sono assolutamente
+    sorprendenti. Invece di avere quelle problematiche  correnti d''aria vorticanti,
+    possiamo creare questi muri d''aria che scendono tra i passeggeri per creare zone
+    d''aria personalizzate. '
+  - ' Così vedrete che il passeggero in mezzo starnutisce di nuovo, ma questa volta,
+    siamo in grado di spingerlo efficacemente verso i filtri per l''eliminazione.
+    Stessa cosa di lato, noterete che siamo in grado di spingere direttamente giù
+    quei patogeni. Così se guardate di nuovo ora allo stesso scenario, ma con questa
+    innovazione installata, vedete che il passeggero starnutisce, e questa volta,
+    lo stiamo spingendo dritto giù negli sbocchi prima che abbia la possibilità di
+    infettare le altre persone. Notate che i due passeggeri seduti accanto alla persona
+    in mezzo non stanno respirando alcun patogeno. Date un''occhiata a questo anche
+    dal lato, vedrete un sistema davvero efficiente '
+  - ' E in breve, con questo sistema, vinciamo. Se diamo un''occhiata a cosa ciò significa,
+    vediamo che non solo funziona se il passeggero in mezzo starnutisce, ma anche
+    se il passeggero al posto finestrino starnutisce o se starnutisce il  passeggero
+    al corridoio. '
+  - ' Quindi con questa soluzione, cosa significa per il mondo? Bene, quando gli diamo
+    un''occhiata dalla simulazione al computer  alla vita reale, possiamo vedere con
+    questo modello 3D che ho costruito qui, fondamentalmente usando la stampa 3D,
+    possiamo vedere quegli stessi flussi d''aria che scendono giù fino ai passeggeri.
+    In passato l''epidemia di SARS è costata realmente al mondo circa 40 billioni
+    di dollari. E nel futuro, una grande epidemia potrebbe costare al mondo oltre
+    tre trilioni di dollari. Così prima si era soliti dover tenere un aeroplano fuori
+    servizio da uno a due mesi, impiegare decine di migliaia di ore di lavoro e molti
+    milioni di dolllari per cambiare qualcosa. Ma ora siamo in grado di installare
+    qualcosa da un giorno all''altro e vedere subito i risultati. '
+  - ' Quindi ora è davvero questione di arrivare ad una certificazione, fare test
+    sui voli, e passare attraverso tutti i processi di approvazione normativa Ma ciò
+    va proprio a dimostrare che a volte le soluzioni migliori sono le più semplici.
+    E due anni fa, inoltre, questo progetto non si sarebbe realizzato, solo perché
+    la tecnologia  non lo avrebbe sostenuto. Ma ora con l''elaborazione dati avanzata
+    e quanto sviluppato è Internet, è davvero l''età d''oro per l''innovazione. '
+  - ' E quindi la domanda che pongo a tutti voi oggi è: perché aspettare? Insieme
+    possiamo costruire il futuro oggi. '
+  - ' Grazie. '
+  - ' (Applausi) '
+  ja:
+  - ' 手を上げてみてください この会場でこの１年間に 飛行機に乗られた方？ かなりいますね ということは 毎年30億人以上の人々と 同じ経験をしているのです
+    飛行機がこんなにも多くの乗客を乗せて 世界中を飛び回わると 時として こういうことも起こりうり 伝染病にかかるのです '
+  - ' 私が最初に このテーマを取り上げたのは 去年のエボラ出血熱の 大流行を聞いた時です こんなことが分かりました エボラの感染は 大粒の飛沫を経由するので
+    到達範囲は狭いですが 様々な種類の病気が 飛行機の客室内で伝染しうるのです 困ったことに 調べてみるとこんな数字が出てきて 恐ろしくなってきます H1N1のケースでは
+    感染者が飛行機を利用すると １回のフライトで 17人に感染しました SARSの感染者のケースでは ３時間のフライトで 22人に感染しました これはあまり好ましい
+    超能力ではありません '
+  - ' さらに これらの病気を事前に検知するのが 非常に難しいのです 実際飛行機の乗客が 病気だったり 潜伏期で 症状が出る前ではあるけれども 病原菌を持っていたりすると
+    キャビンにいる多くの乗客に 病気が感染してしまうかもしれません '
+  - ' 実際どのように 感染するのでしょうか？ 青の矢印で示すように キャビンの天井や横から 空気が送られ フィルターから排出されます フィルターの効率は高く
+    排気口では病原菌を 99.97%も除去します お見せしているのは 気流が渦巻くパターンです くしゃみをする人がいると その空気がフィルターを通って 排気されるまでに
+    何度も循環します 私は「これは問題だ」 と思いました '
+  - ' 私にはこれを避けるために 自家用飛行機を買うお金はありません その代り コンピュータのソフトを作ることにしました コンピュータによる流体力学で シュミレーションを作ってみると
+    実際に飛行機に乗って 計測するよりも より高い解像度のデータが得られます どのようにするのでしょうか? ２次元図面から始めてみましょう これらはネット上で
+    公開されている技術文書です これらを３次元モデリングのソフトに 落とし込むと ３次元モデルができます そのモデルを細分した 小さな格子状の要素に分解し コンピュータがうまく扱えるようにします
+    空気がキャビンの どこから出入りするのかを入力し 物理を一式投入したら コンピュータがシュミレーションを 計算するのを待つだけです '
+  - ' 従来のキャビンを調べて 分かったことは 真ん中に座っている乗客が くしゃみをすると 「ペシャ！」とそれが 他の乗客の顔につくのです ゾッとしますね 前から見ると  その両脇に座る乗客にとって
+    良い状態とは言えないことが わかります 横から見ると 病原菌は 前後の方向に広がっていくのが分かります '
+  - ' 「これは良くないな」と まず思いました 32回以上の シュミレーションを重ねた末 このソリューションに 辿り着きました グローバル・インレット・ディレクター
+    と名付け 特許出願中です これにより病原菌の伝染を 55分の１まで削減でき また呼吸できる新鮮な空気の割合が 190%も増えます '
+  - ' これが実際 どう機能するかというと 複合材料のこのピースを 飛行機内の既存のスポットに 設置します 設置の費用効率は非常に高く 一晩あれば設置可能です
+    ２か所ネジ止めするだけです でも その成果には 目を見張るものがあります 病原菌を含んだ空気が 旋回する代わりに 乗客の間に空気の壁を作るのです 乗客の間に空気の壁を作るのです
+    すると個別に呼吸できるエリアが出来ます '
+  - ' また真ん中の乗客が くしゃみをしますが 今回は効率的に飛沫を 押し下げるので フィルターで 除去できるのが分かります 横からでも同様に 病原菌が直接押し下げられるのが
+    分かります 同じシナリオですが これを設置すると 真ん中の乗客が くしゃみをしても 今回は排気口へと まっすぐ流れるので 他の乗客に 感染することはありません
+    だから 両脇に座っている ２人の乗客は呼吸をしても 実質的に 病原菌に全く感染しないのです 横から見ても同様に とても効果的なシステムで あることが分かります '
+  - ' 要するにこのシステムは 素晴らしく効果的なのです これが意味すること― 真ん中の乗客のくしゃみに 効果があるだけでなく 窓側や通路側の 乗客のくしゃみにも
+    効果があることです '
+  - ' 世界にとって このソリューションの意味とは何でしょうか？ コンピュータ・シュミレーションを 実際に当て嵌めてみましょう 私が3D印刷技術を使って作った
+    ３次元モデルで 見ることができます 同様に空気の流れが 乗客の方に 流れているのが分かります 過去にSARSが流行した時は 世界で５兆円規模の 損失がありました
+    将来的に 大きな病気が大流行すると 損失は360兆円以上 になるかもしれません 以前なら飛行機に 何か改良を加えるには １､２カ月程運休させて 数万時間の工数と数億円を
+    費す必要がありました でも今は これを一晩で設置できて 成果はすぐに現れるのです '
+  - ' これを実用化するには認定や フライト・テスト そして規制当局の承認を 得なくてはなりません しかし お見せしましたように 時として最もシンプルなのが ベスト・ソリューションなのです
+    ２年前でしたら このプロジェクトはありませんでした 当時の技術では できなかったことなのです でも今はコンピュータの進歩や インターネットの発展のお蔭で まさしくイノベーションの
+    黄金時代なのです '
+  - ' 今日皆さんに聞きたいこと― 「なぜ待つのですか？」 一緒に今日から 未来を作っていきましょう '
+  - ' ありがとう '
+  - ' （拍手） '
+  ko:
+  - ' 손 좀 들어주시겠습니까? 작년 비행기를 타보신 분? 좋습니다. 매년 30억명 이상의 사람들과 여러분은 그 경험을 나누게 됩니다. 전세계를
+    다니는 금속관 속에 많은 사람들을 태우고 때때로 이런 일이 일어날 수 있습니다. 여러분은 전염병에 노출될 수 있어요. '
+  - ' 제가 작년 에볼라 발생을 들었을 때  이 주제에 관심이 생겼습니다. 제가 살펴본 바로는 에볼라가 더 범위 제한적이고, 더 커다란 침방울을
+    통해 퍼지지만 비행기 선실에서 퍼질 수 있는 다른 종류의 질병들 또한 많습니다. 문제는 우리가 일부 수치를 볼 때 충분히 공포스럽다는 겁니다.
+    신종 인플루엔자A에 걸린 한 남자가  비행기를 타고 편도로 갔을 때, 17명에게 감염시켰습니다. 사스에 걸린 다른 남성의 경우 3시간 동안
+    비행기에서 보냈고 22명에게 전염시켰습니다. 엄청난 초능력에 대한  이야기가 아닙니다. '
+  - ' 우리가 이것을 봤을 때, 미리 이런 질병들을 차단하기가  쉽지 않다는 것을 알 수 있습니다. 그래서 누군가가 비행기에 탄다면 일부는 병에
+    걸릴 수 있습니다. 질병의 잠복기에 있는 사람들은 사실상 질병에 걸렸지만 어떠한 증상도 나타나지 않습니다. 결국 객실에 있는 많은 사람들에게  전염시킬
+    수 있습니다. '
+  - ' 이런 일이 어떻게 일어나는지 보자면 파란색 화살표를 보시는 것처럼 객실의 윗부분과  측면에서 공기가 나옵니다. 또한 공기는 매우 효율적인  필터를
+    통해 빠져나갑니다. 그 필터는 배출구 근처에서 병원체를 99.97퍼센트를 없앱니다. 하지만 문제는 공기의 흐름이  섞인다는 것입니다. 만약
+    누군가 재채기를 하게 되면 그 공기는 여러 번 빙빙 돌게 됩니다. 그 필터로 빠져나가기도 전에 말이죠. 이것은 심각한 문제라고 생각했습니다. '
+  - ' 저는 비행기를 살 돈이 없습니다. 대신 저는 컴퓨터를 만들기로 했습니다. 계산 유체 역학을 이용해서 우리가 할 수 있는 것은 비행기에 직접
+    들어가서 해석하는 것보다 고 해상도 모의실험을 하는 것입니다. 어떻게 이것이 작용하는지 여러분은 2차원 도안을 통해 먼저 알 수 있습니다.
+    인터넷에서 기술 문서로 떠돌아 다니고 있고 저는 그것을 구해 3차원의  소프트웨어로 구현해냈습니다. 실제로 3차원의 모형을 만들었습니다. 그리고
+    나서 그 모형을  조각 조각 분해했습니다. 컴퓨터가 더 잘 이해할 수 있도록 부품을 딱 들어맞게 만들었고요. 그 다음, 공기가 선실에서 어디에서  들어와서
+    나가는지 컴퓨터로 분석했죠. 많은 물리학 법칙이 들어갑니다. 그리고 컴퓨터가 알아서  계산할 때까지 앉아서 기다렸습니다. '
+  - ' 보통의 객실에서 얻을 수 있는  결과는 이렇습니다. 여러분은 중간에  앉은 사람이 재채기를 하면 사람들의 얼굴에 침이 튀겠죠. 더럽다고
+    생각하실 수 있습니다. 정면에서 보시면 중앙의 승객 옆에 앉은 두명의 승객은 즐거운 시간을 보내지 못할 것입니다. 측면에서 보시면, 여러분은
+    병원균이 선실 주위로 퍼진다는 것을 아실 겁니다. '
+  - ' 제가 처음 생각 했던 것은 "이건 아닌데" 였습니다. 그래서 32가지 이상의 다양한  모의실험을 진행했습니다. 그렇게 이 해결책을 찾아냈습니다.
+    특허출원중인 이것은 Global Inlet Director  (세계적 주입 유도자) 라고 저는 부릅니다. 이것으로 병원균 전파를 감소시킬 수
+    있습니다. 대략 55배 정도 줄입니다. 그리고 신선한 공기의 흡입을 190% 증가시킬 수 있습니다. '
+  - ' 이것의 실제 작용법은 이 복합재료의 부품을 이미 비행기에 있는 부분에  설치하는 것입니다. 이것을 설치하는 것은  매우 비용 효율적입니다.
+    지금 당장 하루만에 설치 할 수 있습니다. 그저 몇 개의 나사로 조작하면 됩니다. 그 결과는 아주 놀랍습니다. 공기의 흐름이 마구잡이로 소용돌이
+    치는 대신에 공기의 차단막을 만들 수 있습니다. 승객들 사이로 바로 내려가 개인적 호흡 공간을 만들어 냅니다. '
+  - ' 그래서 중간의 승객이 재채기를 하면 이번에 우리는 효과적으로 차단할 수 있을 겁니다. 병원균을 제거하는 필터로 바로 보내는 것이죠. 측면에서도
+    마찬가지 입니다. 여러분은 병원균을 바로 제거 할 수  있다는 것을 알아챌 것입니다. 여러분이 같은 시나리오를 이 기술 혁신을 가지고 다시
+    보신다면 중간의 승객이 재채기를 하고 이번엔, 바로 그 병원균을 배출구로 보내 버릴 것입니다. 다른 사람들에게  감염시키기 전에 말입니다.
+    그 중앙의 사람 옆에 앉은  두 명의 승객은 병원균을 전혀 들이마시지 않을 것입니다. 측면에서도 보시죠. 여러분은 매우 효율적인  시스템을
+    보고 계십니다. '
+  - ' 즉, 이 시스템을 가지고  해낼 수 있습니다. 이것이 의미하는 바를 보면 또한 알 수 있는 것은 중앙의 승객이  재채기 할 때 뿐만 아니라
+    창가 쪽 승객이 재채기 할 때도  적용이 된다는 것입니다. 물론 복도 쪽 승객도 마찬가지고요. '
+  - ' 이 해결책이 세상에  어떤 의미가 있을까요? 컴퓨터 모의 실험을  실제 삶에 투영해 보려 할 때, 우리는 제가 만든  3차원 모형으로 확인할
+    수 있고 3차원 프린트 기술을  사용해서 말입니다. 우리는 같은 공기 흐름의 양식을 바로 당사자인 승객에게 가도록 조절 할 수 있습니다. 과거에
+    사스 전염병은 실제로 세계적으로 400억 달러 정도의  비용이 들었습니다. 미래에는 대규모 질병의  발발이 세계적으로 3조 달러를 초과할 정도로  비용이
+    들 수 있었습니다. 예전이었다면 여러분은 비행기를 타지 않으려 했을 겁니다. 아마 한 두달 정도는 말입니다. 수 많은 노동력과  수 백만 달러를
+    소비하면서요. 무언가를 바꾸려고 말이죠. 하지만 지금은 하루만에  설치할 수 있고 결과를 즉각적으로확인할 수 있습니다. '
+  - ' 이제는 확실한 증명과  비행 테스트를 거쳐야 합니다. 그리고 규제 관련 승인 절차를  통과해야 됩니다. 그렇지만 최상의 해결책은 가장 단순한
+    것이라는 것을 실제로 보여줍니다. 심지어 2년 전, 이 프로젝트는 실현되기 힘들 것 같았습니다. 그 당시 기술은 부족했기 때문입니다. 하지만
+    현재의 진보된 컴퓨터 사용과 인터넷의 발달은 혁신의 황금기를 오게 만들었습니다. '
+  - ' 오늘날 제가 할 질문은 이것입니다. "왜 기다리고 있는 겁니까?" 함께 우리는 더 건강한 미래를  만들 수 있습니다. '
+  - ' 고맙습니다. '
+  - ' (박수) '
+  mk:
+  - ' Може ли да кренат рака тие што патувале со авион '
+  - ' минатата година ? Всушност, го делите ова искуство со повеќе од три  милијарди
+    луѓе годишно. Кога толку луѓе се во овие метални цевки, кои летаат низ целиот
+    свет, некогаш вакви работи се случуваат. И добиваме епидемија. '
+  - ' Првпат навлегов во темава кога слушнав за појавата на Ебола, минатата година.
+    Ширењето на Еболата е ограничено на оние дестинации каде има големи врнежи, но
+    сепак постојат и други болести со кои можеме да се заразиме во авион. Некои од
+    броевите изгледаат доста страшно. Еден пример со H1N1. Еден човек решил да патува
+    со авион и за време на летот заразил 17 други луѓе. Еден друг човек заболен од
+    SARS се качил на 3 часовен лет и ја пренел болеста на 22 други луѓе. Ова дефинитивно
+    е огромен проблем. '
+  - ' Кога ќе го разгледаме проблемов ќе видиме дека многу тешко се забележуваат овие
+    болести. Кога некој ќе влезе во авион тој може да е болен но да е во латентна
+    фаза. Болеста е присутна, но симптомите не се забележуваат, па така може да ги
+    зарази и другите во авионот. '
+  - ' Еве како функционира тоа. Воздухот влегува од горниот дел и од страната, а потоа
+    поминува низ филтри, кои елиминираат 99,97% од патогените. Во тој момент имаме
+    измешано струење на воздухот. Па така, ако некој кивне тој воздух прво ќе се сврти
+    неколку пати пред да помине низ филтерот. Си помислив дека ова е доста сериозен
+    проблем. Немав пари да купам авион. '
+  - ' Наместо тоа направив компјутер. Се покажа дека со  компјутерска флуидна динамика
+    можеме да правиме симулации кои ќе ни дадат толку прецизни информации што веќе
+    и нема потреба да влегуваме во авион. Ова функционира така што прво почнувате
+    со овие 2D скици. Нив ги има на интернет. Ги зедов и ги ставив во софтвер за 3D
+    моделирање.  Направив 3D модел. Моделот потоа го разделив на мали делчиња за да
+    може компјутерот  подобро да го разбере. Потоа му кажувам на компјутерот '
+  - ' од каде влегува и излегува воздухот. Вметнав малку физика и чекав компјутерот
+    да ја направи симулацијата. Еве што се случува во авионите: човекот во средина
+    кива и тоа оди право во лицата на луѓето. Одвратно. Однапред ќе забележите двајца
+    патници кои седат до човекот во средина. '
+  - ' Не им е баш пријатно. Ако погледнеме од страна ќе видиме дека патогените се
+    шират и долж авионот. Првото нешто што помислив беше: "Ова не е добро." Затоа
+    спроведов повеќе од 32 различни симулации и на крајот, дојдов до ова решение токму
+    овде. '
+  - ' Јас ова го нареков "Global Inlet Director." Со ова ќе можеме да го  намалиме
+    преносот на патогени за околу  55 пати и ќе го зголемиме свежиот возду за околу
+    190%. Ова функционира така што вградуваме парче композитен материјал на места
+    кои веќе ги има во авионот. Тоа е многу економично за вградување и може да се
+    направи преку ноќ. Ставаме само неколку шрафови и готово. Резултатите што ги  добиваме
+    се неверојатни. Наместо да имаме измешано  струење на воздухот '
+  - ' можеме да направиме воздушни ѕидови кои се спуштаат меѓу патниците и на тој
+    начин да направиме  лични зони за дишење. Патникот во средината повторно кива,
+    но овојпат кивавицата  успешно ја потиснуваме надолу кон филтрите. Истото и кога
+    гледаме од страна, патогените ги потиснуваме надолу. Ако го погледнеме истото
+    сценарио, но овојпат со иновацијата инсталирана ќе забележиме дека  патникот во
+    средина кива но овојпати кивавицата оди надолу во филтерот пред да дојде во контакт
+    со луѓе. Внимавајте, двајцата патници, кои седат до патникот во средината, воопшто
+    не вдишуваат патогени Да погледнеме и од страна '
+  - ' Ова е многу ефикасен систем Накратко со овој систем победуваме. Ова функционира
+    не само за патниците во средина туку и за оние кои седат до прозорецот, па и оние
+    кои седат во коридорот. '
+  - ' Какво значење има за светот ова решение? Користејќи испринтан 3D модел, симулацијава
+    ја спроведов и во реалниот живот. И овојпат се забележа истото струење на воздухот
+    кое влијае врз патниците. Во минатото SARS епидемијата го чинела светот околу
+    40 милијарди долари. Во иднина, појавата на некоја голема болест може да го чини
+    светот повеќе од 3 трилиони долари. Порано авионот мораше да биде тргнат од служба
+    во рок од два до три месеци, да се потрошат десетици илјади работни часови и неколку
+    милиони долари  за да се смени нешто. '
+  - ' А сега, можеме да вградиме нешто набрзина и веднаш добиваме резултати. '
+  - ' Сега е најбитно ова да се сертифицира,  да ги помине пробните летови и сите
+    други регулаторни процеси. Ова покажува дека понекогаш  најдобрите решенија се
+    оние наједноставните. Да беше пред две години, прокетов воопшто и немаше да се
+    случи. Тогаш немаше соодветна технологија. Сега имаме напредни компјутери и многу
+    развиен интернет, па затоа ова навистина е златната  доба на иноваторството. '
+  - ' Прашањето што сакам да ви го поставам на сите денеска е : "Зошто да чекаме?"
+    Заедно, можеме да ја  изградиме иднината уште денес. '
+  - ' Ви благодарам '
+  - ' (Аплауз) '
+  my:
+  - ' လက်တွေထောင်ပြလို့ ရမလား.. ဒီအခန်းထဲက ဘယ်နှစ်ယောက်လောက် ဒီနှစ် လေယာဉ်စီးပြီးပြီးလဲဗျာ။
+    ကောင်းလိုက်တာဗျာ။ အင်း ဖြစ်သွားတာက ခင်ဗျားတို့ဟာ  နှစ်စဉ် ဒီအတွေ့အကြုံကို လူသန်း
+    သုံးထောင်ကျော်နဲ့ မျှဝေလိုက်တာပါ။ ပြီးတော့ ကမ္ဘာတစ်လွှား ပျံသန်းတဲ့  ဒီသတ္ထုပြွန်တွေထဲကို
+    လူအများကြီး သွင်းလိုက်တဲ့အခါ တစ်ခါတစ်ခါမှာ ဒါမျိုးတွေဖြစ်တတ်ပြီး ကူးစက်ရောဂါ ရတတ်တာပါ။ '
+  - ' မနှစ်က Ebola ရောဂါဖြစ်ပွားတာ ကြားမိတော့ ဒီအကြောင်းကို ပထမဆုံး စိတ်ဝင်စားမိတာပါ။
+    ဒါနဲ့ ဖြစ်သွားတာက Ebola ဟာ ပိုကန့်သတ်အပိုင်းအခြားရှိတဲ့  အရည်စက်ကြောင်းတွေ ကနေပြီး
+    တစ်ဆင့်ကူးစက်ပေမဲ့ လေယာဉ်ခန်းမှာ ကူးစက်နိုင်တဲ့ အခြားရောဂါမျိုးတွေ ရှိပါတယ်။ အဆိုးဆုံးအပိုင်းက
+    ဒီကိန်းတွေကို  ကြည့်လိုက်တဲ့အခါ တော်တော် လန့်စရာကြီးပါ။ ဒါနဲ့ H1N1 ရှိတဲ့ လူတစ်ယောက်
+    လေယာဉ်ပေါ်တက်လိုက်တော့ လေယာဉ်တစ်စင်းမှာပဲ အခြားလူ ၁၇ ဦးကို ရောဂါကူးသွားတယ်။ နောက်ပြီး
+    SARS ရောဂါနဲ့လူ သုံးနာရီ ခရီးစဉ်ကို လိုက်ပါခဲ့တော့ လူ ၂၂ ဦးရောဂါကူးခဲ့တယ်။ ဒါက
+    မဟာ အင်အားကြီးတစ်ခုရဲ့ ကျွန်တော့ စိတ်ကူး အတိအကျတော့ မဟုတ်ဘူး။ '
+  - ' ဒါကို ကြည့်လိုက်တော့ တွေ့လိုက်ရသေးတာက ဒီရောဂါတွေကို ကြိုတင် စကင်လုပ်ဖို့  အရမ်း
+    ခက်ခဲတာကိုပါ။ ဒီတော့ တစ်ယောက်ယောက် လေယာဉ်ပေါ်တက်တဲ့အခါ သူတို့တွေ ဖျားနိုင်ပြီး
+    သူတို့တွေ တကယ်ပဲ ရောဂါရှိနိုင်ပေမဲ့ ရောဂါလက္ခဏာ မပြတဲ့ ရောဂါအောင်းနေတဲ့ ကာလထဲ
+    ရောက်နေနိုင်ကာ သူတို့တွေကနေ ပြန်ပြီး  လေယာဉ်ထဲက အခြားလူများစွာ '
+  - ' ကို ရောဂါ ပျံ့နှံ့နိုင်ပါတယ်။ '
+  - ' ဒါက ဘယ်လို အလုပ်လုပ်လဲဆိုတော့ အခု '
+  - ' ကျွန်တော်တို့မှာ လေယာဉ်ခန်း  ထိပ်က ဝင်လာတဲ့လေနဲ့ ပုံမှာမြင်ရတဲ့ အပြာရောင်လို
+    ဘေးက  ဝင်လာတဲ့လေရှိတယ်။ နောက်ပြီး အထွက်ပိုက်တွေနားမှာ ရောဂါ  ပစ္စည်းတွေကို ၉၉.၉၇
+    % ရှင်းလင်းပေးတဲ့ '
+  - ' အရမ်း ထိရောက်မှုရှိတဲ့ အစစ်တွေလည်း  ရှိသေးတယ်။ '
+  - ' ဒါပေမဲ့ အခု ဖြစ်တာက ဒီရောနှောနေတဲ့ လေထုစီးဆင်းမှု  ပုံစံရှိတာပါ။ ဒီတော့ တစ်ဦးဦးက
+    နှာချေတော့မယ်ဆိုရင် '
+  - ' အဲဒီလေက အစစ်ကနေ ထွက်ခွင့်မရခင်မှာတောင် အကြိမ်ပေါင်းများစွာ ပတ်ချာလှည့်နေလိမ်မယ်။
+    ဒီတော့ တွေးမိတာက ဒါ အတော်ကို  အရေးကြီးတဲ့ ပြဿနာဆိုတာ အရှင်းကြီးပါ။ '
+  - ' လေယာဉ်တစ်စင်း သွားဝယ်ဖို့က  ပိုက်ဆံမရှိတော့ ဒီအစား ကွန်ပြူတာ တည်ဆောက်ဖို့  ဆုံးဖြတ်ခဲ့တယ်။
+    တကယ်တော့ ကွန်ပြူတာသုံး အငွေ့အရည် ဆန်တဲ့ ဒိုင်နမစ်ပညာ ဖြစ်သွားတယ်။ ဖန်တီးလို့ရတာက
+    ဒီသရုပ်ပြချက်တွေဟာ '
+  - ' လူကိုယ်တိုင် လေယာဉ်ထဲ ဝင်ပြီး တိုင်းတာတာတွေထက် ပိုပြီး ပြတ်သား  တဲ့ ပုံရိပ်တွေပေးတာပါ။
+    ဒါနဲ့ အခြေခံအားဖြင့် ဒါဘယ်လို  အလုပ်လဲဆိုတာက ဒီ 2D ပုံတွေနဲ့ စပါလိမ့်မယ်။ ဒါတွေက
+    အင်တာနက်တစ်ဝိုက်မှာ မျောလွင့်နေ  တဲ့ နည်းပညာ စာတမ်းတွေပါ။ ဒါကိုယူပြီး အဲဒီအချိန်က
+    ဒီ 3D ပုံ  တကယ် တည်ဆောက်တဲ့ 3D ပုံစံထုတ် ဆော့ဖ်ဝဲ ထဲထည့်လိုက်တယ်။ ဒီနောက်ဒီပုံစံကို
+    ပိုင်းလိုက်ပြီး ဒီလို  အပိုင်းလေးတွေကို ဆောက်လိုက်တယ်၊ အခြေခံကတော့ ဒါကို ကွန်ပြူတာက  ပိုနားလည်အောင်
+    ချိတ်ဆက်တာပါ။ ဒီနောက် လေယာဉ်ခန်းရဲ့ ဘယ်မှာ လေအဝင်၊ အထွက်ရှိတာ ကွန်ပြူတာကိုညွှန်ကြားတယ်၊
+    ရူပဗေဒအစုလိုက်နဲ့ ချိတ်ဆက်ပြီး အဓိကက အသွင်တူဖန်တီးတာကို ကွန်ပြူတာ  က တွက်မပြီးမချင်း
+    အဲဒီမှာထိုင်စောင့်တာပါ။ '
+  - ' ဒီတော့ ဒီသမရိုးကျ လေယာဉ်ခန်းနဲ့  တကယ် ရလိုက်တာက အလယ်ကလူ နှာချေနေတာကို မြင်နိုင်ပြီး
+    "ဖျပ်"လို့လုပ်လိုက်တော့ ဒါက လူတွေရဲ့  မျက်နှာတွေထဲ ရောက်သွားတယ်။ တော်တော် ရွံစရာကောင်းပါတယ်။
+    အရှေ့ဘက်က ဒီခရီးသည်နှစ်ဦးကို  သတိထားမိမှာပါ။ အလယ်ကောင်က ခရီးသည်ဘေးမှာ ထိုင်နေတယ်
+    လုံးလုံး မပျော်နေပါဘူး။ ဘေးဘက်ကနေ တစ်ချက်ကြည့်လိုက်ရင် လေယာဉ်ခန်း တစ်နံတစ်လျား
+    ပျံနေတဲ့  ခရီးသည်တွေကို သိတထားမိပါမယ်။ '
+  - ' ပထမဆုံး ကျွန်တော်တွေးမိတာက "ဒါက မကောင်းဘူး"။ ဒါနဲ့ အသွင်တူဖန်တီးမှု  ၃၂ ခုကျော်ကို
+    လုပ်ခဲ့ပြီး နောက်ဆုံးမှာ ဒီအဖြေကိုရပါတယ်။ ဒါကို မှတ်ပုံတင် ဆိုင်းငံ့ထားတဲ့  Global
+    Inlet Director လို့ခေါ်ထားတယ်။ ဒါနဲ့ ရောဂါပစ္စည်း ထုတ်လွှင့်တာကို  ၅၅% လောက် လျှော့ချပေးနိုင်ပြီး
+    လေကောင်းလေသန့် ရှူရှိက်မှုကို ၁၉၀ %  လောက်တိုးလာစေနိုင်ပါတယ်။ '
+  - ' ဒါက တကယ် ဘယ်လိုလုပ်လဲဆိုတော့ ဒီဒြပ်ပေါင်း အပိုင်းကို လေယာဉ်ထဲက ရှိနှင့်ပြီးသား
+    နေရာတွေထဲမှာ တပ်ဆင်မှာပါ။ ဒီတော့ ဒါက တပ်ဆင်ဖို့ တွက်ချေကိုက်ပြီး ဒါကို ညတွင်းချင်းကို
+    လုပ်လို့ရပါတယ်။ ဝက်အူ တစ်ချောင်း၊ နှစ်ချောင်း  စုပ်ဖို့လိုတာ၊ ပြီးရင် ရပြီလေ။
+    ပြီတော့ ရလာတဲ့ ရလဒ်တွေကတော့  လုံးဝ အံ့ဩစရာကြီးပါ။ ဒီပြဿနာဖြစ်စေတဲ့ ဝေ့လည်နေတဲ့  လေထုစီးဆင်းတဲ့
+    ပုံစံတွေရမယ့်အစား ခရီးသည်တွေကြား ဖြတ်ဝင်တဲ့ ကိုယ်ပိုင် အသက်ရှူတဲ့ ဇုန်တွေဖန်တီးဖို့
+    လေထုနံရံတွေကို ဖန်တီးနိုင်ပါတယ်။ '
+  - ' အလယ်က ခရီးသည်ဟာ နှာထပ်ချေနေတာကို  သတိထားမိကြပါလိမ့်မယ်။ ဒါပေမဲ့ ဒီတစ်ကြိမ်မှာတော့
+    ဒါကို  အောက်ဘက်က အစစ်တွေဆီ ဖယ်ရှားဖို့ ကို ထိထိမိမိ  တွန်းထုတ်နိုင်ပါပြီ။ ဘေးဘက်ကလည်း
+    အလားတူပါ၊ ရောဂါပစ္စည်းတွေကို အောက်ကို  တိုက်ရိုက် တွန်းထုတ်နိုင်တာ မြင်ရမှာပါ။
+    ဒီတော့ ဒီတီထွင်မှု တပ်ဆင်ထားတဲ့  ဒီအခင်းအကျင်းကို တစ်ချက်လောက် ထပ်ကြည့်လိုက်ရင်
+    အလယ်က ခရီးသည်ဟာ နှာချေပေမဲ့ ဒီတစ်ကြိမ်မှာတော့ အခြားသူတွေကို  ကူးစက်ဖို့ အခွင့်မရခင်
+    ဒါကို ထွက်ပေါက်ကို တန်းပြီး  တွန်းချနေတာ သတိပြုမိကြမှာပါ။ အလယ်လူဘေးမှာ ကပ်ထိုင်နေတဲ့  ခရီသည်နှစ်ဦးဟာ
+    ရောဂါပစ္စည်းတွေကို မရှူမိသလောက် အသက်ရှူနေတာကို သတိထားမိမှာပါ။ ဘေးဘက်ကနေလည်း ကြည့်လိုက်ပါဦး၊
+    အရမ်းထိရောက်တဲ့ စနစ်တစ်ခုပါ။ '
+  - ' အတိုချုပ်က ဒီစနစ်နဲ့ပတ်သက်ရင်  ကျွန်တော်တို့ နိုင်တယ်။ ဒီဆိုလိုချက်ကို ကြည့်လိုက်တဲ့အခါ
+    တွေ့လိုက်ရတာက ဒါက အလယ်က  နှာချေတဲ့လူ အတွက်တင်မဟုတ်ပဲ ပြတင်းပေါက်ထိုင်ခုံကလူ  ဒါမှမဟုတ်
+    မင်းလမ်းမှာထိုင်တဲ့ ခရီးသည် နှာချေတာအတွက်လည်း  အလုပ်လုပ်တာပါ။ '
+  - ' ဒီတော့ ဒီဖြေရှင်းမှုက ကမ္ဘာကြီးအတွက်  ဘာကိုဆိုလိုပါသလဲ။ အင်း၊ ဒါကို လက်တွေ့ဘဝထဲကို
+    ကွန်ပြူတာ သရုပ်ဖန်တီးခြင်းကနေ  တစ်ချက်ကြည့်လိုက်တော့ ဟောဒီမှာ ဆောက်ထားတဲ့  3D
+    ပုံစံနဲ့ ကြည့်လို့ရပါတယ်၊ အဓိကကတော့ 3D ပုံနှိပ်ခြင်းကို  သုံးပြီးပေါ့၊ ဒီအလားတူ
+    လေထုစီးဆင်းမှု  ပုံစံတွေဟာ ခရီးသည်တွေဆီကို လာနေတာကို တွေ့နိုင်ပါတယ်။ အတိတ်က SARS
+    ကူးစက်ရောဂါဟာ ကမ္ဘာကြီး  ကို ဒေါ်လာ ဘီလီယံ ၄၀ လောက် ကုန်ကျစေခဲ့ပါတယ်။ အနာဂတ်မှာတော့
+    ရောဂါကြီးတစ်ခု ဖြစ်ပွားမှုဟာ  ကမ္ဘာကြီးကို ဒေါ်လာ သုံး ထရီလီယံထက်ပို ကုန်ကျနိုင်ပါတယ်။
+    ဒါမတိုင်ခင်ကဆို လေယာဉ်ကို  တစ်လ၊နှစ်လလောက် အလုပ်ခွင်ကနေ ထုတ်ပစ်ဖို့ လိုခဲ့သေးတယ်၊
+    တစ်ခုခုပြောင်းလဲဖို့ လူတွေနဲ့ နာရီပေါင်း  သောင်းနဲ့ချီ၊ ဒေါ်လာသန်းပေါင်း များစွာ
+    အကုန်ခံရင်းလေ။ ဒါပေမဲ့ အခုတော့ တစ်ခုခုဆို  ညတွင်းချင်း တပ်ဆင်နိုင်ပြီး ရလဒ်တွေကို
+    ချက်ချင်းကြည့်လို့ရပါတယ်။ '
+  - ' ဒီတော့ အခုအခါမှာ ဒါကို လေကြောင်းစမ်း  သပ်ချက် အထောက်အထားပြုဖို့နဲ့ ဒီသဘောတူချက်
+    လုပ်ငန်းစဉ် ထိန်းသိမ်းမှုတွေအားလုံးကို  အတည်ပြုပေးဖို့ အရေးကြီးတာပါ။ ဒါပေမဲ့ ဒါက
+    ပြတာက တစ်ခါတစ်လေ  အကောင်းဆုံး ဖြေရှင်းနည်းတွေဟာ အရိုးရှင်းဆုံးတွေပဲ ဆိုတာပါ။ လွန်ခဲ့တဲ့
+    နှစ်နှစ်က ဆိုရင်တောင် ဒီပရောဂျက် ဖြစ်လာခဲ့မှာ မဟုတ်ပါဘူး။ အကြောင်းက အဲဒီတုန်းက
+    နည်းပညာက  ဒါကို မထောက်ပံ့နိုင်လို့ပါ။ အခုအခါမှာတော့ အဆင့်မြင့် ကျွန်ပြူတာစနစ်နဲ့
+    တိုးမြှင့်လာခဲ့တဲ့ အင်တာနက်နဲ့အတူ တီထွင်မှုအတွက် တကယ့် ရွှေခေတ်ပါ။ '
+  - ' ဒီတော့ အားလုံးကို ဒီနေ့ မေးမယ့်မေးခွန်းက  ဘာလို့စောင့်နေတာလဲဗျာ၊ အနာဂတ်ကို အတူတူ
+    ဒီနေ့ တည်ဆောက်နိုင်ပါတယ်။ '
+  - ' ကျေးဇူးတင်ပါတယ်။ '
+  - ' (လက်ခုပ်သံများ) '
+  nb:
+  - ' Kan dere vise med hendene - Hvor mange av dere har flydd det siste året? Det
+    er ganske bra. Vel, det viser seg at du deler denne opplevelsen med mer enn 3
+    milliarder mennesker hvert år Og når vi setter så mange mennesker i alle disse
+    metalltubene som flyr over hele verden noen ganger, kan ting som dette skje og
+    du får en sykdomsepidemi. '
+  - ' Jeg kom først over dette emnet når jeg hørte om ebola-utbruddet i fjor. Det
+    viser seg at selv om ebola-spredningen har begrenset rekkevidde med stor-dråpe-ruter
+    så finnes det mange andre typer sykdommer som kan spres i passasjerkabinen på
+    flyet Når vi ser på tallene, viser det seg å være ganske skummelt. Så med H1N1
+    (svineinfluensa) så var det en mann som gikk på et fly og i løpet av én enkelt
+    flytur spredte sykdommen til 17 andre mennesker. Og så var det en annen mann som
+    hadde SARS som kom seg på en 3-timers flytur og spredte sykdommen til 22 mennesker.
+    Det er ikke akkurat min idé for en superkraft. '
+  - ' Når vi ser på dette, ser vi også at det er veldig vanskelig å teste for disse
+    sykdommene før flyturen. Så når noen går på et fly, så kan de være syke, og så
+    kan de faktisk være i denne latensperioden, der de kan ha sykdommen uten å vise
+    symptomer, og de kan spre sykdommen til andre mennesker i flykabinen. '
+  - ' Det fungerer ved at luft kommer inn fra toppen av kabinen og fra siden av kabinen,
+    som du ser i blått. Luften går ut gjennom svært effektive filtre, som fjerner
+    99.97 prosent av patogener. Det som skjer er at vi har denne blandede luftstrømmen.
+    Så hvis noen nyser, blir luften virvlet rundt flere ganger før den i det hele
+    tatt har en sjanse til å gå ut gjennom filteret Så jeg tenkte: dette er tydeligvis
+    et seriøst problem. '
+  - ' Jeg hadde ikke penger til å gå ut og kjøpe meg et fly, så jeg bestemte meg for
+    å bygge en datamaskin. det viser seg at med databeregnet væskedynamikk, så kan
+    vi skape simulasjoner som gir oss høyere oppløsninger enn å faktisk gå inn i flyet
+    og måle der. Og så, egentlig, er dette hvordan du vil starte: med disse 2D-tegningene
+    som flyter rundt i tekniske papirer på internett. Jeg tar dette og setter det
+    i denne 3D-modelleringsprogramvaren for å virkelig bygge en 3D-modell. Og så deler
+    jeg denne  modellen i kjempesmå biter, slik at datamaskinen kan forstå det bedre.
+    Så forteller jeg datamaskinen hvor luften går inn og ut av kabinen, kaster inn
+    en del fysikk og sitter der og venter til datamaskinen er ferdig med å regne ut. '
+  - ' Det vi får ut, med den vanlige kabinen, er dette: du ser at personen i midten
+    nyser, og så "Splat!" - går det rett inn i ansiktene på andre mennesker. Det er
+    ganske ekkelt. Forfra, ser du disse to passasjerene som sitter ved siden av den
+    i midten. De har det ikke så gøy. Og når vi ser på dette fra siden, ser du også
+    disse patogenene som sprer seg langs kabinen. '
+  - ' Jeg tenkte: "dette er ikke bra". Så jeg utførte mer enn 32 forskjellige simulasjoner,
+    og fant til slutt denne løsningen. Dette kaller jeg en Global Inlet Director (i
+    påvente av patent). Med dette, kan vi redusere patogenoverføring omtrent 55 ganger,
+    og øke ferskluftinhalering med omtrent 190 prosent. '
+  - ' Dette fungerer på den måten at vi vil installere dette komposittmaterialet inn
+    i disse stedene som allerede finnes på flyet. Det er veldig kostnadseffektivt
+    og det kan installeres over natten. Det eneste vi må gjøre er å sette inn et par
+    skruer her. Og resultatene vi får er helt utrolige. I stedet for å ha disse problematiske
+    virvlende luftstrømmene, så kan vi skape vegger av luft som kommer ned imellom
+    passasjerene for å skape egne pustesoner. '
+  - ' Nå ser du at passasjeren i midten nyser igjen, men denne gangen klarer vi å
+    skyve det ned til filtrene for at patogenene skal elimineres Og det samme fra
+    siden, vi klarer å skyve patogenene ned. Så hvis tar en titt på samme scenarioet
+    men med denne innovasjonen installert, så ser du at midtpassasjeren nyser, og
+    denne gangen skyver vi det rett ned i uttaket før den får sjans til å infisere
+    noen andre. Du ser at passasjerene som sitter ved siden av mannen i midten puster
+    inn nesten ingen patogener. Sett fra siden også, så ser du et effektivt system. '
+  - ' Kort sagt, vinner vi med dette systemet. Når vi ser på hva dette betyr, ser
+    vi at dette funker -  ikke bare når midtpassasjeren nyser, men også om passasjeren
+    ved vindussetet nyser eller om passasjeren ved gangen nyser. '
+  - ' Hva betyr denne løsningen for verden? Vel, når vi ser på dette fra datasimuleringene
+    til det virkelige liv, ser vi med denne 3D-modellen som jeg har bygget, ved bruk
+    av en 3D-printer, så kan vi se luftstrømmene som kommer ned, rett til passasjerene.
+    SARS-epidemien kostet verden rundt 40 milliarder amerikanske dollar. Og i fremtiden,
+    så kan et stort sykdomsutbrudd koste verden over 3 trillioner dollar. Før, måtte
+    man ta et fly ut av drift i en eller to måneder, bruke titusener mennesketimer
+    og flere millioner dollar for å prøve å endre noe. Men nå klarer vi essensielt
+    å installere over natten og se resultater med en gang. '
+  - ' Så nå handler det om å ta dette gjennom til sertifisering, flytesting, og gå
+    gjennom alle disse regulatoriske godkjenningene. Men dette viser virkelig at noen
+    ganger er de beste løsningene de enkleste løsningene. Og selv for to år siden
+    kunne ikke dette prosjektet funnet sted, fordi teknologien ikke ville støttet
+    den. Men nå med avansert datateknologi og hvor utviklet internett er, er det virkelig
+    en gyllen æra for innovasjon. '
+  - ' Og spørsmålet jeg stiller dere alle i dag er: hvorfor vente? Sammen, kan vi
+    bygge fremtiden i dag. '
+  - ' Takk. '
+  - ' (Applaus). '
+  nl:
+  - ' Mag ik de handen zien van iedereen die het afgelopen jaar in een vliegtuig heeft
+    gezeten? Dat is nogal wat. Nou, het blijkt dat je deze ervaring deelt met meer
+    dan drie miljard mensen elk jaar. En als we zoveel mensen in metalen buizen stoppen
+    die over heel de wereld vliegen, kunnen dit soort dingen gebeuren: er ontstaat
+    een epidemie. '
+  - ' Dit onderwerp houdt mij bezig sinds ik vorig jaar hoorde over de Ebola-uitbraak.
+    En het blijkt dat, hoewel Ebola zich verspreidt via minder wijdreikende druppelbesmetting,
+    er allerlei andere ziektesoorten zijn die verspreid kunnen worden in vliegtuigcabines.
+    Het ergste is: de cijfers zien er behoorlijk eng uit. Met H1N1 was er een man
+    die besloot om te vliegen en tijdens één enkele vlucht verspreidde hij de ziekte
+    onder 17 anderen. Een andere man met SARS slaagde erin tijdens een vlucht van
+    3 uur de ziekte te verspreiden onder 22 anderen. Dat is niet echt mijn idee van
+    een geweldige superheldenkracht. '
+  - ' Als we hiernaar kijken, zien we ook dat het moeilijk is om vooraf te screenen
+    op deze ziekten. Dus als iemand in een vliegtuig stapt, kan hij ziek zijn of zelfs
+    in een latentieperiode verkeren, waarin hij de ziekte wel heeft, maar geen symptomen
+    vertoont. Hij zou dan de ziekte kunnen verspreiden onder vele anderen in de cabine. '
+  - ' Dit werkt als volgt: er komt lucht binnen vanuit de bovenkant en de zijkant
+    van de cabine, blauw aangegeven. Die lucht verdwijnt dan via heel efficiënte filters
+    die 99.97% van de pathogenen elimineren bij de uitlaat. Nu zien we echter een
+    patroon van luchtstromen die zich mengen. Als er dus iemand niest, wervelt die
+    lucht meerdere malen rond voordat ze überhaupt de kans heeft om door de filter
+    te gaan. Dus ik dacht: dit is duidelijk een ernstig probleem. '
+  - ' Ik had het geld niet om een vliegtuig te kopen, dus besloot ik om een computer
+    te bouwen. Het blijkt dat we met numerieke stromingsleer in staat zijn om simulaties
+    te creëren die ons betere antwoorden verschaffen dan echt fysiek meten in het
+    vliegtuig. Dit werkt als volgt: je begint met 2D-tekeningen; deze kun je vinden
+    in technische documenten op het internet. Ik plaats ze in een 3D-computerprogramma
+    en bouw een 3D-model. Dan verdeel ik het model dat ik zojuist heb gebouwd in stukjes.
+    Ik hak het in blokjes zodat de computer het beter kan begrijpen. Dan vertel ik
+    de computer waar de lucht de cabine in- en uitgaat, gooi er nog wat fysica bij
+    en leun dan achterover terwijl de computer de simulatie berekent. '
+  - ' In een conventionele cabine gebeurt het volgende: je ziet dat de middelste persoon
+    niest ... en ''hatsjoe!'' — het belandt recht in het gezicht van de anderen. Het
+    is nogal walgelijk. Van voren kun je zien dat die twee passagiers naast de middelste
+    passagier nogal pech hebben. Vanaf de zijkant bekeken, zie je ook dat die ziektekiemen
+    zich verspreiden door de lengte van de cabine. '
+  - ' Het eerste wat ik dacht was: dit is niet goed. Dus ik heb meer dan 32 verschillende
+    simulaties uitgevoerd en uiteindelijk ben ik tot de volgende oplossing gekomen.
+    Ik noem dit een — patent aangevraagd — Global Inlet Director. Hiermee kunnen we
+    de pathogeen-overdracht verminderen met ongeveer 55 keer en de inademing van frisse
+    lucht verhogen met ongeveer 190%. '
+  - ' Dit zou als volgt gaan: we zouden een stuk composietmateriaal installeren op
+    deze al bestaande plekken in het vliegtuig. Het installeren is dus kostenefficiënt
+    en het is maar een dag werk. Een aantal schroeven monteren en klaar is Kees. De
+    resultaten zijn absoluut fantastisch. In plaats van problematisch rondwervelende
+    luchtstroompatronen, kunnen we muren van lucht creëren die tussen de passagiers
+    neerkomen om persoonlijke ademhalingszones te creëren. '
+  - ' Hier zie je dat de middelste passagier weer aan het niezen is, maar nu kunnen
+    we dat  afvoeren door de filters. Hetzelfde geldt voor de zijkant, je ziet dat
+    we die pathogenen direct kunnen afvoeren. Neem nog eens een kijkje naar hetzelfde
+    scenario maar met deze innovatie geplaatst. De middelste passagier niest, maar
+    deze keer wordt het direct afgevoerd door de uitlaat voordat het de kans krijgt
+    om anderen te infecteren. Je ziet dat de twee passagiers naast de middelste man
+    helemaal geen virtuele pathogenen ademen. Neem ook een kijkje vanaf de zijkant
+    — je ziet een efficient systeem. '
+  - ' Kort gezegd: met dit systeem winnen we. Als we kijken naar wat dit oplevert,
+    zien we dat dit niet alleen werkt als de middelste passagier niest, maar ook als
+    de passagier bij het raam niest of als de passagier naast het gangpad niest. '
+  - ' Wat voor betekenis heeft deze oplossing voor de wereld? Nou, als we dit bekijken
+    vanuit de computersimulatie en toepassen op de echte wereld, zien we bij dit 3D-model,
+    dat ik heb gebouwd met behulp van een 3D-printer, diezelfde neerwaartse luchtstroompatronen,
+    rechtstreeks naar de passagiers. In het verleden heeft de SARS-epidemie de wereld
+    ongeveer $40 miljard gekost. Een toekomstige grote ziekte-uitbraak zou de wereld
+    meer dan $3 biljoen kunnen kosten. Voorheen was het zo dat je een vliegtuig aan
+    de grond moest houden gedurende een of twee maanden, en tienduizenden manuren
+    plus miljoenen dollars kwijt was om iets te veranderen. Maar nu zijn we in staat
+    om razendsnel iets te installeren en direct resultaat te zien. '
+  - ' Het is nu een kwestie van de certificering rondkrijgen, testen in de lucht,
+    en het krijgen van allerlei wettelijke goedkeuringen. Maar dit laat zien dat soms
+    de beste oplossingen de simpelste oplossingen zijn. Nog maar twee jaar geleden
+    was dit project niet haalbaar geweest, enkel omdat de technologie het toen niet
+    kon ondersteunen. Maar nu met geavanceerde computertechniek en de mate van de
+    ontwikkeling van ons internet, is het echt het gouden tijdperk voor innovatie. '
+  - ' En daarom is mijn vraag aan jullie vandaag: waarom wachten? Samen kunnen we
+    de toekomst vandaag bouwen. '
+  - ' Dank jullie wel. '
+  - ' (Applaus) '
+  pl:
+  - ' Czy moga podnieść rękę wszystkie osoby na tej sali, które były w samolocie w
+    minionym roku? Całkiem sporo. Okazuje się, że mieliście to samo doświadczenie,
+    co ponad 3 miliardy ludzi każdego roku. Kiedy włożymy tylu ludzi w metalowe puszki,
+    które latają dookoła świata, czasami coś takiego może sie wydarzyć i otrzymujemy
+    epidemię choroby. '
+  - ' Zająłem się tym tematem po raz pierwszy, gdy w zeszłym roku usłyszałem o wybuchu
+    Eboli. Okazuje się, iż mimo że Ebola rozprzestrzenia się w ograniczonym zakresie,
+    drogą kropelkową, sa inne rodzaje chorób, które mogą rozwijać się w samolocie. '
+  - ' Wygląda to naprawdę źle, gdy przyjrzymy się statystykom. To dość przerażające.
+    Jeżeli chodzi o H1N1, był sobie facet, który postanowił lecieć samolotem. Podczas
+    jednego lotu przeniósł chorobę na 17 innych osób. Inny facet z SARS wybrał się
+    na trzygodzinny lot i przeniósł tą chorobę na 22 osoby. Nie tak wyobrażałem sobie
+    supermoc. '
+  - ' Kiedy się temu przyjrzymy zauważymy także, że jest bardzo trudno wstępnie wykryć
+    te choroby. Kiedy ktoś wchodzi do samolotu może być chory, choroba może byc w
+    fazie utajenia, w czasie której rzeczywiście jest chory i nie wykazuje żadnych
+    objawów, ale jednocześnie może przenosić chorobę na innych pasażerów w kabinie. '
+  - ' Działa to w ten sposób, że powietrze napływa z góry i boku kabiny, jak pokazują
+    niebieskie strzałki. Powietrze także wypływa przez te bardzo wydajne filtry, które
+    eliminują 99.97% patogenów w pobliżu wylotu. Mamy jednak nowy problem, mieszanie
+    się prądów powietrza. Jeżeli ktoś by kichnał, to powietrze zawirowałoby kilkukrotnie,
+    zanim miałoby szanse przejść przez filter. Uznałem, że to całkiem poważny problem. '
+  - ' Nie miałem pieniędzy, żeby kupic samolot, w zamian postanowiłem zbudować komputer.
+    Przy pomocy obliczeniowej dynamiki płynów jesteśmy w stanie stworzyć symulację
+    o większej rozdzielczości, niż gdybyśmy faktycznie pobrali odczyty z kabiny samolotu.
+    W zasadzie działa to tak, że zaczynasz od dwuwymiarowego rysunku— te krążą po
+    internecie wśród dokumentów technicznych. Biorę je i wgrywam do programu modelowania
+    3D, tak naprawdę budujac model w 3D. Wtedy mogę podzielić model na te drobne kawałki,
+    dopasowując je tak, by komputer był to w stanie lepiej zrozumieć. Mówię komputerowi,
+    którędy powietrze wlatuje i wylatuje z kabiny, dodaję kilka zasad fizyki i praktycznie
+    siedzę i czekam, aż komputer obliczy symulację. '
+  - ' To otrzymujemy w konwencjonalnej kabinie: widać jak osoba w środku kicha i wszystko
+    się roznosi wprost na twarze ludzi, co jest dosyć obrzydliwe. Od przodu można
+    zobaczyć, że tych dwóch pasażerow siedzących obok pasażera w środku nie ma teraz
+    nastroju do zabawy. Gdy spojrzymy na to z boku zauważmy, że patogeny  rozprzestrzeniają
+    się wzdłuż kabiny. '
+  - ' Moja pierwsza myśl: "To niedobrze". Przeprowadziłem ponad 32 różne symulacje
+    i w końcu znalazłem rozwiazanie. Nazywam to - wniosek patentowy w toku - Global
+    Inlet Director. Dzięki niemu możemy zmniejszyć przenoszenie patogenów około pięćdziesięciu
+    pięciu razy i zwiększyć produkcję świeżego powietrza o około 190%. '
+  - ' Działa to w taki sposób, że montowalibyśmy ten kawałek kompozytu w już istniejace
+    miejsca w samolocie. Instalacja jest dosyć tania i może być dokonana w ciagu nocy.
+    Wystarczy wkręcić kilka śrub I gotowe. Rezultaty, jakie otrzymujemy, są niesamowite.
+    Zamiast problematycznych zawirowań prądów powietrza możemy stworzyć ściany powietrza,
+    które będa znajdowały się pomiędzy pasażerami, tworząc osobiste strefy oddychania. '
+  - ' Ponownie środkowy pasażer kicha, ale tym razem możemy wypchnąć zarazki i wyeliminować
+    je w filtrach. To samo widać z boku, jesteśmy w stanie bezpośrednio zepchnąć te
+    patogeny w dół. Jeśli spojrzymy ponownie na ten sam scenariusz, ale używając tego
+    wynalazku, zobaczymy jak środkowy pasażer kicha, ale wszystko jest spychane w
+    dół, zanim będzie mogło zarazić inne osoby. Widać, jak dwoje pasażerów siedzacych
+    po bokach nie wdycha praktycznie żadnych patogenów. Spójrzmy też na to z boku.
+    Widać bardzo wydajny system. '
+  - ' Wykorzystując go, szybko wygramy z zarazkami. Kiedy się temu przyjrzymy zauważymy,
+    że działa to nie tylko wtedy, gdy środkowy pasażer kicha, ale także, gdy kicha
+    pasażer od okna lub pasażer z rzędu przy przejściu. '
+  - ' Co to oznacza dla nas wszystkich? Kiedy przeniesiemy tą sytuacje z symulacji
+    komputerowej do prawdziwego życia, na tym trójwymiarowym modelu, zbudowanym używając
+    w zasadzie drukarki 3D, te same prady powietrzne schodzą w dół prosto na pasażerów.
+    W przeszłości, globalny koszt epidemii SARS wyniósł około 40 miliardów dolarów.
+    W przyszłości globalny koszt wielkiej epidemii mógłby wynieść ponad 3 miliardy
+    dolarów. W przeszłości trzeba było wycofać samolot z obiegu na miesiąc lub dwa,
+    poświecić dziesiątki tysięcy godzin i wydać kilka milionów dolarów, aby spróbować
+    coś zmienić. Ale teraz możemy zainstalować coś w ciagu zaledwie jednej nocy i
+    od razu zobaczyć wyniki. '
+  - ' Teraz to jedynie kwestia uzyskania atestu, testowania w trakcie lotu i przejścia
+    przez wszystkie procesy uzyskania certyfikatu. Ale to tylko pokazuje, że czasami
+    najlepsze rozwiazania to te najprostsze. Jeszcze dwa lata temu ten projekt nie
+    doszedłby do skutku, ponieważ nie mieliśmy wtedy odpowiedniej technologii. Ale
+    teraz, z zaawansowanymi komputerami i rozwiniętym internetem, mamy złotą erę nowych
+    wynalazków. '
+  - ' Pytanie brzmi więc: "Na co czekać?". Już dziś możemy razem budować przyszłość. '
+  - ' Dziękuje. '
+  - ' (Brawa) '
+  pt:
+  - ' Levante a mão quem viajou de avião no ano passado. Muito bem! Bem, acontece
+    que vocês partilham essa experiência com mais de três mil milhões de pessoas,
+    todos os anos. Quando colocamos tantas pessoas em todos esses tubos metálicos
+    que voam por todo o mundo, às vezes, podem acontecer coisas deste tipo e causar
+    uma epidemia. '
+  - ' Eu interessei-me por este assunto quando soube acerca do surto de ébola no ano
+    passado. Acontece que, apesar de o vírus do ébola ser transmitido por vias de
+    alcance mais limitado, existem outros tipos de doenças que podem ser transmitidas
+    na cabina do avião. O pior é que, quando examinamos algumas estatísticas, é assustador.
+    Um exemplo com o vírus H1N1: um homem decidiu viajar de avião e, num único voo,
+    transmitiu a doença a 17 pessoas. Uma outra pessoa com SARS, fez uma viagem de
+    avião de três horas e transmitiu a doença a 22 pessoas. Não é esta a ideia  que
+    eu tenho de superpoder. Ao observarmos isto, percebemos também que é muito difícil
+    fazer uma triagem destas doenças. Quando uma pessoa viaja de avião, pode estar
+    doente e até estar no período de incubação, no qual a pessoa já pode ter a doença
+    mas não apresenta nenhuns sintomas, podendo, assim, transmitir a doença  a várias
+    pessoas na cabina do avião. '
+  - ' Atualmente, o sistema funciona assim: o ar entra pela parte superior e pela
+    parte lateral da cabina, como se pode ver a azul. Em seguida, o ar sai por filtros
+    bastante eficientes que eliminam 99,97% dos agentes patogénicos perto das saídas.
+    Mas, na realidade, o resultado é este padrão de mistura de fluxo de ar. Portanto,
+    se alguém espirrar, o ar fica a circular várias vezes antes de poder sair pelo
+    filtro. Então, pensei: "Isto é um problema grave". '
+  - ' Eu não tinha dinheiro para comprar um avião, então decidi construir um computador.
+    Com a dinâmica de fluídos computacional, conseguimos fazer simulações com resoluções
+    mais precisas do que realizar testes no próprio avião. Basicamente, funciona assim:
+    pego em projetos em 2D — encontrados em artigos técnicos na Internet. Pego no
+    projeto e coloco-o  num "software" de gráficos 3D para fazer uma maquete em 3D.
+    Em seguida, divido a maquete  que acabei de construir, em pedacinhos, articulando-a
+    para que o computador entenda a maquete. Depois digo ao computador por onde entra
+    e sai o ar na cabina, meto-lhe uma data de física, sento-me e espero que o computador
+    calcule a simulação. '
+  - ' Numa cabina convencional  o resultado é o seguinte: a pessoa sentada no assento
+    do meio espirra, e o "espirro" vai direto ao rosto dos outros passageiros. É muito
+    nojento. Pela frente, vemos dois passageiros sentados ao lado do passageiro central
+    que não estão nada satisfeitos. Quando olhamos de lado, vemos os agentes patogénicos
+    espalhando-se pela extensão da cabina. '
+  - ' A primeira coisa que pensei foi: "Isto é péssimo." Então realizei mais de 32
+    simulações diferentes e, no final, encontrei esta solução aqui. Chamei-lhe Global
+    Inlet Director — a patente ainda não saiu. Com isto, podemos reduzir a transmissão
+    patogénica aproximadamente 55 vezes, e aumentar a inalação de ar puro em cerca
+    de 190%. '
+  - ' Isto funciona assim: instalamos esta peça feita  de material composto nos pontos
+    de ar que já existem no avião. Portanto, a instalação é muito barata e podemos
+    fazê-la de  um dia para o outro. Basta colocar alguns parafusos e pronto. O resultado
+    é fantástico. Em vez dos problemáticos turbilhões de fluxo de ar, podemos criar
+    paredes de ar que descem entre os passageiros, criando áreas individuais de respiração. '
+  - ' Aqui vemos o passageiro central a espirrar de novo, mas, agora, conseguimos
+    empurrar o ar para baixo na direção dos filtros para ser eliminado. O mesmo acontece
+    pela lateral. Conseguimos empurrar os agentes patogénicos para baixo. Se observarmos
+    novamente o mesmo cenário '
+  - ' — mas agora com o produto instalado — vemos que o passageiro central espirra,
+    mas, desta vez, o ar é empurrado para baixo na saída antes de infetar outros passageiros.
+    Os dois passageiros sentados ao lado do passageiro do meio não estão a respirar
+    nenhum agente patogénico. Vejam também pela lateral. É um sistema muito eficiente. '
+  - ' Resumindo, com este sistema, saímos a ganhar. Quando pensamos nisto, vemos que
+    o sistema funciona  se o passageiro do meio espirrar e também se o passageiro  da
+    janela espirrar ou se o passageiro do corredor espirrar. '
+  - ' Qual é a importância desta solução para o mundo? Bem, quando observamos a simulação
+    do computador e a aplicamos na realidade, podemos ver nesta maquete 3D que montei
+    aqui, através de impressão 3D, vemos os mesmos padrões  de fluxo de ar a descer
+    diretamente para os passageiros. No passado, a epidemia de SARS custou ao mundo
+    aproximadamente 40 mil milhões de dólares. E no futuro, um surto significativo  de
+    uma doença poderá custar mais de três biliões de dólares. Antes era assim, um
+    avião precisava ser desativado durante um ou dois meses, gastavam-se milhares
+    de horas de mão de obra e vários milhões de dólares para fazer uma substituição.
+    Mas agora podemos fazer uma instalação de um dia para o outro e ver resultados
+    imediatamente. '
+  - ' Portanto, agora é apenas  uma questão de obter a certificação, fazer o teste
+    de voo, e passar por todos os processos de aprovação obrigatórios. Mas isto mostra
+    que, às vezes, as melhores soluções são as soluções mais simples. Há dois anos,
+    este projeto não teria acontecido pois a tecnologia naquela época não era avançada
+    o bastante. Mas agora com o avanço da informática e com o desenvolvimento da Internet
+    é realmente uma época de ouro para a inovação. '
+  - ' Então, a minha pergunta de hoje é: Porquê esperar? Juntos podemos construir
+    o futuro hoje. '
+  - ' Obrigado. '
+  - ' (Aplausos) '
+  pt-br:
+  - ' Levante a mão aqui quem viajou de avião ano passado. Muito bom! Bem, vocês compartilham
+    essa experiência com mais de três bilhões de pessoas por ano. E, quando colocamos
+    tantas pessoas dentro desses tubos de metal voando pelo mundo afora, às vezes
+    coisas desse tipo acontecem e, aí, temos uma epidemia. '
+  - ' Comecei a me interessar pelo assunto quando ouvi falar sobre o surto de ebola
+    do ano passado. E acontece que, apesar de o ebolar se espalhar por meio de secreções,
+    de alcance mais limitado, existem outras doenças que podem se espalhar dentro
+    de um avião. E o pior é que, ao olharmos as estatísticas, é bem apavorante. Por
+    exemplo, com o H1N1, foi um cara que decidiu viajar de avião e, num único voo,
+    espalhou a doença para outras 17 pessoas. Depois houve um outro cara, com SARS,
+    que embarcou num voo de três horas e espalhou a doença para 22 pessoas. Este superpoder
+    não é exatamente legal. '
+  - ' Vendo isso, descobrimos também que é muito difícil fazer esse controle. Pois,
+    quando alguém viaja de avião, pode já estar doente, e a doença ainda estar latente,
+    ou seja, a pessoa já está doente, mas ainda não apresenta sintomas, podendo, assim,
+    espalhar a doença para os outros passageiros. '
+  - ' Atualmente, o sistema funciona com o ar vindo do topo e da lateral da cabine,
+    como podem ver aqui em azul. Esse ar passa por filtros bem eficientes, que eliminam
+    99,97% dos patógenos próximos das saídas de ar. Ocorre, no entanto, que temos
+    um padrão de fluxo de ar misto. Assim, se alguém espirrar, o ar pode circular
+    várias vezes antes mesmo de ter a chance de passar pelo filtro. Penso que, sem
+    dúvida, esse problema é muito sério. '
+  - ' Como não tenho dinheiro para comprar um avião, decidi, então, construir um computador.
+    Acontece que, com a dinâmica computacional dos fluidos, somos capazes de fazer
+    simulações que nos dão resoluções mais altas do que se fizéssemos leituras dentro
+    do próprio avião. E isso começou, basicamente, com esses desenhos em 2D, que podem
+    ser encontrados em trabalhos técnicos na internet. Pego isso e depois coloco nesse
+    software de modelar em 3D, construindo um modelo em 3D. Daí, divido esse modelo
+    que acabei de construir em partes bem pequenas, para compatibilizar, de modo que
+    o computador possa entendê-lo melhor. Daí, informo ao computador por onde entra
+    e sai o ar da cabine, jogo um monte de física e, praticamente, sento e espero
+    o computador calcular a simulação. '
+  - ' Assim, o que se consegue com a cabine convencional é isto: vejam a pessoa do
+    meio espirrando, e dá-lhe "Respingo!" bem no rosto das pessoas. É bem nojento.
+    De frente, vemos esses dois passageiros sentados perto do passageiro do meio,
+    que não deve estar achando graça. E, quando olhamos de lado, dá para ver os patógenos
+    se espalhando ao longo da cabine. '
+  - ' Pensei de cara: "Isso não é nada bom". Assim, fiz mais de 32 simulações e, no
+    final, cheguei a essa solução aqui. Isso é o que chamo – patente ainda pendente
+    – de Global Inlet Director. Com isso, é possível reduzir a transmissão de patógenos
+    em cerca de 55 vezes e aumentar a inalação de ar fresco em cerca de 190%. '
+  - ' Então, isso na verdade funciona com a instalação desse pedaço de material composto
+    nesses lugares já existentes no avião. Portanto, o custo da instalação é baixo,
+    podendo ser feita de um dia para o outro. Tudo que temos de fazer é colocar alguns
+    parafusos lá e pronto. Os resultados que conseguimos foram absolutamente incríveis.
+    Em vez de padrões problemáticos na circulação do fluxo do ar, podemos criar paredes
+    de ar que descem entre os passageiros para criar zonas personalizadas de respiração. '
+  - ' vejam que o passageiro do meio está espirrando de novo, mas, dessa vez, fomos
+    capazes de empurrar isso para baixo, para os filtros, e eliminar. Visto de lado,
+    é a mesma coisa. Notem que conseguimos empurrar os patógenos diretamente para
+    baixo. Agora, se observarem de novo o mesmo cenário, mas com a inovação instalada,
+    vejam que o passageiro do meio espirra, mas, dessa vez, empurramos isso direto
+    para baixo, para a saída, antes que tenha a chance de infectar uma outra pessoa.
+    Vejam que os dois passageiros sentados perto do cara do meio praticamente não
+    respiram nenhum patógeno. Olhando também de lado, vê-se que é um sistema muito
+    eficiente. '
+  - ' Em resumo, com esse sistema, vamos vencer. Quando se pensa no que significa
+    isso, vemos que funciona não apenas se o passageiro do meio espirrar, mas também
+    se o passageiro da janela espirrar, ou se o passageiro do corredor espirrar. '
+  - ' E, assim, o que esta solução significa para o mundo? Bem, ao comparar a simulação
+    do computador com a vida real, podemos ver como esse modelo em 3D que construí
+    aqui, basicamente usando impressão em 3D, apresenta os mesmos padrões de fluxo
+    de ar descendo direto para os passageiros. No passado, a epidemia de SARS custou
+    ao mundo cerca de US$ 40 bilhões. E, no futuro, um grande surto da doença poderia
+    custar ao mundo mais de de US$ 3 trilhões. Antes, tínhamos de tirar um avião de
+    circulação por um ou dois meses, gastar dezenas de milhares de horas de trabalho
+    humano e diversos milhões de dólares para tentar mudar algo. Mas, agora, somos
+    capazes de instalar algo praticamente da noite para o dia e ver resultados imediatos. '
+  - ' Agora, é basicamente uma questão de conseguir a certificação, testar em voo
+    e passar por todos esses processos regulatórios de aprovação. Mas isso vem mostrar
+    que, às vezes, as melhores soluções são as mais simples. Dois anos atrás, este
+    projeto poderia não ter acontecido, simplesmente porque não havia tecnologia para
+    torná-lo possível. Mas, agora, com a computação avançada e o desenvolvimento da
+    internet, vivemos a idade de ouro da inovação. '
+  - ' E, assim, a pergunta que faço a todos vocês hoje é: por que esperar? Juntos,
+    podemos construir o futuro hoje. '
+  - ' Obrigado. '
+  - ' (Aplausos) '
+  ro:
+  - ' Ridicați mâna câți ați fost într-un avion în ultimul an? Destul de mulți. Se
+    pare că împărtășiți aceeași experiență cu mai mult de trei miliarde de oameni
+    anual. Când punem atât de mulți oameni în aceste cutii de metal care zboară peste
+    tot în lume, uneori se pot întâmpla astfel de lucruri și poți contacta o maladie
+    epidemică. '
+  - ' Am abordat tema asta întâia oară când am auzit de epidemia de Ebola anul trecut.
+    Se pare că, deși Ebola se răspândește pe căile acestea mai limitate, prin intermediul
+    fluidelor, sunt tot felul de alte boli ce se pot răspândi la bordul avionului.
+    Partea cea mai urâtă e, uitându-ne la niște statistici, că e chiar înspăimântător.
+    Cu H1N1, tipul ăsta se decide să meargă cu avionul și într-un singur zbor a răspândit
+    boala la alți 17 oameni. Un alt tip cu SARS, într-un zbor de trei ore a infectat
+    alți 22 de oameni. Nu asta e ideea mea de superputere. '
+  - ' Când ne uităm la asta aflăm și că e foarte dificil să ecranezi toate aceste
+    boli. Așadar, când cineva urcă în avion, ar putea fi bolnav și ar putea fi în
+    perioada de incubație în care poartă boala, dar nu prezintă simptome, și, la rândul
+    lor, ar putea infecta mulți alți oameni din avion. '
+  - ' Asta funcționează cam așa: chiar acum vine aer din partea de sus a cabinei și
+    din lateral, după cum vedeți indicat cu albastru. Apoi aerul iese prin aceste
+    filtre foarte eficiente care elimină 99.97% din agenții patogeni de la gura de
+    ieșire. Ce se întâmplă chiar acum e că avem acest flux de aer ce se amestecă.
+    Dacă cineva ar strănuta, s-ar crea aceste vârtejuri repetate de aer înainte ca
+    măcar să treacă prin filtru. Așa că m-am gândit: evident, asta e o problemă foarte
+    serioasă. '
+  - ' Nu aveam banii necesari să merg să-mi cumpăr un avion, așa că m-am decis să
+    construiesc un calculator. Cu o dinamică computerizată a fluidelor, putem să creăm
+    aceste simulări care ne oferă date mai concludente decât dacă am face măsurători
+    în avion. Funcționează astfel: începeți cu aceste desene bidimensionale – le găsiți
+    în lucrări tehnice pe Internet. Iau unul și-l pun în acest software de modelare
+    3D, construind acel model 3D. Apoi divid modelul pe care l-ați văzut în aceste
+    părți mici, țesându-l ca să-l poată înțelege computerul mai bine. Apoi comunic
+    computerului pe unde intră și iese aerul din cabină, adaug multă fizică și stau
+    acolo și aștept să calculeze computerul simularea. '
+  - ' Ce obținem cu cabina convențională e asta: veți observa că persoana din mijloc
+    strănută, și „pleosc!” – fix în nasul celorlalţi. E cam dezgustător. Din față,
+    îi veți observa pe cei doi pasageri care stau lângă pasagerul din mijloc și nu
+    se distrează prea bine. Când ne uităm la cel din lateral, veți observa agenții
+    patogeni răspândindu-se în lungul cabinei. '
+  - ' Primul gând a fost: „Asta nu-i bine.” Am făcut mai bine de 32 de simulări diferite
+    și, în final, am găsit soluția asta. Este – aștept patentarea – „Global Inlet
+    Director”. Cu acesta putem reduce transmiterea patogenilor de aproximativ 55 de
+    ori și putem crește inhalarea de aer proaspăt cu aproximativ 190%. '
+  - ' Iată cum funcționează: instalăm bucata asta de material compozit în locurile
+    care deja există în avion. Deci e foarte rentabil să-l instalezi și putem să o
+    facem peste noapte. Tot ce trebuie să facem e să punem câteva șuruburi și am terminat.
+    Rezultatele sunt uimitoare. În loc să avem acei curenți de aer problematici, putem
+    crea acești pereți de aer care coboară între pasageri, creând zone de respirație
+    personalizate. '
+  - ' Observați că pasagerul din mijloc strănută din nou, dar de data aceasta,  putem
+    să direcționăm asta înspre filtre pentru a fi eliminat. Același lucru și în lateral,
+    veți vedea că putem să împingem agenții patogeni în jos. Dacă vă uitați din nou
+    la același scenariu, însă cu această inovație instalată, vedeți cum pasagerul
+    din mijloc strănută, iar de data aceasta, împingem asta direct în orificiul de
+    ieșire înainte să infecteze pe altcineva. Vedeți că cei doi pasageri care stau
+    lângă tipul din mijloc practic nu inhalează patogeni deloc. Să ne uităm și din
+    lateral, vedeți un sistem foarte eficient. '
+  - ' Pe scurt, cu acest sistem am câștigat. Când ne uităm la ce înseamnă asta, vedem
+    că nu funcționează numai dacă strănută tipul din mijloc, ci și dacă strănută cel
+    de la geam sau cel de lângă interval. '
+  - ' Cu această soluție, ce înseamnă asta pentru lume? Când ne uităm la asta de la
+    simularea pe calculator la viața reală, putem vedea cu acest model 3D pe care
+    l-am construit, în primul rând folosind printarea 3D, putem vedea aceiași curenți
+    de aer ajungând direct la pasageri. În trecut, epidemia de SARS a însemnat un
+    cost global de 40 miliarde de dolari. În viitor, un focar al unei boli grave ar
+    putea costa lumea mult mai mult de 3 trilioane de dolari. Înainte trebuia să scoți
+    un avion din uz pentru una sau două luni, să petreci zeci de mii de oră de muncă
+    și să cheltui milioane de dolari, încercând să schimbi ceva. Acum însă, putem
+    să instalăm ceva peste noapte și să vedem rezultatele imediat. '
+  - ' Trebuie doar să obținem certificatul, să facem testele de zbor și să trecem
+    prin toate procesele de autorizare reglementară. Asta demonstrează că,  uneori,
+    cele mai bune soluții sunt cele mai simple. În urmă cu doi ani proiectul ăsta
+    nu ar fi fost posibil, pentru că tehnologia de atunci nu era suficientă. Acum,
+    însă, cu tehnica avansată de calcul și cu cât de dezvoltat e Internetul, e chiar
+    epoca de aur pentru inovații. '
+  - ' Întrebarea pe care v-o pun astăzi este: de ce să așteptăm? Împreună putem construi
+    viitorul astăzi. '
+  - ' Mulțumesc. '
+  - ' (Aplauze) '
+  ru:
+  - ' Поднимите руки те, кто за последний год летал на самолёте. Отлично! Значит,
+    практически каждый из вас встречался с тем, через что проходят ежегодно три миллиарда
+    людей. И когда мы загоняем сотни людей в эти банки из металла с крыльями, летающие
+    по всему миру, иногда происходят вещи, которые приводят к вспышке эпидемии. '
+  - ' Впервые я заинтересовался этим вопросом, когда услышал о прошлогодней вспышке
+    Эболы. Оказывается, Эбола распространяется в ограниченном пространстве посредством
+    больших капель, однако существует масса других заболеваний, способных распространяться
+    в самолёте. Нас ждёт плохая новость, если мы посмотрим на цифры. Довольно страшно.
+    Так получилось с гриппом H1N1, когда один парень решил полететь на самолёте и
+    за один рейс он заразил 17 пассажиров. Другой парень с атипичной пневмонией, полёт
+    которого длился 3 часа, заразил ещё 22 пассажира. Я бы не назвал это полезной
+    сверхспособностью. '
+  - ' Когда я начал заниматься этой проблемой, выяснилось, что заранее очень сложно
+    выявить наличие этих заболеваний. Если кто-то на борту самолёта уже болен и его
+    болезнь находится в инкубационном периоде, когда заболевание уже есть, но не проявляет
+    свои симптомы, то эти люди могут заразить других пассажиров в салоне. '
+  - ' И вот как это происходит: воздух поступает сверху салона и сбоку салона, как
+    показано синими стрелками. Затем воздух проходит через крайне эффективные фильтры,
+    которые на выходе уничтожают 99,97% патогенов. Однако существует модель смешивания
+    воздушных потоков. Так что, если кто-то чихнёт, этот воздух будет какое-то время
+    циркулировать по салону перед тем, как пройти через фильтр. Мне это показалась
+    довольно серьёзной проблемой. '
+  - ' У меня не было денег, чтобы пойти и купить самолёт, поэтому я решил собрать
+    компьютер. Оказалось, что с помощью вычислительной гидрогазодинамики мы можем
+    создать определённые модели, которые дают более точные данные, чем при проведении
+    экспериментов непосредственно на борту самолёта. Всё начинается с этих 2D-чертежей,
+    которые можно найти в технических статьях в Интернете. Я их беру, и с помощью
+    ПО для 3D-моделирования строю 3D-модель. Затем я разбиваю эту модель на небольшие
+    элементы для того, чтобы компьютеру было легче с ней разобраться. Затем я сообщаю
+    компьютеру, куда поступает и откуда выходит воздух в кабине, добавляю немного
+    физики, сижу и жду, когда компьютер закончит расчёт модели. '
+  - ' В результате выясняется, что если в салоне самолёта человек со среднего кресла
+    чихает, то микробы летят прямо в лица соседей. Это просто отвратительно. Как вы
+    видите, эти два пассажира, сидящие по бокам, страдают от такого соседства. Если
+    посмотреть на этот процесс сбоку, то заметно, что патогены разлетаются по всей
+    длине салона самолёта. '
+  - ' Первое, что я подумал: «Это плохо». Я провёл более 32 различных компьютерных
+    симуляций и в конце концов пришёл к данному решению. Назвал его — ожидаю оформления
+    патента —  «общий направитель воздуха». С его помощью можно сократить передачу
+    патогенов приблизительно в 55 раз и увеличить потребление свежего воздуха приблизительно
+    на 190%. '
+  - ' Он работает следующим образом. Воздухозаборник, состоящий из композитных материалов,
+    устанавливается в уже существующие в самолёте точки. Установка обходится недорого,
+    и это можно сделать за одну ночь. Сюда нужно прикрутить пару шурупов — и готово.
+    И результаты потрясающие. Вместо этих проблемных воздушных завитков мы создаём
+    воздушные стены между пассажирами, создавая зоны личного дыхания. '
+  - ' Как видно, пассажир в середине снова чихает, но на этот раз этот «чих» направляется
+    к фильтрам для очистки. То же самое видно сбоку. Заметьте, что патогены сразу
+    направляются вниз. Если снова взглянуть на этот же сценарий после установки этого
+    изобретения, видно, что при чихании пассажира посередине его выделения сразу направляются
+    вниз к воздухозаборнику, не позволяя им заразить других людей. Видно, что сидящие
+    рядом пассажиры практически не вдыхают патогены. Посмотрите на это со стороны,
+    это очень эффективная система. '
+  - ' Короче, с этой системой мы в выигрыше. Если посмотреть на значимость системы,
+    то очевидно, она работает не только в случае с пассажиром посередине, но и с чихающим
+    пассажиром рядом с иллюминатором или у прохода. '
+  - ' Какую пользу обществу приносит данное решение? Когда мы переходим от компьютерной
+    симуляции  к реальной жизни, на этой 3D-модели, которую я создал с помощью 3D-принтера,
+    видны те же самые  воздушные потоки, идущие вниз прямо на пассажиров. В прошлом
+    эпидемия атипичной  пневмонии стоила миру порядка 40 миллиардов долларов. А в
+    будущем массовая вспышка заболевания  может стоить миру более 3 триллионов долларов.
+    Раньше самолёт выводили из эксплуатации на один или два месяца, тратили десятки
+    тысяч человеко-часов и несколько миллионов долларов, чтобы что-либо поменять.
+    Но сейчас у нас есть возможность установить что-то полезное за ночь и сразу увидеть
+    результат. '
+  - ' И сейчас дело за получением сертификата для этого изобретения, тестирования
+    в полётах и получения одобрения  от регулирующих органов. Всё это говорит о том,
+    что иногда простые решения являются самыми лучшими. Два года назад этот проект
+    был бы немыслим, потому что для него не было подходящей технологии. Но сегодня
+    у нас есть продвинутые компьютерные системы и развитый Интернет — это золотая
+    эра для инноваций. '
+  - ' Я хочу задать всем вам вопрос:  зачем нам ждать? Вместе мы можем построить будущее
+    уже сегодня. '
+  - ' Спасибо. '
+  - ' (Аплодисменты) '
+  sk:
+  - ' Prosím zodvihnite ruku tí, ktorí ste za posledný rok cestovali lietadlom? Dobre.
+    Pravdou je, že tak urobí tri miliardy ľudí každý rok. A keď sa v týchto kovových
+    trubiciach lietajúcich ponad celý svet vystrieda také množstvo ľudí, niekedy sa
+    stanú takéto veci a dôjde k epidémii. '
+  - ' Prvýkrát som sa k tomuto dostal, keď som minulý rok počul o epidémii eboly.
+    A ukazuje sa, že aj keď sa ebola šíri pri kontakte s telesnými tekutinami, a teda
+    má obmedzený rozsah, existuje mnoho iných ochorení, ktoré sa môžu šíriť v kabíne
+    lietadla. Najhoršie je, že ak sa pozrieme na čísla, je to dosť strašidelné. Napríklad
+    človek, ktorý sa rozhodol ísť do lietadla s vírusom H1N1, v priebehu jedného letu
+    nakazil 17 ľudí. A iný chlapík, s vírusom SARS, počas trojhodinového letu nakazil
+    22 ľudí. To nie je úplne moja predstava o nadprirodzenej schopnosti. '
+  - ' Ak sa na to pozrieme, zistíme, že je veľmi ťažké tieto ochorenia vopred odhaliť.
+    Takže ak niekto nasadá do lietadla, možno už je nakazený a ak je v inkubačnej
+    dobe, už má ochorenie, ktorým môže nakaziť ostatných ľudí v lietadle, aj keď sám
+    zatiaľ nemá príznaky. '
+  - ' Funguje to tak, že teraz prichádza vzduch z vrchu kabíny a z bokov kabíny, ako
+    je vyznačené modrou. A tento vzduch sa dostáva von, cez veľmi efektívne filtre,
+    ktoré eliminujú 99,97 % patogénov. Deje sa však to, že vzduch sa mieša. Takže
+    ak si niekto kýchne, tento vzduch sa točí dookola ešte niekoľkokrát predtým, ako
+    má vôbec šancu prejsť cez filter. A tak som si pomyslel, že toto je skutočne vážny
+    problém. '
+  - ' Nemal som peniaze na to, aby som si kúpil lietadlo, tak som sa rozhodol zostrojiť
+    počítač. Ukázalo sa, že s využitím výpočtov dynamiky tekutín môžeme vytvoriť simulácie,
+    ktoré nám dávajú lepšie riešenia, než aké by sme získali meraniami v lietadle.
+    V podstate to funguje tak, že začnete s 2D kresbami – tieto nájdete v technických
+    článkoch na internete. Tie som vložil do 3D modelovacieho softvéru, ktorý vytvoril
+    3D model. A tento vytvorený model som potom rozdelil na malé časti tak, aby ich
+    mohol počítač lepšie pochopiť. A potom som počítaču povedal, kde sa vzducho dostáva
+    do a z kabíny, pridal trochu fyziky a v podstate sedel a čakal, kým počítač vytvoril
+    simuláciu. '
+  - ' Takže čo sa deje v bežnej kabíne: všimnite si osoba v strede kýchne, a „Šplech!"
+    – šíri sa to do tváre ľudí okolo. Je to dosť nechutné. Všimite si, že tí dvaja
+    cestujúci, vedľa cestujúceho v strede, si to veľmi neužívajú. A keď sa na to pozrieme
+    z boku, všimneme si, že patogény sa šíria celou kabínou lietadla. '
+  - ' Prvé, čo som si pomyslel, bolo: „Toto nie je dobré." Takže som postupne spravil
+    32 rôznych simulácií a nakoniec som prišiel na riešenie. Nazývam to – prebieha
+    patentovanie – globálny vstupný smerovač. S ním je možné zredukovať prenos patogénov
+    asi 55-násobne a zvýšiť nasávanie čerstvého vzduchu asi o 190 percent. '
+  - ' V skutočnosti to funguje tak, že nainštalujeme túto súčiastku z kompozitného
+    materiálu do už existujúcich miest v lietadle. Takže je to cenovo výhodné a vieme
+    to spraviť rýchlo. Stačí len pár skrutiek a hotovo. A výsledky, ktoré sme dosiahli,
+    sú úplne úžasné. Namiesto problematického vírenia vzduchu vieme vytvoriť tieto
+    vzduchové steny medzi pasažiermi a vytvoríme tak osobné dýchacie zóny. '
+  - ' Takže všimnite si, že cestujúci v strede si znova kýchol, ale tentoraz sme schopný
+    efektívne nasmerovať vzduch do filtrov na odstránenie. To isté z boku, všimnite
+    si, že vieme nasmerovať patogény priamo dole. Takže ak sa znova pozrieme na rovnaký
+    scenár, po nainštalovaní nášho zariadenia, pasažier v strede si kýchne a tentoraz
+    to presmerujeme nadol, do filtrov, ešte skôr ako by sa mohli nakaziť iní cestujúci.
+    Takže dvaja cestujúci hneď vedľa muža v strede nevdýchnu žiadne patogény. Keď
+    sa na to pozriete z boku, sledujete veľmi efektívny systém. '
+  - ' A v skratke, s týmto systémom vyhráme. Ak si uvedomíme, čo to znamená, vidíme,
+    že to funguje nielen, ak si kýchne cestujúci v strede, ale tiež ak si kýchne cestujúci
+    pri okne alebo cestujúci v uličke. '
+  - ' Takže čo toto riešenie znamená pre svet? Ak to vezmeme od počítačovej simulácie
+    do reálneho sveta, môžeme na tomto 3D modeli, ktorý som vytvoril použitím 3D tlačiarne,
+    vidieť to isté prúdenie vzduchu smerom nadol k pasažierom. V minulosti nás epidémia
+    SARSu stála asi 40 miliárd dolárov. A v budúcnosti by nás vypuknutie veľkej epidémie
+    mohlo stáť 3 bilióny dolárov. Predtým bolo potrebné vylúčiť lietadlo z prevádzky
+    asi na dva mesiace, stráviť desiatky tisíc hodín a niekoľko miliónov dolárov,
+    aby sme sa pokúsili niečo zmeniť. Ale teraz sme schopní urobiť zmeny zo dňa na
+    deň a okamžite vidieť výsledky. '
+  - ' Teraz je to už len otázka certifikácie, otestovania počas letu a absolovania
+    všetkých procesov schvaľovania. A to len dokazuje, že niekedy tie najlepšie riešenia
+    sú zároveň tými najjednoduchšími. Pred dvomi rokmi by tento projekt nemal šancu,
+    pretože neexistovali technológie, ktoré by to umožnili. Ale dnes, s pokročilejšími
+    výpočtami a rozvojom internetu žijeme v zlatej ére inovácií. '
+  - ' A tak sa vás dnes všetkých pýtam: „Načo čakať?" Spolu môžme budovať našu budúcnosť
+    už dnes. '
+  - ' Ďakujem. '
+  - ' (potlesk) '
+  sl:
+  - ' Prosim, dvignite roke, če ste v preteklem letu leteli z letalom. Kar precej
+    vas je. No, to izkušnjo ste v enem letu delili z več kot tremi milijardami ljudi.
+    In ko toliko ljudi v teh kovinskih ceveh leti po vsem svetu, se lahko zgodi kaj
+    takega in pride do izbruha bolezni. '
+  - ' Stvar me je začela zanimati, ko sem lani slišal za izbruh ebole. Izkazalo se
+    je, da čeprav se ebola širi po omejenih območjih in preko večjih kapljic, obstajajo
+    druge vrste bolezni, ki se lahko širijo po letalski kabini. Če pogledamo nekaj
+    številk, je slika precej strašljiva. Recimo virus H1N1, neki tip je z njim šel
+    na letalo in na enem samem letu se je okužilo še 17 ljudi. Pa še nekdo, okužen
+    s SARS-om, ta je na triurnem letu okužil še 22 drugih. Temu jaz ne bi rekel dobra
+    nadnaravna moč. '
+  - ' Ob tem ugotovimo tudi, da je te bolezni težko vnaprej ugotoviti. Ko se torej
+    nekdo vkrca na letalo, je morda bolan in je morda v fazi, ko ima bolezen, a ne
+    kaže simptomov, lahko pa bolezen širi na druge ljudi v letalu. '
+  - ' To se zgodi zato, ker v kabino prihaja zrak z vrha in s strani, kot vidite v
+    modrem. Ven pa gre skozi te zelo učinkovite filtre, ki odstranijo 99,97% patogenov
+    blizu odvodov. Trenutno to poteka po vzorcu mešanja zračnih tokov. Če nekdo kihne,
+    bo zrak večkrat zaokrožil, preden bo odstranjen skozi filter. Pomislil sem: to
+    je precej resen problem. '
+  - ' Nisem imel denarja, da bi kupil letalo, zato sem sestavil računalnik. Izkazalo
+    se je,  da z računalniškim modelom toka lahko poustvarimo simulacije, ki so natančnejše,
+    kot če bi izvedli meritve v letalu samem. To deluje tako: začnemo z dvodimenzionalnimi
+    risbami, te so na voljo na tehničnih papirjih na internetu. Vzamem jih in uporabim
+    program 3D modela, prav zgradim ta model. Potem pa ga razdelim na majcene delce,
+    na tak način, da lahko računalnik bolje razume model. Računalniku povem, kje zrak
+    pride v kabino in kje gre ven, dodam ščepec fizike in čakam, da računalnik napravi
+    simulacijo. '
+  - ' V običajni kabini dobimo tale rezultat: če oseba v sredini kihne, "pljusk",
+    to gre naravnost v obraze drugih. Precej ogabno. Od spredaj, kot vidite, potnika
+    poleg tistega v sredini ne uživata najbolj. Poglejmo s strani: patogeni se širijo
+    vzdolž kabine. '
+  - ' Pomislil sem: "To ni dobro." Zato sem napravil preko 32 različnih simulacij
+    in prišel do te rešitve. To je - če bo patentirano -  usmerjevalec vhoda zraka.
+    S tem lahko prenos patogenov zmanjšamo za 55-krat, vnos svežega zraka pa povečamo
+    za okoli 190 odstotkov. '
+  - ' To dosežemo tako, da tale kos materiala namestimo na ta že obstoječa mesta  na
+    letalu. To je cenovno učinkovito in se lahko napravi čez noč. Potrebujemo samo
+    nekaj vijakov. Rezultati pa so neverjetni. Namesto težavnih vrtincev zraka dobimo
+    te zračne zidove, ki pridejo med potnike in ustvarijo osebne cone dihanja. '
+  - ' Tule sredinski potnik spet kihne, a tokrat lahko zrak potisnemo navzdol do filtrov
+    za izhod. Enako velja s strani, vidite, kako patogene potisnemo navzdol. Poglejmo
+    isti scenarij z vstavljeno inovacijo, ko sredinski potnik kihne, gre zrak naravnost
+    do izhoda in nima časa okužiti drugih. Potnika poleg osebe v sredini ne vdihujeta
+    praktično nobenih patogenov. Poglejmo s strani, vidite, kako učinkovit je sistem. '
+  - ' Skratka, s tem sistemom zmagamo. Poglejmo, kaj to pomeni. Ne deluje samo, če
+    kihne potnik v sredini. Deluje tudi pri potniku ob oknu ter tistem ob prehodu. '
+  - ' Kaj ta rešitev pomeni za svet? Če to prenesemo z računalnika v realnost, lahko
+    s tem 3D modelom tule, z uporabo 3D tiskanja, ugotovimo enak vzorec  zračnih tokov
+    navzdol do potnikov. Epidemija SARS-a je svet stala okoli 40 milijard dolarjev.
+    V prihodnje bi velik izbruh bolezni svet lahko stal preko tri bilijone dolarjev.
+    V preteklosti je bilo treba letalo vzeti iz prometa za mesec ali dva, porabiti
+    na desettisoče delovnih ur in več milijonov dolarjev, da bi kaj spremenili. Zdaj
+    lahko novost namestimo čez noč in takoj vidimo rezultate. '
+  - ' Zdaj mora poskus dobiti certifikat, biti testiran med letom, iti skozi postopke
+    odobritve. A to je primer, da so včasih najboljše rešitve najbolj enostavne. Še
+    pred dvema letoma se ta projekt ne bi zgodil, ker ga tehnologija ne bi dovoljevala.
+    Z naprednim programiranjem ter z razvojem interneta pa smo v zlati dobi inovacij. '
+  - ' Zato vas vprašam: Zakaj čakamo? Skupaj lahko zgradimo prihodnost že danes. '
+  - ' Hvala. '
+  - ' (aplavz) '
+  sr:
+  - ' Možete li dići ruke - koliko vas u ovoj prostoriji je ove godine bilo u avionu?
+    To je prilično dobro. Pa, ispostavlja se  da to iskustvo delite sa više od tri
+    milijarde ljudi svake godine. A kada stavimo toliko ljudi u ove metalne cevi koje
+    lete širom sveta, ponekad mogu da se dese ovakve stvari i dobijete epidemiju zaraze. '
+  - ' Ova me je tema zapravo zainteresovala kada sam prošle godine čuo za epidemiju
+    ebole. Ispostavlja se da, iako se ebola širi kroz puteve koji su više ograničeni
+    prostorom i imaju veće tragove, postoje druge vrste bolesti koje se mogu širiti
+    kroz kabinu aviona. Najgore je to što kada pogledamo neke od ovih brojki, prilično
+    je strašno. Sa H1N1, bio je tip koji je odlučio da se ukrca na avion i za vreme
+    jednog leta zapravo je preneo zarazu na 17 drugih ljudi. A bio je i drugi tip
+    sa SARS-om, koji je uspeo da se ukrca na let od tri sada i prenese zarazu na 22
+    drugih ljudi. To nije moja zamisao velike supersile. '
+  - ' Kada ovo pogledamo, takođe otkrivamo da je veoma teško unapred pregledati ljude
+    na ove bolesti. Kada se neko zapravo ukrca na let, ta osoba može biti bolesna
+    i zapravo može da bude u latentnom periodu gde može da ima zarazu ali da ne pokazuju
+    simptome, a zauzvrat može da raširi zarazu na mnoge druge ljude u kabini. '
+  - ' To funkcioniše tako što imamo vazduh koji ulazi  sa vrha kabine i sa strana
+    kabine, kao što vidite u plavoj boji. Vazduh takođe onda izlazi kroz ove veoma
+    efikasne filtere koji eliminišu 99,97% patogena blizu izlaza. Trenutno se ipak
+    dešava da imamo ovaj šablon mešanja toka vazduha. Tako da, kada bi neko kinuo,
+    taj vazduh bi se zakovitlao nekoliko puta pre nego što uopšte dobije priliku da
+    izađe kroz filter. Pomislio sam, ovo je očigledno veoma ozbiljan problem. '
+  - ' Nisam imao novac da odem i kupim avion, pa sam odlučio da napravim kompjuter.
+    Zapravo se ispostavlja da računarskom dinamikom fluida možemo da stvorimo ove
+    simulacije koje nam daju veće rezolucije nego kada bi fizički otišli i uzeli uzorke
+    iz aviona. Ovo zapravo funkcioniše tako što počnete 2D crtežima koji lebde po
+    internetu u tehničkoj dokumentaciji. Uzimam to i onda ga stavljam u ovaj program
+    za 3D modelovanje i zaista napravim taj 3D model. Onda taj model koji sam napravio
+    izdelim na komadiće i u suštini ga zgnječim tako da ga kompjuter bolje razume.
+    Onda kompjuteru kažem gde vazduh ulazi i izlazi u kabini, ubacim fiziku u kombinaciju
+    i sedim i čekam dok kompjuter izračuna simulaciju. '
+  - ' Sa uobičajenom kabinom zapravo dobijamo ovo: primetićete da osoba u sredini
+    kija, i desi se "Fljas!" - odleti pravo u lica ljudima. Prilično je odvratno.
+    Sa prednje strane, primetićete dva putnika koja sede pored onog u sredini i nije
+    baš da se provode. A kada to pogledamo sa strane, ptimetićete i te patogene kako
+    se šire duž kabine. '
+  - ' Prvo što sam pomislio bilo je: "Ovo nije dobro". Prvo sam sproveo  više od 32
+    različite simulacije i na kraju sam došao do ovog rešenja. Ovo nazivam - podneo
+    sam zahtev za patent, Globalni upravljač ulaza. Ovim možemo da smanjimo prenos
+    patogena za oko 55 puta, a da povećamo udisanje svežeg vazduha za oko 190 procenata. '
+  - ' Ovo funkcioniše tako što ugradimo ovaj komad kompozitnog materijala u ova postojeća
+    mesta u avionu. Veoma je ekonomično za ugradnju i može se uraditi direktno za
+    jedan dan. Sve što treba da uradimo je da zavrnemo par šrafova i spremni ste za
+    put. Rezultati koje dobijamo zaista su neverovatni. Umesto problematičnih šablona
+    vazdušnog toka koji krivuda, možemo stvoriti ove vazdušne zidove koji se spuštaju
+    između putnika i stvaraju lične prostore za disanje. '
+  - ' Primetićete da putnik u sredini ovde opet kija, ali ovog puta to možemo efektivno
+    da suzbijemo do filtera radi eliminisanja. Isto je i sa strane, primetićete da
+    možemo direktno da suzbijemo patogene. Ako opet pogledate isti scenario, ali sa
+    ugrađenom inovacijom, primetićete da srednji putnik kija a ovoga puta to suzbijamo
+    direktno do izlaza pre nego što dobije priliku da zarazi nekog drugog. Primetićete
+    dva putnika koja sede pored tipa u sredini i dišu skoro bez ikakvih patogena.
+    Pogledajte to i sa strane, vidite veoma efikasan sistem. '
+  - ' Ukratko, ovim sistemom pobeđujemo. Kada pogledamo šta ovo znači, vidimo da ovo
+    ne samo da funkcioniše ako srednji putnik kine, nego i ako putnik do prozora kine
+    ili ako kine putnik do prolaza. '
+  - ' Šta ovo rešenje znači za svet? Kada pogledamo ovo od kompjuterske simulacije
+    do stvarnog života, sa ovim 3D modelom koji sam napravio koristeći 3D štampanje,
+    možemo videti iste te šablone vazduha koji se spušta, sve do putnika. U prošlosti,
+    epidemija SARS-a koštala je svet oko 40 milijardi dolara. A u budućnosti, velika
+    epidemija zaraze zapravo bi svet mogla da košta više od tri biliona dolara. Pre
+    ste morali da avion povučete van službe na jedan do dva meseca, provedete desetine
+    hiljada sati i nekoliko miliona dolara pokušavajući da promenite nešto. Sada možemo
+    da ugradimo nešto skoro preko noći i da odmah vidimo rezultate. '
+  - ' Sada je zaista stvar u tome da se ovo sertfikuje, testira na letovima, i da
+    se prođu svi procesi pravila odobravanja. Ovim se samo pokazuje da su nekada najbolja
+    rešenja ona najjednostavnija. Pre samo dve godine, ovaj projekat se ne bi desio,
+    prosto zato što tadašnja tehnologija to nije podržavala. Ali sadašnjim naprednim
+    izračunavanjem i razvijenošću interneta, ovo je zaista zlatno doba inovacija. '
+  - ' Pitanje koje želim da postavim danas je, zašto da čekamo? Zajedno možemo ostvariti
+    budućnost danas. '
+  - ' Hvala vam. '
+  - ' (Aplauz) '
+  sv:
+  - ' Kan ni räcka upp händerna - Hur många av er här i rummet har varit på ett flygplan
+    det senast året? Det är bra. Det visar sig att ni delar den erfarenheten med över
+    tre miljarder människor varje år. Och när vi stoppar in så många människor i metallrör
+    som flyger över hela världen, kan ibland något sånt här hända och en sjukdomsepidemi
+    uppstår. '
+  - ' Jag kom in på det här ämnet när jag hörde talas om Ebola-utbrottet förra året.
+    Och det visar sig att även om Ebola sprids via kortare sträckor, som stora droppar
+    gör, så finns det många andra slags sjukdomar som kan spridas i flygplanskabiner.
+    Det värsta är att när vi tittar på statistiken kring detta, så blir det ganska
+    läskigt. I fallet med H1N1 bestämde sig en kille för att gå på ett plan, och genom
+    en enda flygning spred han faktiskt sjukdomen till 17 andra personer. Sen var
+    det en annan kille som hade SARS, som under en tre timmar lång flygning spred
+    sjukdomen till 22 andra människor. Det är inte vad jag kallar en bra superkraft. '
+  - ' När vi sätter oss in i detta ser vi också att det är mycket svårt att hitta
+    de här sjukdomsfallen i förväg. När någon går ombord på ett plan kan de vara sjuka
+    och de kan mycket väl vara i inkubationsperioden då de faktiskt har sjukdomen
+    men inte har utvecklat några symtom än, och de kan i sin tur sprida sjukdomen
+    till många andra människor i kabinen. '
+  - ' Sättet som det fungerar på nu är att luft kommer in ovanifrån i kabinen och
+    från sidorna, som ni ser i blått. Och luften passerar ut genom dessa mycket effektiva
+    filter som eliminerar 99,97 procent av smittämnen som finns nära ventilerna. Men
+    vad som händer nu är att luften rör sig runt i ett visst mönster. Så om någon
+    faktiskt skulle nysa skulle den luften virvla runt flera gånger innan den ens
+    har en chans att passera ut genom filtret. Så jag tänkte: Det här är tydligen
+    ett ganska allvarligt problem. '
+  - ' Jag hade inte råd att bara köpa ett plan så jag byggde en dator istället. Det
+    visade sig att vi med hjälp av digital luftflödesberäkning kunde skapa simuleringar
+    som ger oss en tydligare bild än man kan få genom att fysiskt vara i ett flygplan
+    och göra mätningar. Det går till så att man börjar med såna här 2D-ritningar -
+    de här finns överallt i tekniska uppsatser på internet. Jag tar den och lägger
+    in den i en 3D-mjukvara, och skapar en 3D-modell. Sen delar jag upp modellen,
+    som jag just byggt, i många små delar, gör ett nätverk av den så att datorn kan
+    förstå den bättre. Sen berättar jag för datorn var luften passerar in och ut  genom
+    kabinen, kastar in en del fysik och sitter sen och väntar tills datorn har räknat
+    ut simuleringen. '
+  - ' Vad vi får fram i en vanlig kabin, är det här: Du märker att någon nyser, och
+    "Plask!" så landar det rakt i människors ansikten. Det är ganska äckligt. Framifrån
+    ser man att de här två passagerarna som sitter bredvid passageraren i mitten inte
+    har det så roligt. Och om vi tittar på det från sidan ser man även att smittämnena
+    sprider sig längs kabinen. '
+  - ' Det första jag tänkte var, "Det här är inte bra". Så jag genomförde mer än 32
+    simuleringar och till slut kom jag fram till den här lösningen. Det här är vad
+    jag i patentansökan kallar Global inflödesriktare. Men den kan vi minska spridningen
+    av smittämnen till en 55 gånger så låg siffra och öka inandningen av frisk luft
+    med 190 procent. '
+  - ' Det fungerar så att vi installerar en modul gjord av kompositmaterial på platser
+    som redan finns i planet. Så de kan installeras kostnadseffektivt under en enda
+    natt. Allt vi behöver göra är att sätta in ett par skruvar här, så är det klart.
+    Resultaten vi får är helt fantastiska. Istället för att vi får problem med luft
+    som virvlar kan vi skapa en slags luftväggar som åker ner mellan passagerarna
+    och skapar personliga andningszoner. '
+  - ' Ni ser att passageraren i mitten nyser igen, men den här gången trycks smittan
+    ner på ett effektivt sätt till filtren för att elimineras. Och samma sak från
+    sidan, ni kan se att vi direkt kan trycka ner smittämnena. Om vi tar en titt på
+    samma scenario när vi har innovationen installerad och ni ser att mellanpassageraren
+    nyser, och den här gången trycker vi ner den mot utblåsventilen innan den får
+    en chans att smitta några fler människor. Som ni märker blir de två passagerna
+    som sitter bredvid honom i mitten nästan inte utsatta för några smittämnen alls.
+    Ta en titt på det från det här hållet också. Man ser ett väldigt effektivt system. '
+  - ' Kort sagt är det ett system där vi vinner. Om vi tittar på vad detta betyder,
+    är det att det inte bara fungerar om passageraren i mitten nyser, utan också om
+    en passagerare vid fönstret nyser eller om någon i gången gör det. '
+  - ' Vad betyder då lösningen för världen? Om vi förflyttar blicken från datorsimuleringen
+    till det verkliga livet, kan vi se att 3D-modellen som jag byggt här, genom att
+    använda 3D-skrivare, ger samma luftflöde som åker nedåt, rakt mot passagerarna.
+    SARS-epidemin har kostat världen ungefär 40 miljarder dollar. Och i framtiden
+    skulle ett stort epidemiutbrott kunna kosta världen mer än tre biljoner dollar.
+    Förut var det så att man blev tvungen att ta ett plan ur trafik i en eller två
+    månader, lägga ner tiotusentals mantimmar och flera miljoner dollar för att försöka
+    förändra något. Nu kan vi installera något under natten och se resultat på en
+    gång. '
+  - ' Nu handlar det om att ta det här fram till certifiering, flygtester, och gå
+    igenom processen att bli godkänd av alla myndigheter. Men det visar bara att ibland
+    är den bästa lösningen den enklaste lösningen. Och för bara två år sen hade det
+    här projektet inte kunnat genomföras, för tekniken hade inte klarat av det då.
+    Men nu, med mjukvara som är tillräckligt avancerad och vårt utvecklade internet
+    har vi kommit in i en gyllene tidsålder för innovation. '
+  - ' Så frågan jag ställer till er alla idag är: Varför vänta? Tillsammans kan vi
+    bygga framtiden idag. '
+  - ' Tack. '
+  - ' (Applåder) '
+  te:
+  - ' మీ చేతుల్ని నాకోసారి చూపిస్తారా ఇందులో ఎందరు గత ఏడాది  విమాన ప్రయాణం చేసారు
+    మంచి సంఖ్యే మీతోబాటు మూడు బిలియన్ ల మందికి ఇది తెలిసి వుండాలి చాలా మంది విమానప్రయాణం
+    చేస్తున్నప్పుడు అవి ప్రపంచమంతా ప్రయాణిస్తున్నందున కొన్ని సార్లు ఇలాంటివి జరుగుతుంటాయి
+    మీకో అంటువ్యాధి సోకవచ్చు '
+  - ' గత ఏడాది ఎబోలా గురించి విన్నప్పుడే నాకీ ఆలోచన వచ్చింది అది ఇలా రూపు మార్చుకుంది
+    ఎబోలా ఇలా వ్యాపించినా , ఎక్కువభాగం వేరే మార్గాల ద్వారా కూడా వస్తాయి ఇలాంటి వ్యాధులు
+    విమానాల క్యాబిన్ల ద్వారానూ విస్తరించవచ్చు విచారించాల్సిన విషయమేంటంటే , గణాంకాలను
+    పరిశీస్తే భయం వేస్తుంది అలాగే H1N1 గురించి కూడా ఈ అబ్బాయి విమానంలో వెళ్ళాలని నిర్ణయించుకున్నాడు
+    ఒకసారి విమానంలో ప్రయాణించినప్పుడు వ్యాథి వస్తే ఆది 17 మంది ఇతర ప్రయాణీకులకు సోకవచ్చు
+    అలాంటిది ఈ అబ్బాయి SARS జబ్బుతో 3 గంటల పాటు విమానంలో ప్రయాణించాడు దాంతో 22మంది
+    కి ఈ వ్యాధి సోకింది నా ఉద్దేశ్యం అదొక్కటే కాదు దూరదృష్టితో '
+  - ' గమనిస్తే మనకే అర్థమౌతుంది ఇలాంటి వ్యాథులను కనిపెట్టడం చాలా కష్ఠమని అయితే ఒక
+    వ్యక్తి విమానంలో వెళ్తునప్పుడు అస్వస్థులు కావచ్చు వారిలో వ్యాధి లక్షణాలు నిగూఢంగా
+    వుండవచ్చు ఆ దశలోనే వ్యాధి సోకివుండవచ్చు లక్షణాలు ప్రస్ఫుటంగా కన్పించవు అలా వారితో
+    వ్యాధి క్యాబిన్ లోని మరెందరికో వ్యాపిస్తుంది '
+  - ' అదెలా సాధ్యం అంటే, ఇప్పుడు మనకు గాలి క్యాబిన్ పైవైపు నుండి వస్తుంది మీరు చూస్తున్నట్లుగా
+    ప్రక్కలనుండి కూడా వస్తుంది ఆ గాలి సమర్థవంతమైన ఫిల్టర్ల ద్వారా బయటికి వెళ్తుంది
+    ఈ ఫిల్టర్లు 99.97% సూక్ష్మ క్రిములను వెళ్ళే దారిలో వదిలేస్తాయి అప్పుడేం జరుగుతుందంటే
+    మనకు వచ్చే గాలి, వెళ్లే గాలితో కలుస్తుంది ఎవరైనా తుమ్మితే ఆ గాలి ఆ ఫిల్టర్ల ద్వారా
+    వెళ్ళడానికి ముందు అదే ప్రాంతాల్లో సుళ్ళు తిరుగుతుంది నా దృష్టి లో ఇది తీవ్రమైన
+    సమస్య '
+  - ' బయటికి వెళ్లి , ఇంకో విమానం కొనేంత డబ్బు నావద్దలేదు ఐతే నేనో కంప్యూటర్ ను సిధ్దం
+    చేసుకోవాలనుకున్నాను ఇది కంప్యుటేషనల్ ఫ్లూయిడ్ డైనమిక్స్ సహాయంతో రూపొందుతుంది ఈ
+    కృత్రిమ వాతావరణాన్ని మనం అనుకరించగలం అది విమానంలో తీసుకున్న రీడింగ్ లకంటే ఖచ్చితమైన
+    వివరాలను అందించగలదు ఇదెలా పనిచేస్తుందంటే,ఈ 2D డ్రాయింగ్ ల రూపంలో అది మొదలవుతుంది
+    ఇవే టెక్నికల్ పేపర్ల రూపంలో అంతర్జాలం లో చెక్కర్లు కొడుతున్నాయి దాన్ని తీసుకుని
+    3D మోడలింగ్ సాఫ్ట్ వేర్ లో ప్రవేశపెట్టాను నిజంగా3D మోడల్ ని సృష్టించాను దాన్నిఅతి
+    చిన్నభాగాలుగాతయారుచేసి జోడించాను కంప్యూటర్ కు అనుసంధానం అయ్యేలా  కృషి చేసాను తర్వాత
+    కంప్యూటర్ కు భౌతిక శాస్త్ర  సూత్రాల ద్వారా క్యాబిన్ లో గాలి ఎలా ప్రసరిస్తోందో
+    ఆ డేటా ఇచ్చాను వాస్తవానికి కంప్యూటర్ ఈ అనుకరణను  లెక్కించే వరకు నేను అక్కడే వేచి
+    వున్నాను '
+  - ' సాంప్రదాయిక క్యాబిన్ ద్వారా జరిగేదేంటంటే మధ్యలో ఉన్న వ్యక్తి తుమ్మడాన్ని మీరు
+    గమనించేవుంటారు ఆ తుంపరలు చుట్టుప్రక్కలున్నవారి మొహాలపై చిందుతాయి అది చిరాకు పుట్టిస్తుంది
+    ముందున్న ఆ ఇద్దరు ప్రయాణీకులను మీరు గమనించారా మధ్యవ్యక్తికి ఇరుప్రక్కలున్నారే
+    వారు వారిని విసిగించే వ్యవహారం ఇది పక్కనుంచి దీన్ని పరిశీలించినప్పుడు సూక్ష్మ
+    క్రిములు క్యాబిన్ అంతా వ్యాపించడం గమనించి వుంటారు '
+  - ' మొదటగా నాకొచ్చిన ఆలోచన ఇది బాగాలేదు అని నిజానికి 32 కంటే ఎక్కువ రకాల పరిస్థితులపై
+    అధ్యయనం చేసాను అంతిమంగా ఈ పరిష్కారాన్ని కనుగొన్నాను ఇదే నేను చెప్పే — పేటెంట్
+    పెండింగ్—- గ్లోబల్ ఇన్ లెట్ డైరెక్టర్ దీనితో మనం సూక్ష్మ క్రిముల వ్యాప్తిని అరికట్టగలం
+    దాదాపు 55 రెట్లు గా 190 % తాజాగాలిని పీల్చేలా చేయగలం '
+  - ' నిజానికి ఇదెలా పని చేస్తుందంటే మిశ్రమ పదార్థాలతో తయారైన ఈ సాధనాన్ని  మనం అమర్చాలి
+    విమానంలోని కొన్ని ప్రదేశాలలో అమర్చడం చాలా చవకైనది దీన్ని రాత్రికిరాత్రే పూర్తిచేయవచ్చు
+    మనం చేయాల్సిందేంటంటే 2 స్కృూలు దానిలో బిగిస్తే చాలు పనిచేస్తుంది వచ్చే ఫలితాలు
+    మాత్రం అద్భుతంగా వుంటాయి కలుషిత మైన గాలి సుళ్ళు తిరగకుండా మనం గాలితో గోడలను సృష్టిస్తాం
+    అది ప్రయాణీకుల మధ్యవచ్చి చేరుతుంది వ్యక్తి గతంగా గాలి పీల్చేలా చేస్తుంది '
+  - ' మధ్య సీట్ లోని వ్యక్తి మళ్ళీ తుమ్ముతున్నాడు గమనించండి ఈ సారి మనం దాన్ని క్రిందికి
+    జరపడం ద్వారా బయటికి నెట్టే ఫిల్టర్లను చేరేలా చేస్తాం అలాగే ప్రక్కల నుంచి కూడా
+    ఆసూక్ష్మ క్రిములను నేరుగా కిందికి పంపడాన్ని మీరు గమనించండి ఇదే దృశ్యాన్ని మీరు
+    మరో సారి చూడండి కొత్త పరికరాన్ని అమర్చాక మధ్య వ్యక్తి తుమ్మడాన్ని మీరు చూసారా
+    ఈ సారి దాన్ని నేరుగా outlet వైపుగా  క్రిందికి తోస్తున్నాము ఇతరులకు సోకే కంటే ముందుగానే
+    మధ్యవ్యక్తికి ప్రక్కలనున్న ప్రయాణీకులను మీరు గమనించారా వారు స్వచ్చమైన గాలిని పీలుస్తున్నారు
+    దీన్నే ప్రక్కలనుంచి కూడా చూడండి సమర్థమైన ప్రక్రియను మీరు చూసారు '
+  - ' క్లుప్తంగా చెప్పాలంటే ఈ ప్రక్రియతో  మనం గెలిచాము దీని అర్థమేంటని పరిశీలిస్తే
+    మనం చూసే దాంట్లో మధ్యవ్యక్తి  తుమ్మినప్పుడు మాత్రమే కాకుండా కిటికీ వద్దఉన్న ప్రయాణీకుడు
+    తుమ్మినా ఇది పనిచేస్తోంది నడిచే దారి ప్రక్కనున్న వారు తుమ్మినాకూడా '
+  - ' ఇలాంటి పరిష్కారాలతో ప్రపంచానికేం లాభం? మనం దీన్ని గమనిస్తే కంప్యూటర్ అనుకరణనుండి
+    నుండి నిజజీవితానికి నేను సృష్టించిన ఈ 3D మాడల్ ద్వారా మనం దీన్ని చూడగలం 3D ముద్రణ
+    వాడడం దీనిలో తప్పనిసరి అవే గాలి విన్యాసాలు క్రిందికి రావడాన్ని మనం చూస్తున్నాం
+    నేరుగా ప్రయాణీకుల దగ్గరికి గతంలో వచ్చిన SARS అంటువ్యాధి ప్రపంచంతో 40 బిలియన్ డాలర్లను
+    ఖర్చు పెట్టించింది భవిష్యత్తులో కూడా పెద్ద వ్యాధి వ్యాపిస్తే ప్రపంచంతో  ఇలాంటి
+    ఖర్చు చేయిస్తుంది 3 ట్రిలియన్ కంటే ఎక్కువ డాలర్లను ముందుగా పనికిరాని ఒక విమానంలో
+    దీన్ని ప్రయోగించి చూడాలి ఒకటి లేదా రెండు నెలల కోసం పదుల ,వేల మానవ పనిగంటలతో బాటు  ఎన్నో
+    మిలియన్ల డాలర్లను ఖర్చుపెట్టి ఒక అంశాన్ని మార్చాలంటే కానీ నేడు మనం అవసరమైనదాన్ని
+    రాత్రికిరాత్రే అమర్చగలం వెంటనే ఫలితాలను కూడా తెలుసుకోగలం '
+  - ' ఇప్పుడిది నమోదు చేయించాల్సిన అంశం మాత్రమే విమానంలో పరీక్షించడం అంటే అమలులో వున్న
+    అనుమతులను పొందడానికే నిజం చెప్పాలంటే కొన్నిసార్లు శ్రేష్ఠమైన పరిష్కారాలు చాలా
+    సరళమైనవి కూడా ఉంటాయి గడచిన 2 సం . వరకు కూడా ఈ ప్రాజెక్ట్ పూర్తయ్యేది కాదు కేవలం
+    సాంకేతికసహకారం లేనందువల్లే కాని నేడు కంప్యూటర్ సామర్థ్యం పెరిగింది మన అంతర్జాలం
+    ఎంతో అభివృధ్ధి చెందింది కూడా నూతన ఆవిష్కరణలకిది ఒక స్వర్ణయుగం '
+  - ' మిమ్మల్ని నేడొక ప్రశ్న అడగాలనుకుంటున్నాను ఆలస్యమెందుకు? మనందరం కలిసి నేడే భవిష్యత్తును
+    నిర్మిద్దాం '
+  - ' కృతజ్ఞతలు '
+  - ' ( కరతాళధ్వనులు ) '
+  th:
+  - ' ขอผมดูมือหน่อยครับ มีใครในห้องนี้บ้างครับ  ที่เดินทางโดยเครื่องบินในปีที่ผ่านมา
+    ค่อนข้างดีครับ ครับ มันกลายเป็นว่า พวกคุณมีประสบการณ์ร่วมกัน กับคนอีกกว่าสามพันล้านคนทุกปี
+    และเมื่อพวกเราเอาคนจำนวนมาก เข้าไปอยู่ในกระเปาะเหล็กเหล่านี้ ที่บินไปทั่วโลก บางครั้ง
+    อะไรประมาณนี้เกิดขึ้น ก็จะเกิดการระบาดของโรค '
+  - ' จริง ๆ แล้วผมเริ่มสนใจเรื่องแบบนี้เป็นครั้งแรก เมื่อผมได้ยินเรื่องเกี่ยวกับ
+    การระบาดของอีโบลาปีที่แล้ว และมันกลายเป็นว่า แม้ว่าอีโบลาแพร่กระจายไป ในแบบที่จำกัดขอบเขตมากกว่า
+    ผ่านสารคัดหลั่งหลัก ๆ มันยังมีโรคแบบอื่น ๆ อีก ที่สามารถแพร่กระจายไป ในห้องโดยสารของเครื่องบินได้
+    สิ่งที่แย่ที่สุดก็คือ  เมื่อเรามองดูตัวเลขเหล่านี้ มันค่อนข้างน่ากลัว ฉะนั้น ชายผู้นี้ที่มีเอชวันเอ็นวัน
+    (H1N1) ตัดสินใจที่จะขึ้นเครื่องบิน และการบินขาเดียว ก็สามารถแพร่เชื้อโรคให้กับคนอื่นได้
+    17 คน และจากนั้น ก็ยังมีอีกคนที่มีซาร์ (SARS) ที่โดยสารโดยการบินสามชั่วโมง และแพร่กระจายเชื้อโรคให้คนอีก
+    22 คน นั่นไม่ใช่พลังเหนือมนุษย์ในความคิดของผม '
+  - ' เมื่อเรามองดูสิ่งนี้ สิ่งที่เรายังได้พบ คือว่า มันยากมาก ที่จะตรวจเชื้อโรคเหล่านี้ได้ก่อน
+    ฉะนั้น เมื่อใครสักคนขึ้นไปบนเครื่องบิน พวกเขาอาจป่วย และพวกเขาที่จริงอาจอยู่ในระยะฟักตัว
+    ระยะที่พวกเขามีเชื้อโรค แต่ไม่แสดงอาการใด ๆ และพวกเขาก็อาจจะเป็นผู้แพร่กระจายโรค
+    ให้กับคนอื่น ๆ ในห้องโดยสารได้ '
+  - ' มันเป็นไปได้ก็เพราะว่าตอนนี้ พวกเราได้รับอากาศเข้ามา จากส่วนบนของห้องโดยสาร
+    และจากด้านข้างของห้องโดยสาร และจากนั้น อากาศก็ออกไป ผ่านตัวกรองที่มีประสิทธิภาพสูงเหล่านี้
+    ซึ่งกำจัด 99.97 เปอร์เซ็นต์ ของเชื้อก่อโรคใกล้กับช่องทางออก สิ่งที่เกิดขึ้นก็คือ
+    เรามีรูปแบบการไหลเวียนอากาศที่ปนเป ฉะนั้น ถ้าใครสักคนจามขึ้นมา อากาศนั้นก็จะวนไปวนมาอยู่หลายรอบ
+    ก่อนที่มันจะมีโอกาสผ่านเข้าไปในตัวกรอง ผมก็เลยคิดว่า นี่มันเป็นปัญหา ที่ค่อนข้างเอาเรื่อง '
+  - ' ผมไม่ได้มีเงินที่จะซื้อเครื่องบินได้ ฉะนั้น ผมเลยตัดสินใจที่จะสร้างคอมพิวเตอร์แทน
+    มันกลายเป็นว่า ด้วยพลศาสตร์ของไหลเชิงคอมพิวเตอร์ สิ่งที่เราสามารถทำได้คือ การสร้างการจำลอง
+    ที่ให้ความคมชัดกับเรามากขึ้น กว่าสิ่งที่กำลังเป็นไปเชิงกายภาพ และโดยหลักแล้ว ด้วยวิธีการนี้เอง  คุณเริ่มต้นจาก
+    ภาพวาดสองมิติ สิ่งเหล่านี้ล่องลอยไปมา ในกระดาษทางเทคนิคไปทั่วอินเทอร์เน็ต ผมนำมันมา
+    และจากนั้น นำมันใส่เข้าไปในโปรแกรมแบบจำลองสามมิติ เป็นการสร้างแบบจำลองสามมิตินั้นขึ้นมา
+    และจากนั้น ผมแบ่งแบบจำลอง ที่ผมเพิ่งสร้างขึ้นเป็นสามส่วนเล็ก ๆ พูดง่าย ๆ คือ บดมันเป็นชิ้น
+    เพื่อที่คอมพิวเตอร์จะได้เข้าใจมันง่ายขึ้น และจากนั้น ผมบอกคอมพิวเตอร์ว่า อากาศเข้าและออกจากห้องโดยสารทางไหน
+    โยนกฎทางฟิสิกส์เข้าไป และก็แค่นั้นอยู่ตรงนั้น รอจนกว่าคอมพิวเตอร์ จะทำการคำนวนการจำลองดังกล่าว '
+  - ' อันที่จริง สิ่งที่เราได้ จากห้องโดยสารทั่วไป ก็คือ คุณจะสังเกตเห็นคนตรงกลางกำลังจาม
+    และมันก็ "กระจาย" มันกระเด็นเข้าใส่หน้าคน ค่อนข้างน่าขยะแขยงนะครับ จากด้านหน้า
+    คุณจะสังเกต เห็นผู้โดยสารสองคนนั่น ที่นั่งอยู่ติดกับผู้โดยสารตรงกลาง ไม่ได้มีความสุขสักเท่าไร
+    และเมื่อเรามองดูพวกเขาจากด้านข้าง คุณจะยังสังเกตเห็นเชื้อโรคแพร่กระจาย ไปตามความยาวของห้องโดยสาร '
+  - ' สิ่งแรกที่ผมคิดก็คือ "นี่มันไม่ดีเลย" อันที่จริงผมได้กำกับการจำลอง มากกว่า 32
+    แบบ และในที่สุด ผมก็ได้ข้อสรุปที่อยู่ตรงนี้ นี่คือสิ่งที่ผมเรียกว่า เครื่องตรวจจับ
+    ช่องทางเข้าสากล ที่อยู่ระหว่างการจดสิทธิบัตร ด้วยสิ่งนี้ เราจะสามารถ ลดการแพร่กระจายของเชื้อโรค
+    ได้ถึงประมาณ 55 เท่า และเพิ่มการหายใจเอาอากาศบริสุทธิ์เข้าไป ได้ถึงประมาณ 190
+    เปอร์เซ็นต์ '
+  - ' มันทำงานอย่างนี้ครับ เราจะติดตั้งชื้นส่วนต่าง ๆ ของเครื่อง ในจุดที่มีอยู่แล้วบนเครื่องบิน
+    ฉะนั้น มันจึงถูกมากในการติดตั้ง และเราสามารถทำได้ภายในคืนเดียว ที่เราต้องทำก็คือ
+    ติดตั้งตะปูเกลียวสองสามตัว ก็เป็นอันเสร็จ และผลลัพท์ที่เราได้ก็น่าทึ่งมาก แทนที่จะเห็นรูปแบบการไหลวนของอากาศ
+    ที่เป็นปัญหา เราสามารถสร้างกำแพงอากาศ ที่ลงมาอยู่ระหว่างผู้โดยสาร เพื่อสร้างบริเวณหายใจส่วนบุคคล '
+  - ' ฉะนั้น คุณจะสังเกตว่า ผู้โดยสารตรงกลาง ที่กำลังจามอีกแล้ว แต่ครั้งนี้ เราสามารถที่จะดันมันลง
+    ได้อย่างมีประสิทธิภาพ ไปยังตัวกรองสำหรับการกำจัด และเช่นเดียวกันจากด้านข้าง คุณจะสังเกตว่าเราสามารถดันเชื้อโรคเหล่านี้
+    ลงไปได้โดยตรง ฉะนั้น ถ้าคุณดูอีกทีตอนนี้ ในเหตุการณ์เดียวกัน แต่มีนวัตกรรมนี้อยู่
+    คุณจะสังเกตว่าผู้โดยสารตรงกลางจาม และในครั้งนี้ เราจะสามารถดันมันลง ตรงไปยังช่องทางออก
+    ก่อนที่มันจะมีโอกาสสัมผัสกับคนอื่น คุณจะสังเกตเห็นว่าผู้โดยสารสองคน ที่นั่งติดอยู่กับคนตรงกลาง
+    กำลังหายใจโดยไม่มีเชื้อโรคเลย ลองดูที่ด้านข้างก็เช่นกัน คุณจะเห็นว่ามันเป็นระบบที่มีประสิทธิภาพ '
+  - ' และสั้น ๆ ก็คือ ด้วยระบบนี้ เราจะเป็นผู้ชนะ เมื่อเรามองหาความหมายจากมัน สิ่งที่เราได้
+    ไม่ใช่เพียงแต่ว่ามันจะได้ผล เมื่อผู้โดยสารตรงกลางจาม แต่มันยังได้ผลเมื่อผู้โดยสารริมหน้าต่างจาม
+    หรือถ้าผู้โดยสารที่นั่งติดทางเดินจาม '
+  - ' และด้วยการแก้ปัญหานี้ มันมีความหมายอย่างไรต่อโลกงั้นหรือ ครับ เมื่อเรามองดูสิ่งนี้
+    จากการจำลองทางคอมพิวเตอร์ในชีวิตจริง เราสามารถเห็นจากแบบจำลองสามมิติ ที่ผมสร้างขึ้น
+    โดยใช้เครื่องพิมพ์สามมิติเป็นหลัก เราสามารถเห็นรูปแบบการไหลอากาศแบบเดียวกัน เคลื่อนลงมา
+    ถึงผู้โดยสาร ในอดีต การแพร่ระบาดของซาร์ ทำโลกของเราเสียเงินไป ประมาณ 4 แสนล้านดอลลาร์
+    และในอนาคต การระบาดครั้งใหญ่ของโรค อาจทำให้โลกของเราต้องเสียเงิน มากกว่า สามล้านล้านดอลลาร์
+    ฉะนั้นก่อนหน้านี้ คุณก็คงจะต้องหยุด การให้บริการการบิน เป็นเวลาหนึ่งถึงสองเดือน
+    ใช้เวลาการทำงานเป็นหมื่น ๆ ชั่วโมง และเงินสองสามล้านดอลลาร์ ในการพยายามเปลี่ยนแปลงอะไรบางอย่าง
+    แต่ตอนนี้ เราสามารถติดตั้งอะไรบางอย่างได้ ภายในคืนเดียว และเห็นผลทันตา '
+  - ' ฉะนั้น ตอนนี้มันก็เป็นแค่การทำให้สิ่งนี้ ได้รับการรับรอง ทดสอบในการบิน และผ่านกระบวนการรับรอง
+    ตามข้อบังคับทั้งหมดเหล่านี้ แต่มันยังแสดงอีกว่า บางครั้งการแก้ปัญหาที่ดีที่สุด
+    คือการแก้ปัญหาที่ง่ายที่สุด และสองปีก่อน หรือก่อนหน้านั้น โครงการแบบนี้ไม่อาจเกิดขึ้นได้
+    เพราะเทคโนโลยีในตอนนั้นยังไม่รองรับมัน แต่ตอนนี้ ด้วยคอมพิวเตอร์ที่ทันสมัย และการพัฒนาไปของอินเทอร์เน็ต
+    มันเป็นยุคทองของนวัฒกรรมจริง ๆ '
+  - ' และคำถามที่ผมถามทุกท่านในวันนี้คือ จะรอทำไม พวกเราสามารถสร้างอนาคตด้วยกันได้ในวันนี้ '
+  - ' ขอบคุณครับ '
+  - ' (เสียงปรบมือ) '
+  tr:
+  - ' Elleri görebilir miyim? — Bu salonda kaçınız geçtiğimiz yıl uçağa bindi? — Bu
+    oldukça iyi. Anlaşılan o ki; bu deneyimi her yıl üç milyardan fazla insanla  paylaşıyorsunuz.
+    Ve bu kadar çok insanı dünyayı dolaşan '
+  - ' metal borulara koyduğumuzda, bazen şunlar olabiliyor ve salgın hastalığa kapılabiliyorsunuz. '
+  - ' Aslında bu konu ilk defa, geçen yıl Ebola salgınını duyduğumda  dikkatimi çekti.
+    Ebola hastalığının yayılması her ne kadar sınırlı mesafede ve  büyük-damlacık
+    yollarında olduğu ortaya çıksa da, başka türlü bir çok hastalık uçak kabininde
+    yayılabilir. En kötü tarafı ise, bazı sayılara göz attığımızda, bu oldukça korkutucu.
+    H1N1 ile, uçağa binmeye karar veren bir adam söz konusu tek bir uçuşla aslında
+    hastalığı 17 başka  kişiye bulaştırdı. Ve sonra SARS''lı olan  başka bir adam
+    üç saatlik bir uçuşta gitmeyi başarıp 22 kişiye hastalığını bulaştırdı. Büyük
+    bir süper güç fikrim tam olarak bu değil. '
+  - ' Buna baktığımızda ise, bulduğumuz şey, bu hastalıkların ön-izleme  yapılmasının
+    çok zor oluşu. Yani, bir kişi uçağa bindiğinde hasta olabilir ve hastalığının
+    gizil döneminde olan, ve hiç bir belirti göstermeyen ama aslında hastalığı taşıyan
+    biri, kabindeki bir çok kişiye hastalığını bulaştırabilir. '
+  - ' Bu sistem şimdi aslında şöyle çalışıyor; kabinin üst ve yan tarafından mavi
+    olarak gördüğünüz içeri giren havamız var. Ve sonra bu hava,  hava çıkışlarına
+    yakın patojenlerin %99.97''ini ortadan kaldıran  çok verimli filtrelerden dışarı
+    çıkar. Şu anda olan ise, elimizde, karışmış hava  akımı modeli var. Yani eğer
+    bir kişi hapşurursa, o hava, hava filtresinden çıkma  şansı bulamadan etrafta
+    bir kaç kez döner. Ben, açıkça, bunun çok ciddi  bir problem olduğunu düşündüm. '
+  - ' Dışarı çıkıp bir uçak alacak kadar  param yoktu, bunun yerine bir bilgisayar
+    yapmaya karar verdim. Fiziksel olarak uçağa binmek ve okuma yapmaktan daha yüksek
+    çözünürlük sağlayan simülasyonları, hesaplamalı akışkanlar mekaniği ile  yapabildiğimiz
+    ortaya çıktı. Esasen bu işe 2D çizimlerle başlarsınız — bu çizimler, teknik bildirilerde
+    ve internette çok fazla. Bunu aldım ve 3D modelleme  yazılımına koydum, gerçekten
+    3D modeli inşa ettim. Ve bu modeli çok küçük parçalara böldüm, bilgisayarın daha
+    iyi anlaması için aslında gözenekler oluşturdum. Daha sonra, bilgisayara havanın
+    kabine nereden geldiğini ve çıktığını söyledim, içine de bir çok fizik attım.
+    ve oturup bilgisayarın simülasyonu hesaplamasını bekledim. '
+  - ' Alışılagelmiş bir kabin ile  aslında elde ettiğimiz şu: ortadaki yolcunun  hapşurduğunu
+    göreceksiniz, ve "Hapşu!" — direk  insanların yüzüne gidiyor. Bu oldukça iğrenç.
+    Ön taraftan, ortadaki yolcunun yanında oturan iki yolcunun pek iyi vakit geçirmediğini
+    göreceksiniz. Ve yan görünümden baktığımızda, patojenlerin kabin uzunluğu boyunca  yayıldığını
+    da fark edeceksiniz. '
+  - ' İlk düşündüğüm şey şuydu; "Bu hiç iyi değil" Böylece 32''den fazla simülasyon
+    yaptım ve sonunda şöyle bir çözüme ulaştım. Ben buna —patenti beklemede—  Küresel
+    Giriş Direktörü diyorum. Bununla patojen bulaşmasını 55 kere azaltabiliyoruz,
+    ve temiz hava solumasını %190 oranında artırıyoruz. '
+  - ' Aslında bu iş, kompozit malzemeden  oluşan bu parçanın uçakta hali hazırda var
+    olan  yerlere takılmasıyla olur. Yani, kurulumu çok uygun maliyetli ve bunu bir
+    gecede yapabiliyoruz. Tek yapmamız gereken bir kaç vida açmak  ve işlem tamam.
+    Ve aldığımız sonuçlar kesinlikle şaşırtıcı. Bu problemli dönen hava akımı yerine,
+    yolcuların arasına inen hava duvarları yaratarak, kişiselleştirilmiş nefes alma
+    bölgeleri oluşturabiliriz. '
+  - ' Ortada oturan yolcu yine hapşuruyor fakat bu sefer, bunları yok etmek için filtrelere
+    etkin olarak itebiliyoruz. Ve aynı şey yan görünümde de, bu patojenleri direk
+    olarak aşağı  itebildiğimizi farkedeceksiniz. Bu yeniliğin yerleştirildiği aynı
+    senaryoya tekrar bakarsanız, ortada oturan yolcu hapşurduğunda başka insanlara
+    hastalık bulaştırma  şansı bulmadan onu direk olarak hava  çıkışlarına doğru itiyoruz.
+    Farkedeceksiniz ki, ortada oturan adamın  yanındaki iki yolcu sanal olarak  patojensiz
+    hava solumakta. Yan taraftan baktığımızda da çok etkin bir sistem görülür. '
+  - ' Kısacası, bu sistem ile biz kazanıyoruz. Bunun ne anlama geldiğine bakacak olursak,
+    görülen o ki bu, sadece ortada  oturan yolcu hapşurduğunda değil aynı zamanda
+    pencere ya da  koridor koltuğunda oturan yolcuların hapşurmasında da işe yarıyor. '
+  - ' Peki bu çözüm, dünya için ne ifade ediyor? Bilgisayar simülasyonundan gerçek
+    hayata baktığımızda, temelde 3D yazıcı kullanarak buraya inşa ettiğim 3D model
+    ile aynı hava akış modelinin direk yolculara doğru indiğini görebiliriz. Geçmişte,
+    SARS salgınının gerçekte dünyaya maliyeti yaklaşık 40 milyar dolardır. Ve gelecekte,
+    büyük bir hastalığın patlak  vermesi, dünyaya üç trilyon dolardan fazlaya mal
+    olabilir. Eskiden, bir uçağı bir-iki ay  kadar hizmet dışı bırakmanız gerekliydi,
+    bazı şeyleri değiştirmeye çalıştığınızda binlerce işçilik saati ve milyonlarca
+    dolar para harcanırdı. Fakat şimdi ise bunları  bir gecede yükleyebiliyor ve sonuçlarını
+    hemen görebiliyoruz. '
+  - ' Ve şimdi bunu, sertifika yoluyla almak uçuş testi, ve tüm bu düzenleyici makam  onayları
+    süreci söz konusu. Fakat bu gerçekten şunu gösteriyor ki; bazen en iyi çözümler
+    en basit çözümlerdir. İki yıl öncesinde bile, bu proje gerçekleşemezdi, çünkü
+    o zaman ki teknoloji bunu desteklemiyordu. Fakat şimdi, ileri hesaplamalarla ve
+    gelişmiş internetimizle yenilik yapmak, gerçekten altın çağında. '
+  - ' Ve bu yüzden bugün size şunu soruyorum: Neden bekleyelim? Geleceği, bugün birlikte
+    inşa edebiliriz. '
+  - ' Teşekkürler. '
+  - ' (Alkışlar) '
+  vi:
+  - ' Cho tôi biết bằng cách giơ tay có bao nhiêu người trong phòng này  đã đi máy
+    bay trong năm qua? Khá tốt. Hóa ra các bạn chia sẻ trải nghiệm đó với hơn 3 tỷ
+    người mỗi năm. Và khi chúng ta có quá nhiều người  trong những ống kim loại này
+    bay đi khắp thế giới, thỉnh thoảng,  những việc như vậy có thể xảy ra và dịch
+    bệnh bị lây truyền. '
+  - ' Thực sự đầu tiên tôi thích chủ đề này khi tôi nghe về sự bùng nổ dịch Ebola  năm
+    ngoái. Và thật ra là mặc dù Ebola lan truyền  ở phạm vi khá giới hạn này, bằng
+    con đường nhỏ những giọt lớn, có tất cả các loại bệnh khác ở đây có thể lây truyền
+    trong khoang máy bay. Điều tệ hơn, khi chúng ta nhìn vào vài con số, ta thật thấy
+    kinh khủng. Với H1N1, Người này đã quyết định lên máy bay và chỉ là chuyến bay
+    một chiều thực sự đã truyền căn bệnh cho17 người khác. Và với một người khác bị  dịch
+    bệnh SARS, người đã lên được một chuyến bay trong 3 giờ và lây truyền dịch bệnh
+    cho 22 người khác. Đó không phải chính xác ý tôi về một sức mạnh siêu cường. '
+  - ' Khi ta nhìn điều nầy,  ta cũng nhận ra là rất khó để sàn lọc trước những  căn
+    bệnh này. Khi một người thực sự bước lên máy bay, họ có thể bị bệnh và thật ra
+    họ trong giai đoạn ủ bệnh nghĩa là họ bị bệnh thật nhưng chưa có các triệu chứng,
+    và họ có thể, lần lượt truyền bệnh cho nhiều người khác trong khoang. '
+  - ' Sự lây truyền này thật sự xảy ra vì hiện nay chúng ta nhận không khí từ  trên
+    nóc khoang và từ bên hông khoang, nó màu xanh Và sau đó, không khí đó đi qua những
+    bộ lọc rất hiệu quả sẽ lọc đến 99.97 phần trăm  mầm bệnh ở gần các lối đi. Nhưng
+    mà hiện nay là ta có mô hình của luồng khí trộn lẫn. Bởi thế, nếu người nào đó
+    hắt hơi, thì luồng khí đó bị xoáy quanh nhiều lần trước khi nó có cơ hội đi qua
+    bộ lọc. Nên tôi đã nghĩ: rõ ràng, đây là  một vấn đề rất nguy hiểm, '
+  - ' Tôi đã không có tiền để đi mua một chiếc máy bay, nên tôi quyết định tạo  một
+    máy tính thay thế. Quả thật, nó chứng minh rằng với  những chuyển động chất được
+    cài đặt điều ta có thể làm  là tạo ra những sự mô phỏng này để cho ta những giải
+    pháp tốt hơn so với việc đích thân lên máy bay và  đọc chỉ số trên máy bay. Vì
+    thế về cơ bản, ta  có thể bắt đầu làm việc với những bản vẽ 2D này— Những cái
+    này có đầy trong  bản vẽ kỹ thuật trên Internet. Tôi lấy và đặt vào phần mềm  mô
+    hình 3D này, thật sự tạo ra mô hình 3D đó. Sau đó tôi chia mô hình  mà tôi vừa
+    ghép từ những mảnh nhỏ xíu này, về cơ bản khớp với nhau để máy tính có thể dễ
+    hiểu hơn. Sau đó tôi cho máy tính biết nơi không khí trong khoang ra vào, cho
+    vào đó những tính chất vật lý và ngồi đó đợi cho đến khi  máy tính tính toán sự
+    mô phỏng. '
+  - ' Thực sự những gì chúng ta thu thập được trong khoang thông thường là: bạn chú
+    ý người ở giữa hắt hơi và ta "-vụt" - nó bay ngay vào mặt của mọi người Thật là
+    ghê tởm. Ở hàng ghế đầu, bạn lưu ý hai hành khách đó ngồi kế hành khách ở giữa
+    không có gì gọi là thoải mái. Và khi bạn nhìn bên hông bạn cũng sẽ thấy những
+    mầm bệnh phát tán dọc theo chiều dài khoang. '
+  - ' Điều đầu tiên tôi nghĩ là "Việc này không tốt" Nên tôi đã thực hiện hơn 32 mô
+    phỏng khác nhau và cuối cùng, tôi đã đi đến giải pháp này ngay đây. Đây là cái
+    tôi gọi -bằng sáng chế chưa được cấp - "Giám đốc Lối vào Toàn cầu" Bằng cách này,
+    ta có thể giảm  việc lan truyền mầm bệnh khoảng 55 lần, và gia tăng sự hít thở
+    không khí trong lành khoảng 190%. '
+  - ' Để thực hiện điều này ta lắp đặt miếng ghép bằng vật liệu hỗn hợp này vào những
+    chổ đã có sẵn trên máy bay. Vì vậy việc lắp đặt rất đỡ tốn chi phí và ta có thể
+    làm trong vòng một đêm. Tất cả ta phải làm là vặn vài con ốc vào đó là xong. Và
+    kết quả ta nhận được hoàn toàn gây kinh ngạc. Thay vì có những luồng không khí
+    rắc rối thổi tới lui này, ta có thể tạo những bức tường khí thế này len giữa giữa
+    những hành khách để tạo vùng khí riêng cho từng cá nhân. '
+  - ' Nên bạn sẽ thấy hành khách ở giữa hắt hơi lần nữa, nhưng lần này, ta có thể
+    dễ dàng đẩy xuống chổ bộ lọc để loại bỏ. Và cũng vậy với bên hông, bạn sẽ thấy
+    ta có thể trực tiếp đẩy những mầm bệnh này xuống. Nếu giờ bạn nhìn lại cùng cảnh
+    này nhưng với hệ thống mới lắp đặt, bạn sẽ chú ý lúc hành khách ở giữa hắt hơi,
+    lần này ta đẩy thẳng nó xuống lối thoát khí trước khi nó có cơ hội lây lan người
+    khác. Nếu bạn thấy hai hành khách ngồi cạnh người ở giữa có thể thấy đang hít
+    thở khí  không mầm bệnh. Hãy nhìn bên hông, bạn thấy một hệ thống hiệu quả. '
+  - ' Tóm lại, với hệ thống này, chúng ta chiến thắng. Nếu ta nhìn kỷ chúng ta sẽ
+    thấy là nó không chỉ  hiệu quả khi hành khách ở giữa hắt hơi, mà còn khi hành
+    khách ngồi gần cửa sổ hắt hơi hay cả lúc hành khách ở dãy giữa hắt hơi. '
+  - ' Với giải pháp này, nó có ý nghĩa cho  thế giới như thế nào? Khi chúng ta nhìn
+    nó từ mô phỏng máy tính vào đời thực ta có thể thấy với mô hình 3D này  mà tôi
+    làm, cơ bản sử dụng việc in ấn 3D, chúng ta có thể thấy những luồng không khí
+    giống nhau đi xuống tới ngay hành khách. Trong quá khứ, dịch bệnh SARS thực sự
+    đã tiêu tốn cả thế giới khoảng 40 tỷ đô la Mỹ. Và trong tương lai, một sự bùng
+    nổ dịch bệnh lớn có thể làm cả thế giới tiêu tốn vượt qua con số 3 nghìn tỉ Đô
+    la. Lúc trước, ta đã quen với việc máy bay  ngưng dịch vụ trong một đến hai tuần,
+    tốn ngàn giờ làm làm việc và vài triệu đô la để cố thay đổi điều gì đó. Nhưng
+    bây giờ, chúng ta có thể lắp đặt thiết bị chỉ trong một đêm về thấy kết quả ngay
+    sau đó. '
+  - ' Bởi vậy, thật sự bây giờ vấn đề là việc này phải được chứng nhận, thử nghiệm
+    trên máy bay, và qua tất cả các quy trình khiểm định. Hệ thống này thực sự cho
+    thấy rằng đôi khi giải pháp tốt nhất là giải pháp đơn giản nhất. Cách đây hai
+    năm, thậm chí, dự án này đã không làm được, chỉ vì công nghệ chưa hổ trợ được.
+    Nhưng bây giờ với công nghệ tính học tiên tiến và sự phát triển Internet, nó thực
+    sự là kỷ nguyên vàng  cho sự đổi mới. '
+  - ' Vì thế câu hỏi của tôi cho các bạn  hôm nay là: tại sao ta phải đợi? Hôm nay
+    ta có thể cùng nhau xây dựng tương lai. '
+  - ' Xin cảm ơn. '
+  - ' (Vỗ tay) '
+  zh-cn:
+  - ' 可不可以请大家举一下手—— 这里有多少人在过去一年中搭乘过飞机？ 看起来很多啊。 那么，事实证明你每年会与 超过30亿人共享飞行的经历。 当我们把这么多人放入所有这些
+    满世界飞行的金属管时， 有时会发生这样的事情—— 你会感染一种传染病。 '
+  - ' 我最初开始这个课题， 是在去年听说了埃博拉疫情爆发的时候。 事实表明， 尽管埃博拉病毒是在很有限的范围内， 以飞沫传染的方式进行传播的， 还有其它很多种疾病
+    也会在机舱中传播。 最糟糕的是， 当我们看到一些数字时， 会感到很恐惧。 携带有H1N1的这家伙 决定了要登上飞机， 就单个航班而言， 他可以把疾病传播给其他17个人。
+    还有另一个家伙携带有“非典“病菌, 登上了一个三小时的航班， 并把疾病传播给了其他22个人。 我原先并不知道这种传染性竟然这么强。 '
+  - ' 看一下这张图，我们也会发现， 事先筛查出这些疾病是非常困难的。 所以，当有人上了飞机， 他们可能是病人， 也可能处于疾病的潜伏期， 也就是说他们会得上这种病，
+    但是海没有表现出任何症状， 于是他们就可能把疾病传染给 机舱中的其他人。 '
+  - ' 这到底是怎么传播的呢？ 事实上，空气由机舱的顶部和侧边进入， 就是你们看到的蓝色箭头的位置。 然后，空气通过这些 高效的过滤器离开机舱， 出口附近99.97%的病菌都会被过滤掉。
+    然而，目前的情况是， 空气是按这种混合气流的方式流动着。 所以如果有人打了个喷嚏， 周围的空气就会呈漩涡态反复打转， 然后才有机会从过滤器排出。 所以我觉得这明显是个严重的问题。 '
+  - ' 我买不起飞机， 所以我决定弄台计算机试试看。 事实表明，利用计算流体动力学， 我们就能够模拟这些情况， 相较于真正进入飞机获取数据， 这样其实更方便进行数据解析。
+    我们的工作是从这些 2D图形开始的—— 网络上有很多关于这方面的技术论文。 我把它们导入到3D模型软件中， 建立了那个3D模型。 然后我把刚刚建好的模型分解成小块，
+    彻底打碎这个模型， 使得计算机能够更好地理解每组数据。 然后我告诉计算机空气出入机舱的位置， 在机舱内放置一些物体， 然后基本就可以坐在一边 直到计算机模拟完成。 '
+  - ' 若是用传统的机舱，我们得到的结果是， 中间的乘客打喷嚏时， 在“阿欠”一声后气流 就会喷向人们的脸部。 实在有点恶心。 从前面看，中间乘客身旁的 两位乘客，
+    肯定不会开心。 从侧边观察一下， 你也会发现那些病菌 会在机舱内前后传播。 '
+  - ' 我的第一反应是“这样可不好”。 我实际上创建了 32个不同的情况的模拟， 并最终得到了这个解决方案。 我称它为——专利审核中的—— 环流入口导向器。 有了这个，我们可以把
+    病菌传播的可能性 降低55倍， 并可以增加190%可吸入的新鲜空气。 '
+  - ' 那么在实际过程中如何使用呢？ 我们只需要把这块复合材料 安装到飞机上已经存在的这些位置。 安装成本非常低， 只需要一个晚上就能全部安装好。 所有的工作仅仅是要
+    上几颗螺丝，非常简单。 我们得到的结果非常惊人。 避开了那些有问题的漩涡气流模式， 我们能够在乘客中间， 建立起这些空气墙， 从而创造出私人的呼吸区域。 '
+  - ' 这样你会发现当中间的乘客 再打喷嚏时， 我们就能够有效地迫使 带有病菌的空气向下流动， 直接经过滤器排出。 从侧边再看一下， 可以看到我们能够直接让病菌向下流动。
+    安装了这个新的设计， 现在再看一下同样的情形， 你会发现中间乘客打喷嚏时， 我们能够在其他人受到影响之前， 直接把病菌向下推送并排出机舱。 可以看到中间乘客身边的两位乘客
+    安全不会吸入病菌。 再从侧边看一下， 这是一个非常有效的系统。 '
+  - ' 总而言之，有了这个系统，我们赢了。 当我们再进一步看看它的效果， 可以看到这不仅在当中间位置的乘客 打喷嚏时有效， 也对窗边或者过道边的乘客 非常有效。 '
+  - ' 那么，这个解决方案 对全世界意味着什么了？ 当我们把视角从计算机模拟 转换到现实生活时， 在利用3D打印 做好了这个3D模型后， 我们能够看到气流直接
+    对着乘客往下流动。 在过去，“非典”足足花费了 全世界400亿美元。 在将来， 一个大型疾病的爆发可能会 花费全世界 超过3万亿美元。 以前，我们经常不得不让飞机
+    停飞一两个月， 花费大量人力以及巨资， 来试着解决一些问题。 但现在我们只需花上一个晚上 安装一下这个东西， 效果就立竿见影了。 '
+  - ' 实际上，现在只需要 把这个结果拿去认证， 进行飞行测试， 再通过这些常规的 批准过程就可以了。 事实表明，有时最好的解决方案 恰恰就是最简单的。 然而就两年前，
+    这个项目甚至不可能实施， 只是因为那时的技术 还无法实现这种设计。 但是有了先进的计算技术 和如此发达的网络， 我们现在真的处于创新的黄金时期。 '
+  - ' 所以今天我要问大家的问题是： 还在等什么呢？ 一起努力，我们今天就能创造未来。 '
+  - ' 谢谢。 '
+  - ' （掌声） '
+  zh-tw:
+  - ' 可不可以請大家舉一下手—— 這裡有多少人，在過去一年有搭過飛機？ 非常好， 事實證明，你與每年超過三十億的人口 分享了同樣的飛行經歷。 當我們把這麼多人
+    放在那些全世界 滿天飛的金屬艙里時， 有時會發生這樣的事情： 比如傳染性疾病的感染。 '
+  - ' 我最初進入這個課題 是在去年聽說了埃博拉疫情爆發的時候。 事實證明，儘管埃博拉病毒是在很有限的 範圍內，以飛沫傳染的方式進行傳播的， 但仍有很多其它的疾病
+    會在機艙中傳播。 最糟的是，當我們看到這些數據時， 真的令人感到害怕。 假如一個攜帶有H1N1病毒的傢伙 決定了要登上飛機， 光是單次航班，他就會把 疾病傳播給17個人。
+    再假如還有另一個傢伙感染了SARS， 登上了一個三小時的航班， 那麼他可以把疾病傳播給22個人。 我沒有料想到病毒在飛機上 的傳播力如此驚人。 '
+  - ' 看一下這張圖，我們會發現， 要事先篩檢出這些疾病是非常困難的， 所以，那些上了飛機的人 他們可能患了疾病， 只是當時仍在潛伏期 尚未表現出任何症狀， 於是他們就可能把疾病傳染
+    給機艙中的其他旅客。 '
+  - ' 那麼這究竟是如何發生的呢？ 空氣是由機艙內上方 及側邊的出氣口進入， 正如圖上的藍色箭頭所示。 然後，空氣經由高效的 過濾設備排出機艙， 其中99.7%的病菌都可被除去。
+    然而，實際情況是， 空氣是以複雜的混合氣流 模式在機艙內流通， 所以如果有人打了噴嚏， 周圍空氣就會多次成渦旋態打轉， 然後才有機會從過濾器排除。 所以我認為，很明顯，
+    這是個嚴重的問題， '
+  - ' 我沒有足夠的錢 去買台飛機， 所以乾脆搞一部電腦來代替。 事實表明，利用流體動力學進行模擬， 比親自搭飛機採集數據更能精確地 得到我們所需要的結果， 那麼要如何開始呢？
+    你可以從網路上的技術資料中 找到這些二維平面圖。 我將它們導入到這個3D模型軟體中， 實際地建構一個3D模型。 然後把剛才建置的模型分成小部分， 有效編排後，讓電腦能夠
+    更好地讀取信息。 然後我告訴電腦， 機艙內氣體流動的狀況， 運用一些物理學知識， 然後只要坐在一邊， 等電腦模擬出結果就可以了。 '
+  - ' 所以，傳統機艙中 得到的結果是這樣的： 你會注意到，當中間這個人打噴嚏時， 我們也會“啪的一聲”，被噴得滿臉都是， 非常噁心。 從正面來看，你會注意到旁邊的兩位乘客
+    也完全無法避免。 我們從側面來看， 你也會注意病原體 可以橫跨整個機艙。 '
+  - ' 我的第一反應是＂這下真的不妙了＂。 所以我又模擬了超過32種不同的情況， 最後想到這個辦法。 我稱之為全方位進氣導引器（專利申請中）， 此裝置能將病原體
+    傳播的可能性減少55倍， 將空氣清新度提升190%。 '
+  - ' 那麼它具體是怎麼工作的呢？ 我們只需要把這塊複合材料 裝在飛機上現有的氣孔上， 這非常合乎成本效益， 工期非常短。 我們只要鎖上螺絲便大功告成， 結果讓我們很驚訝。
+    避開了那些有問題的漩渦氣流模式， 取而代之的是，我們在乘客中間 建立了這些空氣牆， 來創造出私人的呼吸領域。 '
+  - ' 這樣你會發現當中間的乘客 再打噴嚏時， 我們就能夠有效地迫使帶有病菌 的空氣向下流動，直接經由過濾器排出。 同樣從側邊再看一下， 你可以注意到我們也可以
+    將這些氣體直接下沉。 安裝了這個新的設計， 現在再看一下同樣的情形， 你會發現中間乘客打噴嚏時， 這次我們能夠在病原體感染其他人之前， 直接把牠傳送到濾氣孔。
+    所以，你可以注意到， 中間乘客身邊的兩位乘客 完全不會吸入病菌。 也可以從側面看出， 這个系統非常有效。 '
+  - ' 總而言之，有了這個系統，我們贏了。 所以當我們再進一步 看看它的效果時， 可以看到，這不僅在中間位置 的乘客打噴嚏時有效， 也對窗邊或者走道邊 的乘客非常有效。 '
+  - ' 那麼，這個解決方案對世界有甚麼意義？ 現在我們從電腦模擬 轉移到現實生活中來， 在利用3D列印 做好這個3D模型後， 我們能夠看到氣流 直接對著乘客往下流動。
+    過去， 流感SARS讓整個世界 損失大約四百億元。 未來，一場嚴重傳染性疾病的爆發 可能花費全球超過三萬億美元。 過去，你通常得讓飛機停飛一兩個月， 投入好幾萬小時的人力、花數百萬元
+    來試著解決一些問題。 但現在，我們只需花上一個晚上 安裝一下這個東西， 馬上就可以看到結果。 '
+  - ' 實際上，現在只需要 把這個結果拿去認證， 進行飛行測試，再通過這些常規的 批准過程就可以了。 這也說明，有時候最好的辦法 其實就是最簡單的方式。 但在兩年前，這個項目
+    根本沒有辦法實施， 只因為當時的技術還不夠成熟。 但如今，有了先進的運算方式及 網路的蓬勃發展， 現在正是創新的黃金時代。 '
+  - ' 所以我今天要問大家的是： 『還在等什麼？』 以我們共同的力量， 我們今天就可以創造未來。 '
+  - ' 謝謝大家！ '
+  - ' （掌聲） '
+update_date: '2017-03-17'
