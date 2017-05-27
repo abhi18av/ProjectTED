@@ -1,43 +1,32 @@
-resources
-*#*
-experiments/electron_app/electron_goTED_react/node_modules
 
-experiments/electron_app/electron_goTED_vanilla/node_modules
+experiments/APP/electron_app/electron_goTED_react/
 
-experiments/goShiny_ui/shiny_example/
+experiments/APP/electron_app/electron_goTED_vanilla/
 
-experiments/go-xkcd-master/
+experiments/APP/ionic_app/
 
-experiments/scala_utils/Ammonite\.pdf
+experiments/APP/reactNative_app/
 
-experiments/scala_utils/hello/
+experiments/APP/nativeScript_app/
 
-experiments/scala_utils/target/
+experiments/dataScience/Python/resources/
 
-experiments/APP/
+experiments/dataScience/Julia/resources/
 
-experiments/nativeScript_app/
+experiments/dataScience/Scala/resources/
 
-experiments/reactNative_app/
+experiments/dataScience/sampleJSON/
+
+experiments/dataScience/TypeScript/resources/
+
+*.pdf
+
+experiments/tedTalkDB/
 
 goKEN/
 
 goTALK/
 
-experiments/tedTalkDB/
+resources/
 
-experiments/dataScience/sampleJSON/
-
-experiments/dataScience/remarshal-master/
-
-experiments/dataScience/Julia/TOML\.jl-master/
-
-experiments/dataScience/Python/remarshal-master/
-
-experiments/dataScience/Python/toml-master/
-
-experiments/dataScience/Ruby/toml-master/
-
-experiments/dataScience/Scala/stoml-master/
-
-experiments/dataScience/TypeScript/toml-node-master/
+experiments/scala_utils/hello/
