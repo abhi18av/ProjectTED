@@ -1,0 +1,1 @@
+b'<root xmlns:ns0="http://www.w3schools.com/furniture" xmlns:ns1="http://www.w3.org/TR/html4/">\n\n<ns0:table>\n  <ns0:width>80</ns0:width>\n  <ns0:name>African Coffee Table</ns0:name>\n  <ns0:length>120</ns0:length>\n</ns0:table>\n\n<ns1:table>\n  <ns1:tr>\n    <ns1:td class="favorite">Apples</ns1:td>\n    <ns1:td>Bananas</ns1:td>\n  </ns1:tr>\n</ns1:table>\n\n</root>'

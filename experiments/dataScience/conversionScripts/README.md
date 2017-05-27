@@ -71,6 +71,9 @@ Awk is a POSIX-standard command line tool and programming language for processin
 | https://github.com/abdmob/x2js 
 |https://github.com/buglabs/node-xml2json
 | https://github.com/Jxck/html2json
+| https://github.com/hay/xml2json
+| https://github.com/clbanning/mxj
+https://github.com/clbanning/checkxml
 
 See also: [Grep and Sed Equivalent for XML Command Line Processing](http://stackoverflow.com/questions/91791/grep-and-sed-equivalent-for-xml-command-line-processing) on StackOverflow.
 
