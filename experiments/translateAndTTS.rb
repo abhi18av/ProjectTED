@@ -13,3 +13,16 @@ for i in outSentences
 	puts i
 
 end
+
+
+inSentences = [%Q("My name is alan."), %Q("I am 20 years old.")]
+
+for s in inSentences
+	cmd1 = "trans -brief en:ja " + s +  " >> out.txt"
+	system(cmd1)
+end
+
+
+
+	#outSentences.push(x)
+	#puts cmd1
