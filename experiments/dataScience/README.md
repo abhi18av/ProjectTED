@@ -88,6 +88,7 @@ See also: [Grep and Sed Equivalent for XML Command Line Processing](http://stack
 | [lobar](https://github.com/sodiumjoe/lobar) | Explore JSON interactively or process it in batch with a wrapper for `lodash.chain()`. An alternative to jq with a JavaScript syntax. |
 | [rq](https://github.com/dflemstr/rq) | Similar to jq. DSL inspired by Rust, C and JavaScript. Supports JSON, YAML and TOML as well as binary formats like Apache Avro and MessagePack. |
 | [validjson](http://github.com/martinlindhe/validjson) | Validate or pretty-print JSON data. |
+| [jsonpp](https://github.com/jmhodges/jsonpp)| A fast command line JSON pretty printer.
 
 ## YAML, TOML
 
