@@ -5,3 +5,5 @@
 ** Today, I'll be  converting the JSON data to simple TOML-YAML-TXT
 *** `remarshal` module in python makes it so easy!
 ** Next, I'll start prototyping the various solutions and approaches in Mathematica - wolfram made life so easy with his Wolfram Programming Cloud.
+** Explored the basic aspects of the using Stats with Mathematica.
+** This project can easily turn into my Umbrella project for trying out everything!
