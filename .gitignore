@@ -29,3 +29,15 @@ experiments/tedTalkDB/
 experiments/dataScience/sampleJSON/
 
 experiments/dataScience/remarshal-master/
+
+experiments/dataScience/Julia/TOML\.jl-master/
+
+experiments/dataScience/Python/remarshal-master/
+
+experiments/dataScience/Python/toml-master/
+
+experiments/dataScience/Ruby/toml-master/
+
+experiments/dataScience/Scala/stoml-master/
+
+experiments/dataScience/TypeScript/toml-node-master/
