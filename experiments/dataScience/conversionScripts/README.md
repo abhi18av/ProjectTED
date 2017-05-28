@@ -57,6 +57,19 @@ Awk is a POSIX-standard command line tool and programming language for processin
 | [Squawk](https://github.com/samuel/squawk) | Python, custom SQL interpreter | Access log and CSV input, JSON and CSV output, Python code generation. | — | Three-clause BSD |
 | [termsql](https://github.com/tobimensch/termsql) | Python, SQLite 3 | Use header rows for column names, custom field separator (regexp), custom record separator (string literal), lines as columns, skip a given number of lines and the beginning and at the end, merge selected columns into one, HTML, CSV, SQL and Tcl output. | [Manual](http://tobimensch.github.io/termsql/) | MIT |
 | [textql](https://github.com/dinedal/textql) | Go, SQLite 3 | Use header rows for column names, keep SQLite file, custom input field separator (string literal). | [Usage](https://github.com/dinedal/textql#usage) | MIT |
+| http://sheetjs.com/
+| https://github.com/harelba/q
+| https://github.com/dinedal/textql
+| https://github.com/mholt/PapaParse
+| https://github.com/wireservice/csvkit
+| https://github.com/wireservice/agate
+| https://github.com/tabulapdf/tabula
+| https://github.com/kennethreitz/tablib
+| https://github.com/johnkerl/miller
+| https://github.com/dbashford/textract
+| https://github.com/jgm/pandoc
+| https://github.com/zemirco/json2csv
+| https://github.com/Keyang/node-csvtojson
 
 ## XML, HTML
 
