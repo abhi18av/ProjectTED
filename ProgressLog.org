@@ -7,3 +7,5 @@
 ** Next, I'll start prototyping the various solutions and approaches in Mathematica - wolfram made life so easy with his Wolfram Programming Cloud.
 ** Explored the basic aspects of the using Stats with Mathematica.
 ** This project can easily turn into my Umbrella project for trying out everything!
+* 30-05-2017
+** Today, I'll be focusing on coming up with some basic questions/algorithms to get some numbers out of the text corpus.

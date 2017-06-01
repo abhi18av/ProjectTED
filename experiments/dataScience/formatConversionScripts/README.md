@@ -13,6 +13,18 @@ What follows is a list of text-based file formats with command line tools for ma
 * [Bonus round: CLIs for single-file databases](#bonus-round-clis-for-single-file-databases)
 * [License](#license)
 * [Disclosure](#disclosure)
+https://github.com/hephesthesis/txt2json
+https://github.com/Barathiraja/json2txt
+https://github.com/danwild/text2json
+https://github.com/yuchaz/JSON_transformer
+https://github.com/ranshiwei/JsonToTxt
+https://github.com/IuriiPidvirnyi/PyData
+https://github.com/azahed98/Basic-and-Bad-lines-to-Json
+https://github.com/lv06025158/textPro
+https://github.com/brianhodges/golang-json2txt
+https://github.com/MaximilianLloyd/text-to-json-cli
+
+
 
 ## DSV
 

@@ -3,6 +3,11 @@ Approach everything from a lone researcher's point of view - first. You need to 
 ** DataScience
 *** Machine Learning / Artificial Intelligence
 **** Textual
+***** NLTK
+***** Imaginative
+****** TODO How many words does each transcript of a TED talk has?
+****** TODO How many words does a language need to express the same paragraph?
+****** TODO Plot the stats taken per file and then the directory as a whole.
 **** Image Processing
 *** Data Visualization
 *** Statistics
