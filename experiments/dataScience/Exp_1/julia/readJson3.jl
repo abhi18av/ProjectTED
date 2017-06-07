@@ -11,17 +11,23 @@ end
 #filelist[end]
 
 
-fileNameAndLanguage = Dict()
+fileNameAndLanguageList = Dict()
 
 for f in filelist
 
-talkName = f
+talkName = split(f, "/")[end]
 #println(talkName)
-contents = JSON.Parser.parsefile(f)
 
-json_contents = JSON.json(contents["transcript"], 2)
+_contents = JSON.Parser.parsefile(f)
 
-write("out.json", json_contents)
+lang_keys = keys(_contents["transcript"])
 
+fileNameAndLanguageList[talkName] = lang_keys
 
 end
+
+#println(fileNameAndLanguageList)
+
+
+json_output = JSON.json(fileNameAndLanguageList, 2)
+write("out.json", json_output)

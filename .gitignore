@@ -34,3 +34,4 @@ experiments/scala_utils/hello/
 *.zip
 
 experiments/dataScience/Scala/scala_utils/
+out.json
