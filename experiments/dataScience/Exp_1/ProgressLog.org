@@ -1,0 +1,20 @@
+* Experiment-1
+  *AIM* : Read all the json files from `../sampleJSON` directory and store the number of languages avl per talk 
+  into a json file of languages per file. 
+ 
+
+  The structure needs to be something like 
+```
+{
+talkTitle_1 : { ar, fr, no},
+talkTitle_2 : {de, eo, zh_cn}
+}
+```
+ 
+** <2017-06-07 Wed> 
+
+*** I'll start with the `julia` lang.
+
+*** Julia effortlessly takes care of the non-unicode encodings in the source json files.
+
+
