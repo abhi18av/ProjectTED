@@ -17,4 +17,6 @@ talkTitle_2 : {de, eo, zh_cn}
 
 *** Julia effortlessly takes care of the non-unicode encodings in the source json files.
 
+*** install vim and git-plus
+
 

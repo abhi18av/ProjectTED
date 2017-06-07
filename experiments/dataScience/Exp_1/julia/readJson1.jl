@@ -9,6 +9,9 @@ using JSON
 
 
 contents = JSON.Parser.parsefile("./al-Are_you_a_giver_or_a_taker_.json")
+json_contents = JSON.json(contents["transcript"],2)
+
+write("json_contents.json", json_contents)
 
 #println(contents)
 
@@ -21,5 +24,6 @@ transcript = contents["transcript"]
 keys(transcript)
 korean_text = transcript["ko"]
 #println(korean_text)
+json_korean_text = JSON.json(korean_text)
 
-write("out.txt", korean_text)
+write("korean_text.json", korean_text)
