@@ -19,4 +19,14 @@ talkTitle_2 : {de, eo, zh_cn}
 
 *** install vim and git-plus
 
+*** The basic goal has been achieved...
 
+*** And in the process, I realized that the form that I want is that of 
+
+```
+{
+id: talkTitle_1 : { ar, fr, no},
+id: talkTitle_2 : {de, eo, zh_cn}
+}
+```
+ 
