@@ -1,3 +1,5 @@
+# AIM : Read and print the contents of a JSON file
+
 using JSON
 
 
