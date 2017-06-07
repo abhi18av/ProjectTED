@@ -20,7 +20,7 @@ talkName = split(f, "/")[end]
 
 _contents = JSON.Parser.parsefile(f)
 
-lang_keys = keys(_contents["transcript"])
+lang_keys = collect(keys(_contents["transcript"]))
 
 fileNameAndLanguageList[talkName] = lang_keys
 
@@ -30,4 +30,4 @@ end
 
 
 json_output = JSON.json(fileNameAndLanguageList, 2)
-write("out.json", json_output)
+write("fileNameAndLanguageList.json", json_output)
