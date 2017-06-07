@@ -19,4 +19,7 @@ keys(contents)
 
 transcript = contents["transcript"]
 keys(transcript)
-println(transcript["ko"])
+korean_text = transcript["ko"]
+#println(korean_text)
+
+write("out.txt", korean_text)
