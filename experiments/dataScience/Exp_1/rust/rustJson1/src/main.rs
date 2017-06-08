@@ -10,7 +10,6 @@ println(x)
 }
 
 
-    println!("{}", json::encode(&42i));
     println!("{}", json::encode(&vec!["to", "be", "or", "not", "to", "be"]));
     println!("{}", json::encode(&Some(true))); 
 
