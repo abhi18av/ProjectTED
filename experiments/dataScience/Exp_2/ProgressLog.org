@@ -1,0 +1,9 @@
+* Experiment-2
+  *AIM* : Plot the basic graphs 
+- Bar chart
+- Pie chart
+-
+
+** <2017-06-07 Wed> 
+*** Using Julia
+*** Installed the platformIO-terminal package in atom

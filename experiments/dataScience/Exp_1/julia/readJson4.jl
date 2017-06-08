@@ -1,4 +1,4 @@
-# AIM : To have a output json in a more structured form like
+# AIM : To have a output sorted json in a more structured form like
 # {
 #id:
 #{
@@ -9,6 +9,8 @@
 #    }
 #  }
 #}
+
+cd("/Users/eklavya/Projects/Polyglot/ProjectTED/experiments/dataScience/Exp_1/julia")
 
 
 using JSON
@@ -38,11 +40,11 @@ _contents = JSON.Parser.parsefile(f)
 
 lang_keys = collect(keys(_contents["transcript"]))
 
-fileNameAndLanguageList[talkName] = lang_keys
+#fileNameAndLanguageList[talkName] = lang_keys
 
 
-_x =  @sprintf("%04d", 10)
-finalData[_x] = fileNameAndLanguageList
+_x =  @sprintf("%04d", id)
+finalData[_x] = Dict(talkName => lang_keys)
 
 
 id = id + 1
@@ -50,6 +52,7 @@ end
 
 #println(fileNameAndLanguageList)
 
-
+#finalData = sort(collect(finalData), by=x->parse(Int, x[1]))
+#sort(collect(finalData))
 json_output = JSON.json(finalData, 2)
 write("finalData.json", json_output)

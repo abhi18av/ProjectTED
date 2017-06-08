@@ -29,4 +29,5 @@ id: talkTitle_1 : { ar, fr, no},
 id: talkTitle_2 : {de, eo, zh_cn}
 }
 ```
- 
+
+*** Installed *pomodoro*
