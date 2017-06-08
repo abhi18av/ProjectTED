@@ -36,3 +36,4 @@ experiments/scala_utils/hello/
 experiments/dataScience/Scala/scala_utils/
 out.json
 target
+/experiments/attic/sampleJSON
