@@ -38,7 +38,7 @@ lang_keys = collect(keys(_contents["TalkTranscriptPage"]["TalkTranscript"]))
 
 
 _x =  @sprintf("%04d", id)
-finalData[_x] = Dict(talkName => lang_keys)
+finalData[_x] = [talkName, lang_keys]
 
 
 id = id + 1

@@ -44,7 +44,7 @@ lang_keys = collect(keys(_contents["TalkTranscriptPage"]["TalkTranscript"]))
 
 
 _x =  @sprintf("%04d", id)
-finalData[_x] = Dict(talkName => lang_keys)
+finalData[_x] = [talkName, lang_keys]
 
 
 id = id + 1
@@ -55,4 +55,4 @@ end
 #finalData = sort(collect(finalData), by=x->parse(Int, x[1]))
 #sort(collect(finalData))
 json_output = JSON.json(finalData, 2)
-write("finalData.json", json_output)
+write("finalData2.json", json_output)
