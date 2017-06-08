@@ -5,6 +5,8 @@ cd("/Users/eklavya/Projects/Polyglot/ProjectTED/experiments/dataScience/Exp_2/ju
 
 using Gadfly
 using JSON
+using CSV
+using DataFrames
 
 file = "../data_laura_robinson_the_secrets_i_find_on_the_mysterious_ocean_floor.json"
 
@@ -22,3 +24,12 @@ talk_name = collect(values(_contents))[1][1]
 langs_string = collect(values(_contents))[1][2]
 
 langs_count = length(langs_string)
+
+df = DataFrame( id_string = id_string, langs_count = langs_count, talk_name=talk_name)
+
+CSV.write("out.csv", df; delim =';')
+
+
+
+
+plot(x= df)
