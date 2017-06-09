@@ -40,15 +40,21 @@ push!(videoPageDF,
 
 
 """
+df = DataFrame(a = String[], b= String[])
+push!(df, 'a','b')
+"""
 
-#      push!(videoPageDF,
-#            videoPage[keys[1]],
-#            videoPage[keys[2]],
-#            videoPage[keys[3]],
-#            videoPage[keys[4]],
-#            #videoPage[keys[5]],
-#            videoPage[keys[6]],
-#            videoPage[keys[7]])
+
+"""
+
+      push!(videoPageDF,
+            videoPage[keys[1]],
+            videoPage[keys[2]],
+            videoPage[keys[3]],
+            videoPage[keys[4]],
+            #videoPage[keys[5]],
+            videoPage[keys[6]],
+            videoPage[keys[7]])
 
 
 
