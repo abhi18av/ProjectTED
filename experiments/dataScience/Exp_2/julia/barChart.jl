@@ -8,6 +8,8 @@ using JSON
 using CSV
 using DataFrames
 
+
+
 file = "../data_laura_robinson_the_secrets_i_find_on_the_mysterious_ocean_floor.json"
 
 
@@ -27,9 +29,15 @@ langs_count = length(langs_string)
 
 df = DataFrame( id_string = id_string, langs_count = langs_count, talk_name=talk_name)
 
-CSV.write("out.csv", df; delim =';')
+typeof(df)
+
+df.colindex
 
 
 
 
-plot(x= df)
+
+#CSV.write("out.csv", df; delim =';')
+
+
+plot(df, x= :id_string, y= :langs_count)

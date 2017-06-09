@@ -15,9 +15,17 @@ cd("/Users/eklavya/Projects/Polyglot/ProjectTED/experiments/dataScience/Exp_1/ju
 
 using JSON
 
-filelist = ["../laura_robinson_the_secrets_i_find_on_the_mysterious_ocean_floor.json"]
+#filelist = ["../laura_robinson_the_secrets_i_find_on_the_mysterious_ocean_floor.json"]
 #filelist[end]
 
+filelist = []
+
+for f in filter(x -> endswith(x, "json"), readdir("../../../tedTalkDB"))
+    fullFileName = "../../../tedTalkDB/" * f
+    push!(filelist, fullFileName)
+end
+
+#filelist[end]
 
 finalData = Dict()
 
@@ -49,4 +57,4 @@ end
 #finalData = sort(collect(finalData), by=x->parse(Int, x[1]))
 #sort(collect(finalData))
 json_output = JSON.json(finalData, 2)
-write("data_laura_robinson_the_secrets_i_find_on_the_mysterious_ocean_floor.json", json_output)
+write("finalData3.json", json_output)
