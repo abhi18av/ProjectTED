@@ -10,12 +10,34 @@ using DataFrames
 
 
 
-file = "../data_laura_robinson_the_secrets_i_find_on_the_mysterious_ocean_floor.json"
-
-
+file = "../finalData3.json"
 
 
 _contents = JSON.Parser.parsefile(file)
+
+ids = collect(keys(_contents))
+
+#df = DataFrame()
+i = 1
+for id in ids
+#println(id)
+talk_name = _contents[id]["talkName"]
+lang_keys = _contents[id]["lang_keys"]
+langs_count = length(lang_keys)
+
+if i == 1
+  df = DataFrame( id_string = id, langs_count = langs_count, talk_name=talk_name)
+  i = i + 1
+end
+
+append!(df, DataFrame( id_string = id, langs_count = langs_count, talk_name=talk_name))
+#append!(df, DataFrame( id_string = id, langs_count = langs_count, talk_name=talk_name))
+end
+
+println(df)
+
+
+
 
 id_string = collect(keys(_contents))[1]
 
@@ -27,9 +49,9 @@ langs_string = collect(values(_contents))[1][2]
 
 langs_count = length(langs_string)
 
-df = DataFrame( id_string = id_string, langs_count = langs_count, talk_name=talk_name)
+df = DataFrame( id_string = id, langs_count = langs_count, talk_name = talk_name)
 
-typeof(df)
+#typeof(df)
 
 df.colindex
 
