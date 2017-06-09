@@ -16,16 +16,16 @@ keys = collect(keys(videoPage))
 
 println(keys)
 
-"""
 
- videoPageDF = DataFrame( VideoURL = String, #1
-                          Speaker = String,#2
-                          AvailableSubtitlesCount = String,#3
-                          Duraton = String,#4
+
+ videoPageDF = DataFrame( VideoURL = String[], #1
+                          Speaker = String[],#2
+                          AvailableSubtitlesCount = String[],#3
+                          Duraton = String[],#4
                           #TalkTopicsList = String[], #5
-                          TimeFilmed = String, #5
-                          TalkViewsCount = String, #6
-                          TalkCommentsCount = String ) #7
+                          TimeFilmed = String[], #5
+                          TalkViewsCount = String[], #6
+                          TalkCommentsCount = String[] ) #7
 
 
 push!(videoPageDF,
@@ -39,7 +39,7 @@ push!(videoPageDF,
 
 
 
-
+"""
 
 #      push!(videoPageDF,
 #            videoPage[keys[1]],
