@@ -1,0 +1,11 @@
+[package]
+name = "my_dylib"
+version = "0.1.0"
+authors = ["Abhinav Sharma <abhi18av@gmail.com>"]
+
+[dependencies]
+libc = "0.2.23"
+
+[lib]
+name = "my_dylib"
+crate-type = ["dylib"]
