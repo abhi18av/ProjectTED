@@ -9,3 +9,5 @@
 ** This project can easily turn into my Umbrella project for trying out everything!
 * 30-05-2017
 ** Today, I'll be focusing on coming up with some basic questions/algorithms to get some numbers out of the text corpus.
+* <2017-06-09 Fri>  
+** Completely forgot to add progress to this report for the past week.
