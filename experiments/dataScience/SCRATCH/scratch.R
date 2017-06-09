@@ -1,7 +1,2 @@
-print("Hello R")
+x <- c(1,2,3)
 
-sq <- seq(1, 10, b2)
-
-for (i in  sq) {
-                print(i)
-}
