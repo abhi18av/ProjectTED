@@ -14,7 +14,7 @@ videoPage = _contents["TalkVideoPage"]
 
 keys = collect(keys(videoPage))
 
-println(keys)
+#println(keys)
 
 
 
@@ -23,10 +23,36 @@ println(keys)
                           AvailableSubtitlesCount = String[],#3
                           Duraton = String[],#4
                           #TalkTopicsList = String[], #5
-                          TimeFilmed = String[], #5
-                          TalkViewsCount = String[], #6
-                          TalkCommentsCount = String[] ) #7
+                          TimeFilmed = String[], #6
+                          TalkViewsCount = String[], #7
+                          TalkCommentsCount = String[] ) #8
 
+
+
+"""
+df = DataFrame(a = String[], b= String[])
+push!(df, ["a","b"])
+"""
+
+
+
+push!(videoPageDF,
+[videoPage[keys[1]],
+videoPage[keys[2]],
+videoPage[keys[3]],
+videoPage[keys[4]],
+#videoPage[keys[5]],
+videoPage[keys[6]],
+videoPage[keys[7]],
+videoPage[keys[8]]])
+
+
+
+println(videoPage)
+
+
+
+"""
 
 push!(videoPageDF,
       videoPage[string(keys[1])],
@@ -35,28 +61,6 @@ push!(videoPageDF,
       videoPage[string(keys[4])],
       #videoPage[string(keys[5])],
       videoPage[string(keys[6])],
-      videoPage[string(keys[7])])
-
-
-
-"""
-df = DataFrame(a = String[], b= String[])
-push!(df, 'a','b')
-"""
-
-
-"""
-
-      push!(videoPageDF,
-            videoPage[keys[1]],
-            videoPage[keys[2]],
-            videoPage[keys[3]],
-            videoPage[keys[4]],
-            #videoPage[keys[5]],
-            videoPage[keys[6]],
-            videoPage[keys[7]])
-
-
-
-println(videoPage)
+      videoPage[string(keys[7])],
+      videoPage[string(keys[8])])
 """
