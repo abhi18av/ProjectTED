@@ -1,4 +1,8 @@
-#Pkg.add("PyPlot")
+
+module prepareDF
+export df
+
+
 
 cd("/Users/eklavya/Projects/Polyglot/ProjectTED/experiments/dataScience/Exp_2/julia")
 
@@ -35,3 +39,7 @@ end
 #typeof(df)
 
 CSV.write("finalData3.csv", df; delim=';')
+
+
+
+end #end of module
