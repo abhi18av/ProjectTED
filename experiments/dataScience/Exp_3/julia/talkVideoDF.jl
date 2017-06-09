@@ -4,6 +4,7 @@ cd("/Users/eklavya/Projects/Polyglot/ProjectTED/experiments/dataScience/Exp_3/ju
 
 
 using JSON
+using CSV
 using DataFrames
 
 file = "./laura_robinson_the_secrets_i_find_on_the_mysterious_ocean_floor.json"
@@ -29,10 +30,10 @@ keys = collect(keys(videoPage))
 
 
 
-"""
-df = DataFrame(a = String[], b= String[])
-push!(df, ["a","b"])
-"""
+
+#df = DataFrame(a = String[], b= String[])
+#push!(df, ["a","b"])
+
 
 
 
@@ -48,19 +49,7 @@ videoPage[keys[8]]])
 
 
 
-println(videoPage)
+#describe(videoPageDF)
+#size(videoPageDF)
 
-
-
-"""
-
-push!(videoPageDF,
-      videoPage[string(keys[1])],
-      videoPage[string(keys[2])],
-      videoPage[string(keys[3])],
-      videoPage[string(keys[4])],
-      #videoPage[string(keys[5])],
-      videoPage[string(keys[6])],
-      videoPage[string(keys[7])],
-      videoPage[string(keys[8])])
-"""
+CSV.write("DF.csv", videoPageDF; delim= ';')
