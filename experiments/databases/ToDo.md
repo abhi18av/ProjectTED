@@ -6,7 +6,7 @@
 
 ### Various message transmission formats to be explored
 JSON
-RPC
+gRPC
 Protobuf
 
 
