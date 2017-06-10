@@ -19,9 +19,9 @@ _keys = collect(keys(transcriptPage))
 
 
 
- _transcriptPageDF = DataFrame( #AvailableTranscripts = String[], #1
-                          #Rated = String[],#2
-                          #TalkTranscript = String[],#3
+ _transcriptPageDF = DataFrame( AvailableTranscripts = DataArray[], #1
+                          Rated = DataArray[],#2
+                          #TalkTranscript = DataArray[],#3
                           DatePosted = String[] ) #4
 
 
@@ -34,10 +34,11 @@ _keys = collect(keys(transcriptPage))
 
 push!(_transcriptPageDF,
 [
-#transcriptPage[_keys[1]],
-#transcriptPage[_keys[2]],
-#transcriptPage[_keys[3]],
-transcriptPage[_keys[4]]])
+convert(DataArray, transcriptPage[_keys[1]]),
+convert(DataArray, Array([transcriptPage[_keys[2]]])),
+#convert(DataArray, transcriptPage[_keys[3]]),
+transcriptPage[_keys[4]]
+	 ])
 
 
 
