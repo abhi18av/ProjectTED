@@ -1,0 +1,1 @@
+# The script to drive the tedTalkDB audio and video component
