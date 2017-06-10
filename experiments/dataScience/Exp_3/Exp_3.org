@@ -1,5 +1,6 @@
 * Experiment-3
   *AIM* : Convert the collective data from the tedTalkDB to a proper dataFrame
-
+** <2017-06-10 Sat>  
+*** I've completed the basic tasks of learning how to convert the data from the JSON form to proper DataFrame/DataArray and CSV.
 
 
