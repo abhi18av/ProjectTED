@@ -13,21 +13,16 @@ file = "./laura_robinson_the_secrets_i_find_on_the_mysterious_ocean_floor.json"
 _contents = JSON.Parser.parsefile(file)
 transcriptPage = _contents["TalkTranscriptPage"]
 
-keys = collect(keys(transcriptPage))
+_keys = collect(keys(transcriptPage))
 
 #println(keys)
 
 
 
- videoPageDF = DataFrame( VideoURL = String[], #1
-                          Speaker = String[],#2
-                          AvailableSubtitlesCount = String[],#3
-                          Duraton = String[],#4
-                          #TalkTopicsList = String[], #5
-                          TimeFilmed = String[], #6
-                          TalkViewsCount = String[], #7
-                          TalkCommentsCount = String[] ) #8
-
+ _transcriptPageDF = DataFrame( #AvailableTranscripts = String[], #1
+                          #Rated = String[],#2
+                          #TalkTranscript = String[],#3
+                          DatePosted = String[] ) #4
 
 
 
@@ -37,19 +32,16 @@ keys = collect(keys(transcriptPage))
 
 
 
-push!(videoPageDF,
-[videoPage[keys[1]],
-videoPage[keys[2]],
-videoPage[keys[3]],
-videoPage[keys[4]],
-#videoPage[keys[5]],
-videoPage[keys[6]],
-videoPage[keys[7]],
-videoPage[keys[8]]])
+push!(_transcriptPageDF,
+[
+#transcriptPage[_keys[1]],
+#transcriptPage[_keys[2]],
+#transcriptPage[_keys[3]],
+transcriptPage[_keys[4]]])
 
 
 
 #describe(videoPageDF)
 #size(videoPageDF)
 
-CSV.write("DF.csv", videoPageDF; delim= ';')
+CSV.write("DF.csv", _transcriptPageDF; delim= ';')
