@@ -1,0 +1,12 @@
+Getting started with the basic analysis on a paragraph level.
+
+
+For now I'll do analysis for English text with spacy and Python
+
+https://spacy.io/docs/usage/models
+
+
+
+Working on the spacy english model - for a start!
+
+python3 -m spacy download en
