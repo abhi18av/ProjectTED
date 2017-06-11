@@ -5,7 +5,9 @@ For now I'll do analysis for English text with spacy and Python
 
 https://spacy.io/docs/usage/models
 
+And then there's textacy
 
+http://textacy.readthedocs.io/en/latest/
 
 Working on the spacy english model - for a start!
 
