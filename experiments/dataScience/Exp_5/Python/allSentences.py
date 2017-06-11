@@ -9,5 +9,8 @@ Created on Sun Jun 11 21:52:00 2017
 
 import json
 
+contents = json.load(open("./finalData4.json"))
 
+shahrukh = contents["0013"]["transcript_en"][0]
 
+print(shahrukh)
