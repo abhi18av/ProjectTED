@@ -6,6 +6,7 @@
 
 ## Clojure
 1. https://github.com/yogthos/clj-pdf
+2. https://github.com/dotemacs/pdfboxing
 
 ## Julia
 1. https://github.com/aviks/Taro.jl
@@ -17,4 +18,6 @@
 
 ## Racket
 1. https://github.com/mbutterick/pollen
-2. 
+
+## Scala
+1. https://github.com/kaliber-scala/scala-pdf
