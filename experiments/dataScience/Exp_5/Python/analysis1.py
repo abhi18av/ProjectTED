@@ -12,13 +12,14 @@ import spacy
 
 
 nlp = spacy.load("en")
-
 contents = json.load(open("./finalData4.json"))
-
 shahrukh = contents["0013"]["transcript_en"][0]
-#print(shahrukh)
+doc1 = nlp(shahrukh)
 
-doc = nlp.make_doc(shahrukh)
+doc1.ents
+
+
+doc2 = nlp.make_doc(shahrukh)
 
 
 
