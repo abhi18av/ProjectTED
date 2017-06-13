@@ -19,3 +19,20 @@ python3 -m spacy download en
 Installed Keras today, having previously installed Tensorflow earlier this year.
 
 Will install theano and tensorflow updated again.
+
+Next, I really need to learn how to use Tensoflow and Keras.
+
+
+file:///Users/eklavya/Projects/Polyglot/ProjectTED/experiments/dataScience/SpacyNotebooks/HTML_tutorials/Hooking%20a%20deep%20learning%20model%20into%20spaCy%20_%20spaCy%20Usage%20Documentation.html
+
+Will continue with, the Hooking deep learning HTML tutorial, to trains models in parallel.
+
+Installed devtools package for rstudio and later on, installed the tensorflow for rstudio.
+
+
+Installed tensorflow for julia
+
+Installed tflearn
+
+Continue working on the ted talk from this html as well
+file:///Users/eklavya/Projects/Polyglot/ProjectTED/experiments/dataScience/SpacyNotebooks/HTML_tutorials/Getting%20Started%20with%20spaCy%20–%20Text%20Mining%20Online.html
