@@ -1,3 +1,5 @@
+11 June
+
 Getting started with the basic analysis on a paragraph level.
 
 
@@ -12,3 +14,8 @@ http://textacy.readthedocs.io/en/latest/
 Working on the spacy english model - for a start!
 
 python3 -m spacy download en
+
+* 13 June
+Installed Keras today, having previously installed Tensorflow earlier this year.
+
+Will install theano and tensorflow updated again.
