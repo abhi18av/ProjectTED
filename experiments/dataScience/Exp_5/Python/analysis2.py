@@ -13,16 +13,37 @@ import spacy
 
 nlp = spacy.load("en")
 contents = json.load(open("./finalData4.json"))
-shahrukh = contents["0013"]["transcript_en"][0]
+shahrukh = contents["0087"]["transcript_en"][0]
 paragraphs = shahrukh.split("\n\n")
 
 #remove all new lines from the paragraphs
+arr = []
+for p in paragraphs:
+	if p == "":
+		None
+	else:
+		arr.append(p)
+		paragraphs = arr
+del(arr)
+
+
+# find the longest paragraph
+#arr = []
+#for p in paragraphs:
+#	len(p)
 
 
 
-doc1 = nlp(shahrukh)
 
-doc1.ents
+
+doc1 = nlp(paragraphs[51])
+
+for token in doc1:
+	print(token)
+
+
+for entity in doc1.ents:
+	print(entity)
 
 
 doc2 = nlp.make_doc(shahrukh)
