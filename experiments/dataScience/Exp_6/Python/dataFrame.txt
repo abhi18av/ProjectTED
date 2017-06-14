@@ -1,0 +1,14 @@
+                                                        TalkTranscriptPage                                      TalkVideoPage
+AvailableSubtitlesCount                                                NaN                                                  9
+AvailableTranscripts     [Arabic, Chinese, Simplified, Chinese, Traditi...                                                NaN
+DatePosted                                                        May 2017                                                NaN
+Duration                                                               NaN                                              17:51
+ImageURL                 https://pi.tedcdn.com/r/pe.tedcdn.com/images/t...                                                NaN
+Rated                                                 Inspiring, Beautiful                                                NaN
+Speaker                                                                NaN                                     Shah Rukh Khan
+TalkCommentsCount                                                      NaN                                                 97
+TalkTopicsList                                                         NaN  [Aging, Art, Communication, Dance, Entertainme...
+TalkTranscript           {'hi': {'TimeStamps': ['0:14', '0:22', '0:24',...                                                NaN
+TalkViewsCount                                                         NaN                                          3,502,756
+TimeFilmed                                                             NaN                                           Apr 2017
+VideoURL                                                               NaN  https://www.ted.com/talks/shah_rukh_khan_thoug...
