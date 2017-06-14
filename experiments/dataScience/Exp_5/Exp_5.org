@@ -1,53 +1,50 @@
-11 June
+* <2017-06-11 Sun>
 
-Getting started with the basic analysis on a paragraph level.
+** Getting started with the basic analysis on a paragraph level.
 
 
-For now I'll do analysis for English text with spacy and Python
+** For now I'll do analysis for English text with spacy and Python
 
 https://spacy.io/docs/usage/models
 
-And then there's textacy
+** And then there's textacy
 
 http://textacy.readthedocs.io/en/latest/
 
-Working on the spacy english model - for a start!
+** Working on the spacy english model - for a start!
 
 python3 -m spacy download en
 
-* 13 June
-Installed Keras today, having previously installed Tensorflow earlier this year.
+* <2017-06-13 Tue> 
 
-Will install theano and tensorflow updated again.
+** Installed Keras today, having previously installed Tensorflow earlier this year.
 
-Next, I really need to learn how to use Tensoflow and Keras.
+** Will install theano and tensorflow updated again.
+
+** Next, I really need to learn how to use Tensoflow and Keras.
 
 
 file:///Users/eklavya/Projects/Polyglot/ProjectTED/experiments/dataScience/SpacyNotebooks/HTML_tutorials/Hooking%20a%20deep%20learning%20model%20into%20spaCy%20_%20spaCy%20Usage%20Documentation.html
 
-Will continue with, the Hooking deep learning HTML tutorial, to trains models in parallel.
+** Will continue with, the Hooking deep learning HTML tutorial, to trains models in parallel.
 
-Installed devtools package for rstudio and later on, installed the tensorflow for rstudio.
+** Installed devtools package for rstudio and later on, installed the tensorflow for rstudio.
 
+** Installed tensorflow for julia
 
-Installed tensorflow for julia
+** Installed tflearn
 
-Installed tflearn
-
-Continue working on the ted talk from this html as well
+** Continue working on the ted talk from this html as well
 file:///Users/eklavya/Projects/Polyglot/ProjectTED/experiments/dataScience/SpacyNotebooks/HTML_tutorials/Getting%20Started%20with%20spaCy%20–%20Text%20Mining%20Online.html
 
+** Installed mxnet and pytorch as well.
 
-Installed mxnet and pytorch as well.
-
-
-Woohoo, it's like javascript land out here!!
+** Woohoo, it's like javascript land out here!!
 
 
-* The only one missing now is H2O
+**  The only one missing now is H2O
 
 
-Installed Rodeo
+** Installed Rodeo
 
-Reticulate
-r-keras # This one is really problematic - avoid it!
+** Installed Reticulate and r-keras # This one is really problematic - avoid it!

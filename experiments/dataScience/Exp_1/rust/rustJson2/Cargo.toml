@@ -1,6 +1,0 @@
-[package]
-name = "rustJson2"
-version = "0.1.0"
-authors = ["Abhinav Sharma <abhi18av@gmail.com>"]
-
-[dependencies]
