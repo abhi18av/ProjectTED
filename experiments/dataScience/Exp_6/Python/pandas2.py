@@ -27,7 +27,8 @@ f1 = tedTalkDB +  "shah_rukh_khan_thoughts_on_humanity_fame_and_love.json"
 df = pd.read_json(f1)
 
 
-In [46]: with open("dataFrame.html", "w") as f:
-       2     f.write(str(df.to_html))
+with open("dataFrame.html", "w") as f:
+	f.write(str(df.to_html))
 
-
+with open("dataFrame.txt", "w") as f:
+	f.write(df.to_string())
