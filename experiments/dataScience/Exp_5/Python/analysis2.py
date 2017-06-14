@@ -55,7 +55,9 @@ def printSentences(doc):
 for token in doc1:
 	print(token, token.lemma, token.lemma_)
 
+entities = []
 for entity in doc1.ents:
+	entities.append(entity)
 	print(entity, entity.label, entity.label_)
 
 In [73]: for noun in doc1.noun_chunks:
