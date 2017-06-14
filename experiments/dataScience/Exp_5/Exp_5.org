@@ -36,3 +36,18 @@ Installed tflearn
 
 Continue working on the ted talk from this html as well
 file:///Users/eklavya/Projects/Polyglot/ProjectTED/experiments/dataScience/SpacyNotebooks/HTML_tutorials/Getting%20Started%20with%20spaCy%20–%20Text%20Mining%20Online.html
+
+
+Installed mxnet and pytorch as well.
+
+
+Woohoo, it's like javascript land out here!!
+
+
+* The only one missing now is H2O
+
+
+Installed Rodeo
+
+Reticulate
+r-keras # This one is really problematic - avoid it!
