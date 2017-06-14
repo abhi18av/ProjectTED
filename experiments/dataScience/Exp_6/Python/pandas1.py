@@ -19,8 +19,13 @@ for f in files:
 
 
 f1 = tedTalkDB +  "shah_rukh_khan_thoughts_on_humanity_fame_and_love.json" 
-f2 = tedTalkDB +  "sarah_kay_how_many_lives_can_you_live.json" 
+
 
 df = pd.read_json(f1)
 
+
+
+"""
+f2 = tedTalkDB +  "sarah_kay_how_many_lives_can_you_live.json" 
 df.append(pd.read_json(f2))
+"""

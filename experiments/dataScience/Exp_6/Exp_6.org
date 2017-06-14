@@ -1,4 +1,5 @@
 * Experiment-6
 *AIM* :- To create a proper pandas dataframe from the talks database.
 * <2017-06-14 Wed> 
-** 
+** I need to be able to read in the data from json properly into a DataFrame.
+
