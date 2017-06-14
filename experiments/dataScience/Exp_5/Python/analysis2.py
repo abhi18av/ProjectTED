@@ -38,12 +38,29 @@ del(arr)
 
 doc1 = nlp(paragraphs[51])
 
-for token in doc1:
-	print(token)
+def printTokens(doc):
+	for token in doc:
+		print(token)
 
+def printEntities(doc):
+	for entity in doc.ents:
+		print(entity)
+
+
+def printSentences(doc):
+	for sentence in doc.sents:
+		print(sentence)
+
+
+for token in doc1:
+	print(token, token.lemma, token.lemma_)
 
 for entity in doc1.ents:
-	print(entity)
+	print(entity, entity.label, entity.label_)
+
+In [73]: for noun in doc1.noun_chunks:
+       2     print(noun, noun.label_)
+
 
 
 doc2 = nlp.make_doc(shahrukh)

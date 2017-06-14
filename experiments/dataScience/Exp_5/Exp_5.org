@@ -48,3 +48,8 @@ file:///Users/eklavya/Projects/Polyglot/ProjectTED/experiments/dataScience/Spacy
 ** Installed Rodeo
 
 ** Installed Reticulate and r-keras # This one is really problematic - avoid it!
+
+
+* <2017-06-14 Wed> 
+
+** Learned a lot about lemmas and various labels for a text today.
