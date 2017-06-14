@@ -14,6 +14,12 @@ import spacy
 nlp = spacy.load("en")
 contents = json.load(open("./finalData4.json"))
 shahrukh = contents["0013"]["transcript_en"][0]
+paragraphs = shahrukh.split("\n\n")
+
+#remove all new lines from the paragraphs
+
+
+
 doc1 = nlp(shahrukh)
 
 doc1.ents
