@@ -1,4 +1,4 @@
-# goTED
+# ProjectTED
 
 This is an Umbrella project and a playground to learn various concepts about
 
